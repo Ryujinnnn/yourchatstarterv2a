@@ -1,0 +1,17 @@
+{/* <MessageContainer></MessageContainer>
+          <MessageBox></MessageBox>
+          <SendButton text="Send"></SendButton> */}
+
+        {/* <p>{this.state.response}</p>
+        <form onSubmit={this.handleSubmit}>
+          <p>
+            <strong>Post to Server:</strong>
+          </p>
+          <input
+            type="text"
+            value={this.state.post}
+            onChange={e => this.setState({ post: e.target.value })}
+          />
+          <SendButton type="submit"></SendButton>
+        </form>
+        <p>{this.state.responseToPost}</p> */}

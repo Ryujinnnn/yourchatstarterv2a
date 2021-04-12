@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+  font-family: Roboto;
+}
+
+ul.navList li {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    float: left;
+    font: bold 16px sans-serif;
+}
+
+ul.navList {
+    list-style-type: none;
+    margin: 0 10px 10px 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: pink;
+    font: bold 16px sans-serif;
+}
+
+
+
+ul.navList li.login {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+    font: bold 16px sans-serif;
+    padding: 20px;
+}
+
+ul.navList li a {
+    text-decoration: none;
+    font: bold 16px sans-serif;
+}
+
+ul.navList li:hover {
+    background-color: palevioletred;
+}

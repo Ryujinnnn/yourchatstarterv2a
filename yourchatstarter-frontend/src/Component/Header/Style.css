@@ -1,0 +1,10 @@
+.Header {
+    display: block;
+    background-color: #faa;
+    width: 100vw
+}
+
+img {
+    float: rigth;
+    display: block;
+}

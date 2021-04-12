@@ -1,0 +1,30 @@
+p.message {
+    min-width: 200px;
+  font-size: 1rem;
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  background: lightblue;
+  color: black;
+  animation: bounce-in 1s 1;
+  transform-origin: left bottom;
+}
+p.message:after {
+    top: 88%;
+    left: 0;
+    position: absolute;
+    content: '';
+    border: 0.75rem solid;
+    border-color: lightblue transparent transparent lightblue;
+}
+  
+p.messageOpponent {
+  transform-origin: right top;
+  background: lightpink;
+}
+p.messageOpponent:after {
+    top: -35%;
+    left: auto;
+    right: 0;
+    border-color: transparent lightpink lightpink transparent;
+}

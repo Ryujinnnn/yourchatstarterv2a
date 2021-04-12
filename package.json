@@ -1,0 +1,15 @@
+{
+  "name": "yourchatstarter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-prebuild": "ced yourchatstarter-backend && npm install",
+    "start": "cd yourchatstarter-backend && node App.js",
+    "heroku-postbuild": "cd yourchatstarter-frontend && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

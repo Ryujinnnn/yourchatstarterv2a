@@ -1,0 +1,2 @@
+1forge: foreign exchange https://1forge.com/api
+openweather: weather https://openweathermap.org/
