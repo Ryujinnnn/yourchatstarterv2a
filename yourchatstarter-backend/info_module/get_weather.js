@@ -9,7 +9,7 @@ function query(locationString) {
             reject("Error in OpenWeather API")
         }
         else {
-        let obj = JSON.parse(await res.text())
+            let obj = JSON.parse(await res.text())
             let result = {
                 temp: obj.main.temp - 273,
                 temp_feel: obj.main.feels_like - 273,
