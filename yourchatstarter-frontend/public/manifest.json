@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "YourChatStarter - Your informational chatbot",
+  "name": "Have a chatbot to answer your everyday question today",
   "icons": [
     {
       "src": "favicon.ico",
