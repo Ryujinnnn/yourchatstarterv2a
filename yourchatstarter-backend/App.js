@@ -19,7 +19,7 @@ app.get('/api', (req, res) => {
   res.send('Hello World!')
 })
 app.get('/googledc62c33f1ad76070.html', (req, res) => {
-  res.sendFile('./googledc62c33f1ad76070.html')
+  res.sendFile(path.join(__dirname + '/googledc62c33f1ad76070.html'))
 })
 app.get('/robots.txt', (req, res) => {
   res.sendFile(path.join(__dirname + '/../yourchatstarter-frontend/build/robots.txt'))
