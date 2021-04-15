@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
     let response = ""
     let parsed_data = await wit_send(message)
     if (parsed_data.intents.length == 0) response = "Mình đéo hiểu bạn đang nói gì :l"
-    if (parsed_data.intents[0].confidence < 0.8) response = "Mình không chắc bạn đang nói gì"
+    else if (parsed_data.intents[0].confidence < 0.8) response = "Mình không chắc bạn đang nói gì"
     else if (parsed_data.intents[0].name == "greeting") response = "Chào bạn"
     else if (parsed_data.intents[0].name == "ask_weather") {
       //response = "Đang đợi code chức năng dò thời tiết bạn ơi :v"
