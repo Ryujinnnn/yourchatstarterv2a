@@ -21,6 +21,11 @@ app.get('/api', (req, res) => {
 app.get('/googledc62c33f1ad76070.html', (req, res) => {
   res.sendFile(path.join(__dirname + '/googledc62c33f1ad76070.html'))
 })
+
+app.get('/nganluong_e84a46e3adc10e50e96f1dcfa506748b.html', (req, res) => {
+  res.sendFile(path.join(__dirname + '/nganluong_e84a46e3adc10e50e96f1dcfa506748b.html'))
+})
+
 app.get('/robots.txt', (req, res) => {
   res.sendFile(path.join(__dirname + '/../yourchatstarter-frontend/build/robots.txt'))
 })
