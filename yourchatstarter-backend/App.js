@@ -4,6 +4,9 @@ const path = require('path');
 
 const message = require('./routes/message')
 const send_message = require('./routes/send_message')
+const payment = require('./routes/payment')
+const auth = require('./routes/auth')
+
 require('dotenv').config()
 
 const app = express()
@@ -36,6 +39,8 @@ app.get('/robots.txt', (req, res) => {
 
 app.use("/api/message", message)
 app.use("/api/send_message", send_message)
+// app.use("/api/payment", payment)
+// app.use("/api/auth", auth)
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/../yourchatstarter-frontend/build/index.html'));
