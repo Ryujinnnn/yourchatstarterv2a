@@ -6,6 +6,7 @@ const message = require('./routes/message')
 const send_message = require('./routes/send_message')
 const payment = require('./routes/payment')
 const auth = require('./routes/auth')
+const databaseConn = require('./database/database_connection')
 
 require('dotenv').config()
 
@@ -48,4 +49,6 @@ app.get('*', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening at port ${port}`)
+  //open connection test
+  //databaseConn.initConnection()
 })
