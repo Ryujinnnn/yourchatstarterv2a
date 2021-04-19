@@ -1,0 +1,48 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+.container img {
+  filter: brightness(50%);
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered h1 {
+  font-size: 4rem;
+}
+
+.centered p {
+  font-size: 1.5rem;
+}
+
+.blueButton {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #3498db;
+  border: 0;
+  border-bottom: 2px solid #2a8bcc;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #2a8bcc;
+  box-shadow: inset 0 -2px #2a8bcc;
+}
+.blueButton {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

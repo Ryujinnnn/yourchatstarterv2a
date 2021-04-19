@@ -24,7 +24,7 @@ export class SubscribeTable extends Component {
                     <li>Premium Support</li>
                     <li>Pay monthly</li>
                     <li>Listed in supporter list(*)</li>
-                    <li className="grey"><a href="/chat" className="button">Sign Up</a></li>
+                    <li className="grey"><a href="/payment" className="button">Sign Up</a></li>
                 </ul>
                 </div>
                 <div className="columns">
@@ -35,7 +35,7 @@ export class SubscribeTable extends Component {
                     <li>Premium Support</li>
                     <li>Pay once</li>
                     <li>Listed in supporter list</li>
-                    <li className="grey"><a href="/chat" className="button">Sign Up</a></li>
+                    <li className="grey"><a href="/payment" className="button">Sign Up</a></li>
                 </ul>
                 </div>   
             </div>

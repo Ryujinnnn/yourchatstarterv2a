@@ -1,7 +1,7 @@
 import { Component } from "react";
 import './Style.css'
 
-export class LoginPrompt extends Component {
+export class PaymentInfoPrompt extends Component {
     render() {
         const style = {
             backgroundColor: "#4CAF50",
@@ -21,10 +21,11 @@ export class LoginPrompt extends Component {
         return (
             <div>
                 <form action="#" method="post">
-                    <input type="text" name="email" placeholder="Email"/>
-                    <input type="password" name="password" placeholder="Password"/>
-                    <button type="submit" value="Login" style={style}>Login</button>
-                    <a href='/register'><button type="button" style={style}>Register</button></a>
+                    <input type="text" name="name" maxLength="50" placeholder="Full name"/>
+                    <input type="text" name="email" maxLength="50" placeholder="Email"/>
+                    <input type="text" name="phone_number" maxLength="20" placeholder="Phone number"/>
+                    <input type="text" name="address" maxLength="130" placeholder="Address"/>
+                    <button type="submit" value="Checkout" style={style}>Checkout</button>
                 </form>
             </div>
         )

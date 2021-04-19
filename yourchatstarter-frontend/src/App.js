@@ -6,6 +6,12 @@ import { Helmet } from "react-helmet";
  
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    let state = {
+      sessionId: "",
+    }
+  }
 
   render() {
     return (

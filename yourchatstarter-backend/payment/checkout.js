@@ -6,7 +6,7 @@ function checkOut(purchaseInfo) {
     const ENDPOINT = "https://sandbox.nganluong.vn:8088/nl35/checkout.php"
     let paymentInfo = {
         merchant_site_code: "50226",
-        return_url: "localhost:5000/api/payment/success",
+        return_url: "localhost:5000/payment_success",
         receiver: "neroyuki241@gmail.com",
         transaction_info: "Test",
         order_code: "LT_00001",
@@ -22,7 +22,7 @@ function checkOut(purchaseInfo) {
         affiliate_code: "", 
         lang: "vi",
         secure_code: "",
-        cancel_url: "localhost:5000/api/payment/failure",
+        cancel_url: "localhost:5000/payment_failure",
         notify_url: "",
         time_limit: "",
     }
