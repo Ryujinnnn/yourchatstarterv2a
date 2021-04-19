@@ -2,15 +2,16 @@ import { Component } from "react";
 import { LoginButton } from "../LoginButton";
 import './Style.css'
 
-export class LoginPrompt extends Component {
+export class RegisterPrompt extends Component {
     render() {
         return (
             <div>
                 <form action="#" method="post">
                     <input type="text" name="email" placeholder="Email"/>
                     <input type="password" name="password" placeholder="Password"/>
-                    <LoginButton text="Login" className="login-button"></LoginButton>
-                    <a href='/register' type="button">Register</a>
+                    <input type="password" name="confirm_password" placeholder="Comfirm Password"/>
+                    <input type="text" name="email" placeholder="Email"/>
+                    <button>Register</button>
                 </form>
             </div>
         )
