@@ -1,7 +1,7 @@
 const crypto = require('crypto')
 require('dotenv').config()
 
-export function checkOut(purchaseInfo) {
+function checkOut(purchaseInfo) {
     //TODO: Move some property to a separated config.json
     const ENDPOINT = "https://sandbox.nganluong.vn:8088/nl35/checkout.php"
     let paymentInfo = {
@@ -53,3 +53,6 @@ export function checkOut(purchaseInfo) {
 
     return paymentLink.slice(0, paymentLink.lastIndexOf('&'))
 }
+
+
+module.export = checkOut

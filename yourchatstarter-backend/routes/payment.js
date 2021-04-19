@@ -1,5 +1,5 @@
 const express = require('express')
-import { checkOut } from '../payment/checkout'
+const { checkOut } = require('../payment/checkout')
 const router = express.Router()
 
 router.get('/request_payment', (req, res) => {
