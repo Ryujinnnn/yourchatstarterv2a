@@ -53,7 +53,7 @@ class RegisterPrompt extends Component {
             fontSize: "14px",
             margin: "15px",
             //borderRadius: "12px",
-            width: "10vw",
+            width: "100px",
             display: "inline-block",
             float: "left"
         };

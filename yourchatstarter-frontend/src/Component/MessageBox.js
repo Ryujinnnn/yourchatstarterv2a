@@ -4,9 +4,14 @@ export class MessageBox extends Component {
     constructor(props) {
         super(props)
         this.onContentChange = this.props.onChange
+        this.handleKeyDown = this.props.handleKeyDown
     }
 
     onContentChange(value) {
+
+    }
+
+    handleKeyDown(event) {
 
     }
     
@@ -24,7 +29,7 @@ export class MessageBox extends Component {
             backgroundColor: "#e29ae2"
         }
         return (
-            <input name="message" type="text" style={style}  onChange={e => this.onContentChange(e.target.value)}></input>
+            <input name="message" type="text" style={style}  onChange={e => this.onContentChange(e.target.value)} value={this.props.text} onKeyDown={this.handleKeyDown}></input>
         )
     }
 }

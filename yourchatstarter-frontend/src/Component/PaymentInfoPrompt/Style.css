@@ -9,3 +9,27 @@ form input{
     border: solid 1px #ffb2ff;
 }
 
+.payment_column {
+    float: left;
+    padding: 20px;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .payment_row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  .payment_row p {
+    font-size: 1.5rem;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .column {
+      width: 100%;
+    }
+  }

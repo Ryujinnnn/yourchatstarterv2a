@@ -19,6 +19,7 @@ class Chat extends Component {
       this.onTextChange = this.onTextChange.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
       this.render = this.render.bind(this)
+      this.handleKeyPress = this.handleKeyPress.bind(this)
     }
   
     componentDidMount() {
@@ -42,13 +43,15 @@ class Chat extends Component {
         },
         body: JSON.stringify({ post: this.state.post }),
       }
-      console.log(req)
+      this.setState({
+        post: ""
+      })
+      //console.log(req)
       const response = await fetch('/api/send_message', req);
       const body = await response.text();
       this.setState({
         messageList: [...this.state.messageList, {text: body, isFromClient: false}]
       })
-      this.render()
     };
 
     onClickHandler() {
@@ -56,7 +59,7 @@ class Chat extends Component {
       this.setState({
         messageList: [...this.state.messageList, {text: this.state.post, isFromClient: true}]
       })
-      console.log(this.state.messageList)
+      //console.log(this.state.messageList)
       this.render()
       this.handleSubmit()
     }
@@ -66,6 +69,13 @@ class Chat extends Component {
         post: value
       })
     }
+
+    handleKeyPress(event){
+      console.log(event)
+      if(event.key === 'Enter') {
+        this.onClickHandler()
+      }
+    }
     
   
     render() {
@@ -73,7 +83,7 @@ class Chat extends Component {
         <div className="Chat">
 
             <MessageContainer messageList={this.state.messageList}></MessageContainer>
-            <MessageBox onChange={this.onTextChange}></MessageBox>
+            <MessageBox onChange={this.onTextChange} text={this.state.post} handleKeyDown={this.handleKeyPress}></MessageBox>
             <SendButton text="Send" style={{float: "right"}} onAction={this.onClickHandler}></SendButton>
 
             <Footer></Footer>
