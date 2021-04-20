@@ -7,11 +7,11 @@ import { Helmet } from "react-helmet";
 
 class App extends Component {
   constructor(props) {
-    super(props)
-    let state = {
-      sessionId: "",
+    super(props);
+    this.state = {
+        token: undefined
     }
-  }
+}
 
   render() {
     return (
@@ -40,7 +40,7 @@ class App extends Component {
             <meta name="twitter:image" content=""/>
           </Helmet>
           <Header></Header>
-          <Routes></Routes>
+          <Routes token={this.state.token}></Routes>
           
       </div>
     );

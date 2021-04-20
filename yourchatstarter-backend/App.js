@@ -13,6 +13,9 @@ require('dotenv').config()
 const app = express()
 
 const port = process.env.PORT || 5000;
+
+let whitelist = ['http://']
+
 app.use(cors());
 app.use(express.static(path.join(__dirname, '/../yourchatstarter-frontend/build')));
 
@@ -41,7 +44,7 @@ app.get('/robots.txt', (req, res) => {
 app.use("/api/message", message)
 app.use("/api/send_message", send_message)
 // app.use("/api/payment", payment)
-// app.use("/api/auth", auth)
+app.use("/api/auth", auth)
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/../yourchatstarter-frontend/build/index.html'));
@@ -50,5 +53,5 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at port ${port}`)
   //open connection test
-  //databaseConn.initConnection()
+  databaseConn.initConnection()
 })

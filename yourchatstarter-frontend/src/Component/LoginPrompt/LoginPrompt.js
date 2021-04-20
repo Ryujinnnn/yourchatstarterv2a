@@ -1,7 +1,45 @@
 import { Component } from "react";
 import './Style.css'
+import { withRouter } from 'react-router-dom' 
 
-export class LoginPrompt extends Component {
+async function loginUser(credentials) {
+    return fetch('api/auth/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(credentials)
+    }).then(data => data.json())
+}
+
+class LoginPrompt extends Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            username: "",
+            password: "",
+            token: "",
+        }
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    async handleSubmit(e) {
+        e.preventDefault();
+        const login_result = await loginUser({
+          username: this.state.username,
+          password: this.state.password
+        });
+        if (login_result.status === "success") {
+            console.log('login success')
+            sessionStorage.setItem('token', login_result.token);
+            this.props.history.push('/')
+        }
+        else {
+            alert(login_result.desc)
+        }
+    }
+
     render() {
         const style = {
             backgroundColor: "#4CAF50",
@@ -18,11 +56,13 @@ export class LoginPrompt extends Component {
             float: "left"
         };
 
+        
+
         return (
             <div>
-                <form action="#" method="post">
-                    <input type="text" name="email" placeholder="Email"/>
-                    <input type="password" name="password" placeholder="Password"/>
+                <form onSubmit={this.handleSubmit}>
+                    <input type="text" name="username" onChange={e => this.setState({username: e.target.value})} placeholder="Username"/>
+                    <input type="password" name="password" onChange={e => this.setState({password: e.target.value})} placeholder="Password"/>
                     <button type="submit" value="Login" style={style}>Login</button>
                     <a href='/register'><button type="button" style={style}>Register</button></a>
                 </form>
@@ -30,3 +70,5 @@ export class LoginPrompt extends Component {
         )
     }
 }
+
+export default withRouter(LoginPrompt) 

@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import Footer from './Component/Footer/Footer'
-import { LoginPrompt } from './Component/LoginPrompt/LoginPrompt'
+import LoginPrompt from './Component/LoginPrompt/LoginPrompt'
 
 class Login extends Component {
     render() {

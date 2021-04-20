@@ -1,5 +1,6 @@
 import {
     BrowserRouter as Router,
+    Redirect,
     Route,
     Switch,
 } from 'react-router-dom'
@@ -18,20 +19,40 @@ import { Component } from 'react'
 import Navigation from '../Component/Navigation/Navigation'
  
 class Routes extends Component {
+
     render() {
-        return (
+        if (!sessionStorage.getItem("token")) {
+            return (
+                <Router>
+                    <Navigation></Navigation>
+                    <Switch>
+                        <Route exact path="/chat"><Chat /></Route>
+                        <Route exact path="/subscribe"><Subscribe /></Route>
+                        <Route exact path="/login"><Login /></Route>
+                        <Route exact path="/about"><About /></Route>
+                        <Route exact path="/register"><Register /></Route>
+                        <Route exact path='/payment'><Login /></Route>
+                        <Route exact path='/history'><Login /></Route>
+                        <Route exact path="/logout">{<Redirect exact from='/logout' to="/"/>}</Route>
+                        <Route exact path="/"><Landing /></Route>
+                    </Switch>
+                </Router>
+            )
+        }
+        else return (
             <Router>
                 <Navigation></Navigation>
                 <Switch>
                     <Route exact path="/chat"><Chat /></Route>
                     <Route exact path="/subscribe"><Subscribe /></Route>
-                    <Route exact path="/login"><Login /></Route>
+                    <Route exact path="/login"><Landing /></Route>
                     <Route exact path="/about"><About /></Route>
                     <Route exact path="/register"><Register /></Route>
                     <Route exact path='/payment'><PaymentInfo /></Route>
                     <Route exact path='/payment_failure'><BillingFailure /></Route>
                     <Route exact path='/payment_success'><BillingSuccess /></Route>
                     <Route exact path='/history'><BillingHistory /></Route>
+                    <Route exact path="/logout">{<Redirect exact from='/logout' to="/"/>}</Route>
                     <Route exact path="/"><Landing /></Route>
                 </Switch>
             </Router>

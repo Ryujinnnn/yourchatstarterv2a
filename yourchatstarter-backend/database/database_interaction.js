@@ -1,4 +1,4 @@
-const databaseConn = require('./databaseconnection.js')
+const databaseConn = require('./database_connection.js')
 const mongodb = require('mongodb')
 
 module.exports.addRecord = (colName, record) => {
