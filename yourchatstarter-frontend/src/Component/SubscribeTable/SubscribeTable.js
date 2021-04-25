@@ -1,41 +1,52 @@
 import { Component } from "react";
 import './Style.css'
+import { Link } from 'react-router-dom'
 
 export class SubscribeTable extends Component {
     render() {
+
+        const premium_location = {
+            pathname: '/payment',
+            state: { plan: "premium" }
+        }
+
+        const lifetime_location = {
+            pathname: '/payment',
+            state: { plan: "lifetime" }
+        }
         return(
             <div>
                 <div className="columns">
                 <ul className="price">
-                    <li className="header">Basic</li>
-                    <li className="grey">Free</li>
-                    <li>Served with Ads</li>
-                    <li>Normal support</li>
-                    <li>Free as long as you like</li>
+                    <li className="header">Cơ bản</li>
+                    <li className="grey">Miễn phí</li>
+                    <li>Chức năng giới hạn</li>
+                    <li>Hỗ trợ thông thường</li>
+                    <li>Miễn phí đến lúc nào cũng được</li>
                     <li>-</li>
-                    <li className="grey">Free forever :D</li>
+                    <li className="grey">Miễn phí vĩnh viễn :D</li>
                 </ul>
                 </div>
                 <div className="columns">
                 <ul className="price">
-                    <li className="header">Premium</li>
-                    <li className="grey">$ 0.99 / month</li>
-                    <li>Ad-free</li>
-                    <li>Premium Support</li>
-                    <li>Pay monthly</li>
-                    <li>Listed in supporter list(*)</li>
-                    <li className="grey"><a href="/payment" className="button">Sign Up</a></li>
+                    <li className="header">Cao cấp</li>
+                    <li className="grey">20.000đ / tháng</li>
+                    <li>Đầy đủ chức năng</li>
+                    <li>Hỗ trợ nâng cao</li>
+                    <li>Trả phí hằng tháng</li>
+                    <li>Được liệt kê trong lời cảm ơn(*)</li>
+                    <li className="grey"><Link to={premium_location} className="button">Mua ngay</Link></li>
                 </ul>
                 </div>
                 <div className="columns">
                 <ul className="price">
-                    <li className="header">Lifetime</li>
-                    <li className="grey">only $ 9.99</li>
-                    <li>Ad-free</li>
-                    <li>Premium Support</li>
-                    <li>Pay once</li>
-                    <li>Listed in supporter list</li>
-                    <li className="grey"><a href="/payment" className="button">Sign Up</a></li>
+                    <li className="header">Trọn đời</li>
+                    <li className="grey">200.000đ</li>
+                    <li>Đầy đủ chức năng</li>
+                    <li>Hỗ trợ nâng cao</li>
+                    <li>Trả phí một lần duy nhất</li>
+                    <li>Được liệt kê trong lời cảm ơn</li>
+                    <li className="grey"><Link to={lifetime_location} className="button">Mua ngay</Link></li>
                 </ul>
                 </div>   
             </div>

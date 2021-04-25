@@ -27,9 +27,40 @@ form input{
     font-size: 1.5rem;
   }
   
-  /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 400px) {
     .column {
       width: 100%;
     }
+  }
+
+
+  .payment_column .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    color: black;
+    width: 75%;
+    float: right;
+  }
+
+  .payment_column .container h2 {
+    /* float: left; */
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .payment_column .container p {
+    /* float: left; */
+    font-size: 15px;
+    text-align: left;
+  }
+
+  hr {
+    display: block;
+  }
+
+  span.price {
+    float: right;
+    color: grey;
   }

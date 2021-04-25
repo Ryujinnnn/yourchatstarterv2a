@@ -13,7 +13,7 @@ class Footer extends Component {
 				<img src="logo200.png" alt="YourChatStarter" className="footer-logo"></img>
 
 				<p className="footer-links">
-					<a href="/chat">Chat</a> · <a href="/subscribe">Subscribe</a> · <a href="/about">About</a> · <a href="/login">Login</a>
+					<a href="/chat">Chat</a> · <a href="/subscribe">Dịch vụ</a> · <a href="/about">Thông tin</a>
 				</p>
 				<p className="footer-company-name">Nguyen Ngoc Dang @ 2021</p>
 
@@ -27,13 +27,13 @@ class Footer extends Component {
 
 			<div className="footer-right">
 
-				<p>Contact Us</p>
+				<p>Liên hệ chúng tôi</p>
 
 				<form action="#" method="post">
 
 					<input type="text" name="email" placeholder="Email"/>
 					<textarea name="message" placeholder="Message"></textarea>
-					<button>Send</button>
+					<button>Gửi</button>
 				</form>
 			</div>
 		</div>

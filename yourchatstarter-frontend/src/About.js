@@ -7,9 +7,9 @@ class About extends Component {
         return (
             <div>
                 <div>
-                    <h2>About this project</h2>
-                    <p>YourChatStarter provide you a chat bot companion that can answer your everyday questions</p>
-                    <p>Made possible with a clean simple interface mimicking a chat window</p>
+                    <h2>Về dự án</h2>
+                    <p>YourChatStarter cung cấp cho bạn một chatbot cung cấp thông tin nhanh và chính xác</p>
+                    <p>Sử dụng với một giao diện khung chat đơn giản và thân thiện</p>
                 </div>
                 <Footer></Footer>
             </div>

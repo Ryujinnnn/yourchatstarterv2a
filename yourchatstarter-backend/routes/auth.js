@@ -11,13 +11,28 @@ router.post('/login', async (req, res) => {
         hashed_password: crypto.createHash('md5').update(input.password).digest('hex')
     }
     let query_result = await db.queryRecord("user", queryInfo)
-    //TODO: session database for token
     if (query_result.length > 0) {
-        res.send({
-            status: "success",
-            desc: "login success",
-            token: query_result[0].hashed_password
-        })
+        let token = crypto.createHash('md5').update(query_result[0].hashed_password).update(new Date().toISOString()).digest('hex')
+        let sessionInfo = {
+            token: token,
+            username: query_result[0].username,
+            createdAt: new Date(),
+            is_paid: (query_result[0].paid_valid_until > new Date())? true : false,
+        }
+        let action_result = await db.addRecord("session", sessionInfo)
+        if (action_result) {
+            res.send({
+                status: "success",
+                desc: "login success",
+                token: token,
+            })
+        }
+        else {
+            res.send({
+                status: "failure",
+                desc: "internal server error",
+            })
+        }
     }
     else {
         res.send({
@@ -32,7 +47,7 @@ router.post('/register', async (req, res) => {
     if (input.confirm_password != input.password) {
         res.send({
             status: "failure",
-            reason: "passwords do not match"
+            desc: "passwords do not match"
         })
         return
     }
@@ -43,14 +58,15 @@ router.post('/register', async (req, res) => {
     if (query_result.length > 0) {
         res.send({
             status: "failure",
-            reason: "username already existed"
+            desc: "username already existed"
         })
         return
     }
     let recordInfo = {
         username: input.username,
         hashed_password: crypto.createHash('md5').update(input.password).digest('hex'),
-        email: input.email
+        email: input.email,
+        paid_valid_until: 0,
     }
     let action_result = await db.addRecord("user", recordInfo)
     if (action_result) {
@@ -71,5 +87,29 @@ router.post('/register', async (req, res) => {
 router.get('/logout', () => {
     
 })
+
+router.post('/verify_token', async (req, res) => {
+    let input = req.body;
+    let tokenQuery = {
+        token: input.token
+    }
+
+    let query_result = await db.queryRecord("session", tokenQuery)
+    if (query_result.length == 0) {
+        res.send({
+            status: "failure",
+            desc: "token not exist"
+        })
+        return
+    }
+    else {
+        res.send({
+            status: "success",
+            desc: "token verification success",
+            is_paid: query_result[0].is_paid
+        })
+        return
+    }
+}) 
 
 module.exports = router

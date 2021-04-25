@@ -18,25 +18,25 @@ class App extends Component {
       <div className="App" style={{backgroundColor: "#c27ac2"}}>
           <Helmet>
             {/*<!-- HTML Meta Tags -->*/}
-            <title>YourChatStarter - Your informational chatbot</title>
-            <meta name="description" content="Have a chatbot to answer your everyday question today"/>
+            <title>YourChatStarter - Chatbot cung cấp thông tin cho bạn</title>
+            <meta name="description" content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay"/>
 
             {/* <!-- Google / Search Engine Tags --> */}
-            <meta itemprop="name" content="YourChatStarter - Your informational chatbot"/>
-            <meta itemprop="description" content="Have a chatbot to answer your everyday question today"/>
+            <meta itemprop="name" content="YourChatStarter - Chatbot cung cấp thông tin cho bạn"/>
+            <meta itemprop="description" content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay"/>
             <meta itemprop="image" content=""/>
 
             {/* <!-- Facebook Meta Tags --> */}
-            <meta property="og:url" content="http://www.yourchatstarter.tk"/>
+            <meta property="og:url" content="http://www.yourchatstarter.xyz"/>
             <meta property="og:type" content="website"/>
-            <meta property="og:title" content="YourChatStarter - Your informational chatbot"/>
-            <meta property="og:description" content="Have a chatbot to answer your everyday question today"/>
+            <meta property="og:title" content="YourChatStarter - Chatbot cung cấp thông tin cho bạn"/>
+            <meta property="og:description" content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay"/>
             <meta property="og:image" content=""/>
 
             {/* <!-- Twitter Meta Tags --> */}
             <meta name="twitter:card" content="summary_large_image"/>
-            <meta name="twitter:title" content="YourChatStarter - Your informational chatbot"/>
-            <meta name="twitter:description" content="Have a chatbot to answer your everyday question today"/>
+            <meta name="twitter:title" content="YourChatStarter - Chatbot cung cấp thông tin cho bạn"/>
+            <meta name="twitter:description" content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay"/>
             <meta name="twitter:image" content=""/>
           </Helmet>
           <Header></Header>

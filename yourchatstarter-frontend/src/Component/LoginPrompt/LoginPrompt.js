@@ -61,10 +61,10 @@ class LoginPrompt extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="username" onChange={e => this.setState({username: e.target.value})} placeholder="Username"/>
-                    <input type="password" name="password" onChange={e => this.setState({password: e.target.value})} placeholder="Password"/>
-                    <button type="submit" value="Login" style={style}>Login</button>
-                    <a href='/register'><button type="button" style={style}>Register</button></a>
+                    <input type="text" name="username" onChange={e => this.setState({username: e.target.value})} placeholder="Tên tài khoản"/>
+                    <input type="password" name="password" onChange={e => this.setState({password: e.target.value})} placeholder="Mật khẩu"/>
+                    <button type="submit" value="Login" style={style}>Đăng nhập</button>
+                    <a href='/register'><button type="button" style={style}>Đăng ký</button></a>
                 </form>
             </div>
         )

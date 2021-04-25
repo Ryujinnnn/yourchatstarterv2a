@@ -61,11 +61,11 @@ class RegisterPrompt extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="username" onChange={e => this.setState({username: e.target.value})}  placeholder="Username"/>
-                    <input type="password" name="password" onChange={e => this.setState({password: e.target.value})} placeholder="Password"/>
-                    <input type="password" name="confirm_password" onChange={e => this.setState({confirm_password: e.target.value})} placeholder="Comfirm Password"/>
+                    <input type="text" name="username" onChange={e => this.setState({username: e.target.value})}  placeholder="Tên tài khoản"/>
+                    <input type="password" name="password" onChange={e => this.setState({password: e.target.value})} placeholder="Mật khẩu"/>
+                    <input type="password" name="confirm_password" onChange={e => this.setState({confirm_password: e.target.value})} placeholder="Xác nhận mật khẩu"/>
                     <input type="text" name="email" onChange={e => this.setState({email: e.target.value})} placeholder="Email"/>
-                    <button type="submit" value="Register" style={style}>Register</button>
+                    <button type="submit" value="Register" style={style}>Đăng ký</button>
                 </form>
             </div>
         )

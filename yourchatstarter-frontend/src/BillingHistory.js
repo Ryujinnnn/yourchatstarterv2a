@@ -6,8 +6,8 @@ class BillingHistory extends Component {
         return (
             <div>
                 <div>
-                    <h2>Billing History</h2>
-                    <p>This is the billing history</p>
+                    <h2>Lịch sử thanh toán</h2>
+                    <p>Đây là lịch sử thanh toán</p>
                 </div>
                 <Footer></Footer>
             </div>

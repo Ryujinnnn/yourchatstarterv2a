@@ -84,7 +84,7 @@ class Chat extends Component {
 
             <MessageContainer messageList={this.state.messageList}></MessageContainer>
             <MessageBox onChange={this.onTextChange} text={this.state.post} handleKeyDown={this.handleKeyPress}></MessageBox>
-            <SendButton text="Send" style={{float: "right"}} onAction={this.onClickHandler}></SendButton>
+            <SendButton text="Gửi" style={{float: "right"}} onAction={this.onClickHandler}></SendButton>
 
             <Footer></Footer>
             </div>

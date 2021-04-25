@@ -9,18 +9,18 @@ class ContentColumn extends Component {
             <div className="row">
                 <div className="column">
                     <FontAwesomeIcon icon={faBrain} size="4x"></FontAwesomeIcon>
-                    <h2>Understand</h2>
-                    <p>Using advanced Natural Language Understanding engine, you have so many way to ask our chatbot</p>
+                    <h2>Thông hiểu</h2>
+                    <p>Dùng công cụ xử lý ngôn ngữ tự nhiên hiện đại, bạn có thật nhiều cách để hỏi chatbot của chúng tôi</p>
                 </div>
                 <div className="column">
                 <FontAwesomeIcon icon={faCheckCircle} size="4x"></FontAwesomeIcon>
-                    <h2>Accurate</h2>
-                    <p>We ensure the information we give you is up-to-date and accurate no problem</p>
+                    <h2>Chính xác</h2>
+                    <p>Chúng tôi đảm bảo chatbot sẽ đưa ra thông tin chính xác và cập nhật</p>
                 </div>
                 <div className="column">
                     <FontAwesomeIcon icon={faCommentsDollar} size="4x"></FontAwesomeIcon>
-                    <h2>Free</h2>
-                    <p>But you can always pay a little to get rid of those ads</p>
+                    <h2>Miễn phí</h2>
+                    <p>Nhưng bạn có thể trả tiền để mở những dịch vụ cao cấp hơn</p>
                 </div>
             </div>
         )

@@ -9,8 +9,8 @@ class BigPicture extends Component {
                 <img src={picture} alt="Chat" style={{width: "100vw", height: "70vh", objectFit: "cover"}}></img>      
                 <div className="centered">
                     <h1>YourChatStarter</h1>
-                    <p>Your informational chatbot at the tip of your finger</p>
-                    <a href="/chat"><button type="button" className="blueButton">Get started now!</button></a>
+                    <p>Chatbot cung cấp thông tin ngay trên đầu ngón tay của bạn</p>
+                    <a href="/chat"><button type="button" className="blueButton">Bắt đầu ngay!</button></a>
                 </div>
             </div>
         )
