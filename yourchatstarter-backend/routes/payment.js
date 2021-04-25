@@ -5,6 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 
 router.get('/confirm_payment', (req, res) => {
     console.log(req)
+    res.send("1")
 })
 
 router.post('/submit_info', (req, res) => {
