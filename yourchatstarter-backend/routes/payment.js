@@ -68,7 +68,7 @@ router.get('/confirm_payment', async (req, res) => {
         username: user_query_result[0].username,
         created_at: new Date(),
         plan_name: query_result[0].plan_name,
-        amount: query_info[0].amount,
+        amount: query_result[0].amount,
     }
     let add_billing_result = await db.addRecord("billing", billing_record)
     if (!add_billing_result) {
