@@ -6,8 +6,8 @@ class BillingFailure extends Component {
         return (
             <div>
                 <div>
-                    <h2>Billing Failed</h2>
-                    <p>Something wrong happened when you try to make the purchase, maybe hit us up to let us know what went wrong?</p>
+                    <h2>Thanh toán thất bại</h2>
+                    <p>Có gì đó bất thường đã xảy ra trong quá trình? Bạn có thể liên lạc chúng tôi</p>
                 </div>
                 <Footer></Footer>
             </div>

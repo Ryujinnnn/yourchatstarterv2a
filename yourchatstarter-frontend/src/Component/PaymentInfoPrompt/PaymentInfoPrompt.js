@@ -35,7 +35,7 @@ class PaymentInfoPrompt extends Component {
             email: this.state.email,
             phone_number: this.state.phone_number,
             address: this.state.address,
-            plan_name: this.state.plan_name,
+            plan_name: this.props.plan,
             amount: this.state.amount,
             user_token: sessionStorage.getItem('token')
         });

@@ -1,0 +1,9 @@
+.profileContainer p {
+    text-align: left;
+    margin: 20px;
+    font-size: large;
+}
+
+.profileInfoText {
+    font-weight: bold;
+}

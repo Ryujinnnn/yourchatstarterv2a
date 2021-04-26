@@ -6,8 +6,8 @@ class BillingSuccess extends Component {
         return (
             <div>
                 <div>
-                    <h2>Billing Completed</h2>
-                    <p>Thanks for the support. Enjoy your new experience</p>
+                    <h2>Thanh toán hoàn tất</h2>
+                    <p>Cảm ơn các bạn đã ủng hộ chúng tôi. Hãy tận hưởng trải nghiệm mới ngay bây giờ</p>
                 </div>
                 <Footer></Footer>
             </div>

@@ -85,8 +85,10 @@ router.post('/register', async (req, res) => {
 })
 
 router.get('/logout', () => {
-    
+    //TODO: delete sender token
 })
+
+router
 
 router.post('/verify_token', async (req, res) => {
     let input = req.body;

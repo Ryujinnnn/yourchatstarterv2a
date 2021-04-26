@@ -51,7 +51,7 @@ class Navigation extends Component {
                        
                         <div className="dropdown-content">
                             <a href="/history">Lịch sử thanh toán</a>
-                            <a href="#">Hồ sơ</a>
+                            <a href="/profile">Hồ sơ</a>
                             <a href="/logout" onClick={() => {console.log("logging out"); sessionStorage.removeItem('token')}}>Đăng xuất</a>
                         </div>
                     </li>

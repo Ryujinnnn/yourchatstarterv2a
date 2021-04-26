@@ -3,7 +3,10 @@ require('dotenv').config()
 
 module.exports = function checkout(purchaseInfo) {
 
-    const SERVER_ENDPOINT = 'http://www.yourchatstarter.xyz'
+    const PRODUCTION_SERVER_ENPOINT = 'http://yourchatstarter.xyz'
+    const DEVELOPMENT_SERVER_ENDPOINT = 'http://localhost:3000'
+    const SERVER_ENDPOINT = PRODUCTION_SERVER_ENPOINT
+    
     //TODO: Move some property to a separated config.json
     const ENDPOINT = "https://sandbox.nganluong.vn:8088/nl35/checkout.php"
     let paymentInfo = {
@@ -53,5 +56,8 @@ module.exports = function checkout(purchaseInfo) {
         paymentLink += key + "=" + paymentInfo[key] + "&"
     }) 
 
-    return paymentLink.slice(0, paymentLink.lastIndexOf('&'))
+    return {
+        link: paymentLink.slice(0, paymentLink.lastIndexOf('&')),
+        secure_code: paymentInfo.secure_code,
+    }
 }

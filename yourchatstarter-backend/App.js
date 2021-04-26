@@ -6,6 +6,7 @@ const message = require('./routes/message')
 const send_message = require('./routes/send_message')
 const payment = require('./routes/payment')
 const auth = require('./routes/auth')
+const user = require('./routes/user')
 const databaseConn = require('./database/database_connection')
 
 require('dotenv').config()
@@ -13,8 +14,6 @@ require('dotenv').config()
 const app = express()
 
 const port = process.env.PORT || 5000;
-
-let whitelist = ['http://']
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, '/../yourchatstarter-frontend/build')));
@@ -45,6 +44,7 @@ app.use("/api/message", message)
 app.use("/api/send_message", send_message)
 app.use("/api/payment", payment)
 app.use("/api/auth", auth)
+app.use("/api/user", user)
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/../yourchatstarter-frontend/build/index.html'));
