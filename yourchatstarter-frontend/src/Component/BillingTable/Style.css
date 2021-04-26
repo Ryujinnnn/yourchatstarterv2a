@@ -1,0 +1,33 @@
+.billingContainer h2 {
+    text-align: left;
+    margin: 20px
+}
+
+.billingContainer p {
+    text-align: left;
+    margin: 20px
+}
+
+
+table.billingTable {
+    width: calc(100% - 40px);
+    margin: 20px;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #000000;
+    border-style: solid;
+    color: #000000;
+    
+  }
+  
+  table.billingTable td, table.billingTable th {
+    border-width: 1px;
+    border-color: #000000;
+    border-style: solid;
+    padding: 5px;
+  }
+  
+  table.billingTable thead {
+    background-color: #c4c4c4;
+  }
