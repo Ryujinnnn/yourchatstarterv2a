@@ -85,7 +85,7 @@ router.get('/confirm_payment', async (req, res) => {
     //update user
     let update_user_action = {
         $set: {
-            paid_valid_until: new_expire_date
+            paid_valid_until: {$toDate: new_expire_date}
         }
     }
     let update_user_result = await db.editRecords("user", user_query, update_user_action)
