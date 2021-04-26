@@ -3,19 +3,31 @@ const checkout = require('../payment/checkout')
 const router = express.Router()
 const { v4: uuidv4 } = require('uuid');
 const db = require('../database/database_interaction')
+const crypto = require('crypto')
 
 router.get('/confirm_payment', async (req, res) => {
-    console.log(req)
+    console.log("receiving transaction confirmation info")
     let query_info = req.query
-    //TODO: check this order with existing pending bill list
-    //add new confirmed bill
-    //change current user is_paid_until_value arcording to plan name
-    //change current user session state to paid
     
     res.send("1")
+
+    let secure_string = ' ' + query_info['transaction_info'] 
+    + ' ' + query_info['order_code']
+    + ' ' + query_info['price']
+    + ' ' + query_info['payment_id']
+    + ' ' + query_info['payment_type']
+    + ' ' + query_info['error_text']
+    + ' ' + '50226' //HARDCODED MERCHANT CODE, MOVE IT ASAP
+    + ' ' + process.env.NL_TOKEN_SB;
+
+    secure_code = crypto.createHash('md5').update(secure_string).digest('hex');
+    if (secure_code !== query_info.secure_code) {
+        console.log("ERROR: checksum failed, transaction info might have been tampered, aborting...")
+        return
+    }
+
     let pending_billing_query = {
         order_id: query_info.order_code,
-        secure_code: query_info.secure_code,
     }
     let query_result = await db.queryRecord("pending_bill", pending_billing_query)
     if (query_result.length == 0) {
@@ -84,7 +96,7 @@ router.get('/confirm_payment', async (req, res) => {
 
 router.post('/submit_info', async (req, res) => {
     let input = req.body
-    //TODO: add this to a pending bill list (include token and username)
+
     let purchaseInfo = {
         plan_name: input.plan_name,
         amount: input.amount,
