@@ -36,7 +36,7 @@ router.get('/confirm_payment', async (req, res) => {
     }
     //find session
     let session_query = {
-        token: query_result.token,
+        token: query_result[0].token,
     }
 
     let session_query_result = await db.queryRecord("session", session_query)
@@ -75,7 +75,7 @@ router.get('/confirm_payment', async (req, res) => {
         console.log("ERROR: can't add payment bill")
     }
     let number_of_date_to_add = 0
-    switch (query_result.plan_name) {
+    switch (query_result[0].plan_name) {
         case 'premium': number_of_date_to_add = 30; break;
         case 'lifetime': number_of_date_to_add = 7200; break;
         default: number_of_date_to_add = 0;
