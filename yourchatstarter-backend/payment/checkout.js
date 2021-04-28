@@ -10,7 +10,7 @@ module.exports = function checkout(purchaseInfo) {
     //TODO: Move some property to a separated config.json
     const ENDPOINT = "https://www.nganluong.vn/checkout.php"
     let paymentInfo = {
-        merchant_site_code: "64836",
+        merchant_site_code: "64888",
         return_url: `${SERVER_ENDPOINT}/payment_success`,
         receiver: "neroyuki241@gmail.com",
         transaction_info: "Test",
@@ -47,7 +47,7 @@ module.exports = function checkout(purchaseInfo) {
     + ' ' + paymentInfo['order_description']
     + ' ' + paymentInfo['buyer_info']
     + ' ' + paymentInfo['affiliate_code']
-    + ' ' + process.env.NL_TOKEN_2;
+    + ' ' + process.env.NL_TOKEN_3;
 
     paymentInfo.secure_code = crypto.createHash('md5').update(secure_string).digest('hex');
 
