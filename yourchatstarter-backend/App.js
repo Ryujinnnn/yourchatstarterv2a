@@ -36,6 +36,10 @@ app.get('/nganluong_cc30bcb3ecc76b173d726514d6b5487f.html', (req, res) => {
   res.sendFile(path.join(__dirname + '/nganluong_cc30bcb3ecc76b173d726514d6b5487f.html'))
 })
 
+app.get('/nganluong_d7a5aebf5d3b484f2830f95a2c249bc6.html', (req, res) => {
+  res.sendFile(path.join(__dirname + '/nganluong_d7a5aebf5d3b484f2830f95a2c249bc6.html'))
+})
+
 app.get('/robots.txt', (req, res) => {
   res.sendFile(path.join(__dirname + '/../yourchatstarter-frontend/build/robots.txt'))
 })
