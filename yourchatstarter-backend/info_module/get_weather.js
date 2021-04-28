@@ -7,6 +7,7 @@ function query(locationString) {
         if (res.status != 200) {
             console.log("Error in OpenWeather API")
             reject("Error in OpenWeather API")
+            return
         }
         else {
             let obj = JSON.parse(await res.text())

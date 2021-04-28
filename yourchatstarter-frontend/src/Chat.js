@@ -41,7 +41,7 @@ class Chat extends Component {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ post: this.state.post }),
+        body: JSON.stringify({ post: this.state.post, token: sessionStorage.getItem('token') }),
       }
       this.setState({
         post: ""

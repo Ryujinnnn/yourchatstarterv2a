@@ -17,8 +17,8 @@ router.get('/confirm_payment', async (req, res) => {
     + ' ' + query_info['payment_id']
     + ' ' + query_info['payment_type']
     + ' ' + query_info['error_text']
-    + ' ' + '50226' //HARDCODED MERCHANT CODE, MOVE IT ASAP
-    + ' ' + process.env.NL_TOKEN_SB;
+    + ' ' + "64836" //HARDCODED MERCHANT CODE, MOVE IT ASAP
+    + ' ' + process.env.NL_TOKEN_2;
 
     secure_code = crypto.createHash('md5').update(secure_string).digest('hex');
     if (secure_code !== query_info.secure_code) {

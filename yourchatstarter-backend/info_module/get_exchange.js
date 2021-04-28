@@ -6,6 +6,7 @@ function convert(amount, from_currency, to_currency) {
         if (res.status != 200) {
             console.log("Error in ForeignExchange API")
             reject("Error in ForeignExchange API")
+            return
         }
         else {
             let obj = JSON.parse(await res.text())
