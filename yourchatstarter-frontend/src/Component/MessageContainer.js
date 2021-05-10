@@ -2,6 +2,15 @@ import { Component } from "react";
 import { MessageItem } from "./MessageItem"
 
 export class MessageContainer extends Component {
+    componentDidMount() {
+        this.scrollToBottom();
+      }
+    componentDidUpdate () {
+        this.scrollToBottom()
+    }
+    scrollToBottom = () => {
+        this.el.scrollIntoView({ behavior: 'smooth', block: 'end' })
+    }
 
     render() {
         console.log('container rendering')
@@ -21,6 +30,7 @@ export class MessageContainer extends Component {
         return (
             <div style={style}>
                 {messageListDisplay}
+                <div ref={el => { this.el = el; }} />
             </div>
         )
     }   

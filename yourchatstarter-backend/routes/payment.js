@@ -126,7 +126,7 @@ router.post('/submit_info', async (req, res) => {
         })
         return
     }
-    //console.log(payment_link)
+    console.log(payment_link.link)
     res.send({
         status: "success",
         checkout_link: payment_link.link

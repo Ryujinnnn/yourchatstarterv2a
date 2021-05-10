@@ -7,9 +7,28 @@ const send_message = require('./routes/send_message')
 const payment = require('./routes/payment')
 const auth = require('./routes/auth')
 const user = require('./routes/user')
+const chatbot = require('./chatbot_engine')
 const databaseConn = require('./database/database_connection')
+const fs = require('fs')
 
 require('dotenv').config()
+
+let IntentHandler = new Map(); 
+
+//include all intent handler
+fs.readdir('./chatbot_engine/intent/', (err, files) => {
+  if (err) return console.error(err);
+  files.forEach(file => {
+      let intentHandler = require(`./chatbot_engine/intent/${file}`);
+      if (intentHandler.isEnable !== true) {
+          console.log(`(x) ${file} intent is disable`)
+          return
+      }
+      IntentHandler.set(intentHandler.name, intentHandler)
+      console.log(`${file} intent loaded`)
+  })
+  chatbot.init_engine(IntentHandler)
+})
 
 const app = express()
 
