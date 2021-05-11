@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-export class SendButton extends Component {
+export class MessageSuggestion extends Component {
     constructor(props) {
         super(props)
         this.onClickHandler = this.props.onAction
@@ -12,19 +12,20 @@ export class SendButton extends Component {
 
     render() {
         const style = {
-            backgroundColor: "#4CAF50",
-            border: "solid lightgreen 1px",
+            backgroundColor: "#333333",
+            border: "solid white 1px",
             color: "white",
-            padding: "12px",
+            padding: "5px 15px",
             textAlign: "center",
             textDecoration: "none",
             fontSize: "14px",
-            margin: "0px 10px 10px",
-            //borderRadius: "12px",
-            width: "10vw",
+            margin: "4px 2px",
+            borderRadius: "12px",
+            height: '30px',
+            float: 'left',
             display: "inline-block",
-            float: "right"
         };
+        
         return (<button style={style} onClick={this.onClickHandler}>{this.props.text}</button>);
     }
 }

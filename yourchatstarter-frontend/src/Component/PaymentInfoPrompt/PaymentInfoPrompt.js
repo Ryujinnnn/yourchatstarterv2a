@@ -92,6 +92,7 @@ class PaymentInfoPrompt extends Component {
                             <input type="text" name="phone_number" maxLength="20" onChange={e => this.setState({phone_number: e.target.value})} placeholder="Số điện thoại"/>
                             <input type="text" name="address" maxLength="130" onChange={e => this.setState({address: e.target.value})} placeholder="Địa chỉ"/>
                             <button type="submit" value="Checkout" style={style}>Thanh toán</button>
+                            
                         </form>
                     </div>
                     <div className="payment_column">
@@ -108,6 +109,7 @@ class PaymentInfoPrompt extends Component {
                         </div>
                     </div>
                 </div>
+                <div><a href="/direct_payment" style={{float: 'left', margin: '10px 40px 20px'}}>Không thanh toán được? thử thanh toán trực tiếp bằng chuyển khoản</a></div>
             </div>
         )
     }

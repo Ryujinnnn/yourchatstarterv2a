@@ -19,6 +19,7 @@ import NotFound from '../NotFound'
 import { Component } from 'react'
 import Navigation from '../Component/Navigation/Navigation'
 import Profile from '../Profile'
+import DirectPayment from '../DirectPayment'
   
 
 class Routes extends Component {
@@ -57,6 +58,7 @@ class Routes extends Component {
                     <Route exact path='/payment'><PaymentInfo plan={this.props.location}/></Route>
                     <Route exact path='/payment_failure'><BillingFailure /></Route>
                     <Route exact path='/payment_success'><BillingSuccess /></Route>
+                    <Route exact path='/direct_payment'><DirectPayment /></Route>
                     <Route exact path='/history'><BillingHistory /></Route>
                     <Route exact path='/profile'><Profile /></Route>
                     <Route exact path="/logout">{<Redirect exact from='/logout' to="/"/>}</Route>

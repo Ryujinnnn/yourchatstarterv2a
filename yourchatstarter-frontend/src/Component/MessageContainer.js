@@ -16,7 +16,7 @@ export class MessageContainer extends Component {
         console.log('container rendering')
         const style = {
             margin: "10px",
-            padding: "10",
+            padding: "10px",
             border: "black solid 1px",
             backgroundColor: "#e29ae2",
             height: "60vh",

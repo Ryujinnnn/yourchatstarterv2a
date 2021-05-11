@@ -4,6 +4,7 @@ import { SendButton } from './Component/SendButton'
 import { MessageBox } from './Component/MessageBox'
 import { MessageContainer } from './Component/MessageContainer'
 import Footer from './Component/Footer/Footer';
+import { MessageSuggestionContainer } from './Component/MessageSuggestionContainer';
 
 class Chat extends Component {
     constructor(props) {
@@ -12,7 +13,8 @@ class Chat extends Component {
         response: '',
         post: '',
         responseToPost: '',
-        messageList: []
+        messageList: [],
+        suggestMessageList: ['Chào bạn', 'Bạn khỏe không?', 'Thời tiết ở Hà Nội như thế nào?']
       };
 
       this.onClickHandler = this.onClickHandler.bind(this)
@@ -20,6 +22,7 @@ class Chat extends Component {
       this.handleSubmit = this.handleSubmit.bind(this)
       this.render = this.render.bind(this)
       this.handleKeyPress = this.handleKeyPress.bind(this)
+      this.onSuggestSelection = this.onSuggestSelection.bind(this)
     }
   
     componentDidMount() {
@@ -54,6 +57,13 @@ class Chat extends Component {
       })
     };
 
+    onSuggestSelection(message) {
+      console.log(message)
+      this.setState({
+        post: message
+      })
+    }
+
     onClickHandler() {
       console.log("Clicked")
       this.setState({
@@ -71,7 +81,7 @@ class Chat extends Component {
     }
 
     handleKeyPress(event){
-      console.log(event)
+      //console.log(event)
       if(event.key === 'Enter') {
         this.onClickHandler()
       }
@@ -83,6 +93,7 @@ class Chat extends Component {
         <div className="Chat">
 
             <MessageContainer messageList={this.state.messageList}></MessageContainer>
+            <MessageSuggestionContainer messageList={this.state.suggestMessageList} onSuggestSelection={this.onSuggestSelection}></MessageSuggestionContainer>
             <MessageBox onChange={this.onTextChange} text={this.state.post} handleKeyDown={this.handleKeyPress}></MessageBox>
             <SendButton text="Gửi" style={{float: "right"}} onAction={this.onClickHandler}></SendButton>
 
