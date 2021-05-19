@@ -12,3 +12,10 @@ const initial_active_context = {
     missing_info: [],
 }
 
+const initial_response_data = {
+    response: "",
+    context: {}
+}
+
+module.exports.initial_context = initial_context
+module.exports.initial_response_data = initial_response_data

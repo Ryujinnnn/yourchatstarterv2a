@@ -44,6 +44,12 @@ router.post('/login', async (req, res) => {
 
 router.post('/register', async (req, res) => {
     let input = req.body;
+    if (!input.username || !input.password || !input.confirm_password || !input.email) {
+        res.send({
+            status: "failure",
+            desc: "You need to fill all the fields to register"
+        })
+    }
     if (input.confirm_password != input.password) {
         res.send({
             status: "failure",
@@ -87,8 +93,6 @@ router.post('/register', async (req, res) => {
 router.get('/logout', () => {
     //TODO: delete sender token
 })
-
-router
 
 router.post('/verify_token', async (req, res) => {
     let input = req.body;

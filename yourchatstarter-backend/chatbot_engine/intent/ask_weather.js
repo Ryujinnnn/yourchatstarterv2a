@@ -13,7 +13,7 @@ module.exports.run = (entities, option, context) => {
                 (weather_res) => {response = `Hiện tại ở ${location} trời đang ${weather_res.desc}, nhiệt độ khoảng ${weather_res.temp.toFixed(2)} độ C`},
                 (e) => response = `Mình không biết thời tiết đang như thế nào ở đó rồi :(`)
         }
-        resolve(response)
+        resolve([response, context])
     })
 }
 

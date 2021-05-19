@@ -20,7 +20,7 @@ module.exports.run = (entities, option, context) => {
 		else { 
 			response = "Chức năng này là chỉ dành cho khách hàng trả phí nhé :D"
 		}
-        resolve(response)
+        resolve([response, context])
     })
 }
 

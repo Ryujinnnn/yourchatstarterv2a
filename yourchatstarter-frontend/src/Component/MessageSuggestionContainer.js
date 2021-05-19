@@ -25,8 +25,8 @@ export class MessageSuggestionContainer extends Component {
 
         }
 
-        const messageSuggestionListDisplay = this.props.messageList.map((message) => {
-            return (<MessageSuggestion text={message} onAction={this.onAction.bind(null, message)}></MessageSuggestion>)
+        const messageSuggestionListDisplay = this.props.messageList.map((message, index) => {
+            return (<MessageSuggestion key={index} text={message} onAction={this.onAction.bind(null, message)}></MessageSuggestion>)
         })
 
         return (

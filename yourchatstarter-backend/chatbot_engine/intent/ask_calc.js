@@ -8,7 +8,8 @@ module.exports.run = (entities, option, context) => {
             let expr_str = entities['wit$math_expression:math_expression'][0].body
             response = `bằng ${eval(expr_str)} nhé`
         }
-        resolve(response)
+        //console.log(response)
+        resolve([response, context])
     })
 }
 

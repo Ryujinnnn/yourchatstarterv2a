@@ -13,7 +13,7 @@ export class MessageContainer extends Component {
     }
 
     render() {
-        console.log('container rendering')
+        //console.log('container rendering')
         const style = {
             margin: "10px",
             padding: "10px",

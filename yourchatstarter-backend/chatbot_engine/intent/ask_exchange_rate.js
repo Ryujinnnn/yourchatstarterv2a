@@ -17,7 +17,7 @@ module.exports.run = (entities, option, context) => {
                     (e) => response = `Mình không đổi loại tiền này được bạn ạ :(`
                 )
         }
-        resolve(response)
+        resolve([response, context])
     })
 }
 

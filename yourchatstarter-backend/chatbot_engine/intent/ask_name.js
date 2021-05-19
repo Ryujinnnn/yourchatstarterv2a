@@ -1,5 +1,5 @@
 module.exports.run = (entities, option, context) => {
-    return 'Mình cũng chẳng biết tên mình là gì nữa, hmmm...'
+    return ['Mình cũng chẳng biết tên mình là gì nữa, hmmm...', context]
 }
 
 module.exports.name = "ask_name"

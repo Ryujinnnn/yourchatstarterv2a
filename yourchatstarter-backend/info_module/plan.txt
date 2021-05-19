@@ -1,2 +1,4 @@
 1forge: foreign exchange https://1forge.com/api
 openweather: weather https://openweathermap.org/
+
+https://www.wikidata.org/w/api.php?action=wbgetentities&titles=Tr%C3%A1i%20%C4%90%E1%BA%A5t&sites=viwiki&languages=vi&format=json

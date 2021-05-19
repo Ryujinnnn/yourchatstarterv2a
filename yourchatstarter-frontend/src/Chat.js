@@ -14,7 +14,7 @@ class Chat extends Component {
         post: '',
         responseToPost: '',
         messageList: [],
-        suggestMessageList: ['Chào bạn', 'Bạn khỏe không?', 'Thời tiết ở Hà Nội như thế nào?']
+        context: {},
       };
 
       this.onClickHandler = this.onClickHandler.bind(this)
@@ -27,11 +27,18 @@ class Chat extends Component {
   
     componentDidMount() {
       this.callApi()
-        .then(res => this.setState({ response: res.express }))
+        .then(res => {
+          this.setState({ 
+            response: res.express, 
+            context: res.context
+          })
+          //console.log(this.state.context)
+      })
         .catch(err => console.log(err));
     }
   
     callApi = async () => {
+      //get initial context
       const response = await fetch('/api/message');
       const body = await response.json();
       if (response.status !== 200) throw Error(body.message);
@@ -44,16 +51,22 @@ class Chat extends Component {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ post: this.state.post, token: sessionStorage.getItem('token') }),
+        body: JSON.stringify({ 
+          post: this.state.post, 
+          token: sessionStorage.getItem('token'),
+          context: this.state.context,
+        }),
       }
       this.setState({
         post: ""
       })
       //console.log(req)
-      const response = await fetch('/api/send_message', req);
-      const body = await response.text();
+      const res = await fetch('/api/send_message', req);
+      const body = JSON.parse(await res.text());
+      console.log(body)
+      //console.log(body.response)
       this.setState({
-        messageList: [...this.state.messageList, {text: body, isFromClient: false}]
+        messageList: [...this.state.messageList, {text: body.response, isFromClient: false}]
       })
     };
 
@@ -65,7 +78,7 @@ class Chat extends Component {
     }
 
     onClickHandler() {
-      console.log("Clicked")
+      //console.log("Clicked")
       this.setState({
         messageList: [...this.state.messageList, {text: this.state.post, isFromClient: true}]
       })
@@ -93,7 +106,8 @@ class Chat extends Component {
         <div className="Chat">
 
             <MessageContainer messageList={this.state.messageList}></MessageContainer>
-            <MessageSuggestionContainer messageList={this.state.suggestMessageList} onSuggestSelection={this.onSuggestSelection}></MessageSuggestionContainer>
+            <MessageSuggestionContainer messageList={(this.state.context.suggestion_list)? this.state.context.suggestion_list : []} 
+              onSuggestSelection={this.onSuggestSelection}></MessageSuggestionContainer>
             <MessageBox onChange={this.onTextChange} text={this.state.post} handleKeyDown={this.handleKeyPress}></MessageBox>
             <SendButton text="Gửi" style={{float: "right"}} onAction={this.onClickHandler}></SendButton>
 
