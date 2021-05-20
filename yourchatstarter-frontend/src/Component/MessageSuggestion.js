@@ -6,7 +6,7 @@ export class MessageSuggestion extends Component {
         this.onClickHandler = this.props.onAction
     }
 
-    onClickHandler() {
+    onClickHandler(text) {
         console.log("default handler")
     }
 
@@ -26,6 +26,6 @@ export class MessageSuggestion extends Component {
             display: "inline-block",
         };
         
-        return (<button style={style} onClick={this.onClickHandler}>{this.props.text}</button>);
+        return (<button style={style} onClick={this.props.onAction}>{this.props.text}</button>);
     }
 }

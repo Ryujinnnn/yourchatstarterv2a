@@ -23,8 +23,8 @@ export class MessageContainer extends Component {
             overflowY: 'scroll',
         }
 
-        const messageListDisplay = this.props.messageList.map((message) => {
-            return (<MessageItem text={message.text} isFromClient={message.isFromClient}></MessageItem>)
+        const messageListDisplay = this.props.messageList.map((message, index) => {
+            return (<MessageItem key={index} text={message.text} isFromClient={message.isFromClient}></MessageItem>)
         })
 
         return (

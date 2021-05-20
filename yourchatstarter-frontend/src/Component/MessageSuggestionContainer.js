@@ -2,14 +2,10 @@ import { Component } from "react";
 import { MessageSuggestion } from "./MessageSuggestion" 
 
 export class MessageSuggestionContainer extends Component {
-    constructor(props) {
-        super(props)
-        //this.onAction = this.props.onSuggestSelection
-        this.onAction = this.onAction.bind(this)
-    }
 
-    onAction(message) {
+    onAction(message, e) {
         //console.log(message)
+        //console.dir(message, {depth: null})
         this.props.onSuggestSelection(message)
     }
 
@@ -25,8 +21,9 @@ export class MessageSuggestionContainer extends Component {
 
         }
 
-        const messageSuggestionListDisplay = this.props.messageList.map((message, index) => {
-            return (<MessageSuggestion key={index} text={message} onAction={this.onAction.bind(null, message)}></MessageSuggestion>)
+        let messageSuggestionListDisplay = this.props.messageList.map((message, index) => {
+            //console.log([message, index])
+            return (<MessageSuggestion key={index} text={message} onAction={e => this.onAction(message, e)}></MessageSuggestion>)
         })
 
         return (

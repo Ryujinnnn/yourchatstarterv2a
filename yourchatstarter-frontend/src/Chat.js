@@ -66,7 +66,8 @@ class Chat extends Component {
       console.log(body)
       //console.log(body.response)
       this.setState({
-        messageList: [...this.state.messageList, {text: body.response, isFromClient: false}]
+        messageList: [...this.state.messageList, {text: body.response, isFromClient: false}],
+        context: body.context
       })
     };
 

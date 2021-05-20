@@ -36,6 +36,11 @@ module.exports.get_response = function get_response(input, option = {}, context 
                 response = "clgt?"
             }
         }
+        context.past_client_message.push(input)
+        if (context.past_client_message.length > 20) context.past_client_message.pop()
+        context.past_bot_message.push(response)
+        if (context.past_bot_message.length > 20) context.past_bot_message.pop()
+        
         resolve([response, context])
     })
 }

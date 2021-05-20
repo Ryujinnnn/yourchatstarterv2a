@@ -6,6 +6,7 @@ const greetingResponsePool = [
 ]
 
 module.exports.run = (entities, option, context) => {
+    context.suggestion_list = ['Bạn khỏe không?', 'Thời tiết ở Hà Nội như thế nào?', '1 USD đổi ra bao nhiêu VND?']
     return [greetingResponsePool[random_helper(greetingResponsePool.length)], context]
 }
 
