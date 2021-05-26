@@ -9,7 +9,7 @@ const baokim_checkout = require('../payment/baokim_checkout');
 router.post('/confirm_payment', async (req, res) => {
     console.log("receiving transaction confirmation info")
     console.log(req)
-    let query_info = JSON.parse(req.body)
+    let query_info = req.body
 
     
     res.send( {err_code: 0 } )
