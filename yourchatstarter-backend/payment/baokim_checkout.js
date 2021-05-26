@@ -3,8 +3,8 @@ const { v4: uuidv4 } = require('uuid');
 const jwt = require('jsonwebtoken')
 const FormData = require('form-data');
 
-const API_KEY = process.env.BAOKIM_API_SB;
-const API_SECRET = process.env.BAOKIM_SECRET_SB;
+const API_KEY = process.env.BAOKIM_API;
+const API_SECRET = process.env.BAOKIM_SECRET;
 const TOKEN_EXPIRE = 60; //token expire time in seconds
 const ENCODE_ALG = 'HS256';
 
@@ -24,8 +24,6 @@ module.exports = function checkout(purchaseInfo) {
         const PRODUCTION_SERVER_ENPOINT = 'http://yourchatstarter.xyz'
         const DEVELOPMENT_SERVER_ENDPOINT = 'http://localhost:3000'
         const SERVER_ENDPOINT = PRODUCTION_SERVER_ENPOINT
-
-        /* Bao Kim API key */
         
 
         let payment_data = {
@@ -33,7 +31,7 @@ module.exports = function checkout(purchaseInfo) {
             total_amount: purchaseInfo.amount,
             description: `purchase for yourchatstarter ${purchaseInfo.plan_name} subscription`,
             url_success: `${SERVER_ENDPOINT}/payment_success`,
-            merchant_id: 34838,
+            merchant_id: 35612,
             url_detail:  `${SERVER_ENDPOINT}/payment_failure`,
             lang: "vi",
             accept_bank: 1,
@@ -78,7 +76,7 @@ module.exports = function checkout(purchaseInfo) {
             }
         }
 
-        let res = await fetch("https://sandbox-api.baokim.vn/payment/api/v4/order/send/", setting)
+        let res = await fetch("https://api.baokim.vn/payment/api/v4/order/send/", setting)
         let res_obj = await res.json()
         //console.log(res)
         //console.log(res_obj)
