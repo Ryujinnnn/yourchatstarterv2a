@@ -6,7 +6,7 @@ const chatbot = require('../chatbot_engine')
 function checkIsPaid(token) {
     return new Promise(async (resolve, reject) => {
         if (!token) {
-            resolve(false)
+            resolve([false, "none"])
             return
         }
         let tokenQuery = {
@@ -15,12 +15,12 @@ function checkIsPaid(token) {
 
         let query_result = await db.queryRecord("session", tokenQuery)
         if (query_result.length == 0) {
-            resolve(false)
+            resolve([false, "none"])
             return
         }
         else {
-            if (query_result[0].is_paid) resolve(true)
-            else resolve(false)
+            if (query_result[0].is_paid) resolve([true, query_result[0].plan])
+            else resolve([false, "none"])
             return
         }
     })
@@ -33,10 +33,11 @@ router.post('/', async (req, res) => {
 	let token = (input.token)? input.token : "";
 
     let option = {
-      isPaid: false
+      isPaid: false,
+      plan: "none"
     }
 
-    option.isPaid = await checkIsPaid(token)
+    [option.isPaid, option.plan] = await checkIsPaid(token)
     let response, updated_context;
     [response, updated_context] = await chatbot.get_response(message, option, context)
     res.send({

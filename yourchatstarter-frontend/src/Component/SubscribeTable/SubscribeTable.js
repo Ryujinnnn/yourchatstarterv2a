@@ -10,6 +10,11 @@ export class SubscribeTable extends Component {
             state: { plan: "premium" }
         }
 
+        const standard_location = {
+            pathname: '/payment',
+            state: { plan: "standard" }
+        }
+
         const lifetime_location = {
             pathname: '/payment',
             state: { plan: "lifetime" }
@@ -25,6 +30,17 @@ export class SubscribeTable extends Component {
                     <li>Miễn phí đến lúc nào cũng được</li>
                     <li>-</li>
                     <li className="grey">Miễn phí vĩnh viễn :D</li>
+                </ul>
+                </div>
+                <div className="columns">
+                <ul className="price">
+                    <li className="header">Tiêu chuẩn</li>
+                    <li className="grey">10.000đ / tháng</li>
+                    <li>Đầy đủ chức năng</li>
+                    <li>Hỗ trợ nâng cao</li>
+                    <li>Trả phí hằng tháng</li>
+                    <li>Được liệt kê trong lời cảm ơn(*)</li>
+                    <li className="grey"><Link to={standard_location} className="button">Mua ngay</Link></li>
                 </ul>
                 </div>
                 <div className="columns">

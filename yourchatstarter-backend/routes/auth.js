@@ -18,6 +18,7 @@ router.post('/login', async (req, res) => {
             username: query_result[0].username,
             createdAt: new Date(),
             is_paid: (query_result[0].paid_valid_until > new Date())? true : false,
+            plan: (query_result[0].paid_valid_until > new Date())? query_result[0].plan : "none",
         }
         let action_result = await db.addRecord("session", sessionInfo)
         if (action_result) {
@@ -72,7 +73,8 @@ router.post('/register', async (req, res) => {
         username: input.username,
         hashed_password: crypto.createHash('md5').update(input.password).digest('hex'),
         email: input.email,
-        paid_valid_until: 0,
+        paid_valid_until: new Date(0),
+        plan: "none",
     }
     let action_result = await db.addRecord("user", recordInfo)
     if (action_result) {
@@ -112,7 +114,8 @@ router.post('/verify_token', async (req, res) => {
         res.send({
             status: "success",
             desc: "token verification success",
-            is_paid: query_result[0].is_paid
+            is_paid: query_result[0].is_paid,
+            plan: query_result[0].plan
         })
         return
     }

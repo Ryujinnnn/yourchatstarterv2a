@@ -5,8 +5,10 @@ module.exports.run = (entities, option, context) => {
         let response = ""
         if (!entities['wit$location:location']) {
             response = "Bạn có thể nói rõ thời tiết ở đâu được không?"
+            context.active_context.push("get_weather_need_location")
         }
         else {
+            console.log("fetching weather")
             let location = entities['wit$location:location'][0].body
             await get_weather(location)
                 .then(

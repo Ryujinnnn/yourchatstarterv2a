@@ -1,3 +1,9 @@
+const INTENTS_ENDPOINT = 'https://api.wit.ai/intents'
+const ENTITIES_ENDPOINT = 'https://api.wit.ai/entities'
+const TRAITS_ENDPOINT = 'https://api.wit.ai/traits'
+const UTTERANCES_ENDPOINT = 'https://api.wit.ai/utterances'
+
+
 require('dotenv').config()
 
 const fetch = require('node-fetch')

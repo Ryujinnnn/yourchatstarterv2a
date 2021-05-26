@@ -47,7 +47,8 @@ router.get('/confirm_payment', async (req, res) => {
     //update session
     let update_action = {
         $set: {
-            is_paid: true
+            is_paid: true,
+            plan: query_result[0].plan_name,
         }
     }
     let update_session_result = await db.editRecords("session", session_query, update_action)
@@ -76,6 +77,7 @@ router.get('/confirm_payment', async (req, res) => {
     }
     let number_of_date_to_add = 0
     switch (query_result[0].plan_name) {
+        case 'standard': number_of_date_to_add = 30; break;
         case 'premium': number_of_date_to_add = 30; break;
         case 'lifetime': number_of_date_to_add = 7200; break;
         default: number_of_date_to_add = 0;
@@ -85,7 +87,8 @@ router.get('/confirm_payment', async (req, res) => {
     //update user
     let update_user_action = {
         $set: {
-            paid_valid_until: new Date(new_expire_date)
+            paid_valid_until: new Date(new_expire_date),
+            plan: query_result[0].plan_name
         }
     }
     let update_user_result = await db.editRecords("user", user_query, update_user_action)

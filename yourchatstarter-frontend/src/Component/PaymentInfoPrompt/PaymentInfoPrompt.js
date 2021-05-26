@@ -52,6 +52,13 @@ class PaymentInfoPrompt extends Component {
             })
         }
 
+        if (this.props.plan === "standard") {
+            this.setState({
+                plan_name: "Gói sơ cấp (1 tháng)",
+                amount: 10000,
+            })
+        }
+
         else if (this.props.plan === "lifetime") {
             this.setState({
                 plan_name: "Gói cao cấp (trọn đời)",
