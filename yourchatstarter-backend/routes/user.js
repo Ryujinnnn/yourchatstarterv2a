@@ -23,10 +23,17 @@ router.post('/profile', async (req, res) => {
         })
         return 
     }
+    const plan_name = {
+        none: "Hạng miễn phí",
+        standard: "Hạng tiêu chuẩn",
+        premium: "Hạng cao cấp",
+        lifetime: "Hạng trọn đời",
+    }
     let user_query = {
         username: token_result[0].username,
     }
     let user_result = await db.queryRecord("user", user_query)
+    
     if (user_result.length == 0) {
         // how?
         res.send({
@@ -40,7 +47,7 @@ router.post('/profile', async (req, res) => {
         return_user_result.username = user_result[0].username,
         return_user_result.email = user_result[0].email
         return_user_result.paid_valid_until = user_result[0].paid_valid_until.toLocaleString('vi', { timeZone: 'UTC' })
-        return_user_result.status = (user_result[0].paid_valid_until > new Date())? "Hạng cao cấp" : "Hạng miễn phí"
+        return_user_result.status = (user_result[0].paid_valid_until > new Date())? plan_name[user_result[0].plan] : "Hạng miễn phí"
         res.send({
             status: 'success',
             desc: "user profile retrived",
