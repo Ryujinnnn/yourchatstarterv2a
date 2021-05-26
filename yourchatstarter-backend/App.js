@@ -63,6 +63,10 @@ app.get('/baokimbcec0b1b88e18cbd26a200ed970d55a3.txt', (req, res) => {
   res.sendFile(path.join(__dirname + '/baokimbcec0b1b88e18cbd26a200ed970d55a3.txt'))
 })
 
+app.get('/baokim60568749f73e1e7523bb6b6f994f1c2d.txt', (req, res) => {
+  res.sendFile(path.join(__dirname + '/baokim60568749f73e1e7523bb6b6f994f1c2d.txt'))
+})
+
 
 app.get('/robots.txt', (req, res) => {
   res.sendFile(path.join(__dirname + '/../yourchatstarter-frontend/build/robots.txt'))
