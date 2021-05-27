@@ -33,11 +33,15 @@ router.post('/', async (req, res) => {
 	let token = (input.token)? input.token : "";
 
     let option = {
-      isPaid: false,
-      plan: "none"
+        isPaid: false,
+        plan: "none"
     }
 
-    [option.isPaid, option.plan] = await checkIsPaid(token)
+    console.log(option)
+
+    let [isPaid, plan] = await checkIsPaid(token)
+    option.isPaid = isPaid
+    option.plan = plan
     let response, updated_context;
     [response, updated_context] = await chatbot.get_response(message, option, context)
     res.send({
