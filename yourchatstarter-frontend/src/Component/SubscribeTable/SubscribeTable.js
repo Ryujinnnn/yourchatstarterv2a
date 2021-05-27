@@ -25,9 +25,9 @@ export class SubscribeTable extends Component {
                 <ul className="price">
                     <li className="header">Cơ bản</li>
                     <li className="grey">Miễn phí</li>
-                    <li>Chức năng giới hạn</li>
-                    <li>Hỗ trợ thông thường</li>
-                    <li>Miễn phí đến lúc nào cũng được</li>
+                    <li>Giải đáp về thời tiết</li>
+                    <li>Giải đáp về tính toán</li>
+                    <li>Giao tiếp cơ bản</li>
                     <li>-</li>
                     <li className="grey">Miễn phí vĩnh viễn :D</li>
                 </ul>
@@ -36,10 +36,10 @@ export class SubscribeTable extends Component {
                 <ul className="price">
                     <li className="header">Tiêu chuẩn</li>
                     <li className="grey">10.000đ / tháng</li>
-                    <li>Đầy đủ chức năng</li>
-                    <li>Hỗ trợ nâng cao</li>
-                    <li>Trả phí hằng tháng</li>
-                    <li>Được liệt kê trong lời cảm ơn(*)</li>
+                    <li>Toàn bộ chức năng của gói tiêu chuẩn</li>
+                    <li>Giải đáp về tỉ giá ngoại tệ</li>
+                    <li>Giải đáp về chỉ số chứng khoán</li>
+                    <li>Đắng kí theo tháng</li>
                     <li className="grey"><Link to={standard_location} className="button">Mua ngay</Link></li>
                 </ul>
                 </div>
@@ -47,10 +47,10 @@ export class SubscribeTable extends Component {
                 <ul className="price">
                     <li className="header">Cao cấp</li>
                     <li className="grey">20.000đ / tháng</li>
-                    <li>Đầy đủ chức năng</li>
-                    <li>Hỗ trợ nâng cao</li>
+                    <li>Toàn bộ chức năng của gói tiêu chuẩn</li>
+                    <li>Giải đáp về dịch thuật</li>
+                    <li>-</li>
                     <li>Trả phí hằng tháng</li>
-                    <li>Được liệt kê trong lời cảm ơn(*)</li>
                     <li className="grey"><Link to={premium_location} className="button">Mua ngay</Link></li>
                 </ul>
                 </div>
@@ -58,10 +58,10 @@ export class SubscribeTable extends Component {
                 <ul className="price">
                     <li className="header">Trọn đời</li>
                     <li className="grey">200.000đ</li>
-                    <li>Đầy đủ chức năng</li>
-                    <li>Hỗ trợ nâng cao</li>
+                    <li>Toàn bộ chức năng của gói cao cấp</li>
+                    <li>-</li>
+                    <li>-</li>
                     <li>Trả phí một lần duy nhất</li>
-                    <li>Được liệt kê trong lời cảm ơn</li>
                     <li className="grey"><Link to={lifetime_location} className="button">Mua ngay</Link></li>
                 </ul>
                 </div>   

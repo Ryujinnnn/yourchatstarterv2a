@@ -1,9 +1,10 @@
 const get_translate = require('../../info_module/get_translate')
 
 module.exports.run = (entities, option, context) => {
+	const permitted_tier = ["premium", "lifetime"]
     return new Promise(async (resolve, reject) => {
         let response = ""
-		if (option.isPaid) {
+		if (option.isPaid && permitted_tier.includes(option.plan)) {
 			if ((!entities['language:language']) || (!entities['wit$phrase_to_translate:phrase_to_translate'])) {
 				response = 'Mình không rõ bạn muốn dịch gì :('
 			}
@@ -18,7 +19,7 @@ module.exports.run = (entities, option, context) => {
 			}
 		}
 		else { 
-			response = "Chức năng này là chỉ dành cho khách hàng trả phí nhé :D"
+			response = "Chức năng này là chỉ dành cho khách hàng hạng cao cấp trở lên nhé :D"
 		}
         resolve([response, context])
     })
