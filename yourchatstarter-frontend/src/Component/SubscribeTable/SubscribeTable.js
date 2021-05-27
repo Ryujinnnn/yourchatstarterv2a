@@ -39,7 +39,7 @@ export class SubscribeTable extends Component {
                     <li>Toàn bộ chức năng của gói tiêu chuẩn</li>
                     <li>Giải đáp về tỉ giá ngoại tệ</li>
                     <li>Giải đáp về chỉ số chứng khoán</li>
-                    <li>Đắng kí theo tháng</li>
+                    <li>Trả phí hằng tháng</li>
                     <li className="grey"><Link to={standard_location} className="button">Mua ngay</Link></li>
                 </ul>
                 </div>
