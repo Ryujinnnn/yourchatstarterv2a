@@ -1,8 +1,6 @@
 import { Component } from "react";
 import { withRouter } from 'react-router-dom'
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import './Style.css'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navbar, Nav, Dropdown, Icon} from 'rsuite'
 import 'rsuite/dist/styles/rsuite-dark.css';
 
@@ -32,10 +30,6 @@ class Navigation extends Component {
     }
 
     render() {
-        const style = {
-            backgroundColor: "pink",
-            display: "block",
-        };  
         if (sessionStorage.getItem("token")) {
             return (
                 <Navbar>

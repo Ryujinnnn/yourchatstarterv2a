@@ -1,6 +1,4 @@
 import './Style.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBrain, faCommentsDollar, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import { Col, Row, Panel, Button } from 'rsuite'
 const { Component } = require("react");
 

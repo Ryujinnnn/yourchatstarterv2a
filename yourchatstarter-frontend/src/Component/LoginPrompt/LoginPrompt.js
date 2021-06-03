@@ -43,32 +43,8 @@ class LoginPrompt extends Component {
     }
 
     render() {
-        const style = {
-            backgroundColor: "#4CAF50",
-            border: "solid lightgreen 1px",
-            color: "white",
-            padding: "12px",
-            textAlign: "center",
-            textDecoration: "none",
-            fontSize: "14px",
-            margin: "15px",
-            //borderRadius: "12px",
-            width: "100px",
-            display: "inline-block",
-            float: "left"
-        };
-
-        
 
         return (
-            // <div>
-            //     <form onSubmit={this.handleSubmit}>
-            //         <input type="text" name="username" onChange={e => this.setState({username: e.target.value})} placeholder="Tên tài khoản"/>
-            //         <input type="password" name="password" onChange={e => this.setState({password: e.target.value})} placeholder="Mật khẩu"/>
-            //         <button type="submit" value="Login" style={style}>Đăng nhập</button>
-            //         <a href='/register'><button type="button" style={style}>Đăng ký</button></a>
-            //     </form>
-            // </div>
             <div className='login-page custom-login'>
                 <Grid fluid >
                     <Col lg={8} md={12} sm={16} xs={20} className='login-prompt'>

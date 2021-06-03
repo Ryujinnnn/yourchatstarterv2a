@@ -1,7 +1,7 @@
 import { Component } from "react";
 import './Style.css'
 import { withRouter } from 'react-router-dom' 
-import {Grid, Col, Panel, Form, FormGroup, ControlLabel, FormControl, ButtonToolbar, Button} from 'rsuite'
+import {Panel, Form, FormGroup, ControlLabel, FormControl, ButtonToolbar, Button} from 'rsuite'
 
 function getCheckoutLink(info) {
     return fetch('api/payment/submit_info', {
@@ -70,20 +70,20 @@ class PaymentInfoPrompt extends Component {
 
     render() {
         console.log(this.props.plan)
-        const style = {
-            backgroundColor: "#4CAF50",
-            border: "solid lightgreen 1px",
-            color: "white",
-            padding: "12px",
-            textAlign: "center",
-            textDecoration: "none",
-            fontSize: "14px",
-            margin: "15px",
-            //borderRadius: "12px",
-            width: "10vw",
-            display: "inline-block",
-            float: "left"
-        };
+        // const style = {
+        //     backgroundColor: "#4CAF50",
+        //     border: "solid lightgreen 1px",
+        //     color: "white",
+        //     padding: "12px",
+        //     textAlign: "center",
+        //     textDecoration: "none",
+        //     fontSize: "14px",
+        //     margin: "15px",
+        //     //borderRadius: "12px",
+        //     width: "10vw",
+        //     display: "inline-block",
+        //     float: "left"
+        // };
 
         let formatter = new Intl.NumberFormat('vi', {
             style: 'currency',

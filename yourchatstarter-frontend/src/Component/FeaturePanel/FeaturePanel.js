@@ -1,6 +1,4 @@
 import './Style.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBrain, faCommentsDollar, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import { Row, Col, Divider } from 'rsuite'
 const { Component } = require("react");
 
@@ -27,7 +25,7 @@ class FeaturePanel extends Component {
                         </div>
                     </Col>
                     <Col md={12} sm={24}>
-                    <iframe width="420" height="315"
+                    <iframe width="420" height="315" title="illus"
                         src="http://www.youtube.com/embed/dQw4w9WgXcQ">
                     </iframe>
                     </Col>

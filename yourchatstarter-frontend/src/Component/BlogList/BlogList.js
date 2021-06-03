@@ -1,7 +1,5 @@
 import './Style.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Panel, Button, Row, Col, Tag, TagGroup} from 'rsuite'
-import { Link } from 'react-router-dom'
 const { Component } = require("react");
 
 const Entry = props => {
