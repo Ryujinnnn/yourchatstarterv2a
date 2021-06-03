@@ -1,6 +1,7 @@
 import { Component } from "react";
 import './Style.css'
 import { withRouter } from 'react-router-dom' 
+import {Grid, Col, Panel, Form, FormGroup, ControlLabel, FormControl, ButtonToolbar, Button} from 'rsuite'
 
 function getCheckoutLink(info) {
     return fetch('api/payment/submit_info', {
@@ -93,17 +94,44 @@ class PaymentInfoPrompt extends Component {
             <div>
                 <div className="payment_row">
                     <div className="payment_column">
-                        <form onSubmit={this.handleSubmit}>
+                        {/* <form onSubmit={this.handleSubmit}>
                             <input type="text" name="name" maxLength="50" onChange={e => this.setState({name: e.target.value})} placeholder="Họ tên"/>
                             <input type="text" name="email" maxLength="50" onChange={e => this.setState({email: e.target.value})} placeholder="Email"/>
                             <input type="text" name="phone_number" maxLength="20" onChange={e => this.setState({phone_number: e.target.value})} placeholder="Số điện thoại"/>
                             <input type="text" name="address" maxLength="130" onChange={e => this.setState({address: e.target.value})} placeholder="Địa chỉ"/>
                             <button type="submit" value="Checkout" style={style}>Thanh toán</button>
                             
-                        </form>
+                        </form> */}
+                        <div className='login-page custom-register'>
+                            <Panel header={<h3>Thông tin thanh toán</h3>} bordered>
+                                <Form fluid onSubmit={this.handleSubmit} >
+                                    <FormGroup style={{marginBottom: -6}}>
+                                        <ControlLabel style={{marginTop: 12}}>Họ tên</ControlLabel>
+                                        <FormControl onChange={e => this.setState({name: e})} name="name"  style={{marginLeft: -3}}/>
+                                    </FormGroup>
+                                    <FormGroup style={{marginBottom: -6}}>
+                                        <ControlLabel style={{marginTop: 12}}>Địa chỉ</ControlLabel>
+                                        <FormControl onChange={e => this.setState({address: e})} name="address" style={{marginLeft: -3}} />
+                                    </FormGroup>
+                                    <FormGroup style={{marginBottom: -6}}>
+                                        <ControlLabel style={{marginTop: 12}}>Số điện thoại</ControlLabel>
+                                        <FormControl onChange={e => this.setState({phone_number: e})} name="phone_number" style={{marginLeft: -3}}/>
+                                    </FormGroup>
+                                    <FormGroup style={{marginBottom: -6}}>
+                                        <ControlLabel style={{marginTop: 12}}>Email</ControlLabel>
+                                        <FormControl onChange={e => this.setState({email: e})} name="email" style={{marginLeft: -3}}/>
+                                    </FormGroup>
+                                    <FormGroup>
+                                        <ButtonToolbar style={{marginTop: 12}}>
+                                            <Button appearance="primary" type="submit">Thanh toán</Button>
+                                        </ButtonToolbar>
+                                    </FormGroup>
+                                </Form>
+                            </Panel>
+                        </div>
                     </div>
                     <div className="payment_column">
-                        <div className="container">
+                        <div className="container" style={{margin: 'auto', width: '80%'}}>
                             <h2>Thanh toán
                                 <span className="price" style={{color: 'black'}}>
                                 <i className="fa fa-shopping-cart"></i>

@@ -6,7 +6,7 @@
 
 .footer-distributed{
     margin-top: 20px;
-	background: rgb(255, 192, 192);
+	background: #1A1D24;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -47,7 +47,7 @@ section {
 /* Footer links */
 
 .footer-distributed .footer-links{
-	color:  #000000;
+	color:  #ffffff;
 	margin: 0 0 10px;
 	padding: 0;
 }
@@ -60,7 +60,7 @@ section {
 }
 
 .footer-distributed .footer-company-name{
-	color:  #000000;
+	color:  #ffffff;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
@@ -77,11 +77,11 @@ section {
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #ffffff;
+	background-color:  #000000;
 	border-radius: 2px;
 
 	font-size: 20px;
-	color: #000000;
+	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
 
@@ -99,7 +99,7 @@ section {
 	display: inline-block;
 	vertical-align: top;
 	margin: 15px 42px 0 0;
-	color:  #000000;
+	color:  #ffffff;
 }
 
 /* The contact form */
@@ -113,7 +113,7 @@ section {
 	display: block;
 	border-radius: 3px;
 	box-sizing: border-box;
-	background-color:  #ffe7e7;
+	background-color:  #0F131A;
 	box-shadow: 0 1px 0 0 rgba(255, 169, 169, 0.1);
 	border: none;
 	resize: none;

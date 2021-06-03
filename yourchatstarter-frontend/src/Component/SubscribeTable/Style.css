@@ -1,68 +1,158 @@
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 
-* {
-  font-family: Roboto;
-  box-sizing: border-box;
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+body {
+  background: #F2F2F2;
+  padding: 0;
+  margin: 0;
 }
+
+#price {
+  text-align: center;
   
-/* Create three columns of equal width */
-.columns {
-    display: inline-block;
-    width: 25.0%;
-    padding: 8px;
 }
 
-/* Style the list */
-.price {
-    list-style-type: none;
-    border: 1px solid #eee;
-    margin: 0;
-    padding: 0;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+.plan {
+  display: inline-block;
+  margin: 10px 1%;
+  font-family: 'Lato', Arial, sans-serif;
 }
 
-/* Add shadows on hover */
-.price:hover {
-    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+.plan-inner {
+  background: #1A1D24;
+  margin: 0 auto;
+  min-width: 280px;
+  max-width: 100%;
+  border-radius: 10px;
+  position:relative;
 }
 
-/* Pricing header */
-.price .header {
-    background-color: rgb(118, 0, 88);
-    color: white;
-    font-size: 25px;
+.entry-title {
+  background: #53CFE9;
+  height: 140px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+  border-radius: 10px;
 }
 
-/* List items */
-.price li {
-    border-bottom: 1px solid #eee;
-    padding: 20px;
-    text-align: center;
+.entry-title>h3 {
+  background: #20BADA;
+  font-size: 20px;
+  padding: 5px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  border-radius: 10px;
 }
 
-/* Grey list item */
-.price .grey {
-    background-color: rgb(162, 91, 255);
-    font-size: 20px;
+.entry-title .price {
+  position: absolute;
+  bottom: -25px;
+  background: #20BADA;
+  height: 90px;
+  width: 250px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 5px solid #fff;
+  line-height: 80px;
+  font-size: 28px;
+  font-weight: 700;
 }
 
-/* The "Sign Up" button */
-.button {
-    background-color: #4CAF50;
-    border: solid 1px rgb(30, 255, 0);
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
+.price span {
+  position: absolute;
+  font-size: 9px;
+  bottom: -10px;
+  left: 30px;
+  font-weight: 400;
 }
 
-/* Change the width of the three columns to 100%
-(to stack horizontally on small screens) */
-@media only screen and (max-width: 600px) {
-.columns {
-    width: 100%;
+.entry-content {
+  color: #ffffff;
 }
+
+.entry-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.entry-content li {
+  border-bottom: 1px solid #E5E5E5;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+.entry-content li:last-child {
+  border: none;
+}
+
+.btn {
+  padding: 3em 0;
+  text-align: center;
+}
+
+.btn a {
+  background: #323232;
+  padding: 10px 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none
+}
+.hot {
+    position: absolute;
+    top: -7px;
+    background: #F80;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 2;
+    padding: 2px 5px;
+    font-size: 9px;
+    border-radius: 2px;
+    right: 10px;
+    font-weight: 700;
+}
+.basic .entry-title {
+  background: #75DDD9;
+}
+
+.basic .entry-title > h3 {
+  background: #44CBC6;
+}
+
+.basic .price {
+  background: #44CBC6;
+}
+
+.standard .entry-title {
+  background: #4484c1;
+}
+
+.standard .entry-title > h3 {
+  background: #3772aa;
+}
+
+.standard .price {
+  background: #3772aa;
+}
+
+.ultimite .entry-title > h3 {
+  background: #DD4B5E;
+}
+
+.ultimite .entry-title {
+  background: #F75C70;
+}
+
+.ultimite .price {
+  background: #DD4B5E;
 }

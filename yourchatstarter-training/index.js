@@ -3,6 +3,7 @@ const ENTITIES_ENDPOINT = 'https://api.wit.ai/entities'
 const TRAITS_ENDPOINT = 'https://api.wit.ai/traits'
 const UTTERANCES_ENDPOINT = 'https://api.wit.ai/utterances'
 
+const fs = require('fs')
 
 require('dotenv').config()
 
@@ -15,7 +16,7 @@ async function test() {
             'Authorization': 'Bearer ' + process.env.WITAI_API, 
         }, 
     }
-    let res = await fetch('https://api.wit.ai/intents', option)
+    let res = await fetch(UTTERANCES_ENDPOINT + "?limit=40", option)
     console.log(await res.text())
 }
 
@@ -24,5 +25,11 @@ function test2(array) {
     return array
 }
 
+function test3() {
+    let a = fs.readFileSync('utterance.json', {encoding: 'utf-8'})
+    console.log(JSON.parse(a))
+}
+
 //test()
-console.log(test2([1,2,3,4]))
+test3()
+//console.log(test2([1,2,3,4]))

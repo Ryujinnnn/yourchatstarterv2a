@@ -27,7 +27,7 @@ export class MessageBox extends Component {
             //borderRadius: "12px",
             float: 'left',
             width: "85vw",
-            backgroundColor: "#e29ae2"
+            backgroundColor: "#1A1D24"
         }
         return (
             <input name="message" type="text" style={style}  onChange={e => this.onContentChange(e.target.value)} value={this.props.text} onKeyDown={this.handleKeyDown}></input>

@@ -18,7 +18,7 @@ export class MessageContainer extends Component {
             margin: "10px",
             padding: "10px",
             border: "black solid 1px",
-            backgroundColor: "#e29ae2",
+            backgroundColor: "#1A1D24",
             height: "60vh",
             overflowY: 'scroll',
         }

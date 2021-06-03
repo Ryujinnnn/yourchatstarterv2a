@@ -1,0 +1,717 @@
+[
+    {
+        "text": "xin ch\u00c3\u00a0o",
+        "entities": [],
+        "traits": [],
+        "intent": {
+            "id": "734449657248397",
+            "name": "greeting"
+        }
+    },
+    {
+        "text": "ch\u00c3\u00a0o",
+        "entities": [],
+        "traits": [],
+        "intent": {
+            "id": "734449657248397",
+            "name": "greeting"
+        }
+    },
+    {
+        "text": "Th\u00e1\u00bb\u009di ti\u00e1\u00ba\u00bft \u00e1\u00bb\u0178 h\u00c3\u00a0 n\u00e1\u00bb\u2122i th\u00e1\u00ba\u00bf n\u00c3\u00a0o?",
+        "entities": [
+            {
+                "id": "453908892581712",
+                "name": "wit$location",
+                "role": "location",
+                "start": 12,
+                "end": 18,
+                "body": "h\u00c3\u00a0 n\u00e1\u00bb\u2122i",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "478035866576237",
+            "name": "ask_weather"
+        }
+    },
+    {
+        "text": "ch\u00c3\u00a0o b\u00e1\u00ba\u00a1n",
+        "entities": [],
+        "traits": [],
+        "intent": {
+            "id": "734449657248397",
+            "name": "greeting"
+        }
+    },
+    {
+        "text": "th\u00e1\u00bb\u009di ti\u00e1\u00ba\u00bft \u00e1\u00bb\u0178 th\u00c3\u00a0nh ph\u00e1\u00bb\u2018 h\u00e1\u00bb\u201c ch\u00c3\u00ad minh th\u00e1\u00ba\u00bf n\u00c3\u00a0o?",
+        "entities": [
+            {
+                "id": "453908892581712",
+                "name": "wit$location",
+                "role": "location",
+                "start": 12,
+                "end": 33,
+                "body": "th\u00c3\u00a0nh ph\u00e1\u00bb\u2018 h\u00e1\u00bb\u201c ch\u00c3\u00ad minh",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "478035866576237",
+            "name": "ask_weather"
+        }
+    },
+    {
+        "text": "1 USD \u00c4\u2018\u00e1\u00bb\u2022i ra bao nhi\u00c3\u00aau VND?",
+        "entities": [
+            {
+                "id": "355650762518041",
+                "name": "wit$amount_of_money",
+                "role": "amount_of_money",
+                "start": 0,
+                "end": 5,
+                "body": "1 USD",
+                "entities": []
+            },
+            {
+                "id": "2614809178811845",
+                "name": "currency",
+                "role": "currency",
+                "start": 23,
+                "end": 26,
+                "body": "VND",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "301302678035282",
+            "name": "ask_exchange_rate"
+        }
+    },
+    {
+        "text": "25000 VND \u00c4\u2018\u00e1\u00bb\u2022i ra bao nhi\u00c3\u00aau EUR",
+        "entities": [
+            {
+                "id": "355650762518041",
+                "name": "wit$amount_of_money",
+                "role": "amount_of_money",
+                "start": 0,
+                "end": 9,
+                "body": "25000 VND",
+                "entities": []
+            },
+            {
+                "id": "2614809178811845",
+                "name": "currency",
+                "role": "currency",
+                "start": 27,
+                "end": 30,
+                "body": "EUR",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "301302678035282",
+            "name": "ask_exchange_rate"
+        }
+    },
+    {
+        "text": "23000 \u00c4\u2018 ra m\u00e1\u00ba\u00a5y $?",
+        "entities": [
+            {
+                "id": "355650762518041",
+                "name": "wit$amount_of_money",
+                "role": "amount_of_money",
+                "start": 0,
+                "end": 7,
+                "body": "23000 \u00c4\u2018",
+                "entities": []
+            },
+            {
+                "id": "2614809178811845",
+                "name": "currency",
+                "role": "currency",
+                "start": 15,
+                "end": 16,
+                "body": "$",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "301302678035282",
+            "name": "ask_exchange_rate"
+        }
+    },
+    {
+        "text": "23000 VND ra m\u00e1\u00ba\u00a5y USD?",
+        "entities": [
+            {
+                "id": "355650762518041",
+                "name": "wit$amount_of_money",
+                "role": "amount_of_money",
+                "start": 0,
+                "end": 9,
+                "body": "23000 VND",
+                "entities": []
+            },
+            {
+                "id": "2614809178811845",
+                "name": "currency",
+                "role": "currency",
+                "start": 17,
+                "end": 20,
+                "body": "USD",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "301302678035282",
+            "name": "ask_exchange_rate"
+        }
+    },
+    {
+        "text": "2+3*12-4 b\u00e1\u00ba\u00b1ng m\u00e1\u00ba\u00a5y",
+        "entities": [
+            {
+                "id": "451731849248695",
+                "name": "wit$math_expression",
+                "role": "math_expression",
+                "start": 0,
+                "end": 8,
+                "body": "2+3*12-4",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "755813118459779",
+            "name": "ask_calc"
+        }
+    },
+    {
+        "text": "d\u00e1\u00bb\u2039ch \"hello\" ra ti\u00e1\u00ba\u00bfng vi\u00e1\u00bb\u2021t",
+        "entities": [
+            {
+                "id": "152006720176851",
+                "name": "wit$phrase_to_translate",
+                "role": "phrase_to_translate",
+                "start": 6,
+                "end": 11,
+                "body": "hello",
+                "entities": []
+            },
+            {
+                "id": "107839221338025",
+                "name": "language",
+                "role": "language",
+                "start": 16,
+                "end": 26,
+                "body": "ti\u00e1\u00ba\u00bfng vi\u00e1\u00bb\u2021t",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "314011900066551",
+            "name": "req_translate"
+        }
+    },
+    {
+        "text": "d\u00e1\u00bb\u2039ch \"give me a pen\" ra ti\u00e1\u00ba\u00bfng vi\u00e1\u00bb\u2021t",
+        "entities": [
+            {
+                "id": "107839221338025",
+                "name": "language",
+                "role": "language",
+                "start": 24,
+                "end": 34,
+                "body": "ti\u00e1\u00ba\u00bfng vi\u00e1\u00bb\u2021t",
+                "entities": []
+            },
+            {
+                "id": "152006720176851",
+                "name": "wit$phrase_to_translate",
+                "role": "phrase_to_translate",
+                "start": 6,
+                "end": 19,
+                "body": "give me a pen",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "314011900066551",
+            "name": "req_translate"
+        }
+    },
+    {
+        "text": "d\u00e1\u00bb\u2039ch \"I'm beautiful\" ra ti\u00e1\u00ba\u00bfng vi\u00e1\u00bb\u2021t",
+        "entities": [
+            {
+                "id": "152006720176851",
+                "name": "wit$phrase_to_translate",
+                "role": "phrase_to_translate",
+                "start": 6,
+                "end": 19,
+                "body": "I'm beautiful",
+                "entities": []
+            },
+            {
+                "id": "107839221338025",
+                "name": "language",
+                "role": "language",
+                "start": 24,
+                "end": 34,
+                "body": "ti\u1ebfng vi\u1ec7t",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "314011900066551",
+            "name": "req_translate"
+        }
+    },
+    {
+        "text": "1+1 b\u00e1\u00ba\u00b1ng m\u00e1\u00ba\u00a5y?",
+        "entities": [
+            {
+                "id": "451731849248695",
+                "name": "wit$math_expression",
+                "role": "math_expression",
+                "start": 0,
+                "end": 3,
+                "body": "1+1",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "755813118459779",
+            "name": "ask_calc"
+        }
+    },
+    {
+        "text": "17+20 b\u00e1\u00ba\u00b1ng m\u00e1\u00ba\u00a5y?",
+        "entities": [
+            {
+                "id": "451731849248695",
+                "name": "wit$math_expression",
+                "role": "math_expression",
+                "start": 0,
+                "end": 5,
+                "body": "17+20",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "755813118459779",
+            "name": "ask_calc"
+        }
+    },
+    {
+        "text": "30+3-12+1 b\u00e1\u00ba\u00b1ng m\u00e1\u00ba\u00a5y?",
+        "entities": [
+            {
+                "id": "451731849248695",
+                "name": "wit$math_expression",
+                "role": "math_expression",
+                "start": 0,
+                "end": 9,
+                "body": "30+3-12+1",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "755813118459779",
+            "name": "ask_calc"
+        }
+    },
+    {
+        "text": "1+1 b\u00e1\u00ba\u00b1ng m\u00e1\u00ba\u00a5y",
+        "entities": [
+            {
+                "id": "451731849248695",
+                "name": "wit$math_expression",
+                "role": "math_expression",
+                "start": 0,
+                "end": 3,
+                "body": "1+1",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "755813118459779",
+            "name": "ask_calc"
+        }
+    },
+    {
+        "text": "b\u00e1\u00ba\u00a1n n\u00c3\u00b3i sorry nh\u00c6\u00b0 th\u00e1\u00ba\u00bf n\u00c3\u00a0o b\u00e1\u00ba\u00b1ng ti\u00e1\u00ba\u00bfng vi\u00e1\u00bb\u2021t?",
+        "entities": [
+            {
+                "id": "107839221338025",
+                "name": "language",
+                "role": "language",
+                "start": 31,
+                "end": 41,
+                "body": "ti\u00e1\u00ba\u00bfng vi\u00e1\u00bb\u2021t",
+                "entities": []
+            },
+            {
+                "id": "152006720176851",
+                "name": "wit$phrase_to_translate",
+                "role": "phrase_to_translate",
+                "start": 8,
+                "end": 13,
+                "body": "sorry",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "314011900066551",
+            "name": "req_translate"
+        }
+    },
+    {
+        "text": "b\u00e1\u00ba\u00a1n n\u00c3\u00b3i y\u00c3\u00aan b\u00c3\u00acnh nh\u00c6\u00b0 th\u00e1\u00ba\u00bf n\u00c3\u00a0o b\u00e1\u00ba\u00b1ng ti\u00e1\u00ba\u00bfng anh?",
+        "entities": [
+            {
+                "id": "107839221338025",
+                "name": "language",
+                "role": "language",
+                "start": 34,
+                "end": 43,
+                "body": "ti\u00e1\u00ba\u00bfng anh",
+                "entities": []
+            },
+            {
+                "id": "152006720176851",
+                "name": "wit$phrase_to_translate",
+                "role": "phrase_to_translate",
+                "start": 8,
+                "end": 16,
+                "body": "y\u00c3\u00aan b\u00c3\u00acnh",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "314011900066551",
+            "name": "req_translate"
+        }
+    },
+    {
+        "text": "B\u00e1\u00ba\u00a1n t\u00c3\u00aan g\u00c3\u00ac?",
+        "entities": [],
+        "traits": [],
+        "intent": {
+            "id": "2821369671511892",
+            "name": "ask_name"
+        }
+    },
+    {
+        "text": "T\u00c3\u00aan b\u00e1\u00ba\u00a1n l\u00c3\u00a0 g\u00c3\u00ac",
+        "entities": [],
+        "traits": [],
+        "intent": {
+            "id": "2821369671511892",
+            "name": "ask_name"
+        }
+    },
+    {
+        "text": "B\u00e1\u00ba\u00a1n kh\u00e1\u00bb\u008fe kh\u00c3\u00b4ng?",
+        "entities": [],
+        "traits": [],
+        "intent": {
+            "id": "229742355575181",
+            "name": "ask_health"
+        }
+    },
+    {
+        "text": "B\u00e1\u00ba\u00a1n c\u00c3\u00b3 kh\u00e1\u00bb\u008fe kh\u00c3\u00b4ng?",
+        "entities": [],
+        "traits": [],
+        "intent": {
+            "id": "229742355575181",
+            "name": "ask_health"
+        }
+    },
+    {
+        "text": "d\u00e1\u00bb\u2039ch \"tr\u00c6\u00b0\u00e1\u00bb\u009dng h\u00e1\u00bb\u008dc\" ra ti\u00e1\u00ba\u00bfng anh",
+        "entities": [
+            {
+                "id": "107839221338025",
+                "name": "language",
+                "role": "language",
+                "start": 21,
+                "end": 30,
+                "body": "ti\u00e1\u00ba\u00bfng anh",
+                "entities": []
+            },
+            {
+                "id": "152006720176851",
+                "name": "wit$phrase_to_translate",
+                "role": "phrase_to_translate",
+                "start": 6,
+                "end": 16,
+                "body": "tr\u00c6\u00b0\u00e1\u00bb\u009dng h\u00e1\u00bb\u008dc",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "314011900066551",
+            "name": "req_translate"
+        }
+    },
+    {
+        "text": "b\u00e1\u00ba\u00a1n c\u00e1\u00ba\u00a3m th\u00e1\u00ba\u00a5y th\u00e1\u00ba\u00bf n\u00c3\u00a0o?",
+        "entities": [],
+        "traits": [],
+        "intent": {
+            "id": "229742355575181",
+            "name": "ask_health"
+        }
+    },
+    {
+        "text": "m\u00c3\u00acnh n\u00c3\u00b3i tr\u00c6\u00b0\u00e1\u00bb\u009dng h\u00e1\u00bb\u008dc trong ti\u00e1\u00ba\u00bfng Anh nh\u00c6\u00b0 th\u00e1\u00ba\u00bf n\u00c3\u00a0o nh\u00e1\u00bb\u2030?",
+        "entities": [
+            {
+                "id": "107839221338025",
+                "name": "language",
+                "role": "language",
+                "start": 26,
+                "end": 35,
+                "body": "ti\u00e1\u00ba\u00bfng Anh",
+                "entities": []
+            },
+            {
+                "id": "152006720176851",
+                "name": "wit$phrase_to_translate",
+                "role": "phrase_to_translate",
+                "start": 9,
+                "end": 19,
+                "body": "tr\u00c6\u00b0\u00e1\u00bb\u009dng h\u00e1\u00bb\u008dc",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "314011900066551",
+            "name": "req_translate"
+        }
+    },
+    {
+        "text": "m\u00c3\u00acnh n\u00c3\u00b3i t\u00c3\u00b4i t\u00c3\u00a0i gi\u00e1\u00bb\u008fi trong ti\u00e1\u00ba\u00bfng Anh nh\u00c6\u00b0 th\u00e1\u00ba\u00bf n\u00c3\u00a0o?",
+        "entities": [
+            {
+                "id": "107839221338025",
+                "name": "language",
+                "role": "language",
+                "start": 28,
+                "end": 37,
+                "body": "ti\u00e1\u00ba\u00bfng Anh",
+                "entities": []
+            },
+            {
+                "id": "152006720176851",
+                "name": "wit$phrase_to_translate",
+                "role": "phrase_to_translate",
+                "start": 9,
+                "end": 22,
+                "body": "t\u00c3\u00b4i t\u00c3\u00a0i gi\u00e1\u00bb\u008fi ",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "314011900066551",
+            "name": "req_translate"
+        }
+    },
+    {
+        "text": "b\u00e1\u00ba\u00a1n kh\u00e1\u00bb\u008fe kh\u00c3\u00b4ng?",
+        "entities": [],
+        "traits": [],
+        "intent": {
+            "id": "229742355575181",
+            "name": "ask_health"
+        }
+    },
+    {
+        "text": "M\u00c3\u00a3 c\u00e1\u00bb\u2022 phi\u00e1\u00ba\u00bfu AAPL \u00c4\u2018ang \u00e1\u00bb\u0178 m\u00e1\u00bb\u00a9c bao nhi\u00c3\u00aau \u00c4\u2018i\u00e1\u00bb\u0192m?",
+        "entities": [
+            {
+                "id": "148184677286748",
+                "name": "stock_code",
+                "role": "stock_code",
+                "start": 12,
+                "end": 16,
+                "body": "AAPL",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "321513882680983",
+            "name": "ask_stock"
+        }
+    },
+    {
+        "text": "C\u00e1\u00bb\u2022 phi\u00e1\u00ba\u00bfu GOOGL \u00c4\u2018ang \u00e1\u00bb\u0178 m\u00e1\u00bb\u2018c bao nhi\u00c3\u00aau \u00c4\u2018i\u00e1\u00bb\u0192m",
+        "entities": [
+            {
+                "id": "148184677286748",
+                "name": "stock_code",
+                "role": "stock_code",
+                "start": 9,
+                "end": 14,
+                "body": "GOOGL",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "321513882680983",
+            "name": "ask_stock"
+        }
+    },
+    {
+        "text": "C\u00e1\u00bb\u2022 phi\u00e1\u00bb\u0192u AMZN \u00c4\u2018ang \u00e1\u00bb\u0178 m\u00e1\u00bb\u00a9c bao nhi\u00c3\u00aau \u00c4\u2018i\u00e1\u00bb\u0192m v\u00e1\u00ba\u00ady?",
+        "entities": [
+            {
+                "id": "148184677286748",
+                "name": "stock_code",
+                "role": "stock_code",
+                "start": 9,
+                "end": 13,
+                "body": "AMZN",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "321513882680983",
+            "name": "ask_stock"
+        }
+    },
+    {
+        "text": "Th\u00e1\u00bb\u009di ti\u00e1\u00ba\u00bft h\u00c3\u00b4m nay nh\u00c6\u00b0 th\u00e1\u00ba\u00bf n\u00c3\u00a0o?",
+        "entities": [
+            {
+                "id": "525705015507987",
+                "name": "wit$datetime",
+                "role": "datetime",
+                "start": 10,
+                "end": 17,
+                "body": "h\u00c3\u00b4m nay",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "478035866576237",
+            "name": "ask_weather"
+        }
+    },
+    {
+        "text": "\u00e1\u00bb\u009d H\u00c3\u00a0 N\u00e1\u00bb\u2122i",
+        "entities": [],
+        "traits": []
+    },
+    {
+        "text": "T\u00c3\u00acnh h\u00c3\u00acnh covid nh\u00c6\u00b0 th\u00e1\u00ba\u00bf n\u00c3\u00a0o",
+        "entities": [],
+        "traits": [],
+        "intent": {
+            "id": "921914485295859",
+            "name": "ask_covid"
+        }
+    },
+    {
+        "text": "ch\u1ec9 s\u1ed1 c\u1ee7a GOOGL hi\u1ec7n t\u1ea1i \u1edf m\u1ed1c bao nhi\u00eau \u0111i\u1ec3m?",
+        "entities": [
+            {
+                "id": "148184677286748",
+                "name": "stock_code",
+                "role": "stock_code",
+                "start": 11,
+                "end": 16,
+                "body": "GOOGL",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "321513882680983",
+            "name": "ask_stock"
+        }
+    },
+    {
+        "text": "24+12 b\u1eb1ng bao nhji\u00eau?",
+        "entities": [
+            {
+                "id": "451731849248695",
+                "name": "wit$math_expression",
+                "role": "math_expression",
+                "start": 0,
+                "end": 5,
+                "body": "24+12",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "755813118459779",
+            "name": "ask_calc"
+        }
+    },
+    {
+        "text": "b\u1ea1n t\u00ednh 2+2 ra bao nhi\u00eau?",
+        "entities": [
+            {
+                "id": "451731849248695",
+                "name": "wit$math_expression",
+                "role": "math_expression",
+                "start": 9,
+                "end": 12,
+                "body": "2+2",
+                "entities": []
+            }
+        ],
+        "traits": [],
+        "intent": {
+            "id": "755813118459779",
+            "name": "ask_calc"
+        }
+    },
+    {
+        "text": "Xin ch\u00e0o",
+        "entities": [],
+        "traits": [],
+        "intent": {
+            "id": "734449657248397",
+            "name": "greeting"
+        }
+    },
+    {
+        "text": "t\u00ean b\u1ea1n l\u00e0 g\u00ec?",
+        "entities": [],
+        "traits": [],
+        "intent": {
+            "id": "2821369671511892",
+            "name": "ask_name"
+        }
+    }
+]

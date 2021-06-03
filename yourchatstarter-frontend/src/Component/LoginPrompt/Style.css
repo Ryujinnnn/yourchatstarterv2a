@@ -1,15 +1,15 @@
-form input{
-	height: 35px;
-    min-width: 200px;
-    width: 30vw;
-	margin: 15px;
-    padding: 10px;
-    display: block;
-    background-color: #e29ae2;
-    border: solid 1px #ffb2ff;
+.custom-login {
+    background-color: #0f131a;
+    text-align: left;
+    min-height: 560px;
+    height: 80vh;
 }
 
-.login-button {
-    margin: 15px;
+.login-prompt {
+    margin: 20px;
+    height: auto;
 }
 
+.custom-form-control {
+    width: 100%;
+}

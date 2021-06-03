@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { withRouter } from "react-router";
 import './Style.css'
+import {Grid, Col, Panel, Form, FormGroup, ControlLabel, FormControl, ButtonToolbar, Button} from 'rsuite'
 
 async function registerUser(credentials) {
     return fetch('api/auth/register', {
@@ -25,7 +26,6 @@ class RegisterPrompt extends Component {
     }
 
     async handleSubmit(e) {
-        e.preventDefault();
         const register_result = await registerUser({
           username: this.state.username,
           password: this.state.password,
@@ -59,14 +59,45 @@ class RegisterPrompt extends Component {
         };
 
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="username" onChange={e => this.setState({username: e.target.value})}  placeholder="Tên tài khoản"/>
-                    <input type="password" name="password" onChange={e => this.setState({password: e.target.value})} placeholder="Mật khẩu"/>
-                    <input type="password" name="confirm_password" onChange={e => this.setState({confirm_password: e.target.value})} placeholder="Xác nhận mật khẩu"/>
-                    <input type="text" name="email" onChange={e => this.setState({email: e.target.value})} placeholder="Email"/>
-                    <button type="submit" value="Register" style={style}>Đăng ký</button>
-                </form>
+            // <div>
+            //     <form onSubmit={this.handleSubmit}>
+            //         <input type="text" name="username" onChange={e => this.setState({username: e.target.value})}  placeholder="Tên tài khoản"/>
+            //         <input type="password" name="password" onChange={e => this.setState({password: e.target.value})} placeholder="Mật khẩu"/>
+            //         <input type="password" name="confirm_password" onChange={e => this.setState({confirm_password: e.target.value})} placeholder="Xác nhận mật khẩu"/>
+            //         <input type="text" name="email" onChange={e => this.setState({email: e.target.value})} placeholder="Email"/>
+            //         <button type="submit" value="Register" style={style}>Đăng ký</button>
+            //     </form>
+            // </div>
+            <div className='login-page custom-register'>
+            <Grid fluid justify="center">
+                <Col lg={12} md={16} sm={20} xs={24} className='register-prompt'>
+                    <Panel header={<h3>Đăng ký</h3>} bordered>
+                        <Form fluid onSubmit={this.handleSubmit} >
+                            <FormGroup style={{marginBottom: -6}} >
+                                <ControlLabel style={{marginTop: 12}}>Tên tài khoản</ControlLabel>
+                                <FormControl onChange={e => this.setState({username: e})} name="username" style={{marginLeft: -3}}/>
+                            </FormGroup>
+                            <FormGroup style={{marginBottom: -6}}>
+                                <ControlLabel style={{marginTop: 12}}> Mật khẩu</ControlLabel>
+                                <FormControl onChange={e => this.setState({password: e})} name="password" type="password" style={{marginLeft: -3}}/>
+                            </FormGroup>
+                            <FormGroup style={{marginBottom: -6}}>
+                                <ControlLabel style={{marginTop: 12}}>Xác nhận Mật khẩu</ControlLabel>
+                                <FormControl onChange={e => this.setState({confirm_password: e})} name="confirm_password" type="password" style={{marginLeft: -3}}/>
+                            </FormGroup>
+                            <FormGroup style={{marginBottom: -6}}>
+                                <ControlLabel style={{marginTop: 12}}>Email</ControlLabel>
+                                <FormControl onChange={e => this.setState({email: e})} name="email" style={{marginLeft: -3}}/>
+                            </FormGroup>
+                            <FormGroup>
+                                <ButtonToolbar style={{marginTop: 12}}>
+                                    <Button appearance="primary" type="submit">Đăng ký</Button>
+                                </ButtonToolbar>
+                            </FormGroup>
+                        </Form>
+                    </Panel>
+                </Col>
+            </Grid>
             </div>
         )
     }

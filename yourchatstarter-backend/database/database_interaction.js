@@ -46,10 +46,25 @@ module.exports.removeRecords = (colName, query) => {
     }).catch()
 }
 
-module.exports.queryRecord = (colName, query) => {
+module.exports.queryRecord = (colName, query, projection = {}) => {
     return new Promise((resolve, reject) => {
         let col = databaseConn.getConnection().collection(colName)
-        col.find(query).toArray(function(err, res) {
+        col.find(query).project(projection).toArray(function(err, res) {
+            if (err) {
+                console.err(err)
+                reject()
+            }
+            else {
+                resolve(res)
+            }
+        })
+    }).catch()
+}
+
+module.exports.queryRecordLimit = (colName, query, limit, projection = {}) => {
+    return new Promise((resolve, reject) => {
+        let col = databaseConn.getConnection().collection(colName)
+        col.find(query).project(projection).limit(limit).toArray(function(err, res) {
             if (err) {
                 console.err(err)
                 reject()

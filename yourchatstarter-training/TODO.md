@@ -1,0 +1,5 @@
+- Fix data model (use template thanks)
+- Redo the UI
+- Add admin panel
+- Add contentssssssssssss
+- Add social front

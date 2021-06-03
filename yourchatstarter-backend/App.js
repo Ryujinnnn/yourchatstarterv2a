@@ -7,6 +7,7 @@ const send_message = require('./routes/send_message')
 const payment = require('./routes/payment')
 const auth = require('./routes/auth')
 const user = require('./routes/user')
+const blog = require('./routes/blog')
 const chatbot = require('./chatbot_engine')
 const databaseConn = require('./database/database_connection')
 const fs = require('fs')
@@ -77,6 +78,7 @@ app.use("/api/send_message", send_message)
 app.use("/api/payment", payment)
 app.use("/api/auth", auth)
 app.use("/api/user", user)
+app.use("/api/blog", blog)
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/../yourchatstarter-frontend/build/index.html'));

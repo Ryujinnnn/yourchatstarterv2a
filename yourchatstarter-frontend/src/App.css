@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+p h1 h2 h3 h4 {
+  font-size: 1rem;
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0)
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 20px;
+  border: 1px solid darkgray;
 }

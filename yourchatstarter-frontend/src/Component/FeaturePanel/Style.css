@@ -1,0 +1,16 @@
+.feature-panel-container {
+    margin: 50px 0 50px 0;
+}
+
+.feature-panel-text {
+    margin: 40px;
+    text-align: left;
+}
+
+.feature-panel-desc {
+    margin: 10px 0 10px 0;
+}
+
+.feature-panel-list li{
+    margin: 10px 0 0 0;
+}

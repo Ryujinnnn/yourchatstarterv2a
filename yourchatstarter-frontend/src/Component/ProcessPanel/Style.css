@@ -1,0 +1,29 @@
+.custom-timeline {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+  
+.custom-timeline .rs-timeline-item-custom-dot .rs-icon {
+    position: absolute;
+    background: #fff;
+    top: 0;
+    left: -2px;
+    border: 2px solid #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    padding-top: 9px;
+    color: #999;
+    margin-left: -24px;
+}
+
+.custom-timeline .rs-timeline-item-content {
+    margin-right: 40px;
+}
+
+.payment-method-list {
+    margin-top: 20px;
+    font-size: 1rem;
+}

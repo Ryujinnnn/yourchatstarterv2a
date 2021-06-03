@@ -20,6 +20,9 @@ import { Component } from 'react'
 import Navigation from '../Component/Navigation/Navigation'
 import Profile from '../Profile'
 import DirectPayment from '../DirectPayment'
+import Blog from '../Blog'
+import BlogPost from '../BlogPost'
+import { AdminPanel } from '../AdminPanel'
   
 
 class Routes extends Component {
@@ -40,6 +43,8 @@ class Routes extends Component {
                         <Route path='/payment'><Login /></Route>
                         <Route exact path='/history'><Login /></Route>
                         <Route exact path="/logout">{<Redirect exact from='/logout' to="/"/>}</Route>
+                        <Route exact path='/blog'><Blog /></Route>
+                        <Route path='/blog_post'><BlogPost /></Route>
                         <Route exact path="/"><Landing /></Route>
                         <Route path="*"><NotFound /></Route>
                     </Switch>
@@ -62,6 +67,9 @@ class Routes extends Component {
                     <Route exact path='/history'><BillingHistory /></Route>
                     <Route exact path='/profile'><Profile /></Route>
                     <Route exact path="/logout">{<Redirect exact from='/logout' to="/"/>}</Route>
+                    <Route exact path='/blog'><Blog /></Route>
+                    <Route path='/blog_post'><BlogPost /></Route>
+                    <Route exact path='/admin'><AdminPanel /></Route>
                     <Route exact path="/"><Landing /></Route>
                     <Route path="*"><NotFound /></Route>
                 </Switch>

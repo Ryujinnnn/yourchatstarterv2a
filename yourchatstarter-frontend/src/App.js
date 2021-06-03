@@ -15,7 +15,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" style={{backgroundColor: "#c27ac2"}}>
+      <div className="App" style={{backgroundColor: "#0F131A"}}>
           <Helmet>
             {/*<!-- HTML Meta Tags -->*/}
             <title>YourChatStarter - Chatbot cung cấp thông tin cho bạn</title>
@@ -39,7 +39,7 @@ class App extends Component {
             <meta name="twitter:description" content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay"/>
             <meta name="twitter:image" content=""/>
           </Helmet>
-          <Header></Header>
+          {/* <Header></Header> */}
           <Routes token={this.state.token}></Routes>
           
       </div>
