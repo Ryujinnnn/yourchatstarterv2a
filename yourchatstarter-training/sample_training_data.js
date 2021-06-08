@@ -28,7 +28,7 @@ const sample_train = [
                 entity: "wit$location:location",
                 start: 22,
                 end: 28,
-                boday: "London",
+                body: "London",
                 entities: [],
             }
         ],

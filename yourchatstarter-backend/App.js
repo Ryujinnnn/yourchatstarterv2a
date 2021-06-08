@@ -8,9 +8,11 @@ const payment = require('./routes/payment')
 const auth = require('./routes/auth')
 const user = require('./routes/user')
 const blog = require('./routes/blog')
+
 const chatbot = require('./chatbot_engine')
 const databaseConn = require('./database/database_connection')
-const fs = require('fs')
+const fs = require('fs');
+const { init_scraper } = require('./info_module/covid_info');
 
 require('dotenv').config()
 
@@ -30,6 +32,9 @@ fs.readdir('./chatbot_engine/intent/', (err, files) => {
   })
   chatbot.init_engine(IntentHandler)
 })
+
+//init scraper
+init_scraper()
 
 const app = express()
 
@@ -79,6 +84,19 @@ app.use("/api/payment", payment)
 app.use("/api/auth", auth)
 app.use("/api/user", user)
 app.use("/api/blog", blog)
+
+//ADMIN ACCESS
+if (process.env.ADMIN_ACCESS === "1") {
+  console.log('Loading admin panel')
+  const admin_user = require('./routes/admin/user')
+  app.use('/api/admin/user', admin_user)
+  const admin_blog = require('./routes/admin/blog')
+  app.use('/api/admin/blog', admin_blog)
+  const admin_bill = require('./routes/admin/bill')
+  app.use('/api/admin/bill', admin_bill)
+  const admin_service = require('./routes/admin/service')
+  app.use('/api/admin/service', admin_service)
+}
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/../yourchatstarter-frontend/build/index.html'));

@@ -30,7 +30,7 @@ body {
 }
 
 .entry-title {
-  background: #53CFE9;
+  background: #3B4966;
   height: 140px;
   position: relative;
   text-align: center;
@@ -40,7 +40,7 @@ body {
 }
 
 .entry-title>h3 {
-  background: #20BADA;
+  background: #3B4966;
   font-size: 20px;
   padding: 5px 0;
   text-transform: uppercase;
@@ -52,7 +52,7 @@ body {
 .entry-title .price {
   position: absolute;
   bottom: -25px;
-  background: #20BADA;
+  background: #3B4966;
   height: 90px;
   width: 250px;
   margin: 0 auto;
@@ -122,37 +122,37 @@ body {
     font-weight: 700;
 }
 .basic .entry-title {
-  background: #75DDD9;
+  background: #2d89ef
 }
 
 .basic .entry-title > h3 {
-  background: #44CBC6;
+  background: #2d89ef
 }
 
 .basic .price {
-  background: #44CBC6;
+  background: #2d89ef
 }
 
 .standard .entry-title {
-  background: #4484c1;
+  background: #da532c
 }
 
 .standard .entry-title > h3 {
-  background: #3772aa;
+  background: #da532c
 }
 
 .standard .price {
-  background: #3772aa;
+  background: #da532c
 }
 
 .ultimite .entry-title > h3 {
-  background: #DD4B5E;
+  background: #b91d47
 }
 
 .ultimite .entry-title {
-  background: #F75C70;
+  background: #b91d47
 }
 
 .ultimite .price {
-  background: #DD4B5E;
+  background: #b91d47
 }

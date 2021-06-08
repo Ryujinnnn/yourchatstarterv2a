@@ -34,7 +34,7 @@ class Navigation extends Component {
             return (
                 <Navbar>
                     <Navbar.Header classPrefix='brand-logo'>
-                        <a href="/"><img src="logo200.png" alt="YourChatStarter" height='80'></img></a>
+                        <a href="/"><img src="logo200.png" alt="YourChatStarter" height='50' style={{marginBottom: 10, marginTop: 15, marginLeft: 5}}></img></a>
                     </Navbar.Header> 
                     <Navbar.Body>
                         <Nav>

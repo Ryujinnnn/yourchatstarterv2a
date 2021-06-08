@@ -16,7 +16,7 @@ class BigPicture extends Component {
             <Carousel className="custom-slider" style={{width: "100vw", height: "70vh"}} >
             <div className="container">
                 <img
-                    src={picture}
+                    src="https://bizflyportal.mediacdn.vn/bizflyportal/341/470/2020/04/17/22/11/715871146813194.jpg"
                     style={{width: "100vw", height: "70vh", objectFit: "cover"}}
                     alt="Chat"
                 />
@@ -24,7 +24,7 @@ class BigPicture extends Component {
             </div>
             <div className="container">
                 <img
-                    src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=2"
+                    src="https://thecxinsights.com/wp-content/uploads/2020/08/Discover-the-9-Best-Chatbot-Examples-of-2020-vector-1-1.png"
                     style={{width: "100vw", height: "70vh", objectFit: "cover"}}
                     alt="Chat"
                 />
@@ -32,7 +32,7 @@ class BigPicture extends Component {
             </div>
             <div className="container">
                 <img
-                    src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=3"
+                    src="https://sonaagency.com/wp-content/uploads/2019/11/1_m9IJdAYW04MYh75ivpwUNA-1536x877.png"
                     style={{width: "100vw", height: "70vh", objectFit: "cover"}}
                     alt="Chat"
                 />
@@ -40,7 +40,7 @@ class BigPicture extends Component {
             </div>
             <div className="container">
                 <img
-                    src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=4"
+                    src="https://s3-eu-west-1.amazonaws.com/userlike-cdn-blog/do-i-need-a-chatbot/header-chat-box.png"
                     style={{width: "100vw", height: "70vh", objectFit: "cover"}}
                     alt="Chat"
                 />
@@ -48,7 +48,7 @@ class BigPicture extends Component {
             </div>
             <div className="container">
                 <img
-                    src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=5"
+                    src="https://cdn.wedevs.com/uploads/2018/12/Chatbot-marketing-Feature-image.png"
                     style={{width: "100vw", height: "70vh", objectFit: "cover"}}
                     alt="Chat"
                 />

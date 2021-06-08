@@ -10,7 +10,7 @@ const Entry = props => {
         <Panel bordered bodyFill style={{margin: 20, textAlign: 'left', display: 'block', height: 240}} >
             <Row>
                 <Col md={4} sm={8} style={{overflowX: 'hidden'}}>
-                    <img src={(props.imageLink)? props.imageLink : "https://via.placeholder.com/240x240"} alt="blog" style={{objectFit: 'fill'}}/>
+                    <img src={(props.imageLink)? props.imageLink : "https://via.placeholder.com/240x240"} height={240} alt="blog" style={{objectFit: 'fill'}}/>
                 </Col>
                 <Col md={20} sm={16}  style={{overflowY: 'hidden'}}>
                     <Panel style={{textAlign: 'left', display: 'inline'}}>
@@ -57,7 +57,7 @@ class BlogList extends Component {
     render() {
         const blog_list_disp = this.state.blog_list.map((val, index) => {
             return (
-                <Entry title={val.title} desc={val.desc} tag={val.tag} time={val.createOn} id={val.articleId} key={index}/>
+                <Entry title={val.title} desc={val.desc} tag={val.tag} time={val.createOn} id={val.articleId} key={index} imageLink={val.imageLink}/>
             )
         })
         return (<div>

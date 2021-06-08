@@ -1,5 +1,9 @@
 import { Component } from "react";
 import { Container, Sidenav, Sidebar, Nav, Navbar, Dropdown, Icon, Header, Content } from 'rsuite'
+import { BillManager } from "./Component/AdminPanelComponents/BillManager";
+import { BlogManager } from "./Component/AdminPanelComponents/BlogManager";
+import { UserManager } from './Component/AdminPanelComponents/UserManager';
+import { ServiceManager } from './Component/AdminPanelComponents/ServiceManager'
 
 const headerStyles = {
     padding: 18,
@@ -50,17 +54,27 @@ export class AdminPanel extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            expand: true
+            expand: true,
+            currentPageTitle: "Dashboard" 
         };
         this.handleToggle = this.handleToggle.bind(this);
     }
+
     handleToggle() {
         this.setState({
             expand: !this.state.expand
         });
     }
+
     render() {
         const { expand } = this.state;
+        const LoadedComponet = (this.state.currentPageTitle === "Users") ? <UserManager />
+            : (this.state.currentPageTitle === "Billing") ? <BillManager />
+            : (this.state.currentPageTitle === "Subscription Plan") ? <ServiceManager />
+            : (this.state.currentPageTitle === "Blog") ? <BlogManager />
+            : (this.state.currentPageTitle === "Dashboard")? (<p>Dashboard</p>)
+            : (<p>This page is empty</p>)
+
         return (
             <div className="show-fake-browser sidebar-page" style={{textAlign: 'left'}}>
                 <Container>
@@ -73,12 +87,12 @@ export class AdminPanel extends Component {
                             <Sidenav.Header>
                                 <div style={headerStyles}>
                                     <Icon icon="logo-analytics" size="lg" style={{ verticalAlign: 0 }} />
-                                    <span style={{ marginLeft: 12 }}> AdminPanel</span>
+                                    <span style={{ marginLeft: 12 }}>Admin Panel</span>
                                 </div>
                             </Sidenav.Header>
                             <Sidenav.Body>
                                 <Nav>
-                                    <Nav.Item eventKey="1" active icon={<Icon icon="dashboard" />}>
+                                    <Nav.Item eventKey="1" active icon={<Icon icon="dashboard" />} onSelect={() => {this.setState({currentPageTitle: "Dashboard"})}}>
                                         Dashboard
                                     </Nav.Item>
                                     <Nav.Item eventKey="2" icon={<Icon icon="group" />}>
@@ -91,10 +105,10 @@ export class AdminPanel extends Component {
                                         icon={<Icon icon="magic" />}
                                         placement="rightStart"
                                     >
-                                        <Dropdown.Item eventKey="3-1">Users</Dropdown.Item>
-                                        <Dropdown.Item eventKey="3-2">Billing</Dropdown.Item>
-                                        <Dropdown.Item eventKey="3-3">Subscription Plan</Dropdown.Item>
-                                        <Dropdown.Item eventKey="3-4">Blog</Dropdown.Item>
+                                        <Dropdown.Item eventKey="3-1" onSelect={() => {this.setState({currentPageTitle: "Users"})}}>Users</Dropdown.Item>
+                                        <Dropdown.Item eventKey="3-2" onSelect={() => {this.setState({currentPageTitle: "Billing"})}}>Billing</Dropdown.Item>
+                                        <Dropdown.Item eventKey="3-3" onSelect={() => {this.setState({currentPageTitle: "Subscription Plan"})}}>Subscription Plan</Dropdown.Item>
+                                        <Dropdown.Item eventKey="3-4" onSelect={() => {this.setState({currentPageTitle: "Blog"})}}>Blog</Dropdown.Item>
                                     </Dropdown>
                                     <Dropdown
                                         eventKey="4"
@@ -113,11 +127,11 @@ export class AdminPanel extends Component {
                         <NavToggle expand={expand} onChange={this.handleToggle} />
                     </Sidebar>
 
-                    <Container style={{padding: 20}}>
-                        <Header>
-                            <h4>Page Title</h4>
+                    <Container style={{padding: 10}}>
+                        <Header style={{marginBottom: 10}}>
+                            <h4>{this.state.currentPageTitle}</h4>
                         </Header>
-                        <Content>Content</Content>
+                        <Content>{LoadedComponet}</Content>
                     </Container>
                 </Container>
             </div>

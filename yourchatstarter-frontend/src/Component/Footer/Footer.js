@@ -10,7 +10,7 @@ class Footer extends Component {
 
 			<div className="footer-left">
 
-				<img src="logo200.png" alt="YourChatStarter" className="footer-logo"></img>
+				<img src="logo200.png" alt="YourChatStarter" className="footer-logo" height={80} style={{marginBottom: 10}}></img>
 
 				<p className="footer-links">
 					<a href="/chat">Chat</a> · <a href="/subscribe">Dịch vụ</a> · <a href="/about">Thông tin</a>

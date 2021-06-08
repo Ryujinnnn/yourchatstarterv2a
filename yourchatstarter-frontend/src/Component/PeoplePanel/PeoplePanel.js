@@ -7,7 +7,7 @@ class PeoplePanel extends Component {
         return (
             <div className='people-panel-container'>
                 <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: 300 }}>
-                    <img src="https://via.placeholder.com/240x240" height="300" alt="placeholder"/>
+                    <a href="https://ibb.co/87tjH4f"><img src="https://i.ibb.co/0GvfxV6/IMG-20201226-140928.jpg" alt="IMG-20201226-140928" border="0" width={300}/></a>
                     <Panel header="NGUYỄN NGỌC ĐĂNG">
                         <p>
                             Quản lý dịch vụ

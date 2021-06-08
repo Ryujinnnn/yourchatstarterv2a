@@ -45,7 +45,7 @@ class BlogCardPanel extends Component {
         const blog_list_disp = this.state.blog_list.map((val, index) => {
             return (
                 <Col md={8} sm={24} style={{padding: 20}} key={index}>
-                    <Card title={val.title} desc={val.desc} id={val.articleId}/>
+                    <Card title={val.title} desc={val.desc} id={val.articleId} imageLink={val.imageLink}/>
                 </Col>
             )
         })
