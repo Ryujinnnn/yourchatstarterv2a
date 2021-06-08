@@ -29,7 +29,6 @@ class PaymentInfoPrompt extends Component {
     }
 
     async handleSubmit(e) {
-        e.preventDefault();
 
         const submit_result = await getCheckoutLink({
             name: this.state.name,
