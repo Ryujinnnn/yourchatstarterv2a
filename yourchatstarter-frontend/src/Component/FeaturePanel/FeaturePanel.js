@@ -25,8 +25,8 @@ class FeaturePanel extends Component {
                         </div>
                     </Col>
                     <Col md={12} sm={24}>
-                    <iframe width="420" height="315" title="illus"
-                        src="http://www.youtube.com/embed/dQw4w9WgXcQ">
+                    <iframe width="640" height="360" title="illus"
+                        src="http://www.youtube.com/embed/C5lNmbS99a0">
                     </iframe>
                     </Col>
                 </Row>
