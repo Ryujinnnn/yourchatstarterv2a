@@ -26,7 +26,7 @@ export class MessageBox extends Component {
             margin: "0px 10px 10px",
             //borderRadius: "12px",
             float: 'left',
-            width: "85vw",
+            width: "80vw",
             backgroundColor: "#1A1D24"
         }
         return (

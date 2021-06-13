@@ -22,6 +22,7 @@ export class SendButton extends Component {
             margin: "0px 10px 10px",
             //borderRadius: "12px",
             width: "10vw",
+            minWidth: 100,
             display: "inline-block",
             float: "right"
         };
