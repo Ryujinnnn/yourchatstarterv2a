@@ -1,6 +1,7 @@
 const wit_client = require('../wit_client')
 const random_index = require('./utils/random_helper')
 const context_handling = require('./context_handler')
+const { wiki_query } = require('../info_module/wikidata_info')
 
 let IntentHandler = undefined
 
@@ -25,8 +26,9 @@ module.exports.get_response = function get_response(input, option = {}, context 
 
         let response = ""
         //check for intent
+        let uncertain_flag = false
         if (parsed_data.intents.length != 0) {
-            if (parsed_data.intents[0].confidence < 0.8) response = uncertainResponsePool[random_index(uncertainResponsePool.length)]
+            if (parsed_data.intents[0].confidence < 0.8) uncertain_flag = true
             else {
                 let intent = IntentHandler.get(parsed_data.intents[0].name)
                 if (intent) {
@@ -42,8 +44,16 @@ module.exports.get_response = function get_response(input, option = {}, context 
             [response, context] = await context_handling(parsed_data, input, option, context, IntentHandler)
         }
         else {
-            response = notFoundResponsePool[random_index(notFoundResponsePool.length)]
+            //TODO: resolve description into vietnamese, somehow
+            await wiki_query(parsed_data.text).then(wiki_res => {
+                response = wiki_res[0].label + " là " + wiki_res[0].description 
+            })
+            .catch(() => {
+                response = notFoundResponsePool[random_index(notFoundResponsePool.length)]
+            })
         }
+        if (!response && uncertain_flag) response = uncertainResponsePool[random_index(uncertainResponsePool.length)]
+
         context.past_client_message.push(input)
         if (context.past_client_message.length > 20) context.past_client_message.pop()
         context.past_bot_message.push(response)
@@ -61,8 +71,9 @@ module.exports.get_response_from_voice = function get_response_from_voice(data, 
         let parsed_data = await wit_client.voice(data)
         let response = ""
         //check for intent
+        let uncertain_flag = false
         if (parsed_data.intents.length != 0) {
-            if (parsed_data.intents[0].confidence < 0.8) response = uncertainResponsePool[random_index(uncertainResponsePool.length)]
+            if (parsed_data.intents[0].confidence < 0.8) uncertain_flag = true
             else {
                 let intent = IntentHandler.get(parsed_data.intents[0].name)
                 if (intent) {
@@ -78,8 +89,17 @@ module.exports.get_response_from_voice = function get_response_from_voice(data, 
             [response, context] = await context_handling(parsed_data, input, option, context, IntentHandler)
         }
         else {
-            response = notFoundResponsePool[random_index(notFoundResponsePool.length)]
+            //try a wikidata query
+            //TODO: resolve description into vietnamese, somehow
+            await wiki_query(parsed_data.text).then(wiki_res => {
+                response = wiki_res[0].label + " là " + wiki_res[0].description 
+            })
+            .catch(() => {
+                response = notFoundResponsePool[random_index(notFoundResponsePool.length)]
+            })
         }
+
+        if (!response && uncertain_flag) response = uncertainResponsePool[random_index(uncertainResponsePool.length)]
         context.past_client_message.push(parsed_data.text)
         if (context.past_client_message.length > 20) context.past_client_message.pop()
         context.past_bot_message.push(response)

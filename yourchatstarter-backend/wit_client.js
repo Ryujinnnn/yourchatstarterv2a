@@ -25,7 +25,7 @@ function wit_parse(message) {
 		wit_client
 			.message(message)
 			.then(data => {
-				console.dir(data, { depth: null });
+				//console.dir(data, { depth: null });
 				resolve(data)
 			})
 			.catch(error => {

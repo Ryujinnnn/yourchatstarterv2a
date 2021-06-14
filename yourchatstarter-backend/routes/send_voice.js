@@ -60,7 +60,7 @@ router.post('/', async (req, res) => {
             return
         }
         part.on('data', (buffer) => {
-            console.log(buffer)
+            //console.log(buffer)
             buffers.push(buffer)
         });
       };
