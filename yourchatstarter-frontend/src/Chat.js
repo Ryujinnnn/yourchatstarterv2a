@@ -27,6 +27,7 @@ class Chat extends Component {
 		this.render = this.render.bind(this)
 		this.handleKeyPress = this.handleKeyPress.bind(this)
 		this.onSuggestSelection = this.onSuggestSelection.bind(this)
+		this.onReceivingAudio = this.onReceivingAudio.bind(this)
 	}
 
 	componentDidMount() {
@@ -92,6 +93,35 @@ class Chat extends Component {
 		this.handleSubmit()
 	}
 
+	async onReceivingAudio(blob) {
+		//console.log(blob)
+
+		let formData = new FormData()
+
+		formData.append("token", sessionStorage.getItem('token'));
+		formData.append("context", JSON.stringify(this.state.context))
+		formData.append("data", blob)
+		let req = {
+			method: 'POST',
+			body: formData
+		}
+		this.setState({
+			post: ""
+		})
+		// for (var key of formData.entries()) {
+		// 	console.log(key[0] + ', ' + key[1]);
+		// }
+		//console.log(req)
+		const res = await fetch('/api/send_voice', req);
+		const body = JSON.parse(await res.text());
+		//console.log(body)
+		//console.log(body.response)
+		this.setState({
+			messageList: [...this.state.messageList, { text: body.context.past_client_message[body.context.past_client_message.length - 1], isFromClient: true }, { text: body.response, isFromClient: false }],
+			context: body.context
+		})
+	}
+
 	onTextChange(value) {
 		this.setState({
 			post: value
@@ -115,7 +145,7 @@ class Chat extends Component {
 				<MessageBox onChange={this.onTextChange} text={this.state.post} handleKeyDown={this.handleKeyPress}></MessageBox>
 				<SpeechInput isVisible={this.state.isSpeechModalVisible} onRequestClose={() => {
 					this.setState({isSpeechModalVisible: false})
-				}}></SpeechInput>
+				}} onReceivingAudio={this.onReceivingAudio}></SpeechInput>
 				<div>
 					<div onClick={() => {this.setState({isSpeechModalVisible: true})}} style={{display: 'inline', marginTop: 12 }}><Icon icon='microphone' size='2x' style={{marginTop: 10, marginBottom: 10}}/></div>
 					<SendButton text="Gửi" style={{ float: "right" }} onAction={this.onClickHandler}></SendButton>

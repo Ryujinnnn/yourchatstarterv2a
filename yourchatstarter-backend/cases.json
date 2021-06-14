@@ -7,6 +7,1077 @@
         "nationality": ""
     },
     {
+        "id": "BN10673",
+        "age": "39",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10682",
+        "age": "30",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10681",
+        "age": "39",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10680",
+        "age": "23",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10679",
+        "age": "32",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10678",
+        "age": "23",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10677",
+        "age": "28",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10676",
+        "age": "25",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10675",
+        "age": "31",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10674",
+        "age": "30",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10673",
+        "age": "39",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10672",
+        "age": "54",
+        "province": "Hà Nội",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10671",
+        "age": "32",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10670",
+        "age": "29",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10669",
+        "age": "37",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10668",
+        "age": "27",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10667",
+        "age": "37",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10666",
+        "age": "20",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10665",
+        "age": "35",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10664",
+        "age": "27",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10663",
+        "age": "32",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10662",
+        "age": "38",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10661",
+        "age": "32",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10660",
+        "age": "29",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10659",
+        "age": "42",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10658",
+        "age": "35",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10657",
+        "age": "37",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10656",
+        "age": "24",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10655",
+        "age": "29",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10654",
+        "age": "30",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10653",
+        "age": "22",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10652",
+        "age": "34",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10651",
+        "age": "33",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10650",
+        "age": "42",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10649",
+        "age": "30",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10648",
+        "age": "34",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10647",
+        "age": "34",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10646",
+        "age": "55",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10645",
+        "age": "43",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10644",
+        "age": "33",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10643",
+        "age": "14",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10642",
+        "age": "28",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10641",
+        "age": "12",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10640",
+        "age": "27",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10639",
+        "age": "67",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10638",
+        "age": "37",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10637",
+        "age": "56",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10636",
+        "age": "32",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10635",
+        "age": "33",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10634",
+        "age": "64",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10633",
+        "age": "25",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10632",
+        "age": "47",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10631",
+        "age": "37",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10630",
+        "age": "47",
+        "province": "Tiền Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10629",
+        "age": "73",
+        "province": "Tiền Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10628",
+        "age": "25",
+        "province": "Tiền Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10627",
+        "age": "19",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10626",
+        "age": "1",
+        "province": "Tiền Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10625",
+        "age": "4",
+        "province": "Tiền Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10624",
+        "age": "8",
+        "province": "Tiền Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10623",
+        "age": "61",
+        "province": "Tiền Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10622",
+        "age": "29",
+        "province": "Tiền Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10621",
+        "age": "46",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10620",
+        "age": "36",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10619",
+        "age": "12",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10618",
+        "age": "15",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10617",
+        "age": "46",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10616",
+        "age": "75",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10615",
+        "age": "37",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10614",
+        "age": "65",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10613",
+        "age": "66",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10612",
+        "age": "6",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10611",
+        "age": "21",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10610",
+        "age": "33",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10609",
+        "age": "22",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10608",
+        "age": "4",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10607",
+        "age": "6",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10606",
+        "age": "8",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10605",
+        "age": "40",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10604",
+        "age": "3",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10603",
+        "age": "53",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10602",
+        "age": "29",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10601",
+        "age": "45",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10600",
+        "age": "8",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10599",
+        "age": "13",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10598",
+        "age": "52",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10597",
+        "age": "48",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10596",
+        "age": "31",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10595",
+        "age": "5",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10594",
+        "age": "62",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10593",
+        "age": "24",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10592",
+        "age": "8",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10591",
+        "age": "36",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10590",
+        "age": "7",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10589",
+        "age": "31",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10588",
+        "age": "23",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10587",
+        "age": "5",
+        "province": "Bình Dương",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10586",
+        "age": "32",
+        "province": "Bình Dương",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10585",
+        "age": "24",
+        "province": "Bình Dương",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10584",
+        "age": "26",
+        "province": "Bình Dương",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
+    },
+    {
+        "id": "BN10590",
+        "age": "7",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10589",
+        "age": "31",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10588",
+        "age": "23",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10587",
+        "age": "5",
+        "province": "Bình Dương",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10586",
+        "age": "32",
+        "province": "Bình Dương",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10585",
+        "age": "24",
+        "province": "Bình Dương",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10584",
+        "age": "26",
+        "province": "Bình Dương",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10583",
+        "age": "53",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10582",
+        "age": "32",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10581",
+        "age": "24",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10580",
+        "age": "21",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10579",
+        "age": "30",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10578",
+        "age": "28",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10577",
+        "age": "18",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10576",
+        "age": "26",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10575",
+        "age": "32",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10574",
+        "age": "24",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10573",
+        "age": "40",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10572",
+        "age": "14",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10571",
+        "age": "38",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10570",
+        "age": "28",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10569",
+        "age": "45",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10568",
+        "age": "29",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10567",
+        "age": "23",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10566",
+        "age": "32",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10565",
+        "age": "25",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10564",
+        "age": "51",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10563",
+        "age": "12",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10562",
+        "age": "47",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10561",
+        "age": "31",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10560",
+        "age": "40",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10559",
+        "age": "25",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10558",
+        "age": "32",
+        "province": "Bắc Kạn",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10557",
+        "age": "74",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10556",
+        "age": "31",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10555",
+        "age": "2",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10554",
+        "age": "6",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10553",
+        "age": "60",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10552",
+        "age": "64",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10551",
+        "age": "30",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10550",
+        "age": "50",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10549",
+        "age": "27",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10548",
+        "age": "55",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10547",
+        "age": "34",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10546",
+        "age": "9",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10545",
+        "age": "32",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10544",
+        "age": "40",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10543",
+        "age": "20",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10542",
+        "age": "19",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10541",
+        "age": "40",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10540",
+        "age": "8",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10539",
+        "age": "38",
+        "province": "Tây Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
         "id": "BN10538",
         "age": "49",
         "province": "Hồ Chí Minh",
@@ -292,6 +1363,62 @@
         "province": "Hồ Chí Minh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10497",
+        "age": "38",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10496",
+        "age": "25",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10495",
+        "age": "59",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10494",
+        "age": "46",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10493",
+        "age": "42",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10492",
+        "age": "31",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10491",
+        "age": "61",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN10497",
@@ -707,13 +1834,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN10438",
         "age": "67",
         "province": "Hà Tĩnh",
@@ -999,6 +2119,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN10397",
@@ -1414,13 +2541,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN10338",
         "age": "33",
         "province": "Bắc Giang",
@@ -1706,6 +2826,13 @@
         "province": "Bắc Ninh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN10297",
@@ -2121,13 +3248,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN10238",
         "age": "7",
         "province": "Hồ Chí Minh",
@@ -2415,102 +3535,11 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "BN10197",
-        "age": "41",
-        "province": "Hồ Chí Minh",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10196",
-        "age": "18",
-        "province": "Hồ Chí Minh",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10195",
-        "age": "34",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10194",
-        "age": "34",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10193",
-        "age": "24",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10192",
-        "age": "31",
-        "province": "Hà Tĩnh",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10191",
-        "age": "31",
-        "province": "Hà Tĩnh",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10190",
-        "age": "28",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10189",
-        "age": "10",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10188",
-        "age": "11",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10187",
-        "age": "41",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10186",
-        "age": "27",
-        "province": "Bắc Ninh",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10185",
-        "age": "36",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN10184",
-        "age": "32",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN10183",
@@ -2826,13 +3855,6 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
-    },
-    {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
     },
     {
         "id": "BN10138",
@@ -3220,6 +4242,41 @@
         "nationality": "Việt Nam"
     },
     {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
+    },
+    {
+        "id": "BN10087",
+        "age": "3",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10086",
+        "age": "44",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10085",
+        "age": "37",
+        "province": "Hà Tĩnh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN10084",
+        "age": "23",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
         "id": "BN10083",
         "age": "3",
         "province": "Bắc Giang",
@@ -3533,13 +4590,6 @@
         "province": "Tiền Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
-    },
-    {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
     },
     {
         "id": "BN10039",
@@ -3899,6 +4949,20 @@
         "nationality": "Việt Nam"
     },
     {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
+    },
+    {
+        "id": "BN9988",
+        "age": "2",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
         "id": "BN9987",
         "age": "26",
         "province": "Bắc Ninh",
@@ -4240,13 +5304,6 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
-    },
-    {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
     },
     {
         "id": "BN9938",
@@ -4599,6 +5656,13 @@
         "nationality": "Việt Nam"
     },
     {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
+    },
+    {
         "id": "BN9888",
         "age": "39",
         "province": "Bắc Giang",
@@ -4949,13 +6013,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN9838",
         "age": "19",
         "province": "Bắc Giang",
@@ -5297,6 +6354,20 @@
         "province": "Bà Rịa - Vũng Tàu",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN9789",
+        "age": "27",
+        "province": "Bà Rịa - Vũng Tàu",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN9789",
@@ -5656,13 +6727,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN9738",
         "age": "35",
         "province": "Bắc Giang",
@@ -6004,6 +7068,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN9689",
@@ -6363,13 +7434,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN9638",
         "age": "25",
         "province": "Bắc Giang",
@@ -6704,6 +7768,20 @@
         "province": "Bắc Ninh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN9590",
+        "age": "26",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN9590",
@@ -7070,13 +8148,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN9538",
         "age": "31",
         "province": "Bắc Giang",
@@ -7411,6 +8482,13 @@
         "province": "Hồ Chí Minh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN9490",
@@ -7777,13 +8855,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN9438",
         "age": "23",
         "province": "Bắc Giang",
@@ -8118,6 +9189,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN9390",
@@ -8484,13 +9562,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN9338",
         "age": "34",
         "province": "Bắc Giang",
@@ -8825,6 +9896,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN9290",
@@ -9191,13 +10269,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN9238",
         "age": "42",
         "province": "Bắc Giang",
@@ -9525,6 +10596,20 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN9191",
+        "age": "23",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN9191",
@@ -9898,13 +10983,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN9138",
         "age": "71",
         "province": "Hà Nội",
@@ -10232,6 +11310,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN9091",
@@ -10605,13 +11690,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN9038",
         "age": "22",
         "province": "Bắc Ninh",
@@ -10939,6 +12017,13 @@
         "province": "Bắc Ninh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN8991",
@@ -11312,13 +12397,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN8938",
         "age": "29",
         "province": "Bắc Giang",
@@ -11639,6 +12717,20 @@
         "province": "Bắc Ninh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN8892",
+        "age": "10",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN8892",
@@ -12019,13 +13111,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN8838",
         "age": "35",
         "province": "Bắc Giang",
@@ -12346,6 +13431,13 @@
         "province": "Lạng Sơn",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN8792",
@@ -12726,13 +13818,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN8738",
         "age": "68",
         "province": "Hồ Chí Minh",
@@ -13053,6 +14138,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN8692",
@@ -13433,13 +14525,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN8638",
         "age": "32",
         "province": "Hồ Chí Minh",
@@ -13753,6 +14838,20 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN8593",
+        "age": "23",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN8593",
@@ -14140,13 +15239,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN8538",
         "age": "25",
         "province": "Hồ Chí Minh",
@@ -14446,6 +15538,27 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN8495",
+        "age": "19",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN8494",
+        "age": "19",
+        "province": "Bắc Ninh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN8495",
@@ -14847,13 +15960,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN8438",
         "age": "26",
         "province": "Hồ Chí Minh",
@@ -15139,6 +16245,27 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN8397",
+        "age": "23",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN8396",
+        "age": "26",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN8397",
@@ -15554,13 +16681,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN8338",
         "age": "16",
         "province": "Bắc Giang",
@@ -15846,6 +16966,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN8297",
@@ -16261,13 +17388,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN8238",
         "age": "21",
         "province": "Bắc Giang",
@@ -16553,6 +17673,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN8197",
@@ -16968,13 +18095,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN8190",
         "age": "37",
         "province": "Bắc Giang",
@@ -17260,6 +18380,13 @@
         "province": "Bắc Ninh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN8149",
@@ -17675,13 +18802,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN8038",
         "age": "23",
         "province": "Kiên Giang",
@@ -17967,6 +19087,13 @@
         "province": "Bắc Ninh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN7997",
@@ -18382,13 +19509,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN7938",
         "age": "32",
         "province": "Bắc Giang",
@@ -18674,6 +19794,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN7897",
@@ -19089,13 +20216,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN7838",
         "age": "43",
         "province": "Bắc Giang",
@@ -19381,6 +20501,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN7797",
@@ -19796,13 +20923,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN7738",
         "age": "18",
         "province": "Bắc Ninh",
@@ -20088,6 +21208,13 @@
         "province": "Hải Dương",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN7697",
@@ -20503,13 +21630,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN7638",
         "age": "38",
         "province": "Bắc Giang",
@@ -20795,6 +21915,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN7597",
@@ -21210,13 +22337,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN7538",
         "age": "55",
         "province": "Bắc Ninh",
@@ -21504,109 +22624,11 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "BN7497",
-        "age": "33",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7496",
-        "age": "29",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7495",
-        "age": "20",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7494",
-        "age": "21",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7493",
-        "age": "31",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7492",
-        "age": "28",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7491",
-        "age": "49",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7490",
-        "age": "23",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7489",
-        "age": "26",
-        "province": "Hà Nam",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7488",
-        "age": "29",
-        "province": "Long An",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7487",
-        "age": "55",
-        "province": "Long An",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7486",
-        "age": "29",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7485",
-        "age": "22",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7484",
-        "age": "1",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN7483",
-        "age": "25",
-        "province": "Bắc Giang",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN7482",
@@ -21917,13 +22939,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN7438",
         "age": "39",
         "province": "Lạng Sơn",
@@ -22209,6 +23224,118 @@
         "province": "Hồ Chí Minh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7397",
+        "age": "23",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7396",
+        "age": "27",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7395",
+        "age": "29",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7394",
+        "age": "22",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7393",
+        "age": "39",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7392",
+        "age": "25",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7391",
+        "age": "38",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7390",
+        "age": "33",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7389",
+        "age": "56",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7388",
+        "age": "57",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7387",
+        "age": "26",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7386",
+        "age": "20",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7385",
+        "age": "58",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7384",
+        "age": "28",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN7383",
+        "age": "33",
+        "province": "Hồ Chí Minh",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN7397",
@@ -22624,13 +23751,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN7338",
         "age": "11",
         "province": "Bắc Ninh",
@@ -22916,6 +24036,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN7297",
@@ -23331,13 +24458,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN7238",
         "age": "57",
         "province": "Bắc Ninh",
@@ -23623,6 +24743,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN7197",
@@ -24038,13 +25165,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN7138",
         "age": "34",
         "province": "Hà Nội",
@@ -24330,6 +25450,13 @@
         "province": "Hồ Chí Minh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN7097",
@@ -24745,13 +25872,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN7038",
         "age": "23",
         "province": "Bắc Ninh",
@@ -25037,6 +26157,13 @@
         "province": "Bắc Ninh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN6997",
@@ -25452,13 +26579,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN6938",
         "age": "27",
         "province": "Bắc Giang",
@@ -25744,6 +26864,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN6897",
@@ -26159,13 +27286,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN6838",
         "age": "28",
         "province": "Bắc Giang",
@@ -26451,6 +27571,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN6797",
@@ -26866,13 +27993,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN6738",
         "age": "48",
         "province": "Hà Nội",
@@ -27158,6 +28278,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN6697",
@@ -27573,13 +28700,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN6638",
         "age": "27",
         "province": "Bắc Giang",
@@ -27865,6 +28985,13 @@
         "province": "Bắc Ninh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN6597",
@@ -28280,13 +29407,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN6538",
         "age": "32",
         "province": "Bắc Giang",
@@ -28572,6 +29692,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN6497",
@@ -28987,13 +30114,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN6438",
         "age": "22",
         "province": "Hồ Chí Minh",
@@ -29279,6 +30399,13 @@
         "province": "Hà Nội",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN6397",
@@ -29694,13 +30821,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN6338",
         "age": "33",
         "province": "Bắc Giang",
@@ -29986,6 +31106,13 @@
         "province": "Hồ Chí Minh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN6299",
@@ -30401,13 +31528,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN6240",
         "age": "20",
         "province": "Bắc Giang",
@@ -30693,6 +31813,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN6199",
@@ -31108,13 +32235,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN6139",
         "age": "9",
         "province": "Bắc Ninh",
@@ -31400,6 +32520,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN6097",
@@ -31815,13 +32942,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN6038",
         "age": "9",
         "province": "Bắc Ninh",
@@ -32107,6 +33227,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN5997",
@@ -32522,13 +33649,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN5938",
         "age": "59",
         "province": "Hải Dương",
@@ -32814,6 +33934,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN5897",
@@ -33229,13 +34356,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN5838",
         "age": "28",
         "province": "Bắc Giang",
@@ -33521,6 +34641,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN5797",
@@ -33936,13 +35063,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN5738",
         "age": "16",
         "province": "Bắc Giang",
@@ -34228,6 +35348,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN5697",
@@ -34643,13 +35770,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN5638",
         "age": "44",
         "province": "Bắc Giang",
@@ -34937,18 +36057,11 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "BN5597",
-        "age": "38",
-        "province": "Lạng Sơn",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
-    },
-    {
-        "id": "BN5596",
-        "age": "32",
-        "province": "Lạng Sơn",
-        "status": "Đang điều trị",
-        "nationality": "Việt Nam"
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN5595",
@@ -35350,13 +36463,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN5438",
         "age": "25",
         "province": "Bắc Giang",
@@ -35642,6 +36748,27 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN5554",
+        "age": "36",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "BN5553",
+        "age": "35",
+        "province": "Bắc Giang",
+        "status": "Đang điều trị",
+        "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN5554",
@@ -36057,13 +37184,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN5495",
         "age": "32",
         "province": "Bắc Giang",
@@ -36349,6 +37469,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN5397",
@@ -36764,13 +37891,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN5338",
         "age": "14",
         "province": "Bắc Ninh",
@@ -37056,6 +38176,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN5297",
@@ -37471,13 +38598,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN5238",
         "age": "19",
         "province": "Hà Nội",
@@ -37763,6 +38883,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN5197",
@@ -38178,13 +39305,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN5138",
         "age": "23",
         "province": "Bắc Giang",
@@ -38470,6 +39590,13 @@
         "province": "Bắc Ninh",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN5097",
@@ -38885,13 +40012,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN5039",
         "age": "44",
         "province": "Lạng Sơn",
@@ -39177,6 +40297,13 @@
         "province": "Bắc Giang",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN4997",
@@ -39592,13 +40719,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN4938",
         "age": "28",
         "province": "Bắc Giang",
@@ -39884,6 +41004,13 @@
         "province": "Bắc Ninh",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN4897",
@@ -40299,13 +41426,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN4838",
         "age": "24",
         "province": "Hà Nội",
@@ -40591,6 +41711,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN4797",
@@ -41006,13 +42133,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN4586",
         "age": "4",
         "province": "Điện Biên",
@@ -41298,6 +42418,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN4656",
@@ -41713,13 +42840,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN4749",
         "age": "46",
         "province": "Bắc Giang",
@@ -42005,6 +43125,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN4708",
@@ -42420,13 +43547,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN4538",
         "age": "12",
         "province": "Bắc Giang",
@@ -42712,6 +43832,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN4497",
@@ -43127,13 +44254,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN4438",
         "age": "33",
         "province": "Bắc Giang",
@@ -43419,6 +44539,13 @@
         "province": "Điện Biên",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN4396",
@@ -43834,13 +44961,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN4338",
         "age": "30",
         "province": "Bắc Giang",
@@ -44126,6 +45246,13 @@
         "province": "Bắc Ninh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN4297",
@@ -44541,13 +45668,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN4239",
         "age": "40",
         "province": "Bắc Giang",
@@ -44833,6 +45953,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN4197",
@@ -45248,13 +46375,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN4138",
         "age": "35",
         "province": "Bắc Ninh",
@@ -45540,6 +46660,13 @@
         "province": "Bắc Giang",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN4097",
@@ -45955,13 +47082,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN4038",
         "age": "21",
         "province": "Bắc Giang",
@@ -46247,6 +47367,13 @@
         "province": "Điện Biên",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN3997",
@@ -46662,13 +47789,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN3938",
         "age": "24",
         "province": "Bắc Giang",
@@ -46954,6 +48074,13 @@
         "province": "Vĩnh Phúc",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN3897",
@@ -47369,13 +48496,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN3838",
         "age": "33",
         "province": "Điện Biên",
@@ -47661,6 +48781,13 @@
         "province": "Bắc Ninh",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN3797",
@@ -48076,13 +49203,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN3738",
         "age": "44",
         "province": "Bắc Giang",
@@ -48368,6 +49488,13 @@
         "province": "Đà Nẵng",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN3697",
@@ -48783,13 +49910,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN3638",
         "age": "34",
         "province": "Đà Nẵng",
@@ -49075,6 +50195,13 @@
         "province": "Hà Nội",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN3597",
@@ -49490,13 +50617,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN3538",
         "age": "12",
         "province": "Nam Định",
@@ -49782,6 +50902,13 @@
         "province": "Đồng Nai",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN3497",
@@ -50197,13 +51324,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN3439",
         "age": "35",
         "province": "Bà Rịa - Vũng Tàu",
@@ -50489,6 +51609,13 @@
         "province": "Đà Nẵng",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN3397",
@@ -50904,13 +52031,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN3338",
         "age": "43",
         "province": "Bắc Ninh",
@@ -51196,6 +52316,13 @@
         "province": "Đà Nẵng",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN3297",
@@ -51611,13 +52738,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN3238",
         "age": "46",
         "province": "Lạng Sơn",
@@ -51903,6 +53023,13 @@
         "province": "Cần Thơ",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN3198",
@@ -52318,13 +53445,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN3138",
         "age": "14",
         "province": "Hà Nội",
@@ -52610,6 +53730,13 @@
         "province": "Nghệ An",
         "status": "Đang điều trị",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN3097",
@@ -53025,13 +54152,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN3038",
         "age": "45",
         "province": "Vĩnh Phúc",
@@ -53317,6 +54437,13 @@
         "province": "Hà Nội",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN2997",
@@ -53732,13 +54859,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN2938",
         "age": "23",
         "province": "Quảng Ninh",
@@ -54024,6 +55144,13 @@
         "province": "Nghệ An",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN2897",
@@ -54439,13 +55566,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN2838",
         "age": "22",
         "province": "Khánh Hòa",
@@ -54731,6 +55851,13 @@
         "province": "Đà Nẵng",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN2797",
@@ -55146,13 +56273,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN2738",
         "age": "26",
         "province": "Bến Tre",
@@ -55438,6 +56558,13 @@
         "province": "Bắc Ninh",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN2697",
@@ -55853,13 +56980,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN2638",
         "age": "43",
         "province": "Long An",
@@ -56145,6 +57265,13 @@
         "province": "Cà Mau",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN2597",
@@ -56560,13 +57687,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN2538",
         "age": "33",
         "province": "Đồng Nai",
@@ -56852,6 +57972,13 @@
         "province": "Hải Dương",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN2497",
@@ -57267,13 +58394,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN2438",
         "age": "30",
         "province": "Hải Dương",
@@ -57559,6 +58679,13 @@
         "province": "Hải Dương",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN2397",
@@ -57974,13 +59101,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN2338",
         "age": "80",
         "province": "Hải Dương",
@@ -58266,6 +59386,13 @@
         "province": "Hải Dương",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN2297",
@@ -58681,13 +59808,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN2238",
         "age": "38",
         "province": "Hải Dương",
@@ -58973,6 +60093,13 @@
         "province": "Hải Dương",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN2197",
@@ -59388,13 +60515,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN2138",
         "age": "27",
         "province": "Hải Dương",
@@ -59680,6 +60800,13 @@
         "province": "Hải Dương",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN2097",
@@ -60095,13 +61222,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN2038",
         "age": "31",
         "province": "Hồ Chí Minh",
@@ -60387,6 +61507,13 @@
         "province": "Hải Dương",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN1997",
@@ -60802,13 +61929,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN1939",
         "age": "21",
         "province": "Hải Dương",
@@ -61094,6 +62214,13 @@
         "province": "Hải Dương",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN1897",
@@ -61509,13 +62636,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN1838",
         "age": "38",
         "province": "Hải Dương",
@@ -61801,6 +62921,13 @@
         "province": "Hải Dương",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN1797",
@@ -62216,13 +63343,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN1738",
         "age": "26",
         "province": "Khánh Hòa",
@@ -62508,6 +63628,13 @@
         "province": "Quảng Ninh",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN1697",
@@ -62923,13 +64050,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN1639",
         "age": "28",
         "province": "Hải Dương",
@@ -63215,6 +64335,13 @@
         "province": "Hải Dương",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN1597",
@@ -63630,13 +64757,6 @@
         "nationality": "Cộng hoà Costa Rica"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN1538",
         "age": "28",
         "province": "Đà Nẵng",
@@ -63922,6 +65042,13 @@
         "province": "Hà Nội",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN1497",
@@ -64337,13 +65464,6 @@
         "nationality": "Cộng hòa Nam Phi"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN1439",
         "age": "29",
         "province": "Hưng Yên",
@@ -64629,6 +65749,13 @@
         "province": "Thái Bình",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN1397",
@@ -65044,13 +66171,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN1338",
         "age": "45",
         "province": "Hồ Chí Minh",
@@ -65336,6 +66456,13 @@
         "province": "Hải Dương",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN1297",
@@ -65751,13 +66878,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN1238",
         "age": "44",
         "province": "Hồ Chí Minh",
@@ -66043,6 +67163,13 @@
         "province": "Bắc Ninh",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN1200",
@@ -66458,13 +67585,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN1141",
         "age": "29",
         "province": "Hồ Chí Minh",
@@ -66750,6 +67870,13 @@
         "province": "Hải Dương",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN1097",
@@ -67165,13 +68292,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN1038",
         "age": "23",
         "province": "Hải Dương",
@@ -67457,6 +68577,13 @@
         "province": "Quảng Nam",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN998",
@@ -67872,13 +68999,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN938",
         "age": "34",
         "province": "Đà Nẵng",
@@ -68164,6 +69284,13 @@
         "province": "Quảng Nam",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN897",
@@ -68579,13 +69706,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN839",
         "age": "60",
         "province": "Quảng Nam",
@@ -68871,6 +69991,13 @@
         "province": "Đà Nẵng",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN797",
@@ -69286,13 +70413,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN738",
         "age": "49",
         "province": "Đà Nẵng",
@@ -69578,6 +70698,13 @@
         "province": "Đà Nẵng",
         "status": "Tử vong",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN697",
@@ -69993,13 +71120,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN638",
         "age": "23",
         "province": "Đà Nẵng",
@@ -70285,6 +71405,13 @@
         "province": "Quảng Nam",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN597",
@@ -70700,13 +71827,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN539",
         "age": "35",
         "province": "Hà Nội",
@@ -70992,6 +72112,13 @@
         "province": "Đà Nẵng",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN497",
@@ -71407,13 +72534,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN438",
         "age": "56",
         "province": "Đà Nẵng",
@@ -71699,6 +72819,13 @@
         "province": "Hoà Bình",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN397",
@@ -72114,13 +73241,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN338",
         "age": "38",
         "province": "Bà Rịa - Vũng Tàu",
@@ -72406,6 +73526,13 @@
         "province": "Thái Bình",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN297",
@@ -72821,13 +73948,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN238",
         "age": "17",
         "province": "Hà Tĩnh",
@@ -73113,6 +74233,13 @@
         "province": "Hà Nội",
         "status": "Khỏi",
         "nationality": "Việt Nam"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN197",
@@ -73528,13 +74655,6 @@
         "nationality": "Việt Nam"
     },
     {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
-    },
-    {
         "id": "BN138",
         "age": "23",
         "province": "Hà Nội",
@@ -73820,6 +74940,13 @@
         "province": "Hồ Chí Minh",
         "status": "Khỏi",
         "nationality": "Vương quốc Anh"
+    },
+    {
+        "id": "",
+        "age": "",
+        "province": "",
+        "status": "",
+        "nationality": ""
     },
     {
         "id": "BN97",
@@ -74233,13 +75360,6 @@
         "province": "Hà Nội",
         "status": "Khỏi",
         "nationality": "Việt Nam"
-    },
-    {
-        "id": "",
-        "age": "",
-        "province": "",
-        "status": "",
-        "nationality": ""
     },
     {
         "id": "BN38",

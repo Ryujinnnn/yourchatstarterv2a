@@ -27,10 +27,11 @@ function checkIsPaid(token) {
 }
 
 router.post('/', async (req, res) => {
+    //console.log(req)
     let input = req.body;
     let message = input.post;
     let context = input.context;
-	let token = (input.token)? input.token : "";
+    let token = (input.token) ? input.token : "";
 
     let option = {
         isPaid: false,
@@ -45,8 +46,8 @@ router.post('/', async (req, res) => {
     let response, updated_context;
     [response, updated_context] = await chatbot.get_response(message, option, context)
     res.send({
-      response: response,
-      context: updated_context
+        response: response,
+        context: updated_context
     });
 });
 

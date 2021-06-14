@@ -1,41 +1,51 @@
 {
     "": {
-        "case": 108,
+        "case": 109,
         "recovered": 2,
         "death": 0
     },
-    "hồ chí minh": {
-        "case": 1107,
-        "recovered": 277,
-        "death": 1
-    },
-    "bắc ninh": {
-        "case": 1366,
-        "recovered": 399,
-        "death": 5
-    },
     "bắc giang": {
-        "case": 4097,
+        "case": 4160,
         "recovered": 436,
         "death": 2
     },
-    "hà tĩnh": {
-        "case": 53,
-        "recovered": 6,
-        "death": 0
-    },
-    "bình dương": {
-        "case": 54,
-        "recovered": 45,
-        "death": 0
-    },
     "hà nội": {
-        "case": 728,
+        "case": 729,
         "recovered": 406,
         "death": 14
     },
+    "hà tĩnh": {
+        "case": 64,
+        "recovered": 6,
+        "death": 0
+    },
+    "tiền giang": {
+        "case": 32,
+        "recovered": 4,
+        "death": 0
+    },
+    "hồ chí minh": {
+        "case": 1162,
+        "recovered": 277,
+        "death": 1
+    },
+    "bình dương": {
+        "case": 62,
+        "recovered": 45,
+        "death": 0
+    },
+    "bắc kạn": {
+        "case": 1,
+        "recovered": 0,
+        "death": 0
+    },
+    "bắc ninh": {
+        "case": 1381,
+        "recovered": 399,
+        "death": 5
+    },
     "tây ninh": {
-        "case": 63,
+        "case": 64,
         "recovered": 34,
         "death": 0
     },
@@ -50,7 +60,7 @@
         "death": 3
     },
     "lạng sơn": {
-        "case": 100,
+        "case": 98,
         "recovered": 9,
         "death": 1
     },
@@ -59,18 +69,13 @@
         "recovered": 3,
         "death": 0
     },
-    "tiền giang": {
-        "case": 24,
-        "recovered": 4,
-        "death": 0
-    },
     "bà rịa - vũng tàu": {
-        "case": 138,
+        "case": 139,
         "recovered": 109,
         "death": 0
     },
     "long an": {
-        "case": 26,
+        "case": 24,
         "recovered": 8,
         "death": 0
     },
@@ -80,7 +85,7 @@
         "death": 0
     },
     "hà nam": {
-        "case": 55,
+        "case": 54,
         "recovered": 22,
         "death": 0
     },
@@ -280,7 +285,7 @@
         "death": 0
     },
     "cả nước": {
-        "case": 10644,
+        "case": 10804,
         "recovered": 3998,
         "death": 59
     }
