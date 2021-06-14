@@ -128,7 +128,7 @@ export class SpeechInput extends Component {
 					onError={this.handleError} 
 					onStreamClosed={this.handleStreamClose}
 					render={({ request, start, stop, pause, resume }) => 
-                    <Modal show={this.props.isVisible} onHide={() => {if (recording) stop(); this.props.onRequestClose()}}>
+                    <Modal show={this.props.isVisible} onHide={() => {if (recording) stop(); this.props.onRequestClose()}} size='xs'>
                         <Modal.Header>
                             <Modal.Title></Modal.Title>
                         </Modal.Header>
