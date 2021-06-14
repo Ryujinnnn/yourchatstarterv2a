@@ -39,6 +39,7 @@ class Routes extends Component {
                         <Route exact path="/subscribe"><Subscribe /></Route>
                         <Route exact path="/login"><Login /></Route>
                         <Route exact path="/about"><About /></Route>
+                        <Route exact path="/function"><About /></Route>
                         <Route exact path="/register"><Register /></Route>
                         <Route path='/payment'><Login /></Route>
                         <Route exact path='/history'><Login /></Route>
@@ -59,6 +60,7 @@ class Routes extends Component {
                     <Route exact path="/subscribe"><Subscribe /></Route>
                     <Route exact path="/login"><Landing /></Route>
                     <Route exact path="/about"><About /></Route>
+                    <Route exact path="/function"><About /></Route>
                     <Route exact path="/register"><Register /></Route>
                     <Route exact path='/payment'><PaymentInfo plan={this.props.location}/></Route>
                     <Route exact path='/payment_failure'><BillingFailure /></Route>

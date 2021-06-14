@@ -42,7 +42,7 @@ class Navigation extends Component {
                             <a href="/subscribe"><Nav.Item>Dịch vụ</Nav.Item></a>
                             <Dropdown title="Thông tin">
                                 <a href="/about"><Dropdown.Item>Nhà phát triển</Dropdown.Item></a>
-                                <a href="/about"><Dropdown.Item>Chức năng</Dropdown.Item></a>
+                                <a href="/function"><Dropdown.Item>Chức năng</Dropdown.Item></a>
                                 <a href="/blog"><Dropdown.Item>Blog</Dropdown.Item></a>
                             </Dropdown>
                         </Nav>
@@ -68,7 +68,7 @@ class Navigation extends Component {
                         <a href="/subscribe"><Nav.Item>Dịch vụ</Nav.Item></a>
                         <Dropdown title="Thông tin">
                             <a href="/about"><Dropdown.Item>Nhà phát triển</Dropdown.Item></a>
-                            <a href="/test"><Dropdown.Item>Chức năng</Dropdown.Item></a>
+                            <a href="/function"><Dropdown.Item>Chức năng</Dropdown.Item></a>
                             <a href="/blog"><Dropdown.Item>Blog</Dropdown.Item></a>
                         </Dropdown>
                     </Nav>
