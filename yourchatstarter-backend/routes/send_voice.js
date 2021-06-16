@@ -50,7 +50,7 @@ router.post('/', async (req, res) => {
 
     form.on('field', (fieldName, fieldValue) => {
         if (fieldName === "context") context = JSON.parse(fieldValue) //form.emit('data', { name: 'field', key: fieldName, value: fieldValue });
-        else if (fieldName === "token") (fieldValue || fieldValue != "null") ? fieldValue : "";
+        else if (fieldName === "token") token = (fieldValue || fieldValue != "null") ? fieldValue : "";
     });
 
     form.onPart = (part) => {
