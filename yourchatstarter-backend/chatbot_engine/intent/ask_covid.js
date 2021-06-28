@@ -18,6 +18,7 @@ module.exports.run = (entities, option, context) => {
                 response = `Hiện tại ${location} ghi nhận ${result.case} ca nhiễm COVID-19, đã chữa khỏi ${result.recovered} ca, và đã có ${result.death} ca tử vong`
             }
         }
+        context.suggestion_list = ['Bạn khỏe không?', 'Lời khuyên covid']
         resolve([response, context])
     })
 }
