@@ -10,13 +10,11 @@ module.exports.run = (entities, option, context) => {
         }
         else {
             let location = entities['wit$location:location'][0].value
-            let result = await get_covid_info.get_stat(location)
-            if (result == "not found") {
-                response = `Không tìm thấy ${location} trong danh sách, có thể địa điểm này chưa ghi nhận ca mắc nào hoặc bạn đã nhập sai địa điểm`
-            }
-            else  {
-                response = `Hiện tại ${location} ghi nhận ${result.case} ca nhiễm COVID-19, đã chữa khỏi ${result.recovered} ca, và đã có ${result.death} ca tử vong`
-            }
+            await get_covid_info.get_stat(location).
+                then(
+                    (result) => { response = `Hiện tại ${location} ghi nhận ${result.case} ca nhiễm COVID-19, đã chữa khỏi ${result.recovered} ca, và đã có ${result.death} ca tử vong` },
+                    (e) => { response = `Không tìm thấy ${location} trong danh sách, có thể địa điểm này chưa ghi nhận ca mắc nào hoặc bạn đã nhập sai địa điểm`}
+                )
         }
         context.suggestion_list = ['Bạn khỏe không?', 'Lời khuyên covid']
         resolve([response, context])
