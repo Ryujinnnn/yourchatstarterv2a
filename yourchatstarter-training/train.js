@@ -1,5 +1,4 @@
 const UTTERANCES_ENDPOINT = 'https://api.wit.ai/utterances'
-const training_data = require('./training_data/ask_stock')
 require('dotenv').config()
 
 const fetch = require('node-fetch')

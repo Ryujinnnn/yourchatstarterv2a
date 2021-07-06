@@ -38,8 +38,10 @@ module.exports.get_response = function get_response(input, option = {}, context 
                 else {
                     let intent = IntentHandler.get(parsed_data.intents[0].name)
                     if (intent) {
+                        
                         let entities = parsed_data.entities;
-                        [response, context] = await intent.run(entities, option, context)
+                        if (intent.name === "ask_calc") [response, context] = await intent.run(entities, option, context, input)
+                        else [response, context] = await intent.run(entities, option, context)
                     }
                     else {
                         response = "Chức năng chưa được xây dựng"

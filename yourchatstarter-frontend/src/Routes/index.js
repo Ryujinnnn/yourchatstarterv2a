@@ -22,6 +22,7 @@ import Profile from '../Profile'
 import DirectPayment from '../DirectPayment'
 import Blog from '../Blog'
 import BlogPost from '../BlogPost'
+import AboutUs from '../AboutUs'
 import { AdminPanel } from '../AdminPanel'
   
 
@@ -38,7 +39,7 @@ class Routes extends Component {
                         <Route exact path="/chat"><Chat /></Route>
                         <Route exact path="/subscribe"><Subscribe /></Route>
                         <Route exact path="/login"><Login /></Route>
-                        <Route exact path="/about"><About /></Route>
+                        <Route exact path="/about"><AboutUs /></Route>
                         <Route exact path="/function"><About /></Route>
                         <Route exact path="/register"><Register /></Route>
                         <Route path='/payment'><Login /></Route>
@@ -59,7 +60,7 @@ class Routes extends Component {
                     <Route exact path="/chat"><Chat /></Route>
                     <Route exact path="/subscribe"><Subscribe /></Route>
                     <Route exact path="/login"><Landing /></Route>
-                    <Route exact path="/about"><About /></Route>
+                    <Route exact path="/about"><AboutUs /></Route>
                     <Route exact path="/function"><About /></Route>
                     <Route exact path="/register"><Register /></Route>
                     <Route exact path='/payment'><PaymentInfo plan={this.props.location}/></Route>
