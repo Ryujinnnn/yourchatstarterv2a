@@ -3,7 +3,7 @@ const router = express.Router()
 const db = require('../database/database_interaction')
 
 router.get('/newest_blog', async (req, res) => {
-    let blog_res = await db.queryRecordLimit('blog', {}, 3, {content: 0})
+    let blog_res = await db.queryRecordLimit('blog', {}, 3, {content: 0}, {createOn: -1})
     if (blog_res.length == 0) {
         res.send({
             status: 'failed'
@@ -18,7 +18,7 @@ router.get('/newest_blog', async (req, res) => {
 })
 
 router.get('/all_blog', async (req, res) => {
-    let blog_res = await db.queryRecord('blog', {}, {content: 0})
+    let blog_res = await db.queryRecord('blog', {}, {content: 0}, {createOn: -1})
     if (blog_res.length == 0) {
         res.send({
             status: 'failed'

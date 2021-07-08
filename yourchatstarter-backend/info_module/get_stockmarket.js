@@ -31,3 +31,32 @@ module.exports = (code) => {
     })
 }
 
+
+module.exports.crypto = (symbol) => {
+    let url = `${ENDPOINT}/time_series?symbol=${symbol}&interval=1day&apikey=${process.env.TWELVEDATA_API}`
+    return new Promise(async (resolve, reject) => {
+        let res = await fetch(url)
+        let return_res = {
+            cryptoIndex: 0,
+            cryptoChangeRaw: 0,
+            cryptoChangePercent: 0,
+        }
+        //console.log(res)
+        if (res.status != 200) {
+            resolve(return_res)
+            return
+        }
+        let obj = await res.json()
+        //console.log(obj)
+        if (obj.status != 'ok') {
+            resolve(return_res)
+            return
+        }
+        return_res.cryptoIndex = parseFloat(obj.values[0].close)
+        let pastIntervalIndex = parseFloat(obj.values[1].close)
+        return_res.cryptoChangeRaw = return_res.cryptoIndex - pastIntervalIndex
+        return_res.cryptoChangePercent = ((return_res.cryptoIndex / pastIntervalIndex) - 1) * 100
+        //console.log(return_res)
+        resolve(return_res)  
+    })
+}
