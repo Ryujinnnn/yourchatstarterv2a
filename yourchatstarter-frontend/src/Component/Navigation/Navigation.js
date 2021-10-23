@@ -2,7 +2,6 @@ import { Component } from "react";
 import { withRouter } from 'react-router-dom'
 import './Style.css'
 import { Navbar, Nav, Dropdown, Icon} from 'rsuite'
-import 'rsuite/dist/styles/rsuite-dark.css';
 
 async function verifyToken(credentials) {
     return fetch('api/auth/verify_token', {
@@ -13,7 +12,7 @@ async function verifyToken(credentials) {
         body: JSON.stringify(credentials)
     }).then(data => data.json())
 }
-class Navigation extends Component {
+class _Navigation extends Component {
 
     
     async componentDidMount() {
@@ -81,4 +80,4 @@ class Navigation extends Component {
     }
 }
 
-export default withRouter(Navigation)
+export const Navigation = withRouter(_Navigation)

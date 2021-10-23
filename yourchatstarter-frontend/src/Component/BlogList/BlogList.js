@@ -27,7 +27,7 @@ const Entry = props => {
         </Panel>
 )}
 
-class BlogList extends Component {
+export class BlogList extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -66,5 +66,3 @@ class BlogList extends Component {
         
     }
 }
-
-export default BlogList

@@ -1,8 +1,8 @@
 import './Style.css'
 import  { Panel } from 'rsuite'
-const { Component } = require("react");
+import { Component } from 'react'
 
-class PeoplePanel extends Component {
+export class PeoplePanel extends Component {
     render() {
         return (
             <div className='people-panel-container'>
@@ -18,5 +18,3 @@ class PeoplePanel extends Component {
         )
     }
 }
-
-export default PeoplePanel

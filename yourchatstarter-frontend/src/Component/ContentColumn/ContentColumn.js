@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBrain, faCommentsDollar, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 const { Component } = require("react");
 
-class ContentColumn extends Component {
+export class ContentColumn extends Component {
     render() {
         return (
             <div className="row content-column-container">
@@ -26,5 +26,3 @@ class ContentColumn extends Component {
         )
     }
 }
-
-export default ContentColumn

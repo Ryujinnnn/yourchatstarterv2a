@@ -13,7 +13,7 @@ function getCheckoutLink(info) {
     }).then(data => data.json())
 }
 
-class PaymentInfoPrompt extends Component {
+class _PaymentInfoPrompt extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -44,6 +44,7 @@ class PaymentInfoPrompt extends Component {
         }
     }
 
+    //TODO: pass this down to PaymentInfoScreen instead
     componentDidMount() {
         if (this.props.plan === "premium") {
             this.setState({
@@ -149,4 +150,4 @@ class PaymentInfoPrompt extends Component {
     }
 }
 
-export default withRouter(PaymentInfoPrompt)
+export const PaymentInfoPrompt = withRouter(_PaymentInfoPrompt)

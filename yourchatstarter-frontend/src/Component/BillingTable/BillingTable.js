@@ -12,7 +12,7 @@ async function getUserBilling(query) {
 }
 
 
-class BillingTable extends Component {
+export class BillingTable extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -73,5 +73,3 @@ class BillingTable extends Component {
         )
     }
 }
-
-export default BillingTable

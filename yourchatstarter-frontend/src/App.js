@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import { Header } from './Component/Header/Header'
+import 'rsuite/dist/styles/rsuite-dark.css';
 import Routes from './Routes'
 import { Helmet } from "react-helmet";
  
@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 class App extends Component {
   constructor(props) {
     super(props);
+    //get rid of this?
     this.state = {
         token: undefined
     }

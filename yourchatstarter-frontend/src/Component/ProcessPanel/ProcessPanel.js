@@ -7,7 +7,7 @@ import BankLogo from './comb.jpg'
 import VisaLogo from './visa-master.jpg'
 const { Component } = require("react");
 
-class ProcessPanel extends Component {
+export class ProcessPanel extends Component {
     render() {
         return (
             <div>
@@ -68,5 +68,3 @@ class ProcessPanel extends Component {
         )
     }
 }
-
-export default ProcessPanel

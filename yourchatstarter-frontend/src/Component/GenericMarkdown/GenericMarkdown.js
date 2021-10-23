@@ -3,7 +3,7 @@ import MarkdownView from 'react-showdown';
 import './Style.css'
 import { Tag, TagGroup } from 'rsuite'
 
-class GenericMarkdown extends Component {
+export class GenericMarkdown extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -68,5 +68,3 @@ class GenericMarkdown extends Component {
         )
     }
 }
-
-export default GenericMarkdown

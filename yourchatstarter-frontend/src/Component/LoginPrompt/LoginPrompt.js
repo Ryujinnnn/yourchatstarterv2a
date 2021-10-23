@@ -14,7 +14,7 @@ async function loginUser(credentials) {
     }).then(data => data.json())
 }
 
-class LoginPrompt extends Component {
+class _LoginPrompt extends Component {
 
     constructor(props) {
         super(props)
@@ -25,6 +25,7 @@ class LoginPrompt extends Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this)
     }
+    //TODO: pass this down to LoginScreen logic instead
 
     async handleSubmit(e) {
         //e.preventDefault();
@@ -73,4 +74,4 @@ class LoginPrompt extends Component {
     }
 }
 
-export default withRouter(LoginPrompt) 
+export const LoginPrompt = withRouter(_LoginPrompt) 

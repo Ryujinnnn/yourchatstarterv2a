@@ -2,7 +2,7 @@ import { Divider } from 'rsuite';
 import './Style.css'
 const { Component } = require("react");
 
-class BriefPanel extends Component {
+export class BriefPanel extends Component {
    
     render() {
         const bpService = (
@@ -91,5 +91,3 @@ class BriefPanel extends Component {
         return [bpService]
     }
 }
-
-export default BriefPanel

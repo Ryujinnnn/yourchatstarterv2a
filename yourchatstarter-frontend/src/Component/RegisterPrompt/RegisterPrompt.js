@@ -13,7 +13,7 @@ async function registerUser(credentials) {
     }).then(data => data.json())
 }
 
-class RegisterPrompt extends Component {
+export class _RegisterPrompt extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -25,6 +25,7 @@ class RegisterPrompt extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
+    //TODO: pass this down to register screen instead
     async handleSubmit(e) {
         const register_result = await registerUser({
           username: this.state.username,
@@ -103,4 +104,4 @@ class RegisterPrompt extends Component {
     }
 }
 
-export default withRouter(RegisterPrompt)
+export const RegisterPrompt = withRouter(_RegisterPrompt)

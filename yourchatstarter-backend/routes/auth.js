@@ -3,6 +3,8 @@ const router = express.Router()
 const db = require('../database/database_interaction')
 const crypto = require('crypto')
 
+const { User } = import('../model/index.mjs')
+
 router.post('/login', async (req, res) => {
     let input = req.body
     console.log(input)
@@ -76,6 +78,8 @@ router.post('/register', async (req, res) => {
         paid_valid_until: new Date(0),
         plan: "none",
     }
+
+    //let userInfoRecord = new User(input.username)
     let action_result = await db.addRecord("user", recordInfo)
     if (action_result) {
         res.send({
