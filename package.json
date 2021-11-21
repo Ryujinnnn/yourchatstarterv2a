@@ -9,6 +9,9 @@
     "start": "cd yourchatstarter-backend && node App.js",
     "heroku-postbuild": "cd yourchatstarter-frontend && npm install && npm run build"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
