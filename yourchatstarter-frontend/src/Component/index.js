@@ -32,6 +32,9 @@ import { RespondPanel } from './RespondPanel/RespondPanel'
 import { SendButton } from './SendButton/SendButton'
 import { SpeechInput } from './SpeechInput/SpeechInput'
 import { SubscribeTable } from './SubscribeTable/SubscribeTable'
+import { UserInfoFragment } from "./UserInfoFragement";
+import { UserPreferenceFragment } from "./UserPreferenceFragment";
+import { UserSecurityFragment } from "./UserSecurityFragment";
 
 export {
     BillManager,
@@ -67,5 +70,8 @@ export {
     RespondPanel,
     SendButton,
     SpeechInput,
-    SubscribeTable
+    SubscribeTable,
+    UserInfoFragment,
+    UserSecurityFragment,
+    UserPreferenceFragment,
 }

@@ -2,8 +2,7 @@ const express = require('express')
 const router = express.Router()
 const db = require('../database/database_interaction')
 const crypto = require('crypto')
-
-const { User } = import('../model/index.mjs')
+const { verifyToken } = require('./middleware/verify_token')
 
 router.post('/login', async (req, res) => {
     let input = req.body
@@ -100,14 +99,10 @@ router.get('/logout', () => {
     //TODO: delete sender token
 })
 
-router.post('/verify_token', async (req, res) => {
+router.get('/verify_token', verifyToken, async (req, res) => {
     let input = req.body;
-    let tokenQuery = {
-        token: input.token
-    }
-
-    let query_result = await db.queryRecord("session", tokenQuery)
-    if (query_result.length == 0) {
+    
+    if (!req.username) {
         res.send({
             status: "failure",
             desc: "token not exist"
@@ -118,8 +113,8 @@ router.post('/verify_token', async (req, res) => {
         res.send({
             status: "success",
             desc: "token verification success",
-            is_paid: query_result[0].is_paid,
-            plan: query_result[0].plan
+            is_paid: req.is_paid,
+            plan: req.plan
         })
         return
     }

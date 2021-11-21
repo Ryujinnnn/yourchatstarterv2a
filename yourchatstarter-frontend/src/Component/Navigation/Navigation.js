@@ -5,11 +5,10 @@ import { Navbar, Nav, Dropdown, Icon} from 'rsuite'
 
 async function verifyToken(credentials) {
     return fetch('api/auth/verify_token', {
-        method: 'POST',
+        method: 'GET',
         headers: {
-            'Content-Type': 'application/json'
+            'x-access-token': sessionStorage.getItem("token")
         },
-        body: JSON.stringify(credentials)
     }).then(data => data.json())
 }
 class _Navigation extends Component {

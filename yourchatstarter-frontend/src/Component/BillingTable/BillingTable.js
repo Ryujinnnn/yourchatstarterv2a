@@ -1,13 +1,12 @@
 import { Component } from "react";
 import './Style.css' 
 
-async function getUserBilling(query) {
+async function getUserBilling() {
     return fetch('api/user/billing', {
-        method: 'POST',
+        method: 'GET',
         headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(query)
+            'x-access-token': sessionStorage.getItem("token")
+        }
     }).then(data => data.json())
 }
 
@@ -22,9 +21,7 @@ export class BillingTable extends Component {
     }
 
     async componentDidMount() {
-        const billing_result = await getUserBilling({
-            token: sessionStorage.getItem("token")
-        })
+        const billing_result = await getUserBilling()
         console.log(billing_result)
         if (billing_result.status === "success") {
             this.setState({

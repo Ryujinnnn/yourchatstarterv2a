@@ -1,12 +1,16 @@
 const wit_client = require('../wit_client')
 const random_index = require('./utils/random_helper')
 const context_handling = require('./context_handler')
+const NodeNlpInstance = require('./local_nlp_manager')
 const { wiki_query } = require('../info_module/wikidata_info')
 
 let IntentHandler = undefined
+let isLocalInstanceAvailable = false
 
 module.exports.init_engine = function init_engine(handlerCollection) {
     IntentHandler = handlerCollection 
+    //TODO: setup node-nlp model
+    isLocalInstanceAvailable = NodeNlpInstance.setupInstance()
     console.log('chatbot initialized')
 }
 
@@ -19,6 +23,14 @@ const uncertainResponsePool = [
     "Mình không chắc bạn đang nói gì",
     "Bạn có thể nói rõ hơn cho mình được không?"
 ]
+
+module.exports.get_response_local = (input, option = {}, context = {}) => {
+    return new Promise(async (resolve, reject) => {
+        let response = await NodeNlpInstance.processInput(input)
+        //console.log(res)
+        resolve([response, context])
+    })
+}
 
 module.exports.get_response = function get_response(input, option = {}, context = {}) {
     return new Promise(async (resolve, reject) => {
@@ -48,9 +60,9 @@ module.exports.get_response = function get_response(input, option = {}, context 
                     }
                 }
             }
-            else if (context.active_context.length != 0) {
-                [response, context] = await context_handling(parsed_data, input, option, context, IntentHandler)
-            }
+            // else if (context.context_stack.length != 0) {
+            //     [response, context] = await context_handling(parsed_data, input, option, context, IntentHandler)
+            // }
             else {
                 //TODO: resolve description into vietnamese, somehow
                 await wiki_query(parsed_data.text).then(wiki_res => {
@@ -62,11 +74,6 @@ module.exports.get_response = function get_response(input, option = {}, context 
             }
             if (!response && uncertain_flag) response = uncertainResponsePool[random_index(uncertainResponsePool.length)]
         }
-
-        context.past_client_message.push(input)
-        if (context.past_client_message.length > 20) context.past_client_message.pop()
-        context.past_bot_message.push(response)
-        if (context.past_bot_message.length > 20) context.past_bot_message.pop()
         
         resolve([response, context])
     })
@@ -78,6 +85,10 @@ module.exports.get_response_from_voice = function get_response_from_voice(data, 
         // make request to wit.ai endpoint directly
 
         let parsed_data = await wit_client.voice(data)
+        if (parsed_data.text == "") {
+            resolve(["Xin lỗi bạn, mình không chắc là mình có nghe rõ lời bạn nói, bạn có thể nói lại chậm hơn được không", context])
+            return
+        } 
         let response = ""
         //check for intent
         let uncertain_flag = false
@@ -94,9 +105,9 @@ module.exports.get_response_from_voice = function get_response_from_voice(data, 
                 }
             }
         }
-        else if (context.active_context.length != 0) {
-            [response, context] = await context_handling(parsed_data, input, option, context, IntentHandler)
-        }
+        // else if (context.context_stack.length != 0) {
+        //     [response, context] = await context_handling(parsed_data, input, option, context, IntentHandler)
+        // }
         else {
             //try a wikidata query
             //TODO: resolve description into vietnamese, somehow
@@ -109,10 +120,8 @@ module.exports.get_response_from_voice = function get_response_from_voice(data, 
         }
 
         if (!response && uncertain_flag) response = uncertainResponsePool[random_index(uncertainResponsePool.length)]
-        context.past_client_message.push(parsed_data.text)
-        if (context.past_client_message.length > 20) context.past_client_message.pop()
-        context.past_bot_message.push(response)
-        if (context.past_bot_message.length > 20) context.past_bot_message.pop()
+
+        context.detected_msg = parsed_data.text
         
         resolve([response, context])
     })

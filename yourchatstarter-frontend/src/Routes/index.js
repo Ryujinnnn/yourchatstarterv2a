@@ -36,6 +36,7 @@ class Routes extends Component {
             )
         }
         else return (
+            
             <Router>
                 <Switch>
                     <Route exact path="/chat"><Chat /></Route>

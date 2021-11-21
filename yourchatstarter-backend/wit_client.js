@@ -51,8 +51,26 @@ function wit_voice(data) {
 		//console.log(option)
 		//console.log(option.body)
 		let res = fetch(SPEECH_ENDPOINT , option).then( async res => {
-			//console.dir(res, { depth: null });
-			resolve(await res.json())
+			//console.dir(res.body, { depth: null });
+			//who the fuck send multiple JSON string in one response?
+			let res_text = await res.text()
+			console.log(res_text)
+			//WARNING: CAN BREAK IF THEY DECIDE TO CHANGE THE API RESPONSE AGAIN. IF IT BREAK AGAIN, YOU KNOW WHERE TO LOOK
+			//split the repsonse and parse multiple split individually
+			res_text = res_text.replace(/}\s*{/g, "}||||{")
+			let comp = res_text.split("||||")
+			//console.log(comp)
+			let utter = null
+			if (comp.length > 1) {
+				//if more than 1 json object string is found, assume first object is for partially detected text 
+				//(and ignore it for now because detected text is also included in the utterance response)
+				let text = JSON.parse(comp[0])
+				utter = JSON.parse(comp[comp.length - 1])
+			}
+			else {
+				utter = JSON.parse(comp[0])
+			}
+			resolve(utter)
 		})
 		.catch(error => {
 			console.log(error)

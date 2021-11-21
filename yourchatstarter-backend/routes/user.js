@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../database/database_interaction')
+const { verifyToken } = require('./middleware/verify_token')
 
-router.post('/profile', async (req, res) => {
+router.get('/profile', verifyToken ,async (req, res) => {
     let input = req.body
     let return_user_result = {
         username: "",
@@ -10,13 +11,8 @@ router.post('/profile', async (req, res) => {
         paid_valid_until: "",
         status: "",
     }
-    let token_query = {
-        token: input.token,
-    }
-    let token_result = await db.queryRecord("session", token_query)
-    if (token_result.length == 0) {
-        
-        res.send({
+    if (!req.username) {
+        res.status(401).send({
             status: "failed",
             desc: "token verification failed",
             user: return_user_result
@@ -30,13 +26,13 @@ router.post('/profile', async (req, res) => {
         lifetime: "Hạng trọn đời",
     }
     let user_query = {
-        username: token_result[0].username,
+        username: req.username,
     }
     let user_result = await db.queryRecord("user", user_query)
     
     if (user_result.length == 0) {
         // how?
-        res.send({
+        res.status(200).send({
             status: 'failed',
             desc: 'username not found',
             user: return_user_result,
@@ -56,15 +52,19 @@ router.post('/profile', async (req, res) => {
     } 
 })
 
-router.post('/billing', async (req, res) => {
+router.post('/save_profile', verifyToken, (req, res) => {
+    res.status(501).send({
+        status: "failed",
+        desc: "endpoint not implemented"
+    })
+})
+
+router.get('/billing', async (req, res) => {
     let input = req.body
     let billing_list_result = []
-    let token_query = {
-        token: input.token,
-    }
-    let token_result = await db.queryRecord("session", token_query)
-    if (token_result.length == 0) {
-        res.send({
+
+    if (!req.username) {
+        res.status(401).send({
             status: "failed",
             desc: "token verification failed",
             username: "",
@@ -72,8 +72,9 @@ router.post('/billing', async (req, res) => {
         })
         return 
     }
+
     let billing_query = {
-        username: token_result[0].username,
+        username: req.username
     }
 
     let billing_result = await db.queryRecord("billing", billing_query)

@@ -1,7 +1,28 @@
 import { Component } from 'react'
-import { Table, Checkbox  } from 'rsuite'
+import { Table, Checkbox, Divider, Button  } from 'rsuite'
 
-const { Column, HeaderCell, Cell,} = Table;
+
+const InfoCard = (props) => {
+    return (
+        <div style={{display: 'flex', width: 300, minHeight: 80, border: '1px solid gray', borderRadius: 10, flexDirection: 'column', padding: 20, marginRight: 20, flexGrow: 1}}>
+            <div style={{flex: 1}}><b>{props.title}</b></div>
+            <Divider />
+            <div style={{flex: 1}}>
+                <Checkbox defaultChecked={true} disabled> Chức năng giao tiếp cơ bản</Checkbox>
+                <Checkbox> Chức năng tra cứu tỉ giá ngoại tệ</Checkbox>
+                <Checkbox> Chức năng tra cứu giá tiền ảo</Checkbox>
+                <Checkbox> Chức năng tra cứu chỉ số chứng khoán</Checkbox>
+                <Checkbox> Chức năng tra cứu thông tin thời tiết</Checkbox>
+                <Checkbox> Chức năng dịch thuật</Checkbox>
+                <Checkbox> Chức năng tra cứu thông tin thường thức (Google Knowledge Graph)</Checkbox>
+                <Checkbox> Chức năng tra cứu thông tin thường thức (Wikipedia)</Checkbox>
+                <Checkbox> Chức năng tra cứu tin báo (VNExpress RSS Board)</Checkbox>
+                <Checkbox> Chức năng tính toán</Checkbox>
+                <Checkbox> Chức năng tra cứu tình hình dịch COVID-19</Checkbox>
+            </div>
+        </div>
+    )
+}
 
 export class ServiceManager extends Component {
     constructor(props) {
@@ -47,55 +68,18 @@ export class ServiceManager extends Component {
 
     render() {
         //console.log(this.state.data)
-        const CheckCell = ({ rowData, onChange, checkedKeys, dataKey, ...props }) => (
-            <Cell {...props} style={{ padding: 0 }}>
-              <div style={{marginTop: -10}}>
-                <Checkbox
-                  value={rowData[dataKey]}
-                  inline
-                  onChange={onChange}
-                  checked={checkedKeys.some(item => item === rowData[dataKey])}
-                />
-              </div>
-            </Cell>
-          );
+
           
         return (
-            <div>
-                <Table
-                    height={400}
-                    data={this.state.data}
-                    onRowClick={data => {
-                        console.log(data);
-                    }}
-                >
-                    <Column width={180}>
-                        <HeaderCell>Id</HeaderCell>
-                        <Cell dataKey="_id" />
-                    </Column>
+            <div style={{height: '100%', overflowY: 'scroll'}}>
+                <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', alignItems: "center" }}>
+                    <InfoCard title="Miễn phí" />
+                    <InfoCard title="Tiêu chuẩn" />
+                    <InfoCard title="Cao cấp" />
 
-                    <Column width={200} align="center" fixed>
-                        <HeaderCell>Plan Name</HeaderCell>
-                        <Cell dataKey="plan_name" />
-                    </Column>
-
-                    <Column width={200} fixed>
-                        <HeaderCell>Checked</HeaderCell>
-                        <CheckCell dataKey="_id"
-                            checkedKeys={this.state.checkedKeys}
-                            onChange={this.handleCheck} />
-                    </Column>
-
-                    <Column width={200}>
-                        <HeaderCell>Plan Expiration Date</HeaderCell>
-                        <Cell dataKey="payment_mode" />
-                    </Column>
-
-                    <Column width={100}>
-                        <HeaderCell>Amount</HeaderCell>
-                        <Cell dataKey="amount" />
-                    </Column>
-                </Table>
+                </div>
+                <Divider />
+                <Button appearance="primary">Lưu cấu hình</Button>
             </div>
         )
     }

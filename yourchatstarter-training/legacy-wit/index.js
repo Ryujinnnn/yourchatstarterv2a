@@ -3,8 +3,6 @@ const ENTITIES_ENDPOINT = 'https://api.wit.ai/entities'
 const TRAITS_ENDPOINT = 'https://api.wit.ai/traits'
 const UTTERANCES_ENDPOINT = 'https://api.wit.ai/utterances'
 
-
-//console.log(entity.AMOUNT_OF_MONEY)
 const fs = require('fs')
 
 require('dotenv').config()
@@ -28,4 +26,3 @@ function test2(array) {
 }
 
 test()
-//console.log(test2([1,2,3,4]))

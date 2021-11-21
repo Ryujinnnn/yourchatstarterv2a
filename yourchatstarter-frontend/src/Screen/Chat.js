@@ -1,12 +1,6 @@
 
 import React, { Component } from 'react';
-import { Icon } from 'rsuite'
-// import { SendButton } from './Component/SendButton'
-// import { MessageBox } from './Component/MessageBox'
-// import { MessageContainer } from './Component/MessageContainer'
-// import Footer from './Component/Footer/Footer';
-// import { MessageSuggestionContainer } from './Component/MessageSuggestionContainer';
-// import { SpeechInput } from './Component/SpeechInput/SpeechInput'
+import { Alert, Icon } from 'rsuite'
 import { SendButton, MessageBox, MessageContainer, Footer, MessageSuggestionContainer, SpeechInput, Header } from '../Component'
 
 export class Chat extends Component {
@@ -18,9 +12,12 @@ export class Chat extends Component {
 			responseToPost: '',
 			messageList: [],
 			context: {},
+			selectedVoice: null,
+            voiceList: [],
 
 			isSpeechModalVisible: false,
 		};
+
 
 		this.onClickHandler = this.onClickHandler.bind(this)
 		this.onTextChange = this.onTextChange.bind(this)
@@ -29,9 +26,11 @@ export class Chat extends Component {
 		this.handleKeyPress = this.handleKeyPress.bind(this)
 		this.onSuggestSelection = this.onSuggestSelection.bind(this)
 		this.onReceivingAudio = this.onReceivingAudio.bind(this)
+		this.onChatBubbleSpeak = this.onChatBubbleSpeak.bind(this)
+		this.loadVoice = this.loadVoice.bind(this)
 	}
 
-	componentDidMount() {
+	async componentDidMount() {
 		this.callApi()
 			.then(res => {
 				this.setState({
@@ -41,6 +40,24 @@ export class Chat extends Component {
 				//console.log(this.state.context)
 			})
 			.catch(err => console.log(err));
+
+		this.synth = await window.speechSynthesis;
+		this.synth.onvoiceschanged = this.loadVoice
+	}
+
+	async loadVoice() {
+		let voiceList = this.synth.getVoices()
+
+		let vnDefaultVoice = voiceList.findIndex((val) => val.lang === "vi-VN" && val.name.includes("Natural"))
+		if (vnDefaultVoice === -1 )vnDefaultVoice = voiceList.findIndex((val) => val.lang === "vi-VN")
+		if (vnDefaultVoice === -1) {
+			Alert.error("Không thể tìm thấy giọng tiếng Việt")
+			console.log("Cant find default vietnamese voice")
+		}
+		this.setState({
+			voiceList: voiceList,
+			selectedVoice: (vnDefaultVoice !== -1 )? voiceList[vnDefaultVoice] : null
+		})
 	}
 
 	callApi = async () => {
@@ -55,12 +72,13 @@ export class Chat extends Component {
 		let req = {
 			method: 'POST',
 			headers: {
+				'x-access-token': sessionStorage.getItem("token"),
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
 				post: this.state.post,
-				token: sessionStorage.getItem('token'),
 				context: this.state.context,
+				is_local: true,
 			}),
 		}
 		this.setState({
@@ -75,6 +93,8 @@ export class Chat extends Component {
 			messageList: [...this.state.messageList, { text: body.response, isFromClient: false }],
 			context: body.context
 		})
+
+		this.onChatBubbleSpeak(body.response)
 	};
 
 	onSuggestSelection(message) {
@@ -104,6 +124,9 @@ export class Chat extends Component {
 		formData.append("data", blob)
 		let req = {
 			method: 'POST',
+			headers: {
+				'x-access-token': sessionStorage.getItem("token")
+			},
 			body: formData
 		}
 		this.setState({
@@ -118,9 +141,11 @@ export class Chat extends Component {
 		//console.log(body)
 		//console.log(body.response)
 		this.setState({
-			messageList: [...this.state.messageList, { text: body.context.past_client_message[body.context.past_client_message.length - 1], isFromClient: true }, { text: body.response, isFromClient: false }],
+			messageList: [...this.state.messageList, { text: body.context.detected_msg, isFromClient: true }, { text: body.response, isFromClient: false }],
 			context: body.context
 		})
+
+		this.onChatBubbleSpeak(body.response)
 	}
 
 	onTextChange(value) {
@@ -136,12 +161,30 @@ export class Chat extends Component {
 		}
 	}
 
+	onChatBubbleSpeak(text) {
+		if (!this.state.selectedVoice) return
+        let hyperlink_match = text.match(/\[(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?.*\/]/g)
+        let hyperlink_element = <p></p>
+        if (hyperlink_match) {
+            let hyperlink_match_entry = hyperlink_match[0]
+            let comp = hyperlink_match_entry.split(" - ")
+            let ref_link = comp[0].replace('[', "").trim()
+            let ref_text = comp[1].replace('/]', "").trim()
+            hyperlink_element = <a href={ref_link} style={{color: 'black', backgroundColor: '#44ff44', padding: 5}}>{ref_text}</a>
+        }
+        text = text.replace(/\[(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?.*\/]/g, "")
+		let utterance = new SpeechSynthesisUtterance(text)
+        utterance.voice = this.state.selectedVoice
+        utterance.rate = 0.8
+        this.synth.speak(utterance)
+	}
+
 
 	render() {
 		return (
 			<div className="Chat">
 				<Header></Header>
-				<MessageContainer messageList={this.state.messageList}></MessageContainer>
+				<MessageContainer messageList={this.state.messageList} onSpeak={this.onChatBubbleSpeak}></MessageContainer>
 				<MessageSuggestionContainer messageList={(this.state.context.suggestion_list) ? this.state.context.suggestion_list : []}
 					onSuggestSelection={this.onSuggestSelection}></MessageSuggestionContainer>
 				<MessageBox onChange={this.onTextChange} text={this.state.post} handleKeyDown={this.handleKeyPress}></MessageBox>

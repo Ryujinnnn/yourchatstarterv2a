@@ -1,10 +1,8 @@
 import { Component } from "react";
-import { Container, Sidenav, Sidebar, Nav, Navbar, Dropdown, Icon, Header, Content } from 'rsuite'
-// import { BillManager } from "./Component/AdminPanelComponents/BillManager";
-// import { BlogManager } from "./Component/AdminPanelComponents/BlogManager";
-// import { UserManager } from './Component/AdminPanelComponents/UserManager';
-// import { ServiceManager } from './Component/AdminPanelComponents/ServiceManager'
+import { Container, Sidenav, Sidebar, Nav, Navbar, Dropdown, Icon, Header, Content, Breadcrumb } from 'rsuite'
 import { BillManager, BlogManager, UserManager, ServiceManager } from "../Component";
+import { DashboardPanel } from "../Component/AdminPanelComponents/DashboardPanel";
+import { InfoPanel } from "../Component/AdminPanelComponents/InfoPanel";
 
 const headerStyles = {
     padding: 18,
@@ -73,11 +71,12 @@ export class AdminPanel extends Component {
             : (this.state.currentPageTitle === "Billing") ? <BillManager />
             : (this.state.currentPageTitle === "Subscription Plan") ? <ServiceManager />
             : (this.state.currentPageTitle === "Blog") ? <BlogManager />
-            : (this.state.currentPageTitle === "Dashboard")? (<p>Dashboard</p>)
+            : (this.state.currentPageTitle === "Info")? (<InfoPanel />)
+            : (this.state.currentPageTitle === "Dashboard")? (<DashboardPanel />)
             : (<p>This page is empty</p>)
 
         return (
-            <div className="show-fake-browser sidebar-page" style={{textAlign: 'left'}}>
+            <div className="show-fake-browser sidebar-page" style={{textAlign: 'left', height: '100vh'}}>
                 <Container>
                     <Sidebar
                         style={{ display: 'flex', flexDirection: 'column' }}
@@ -96,7 +95,7 @@ export class AdminPanel extends Component {
                                     <Nav.Item eventKey="1" active icon={<Icon icon="dashboard" />} onSelect={() => {this.setState({currentPageTitle: "Dashboard"})}}>
                                         Dashboard
                                     </Nav.Item>
-                                    <Nav.Item eventKey="2" icon={<Icon icon="group" />}>
+                                    <Nav.Item eventKey="2" icon={<Icon icon="group" />} onSelect={() => {this.setState({currentPageTitle: "Info"})}}>
                                         Info
                                     </Nav.Item>
                                     <Dropdown
@@ -111,26 +110,19 @@ export class AdminPanel extends Component {
                                         <Dropdown.Item eventKey="3-3" onSelect={() => {this.setState({currentPageTitle: "Subscription Plan"})}}>Subscription Plan</Dropdown.Item>
                                         <Dropdown.Item eventKey="3-4" onSelect={() => {this.setState({currentPageTitle: "Blog"})}}>Blog</Dropdown.Item>
                                     </Dropdown>
-                                    <Dropdown
-                                        eventKey="4"
-                                        trigger="hover"
-                                        title="Settings"
-                                        icon={<Icon icon="gear-circle" />}
-                                        placement="rightStart"
-                                    >
-                                        <Dropdown.Item eventKey="4-1">Applications</Dropdown.Item>
-                                        <Dropdown.Item eventKey="4-2">Websites</Dropdown.Item>
-                                        <Dropdown.Item eventKey="4-3">Versions</Dropdown.Item>
-                                    </Dropdown>
                                 </Nav>
                             </Sidenav.Body>
                         </Sidenav>
                         <NavToggle expand={expand} onChange={this.handleToggle} />
                     </Sidebar>
 
-                    <Container style={{padding: 10}}>
-                        <Header style={{marginBottom: 10}}>
-                            <h4>{this.state.currentPageTitle}</h4>
+                    <Container style={{padding: 20, height: '100vh', overflowY: 'scroll'}}>
+                        <Header>
+                            <Breadcrumb>
+                                <Breadcrumb.Item>Home</Breadcrumb.Item>
+                                <Breadcrumb.Item>AdminPanel</Breadcrumb.Item>
+                                <Breadcrumb.Item active>{this.state.currentPageTitle}</Breadcrumb.Item>
+                            </Breadcrumb>
                         </Header>
                         <Content>{LoadedComponet}</Content>
                     </Container>

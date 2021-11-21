@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Button, Icon } from "rsuite";
 import './MessageItem.css'
 
 export class MessageItem extends Component {
@@ -23,7 +24,7 @@ class ServerMessage extends Component {
         }
         let text = this.props.text
         let hyperlink_match = text.match(/\[(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?.*\/]/g)
-        let hyperlink_element = <div></div>
+        let hyperlink_element = <p></p>
         if (hyperlink_match) {
             let hyperlink_match_entry = hyperlink_match[0]
             let comp = hyperlink_match_entry.split(" - ")
@@ -35,6 +36,7 @@ class ServerMessage extends Component {
         return (
             <div style={style}>
                 <p className="message">{text}{hyperlink_element}</p>
+                {/* <Icon icon="speaker" }/> */}
             </div>
         )
     }
@@ -53,6 +55,7 @@ class ClientMessage extends Component {
         return (
             <div style={style}>
                 <p className="message messageOpponent">{this.props.text}</p>
+                {/* <Icon icon="speaker" onClick={this.props.speak(this.props.text)}/> */}
             </div>
         )
     }
