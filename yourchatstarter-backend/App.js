@@ -9,11 +9,14 @@ const payment = require('./routes/payment')
 const auth = require('./routes/auth')
 const user = require('./routes/user')
 const blog = require('./routes/blog')
+const notification = require('./routes/notification')
 
 const chatbot = require('./chatbot_engine')
 const databaseConn = require('./database/database_connection')
 const fs = require('fs');
 const { init_scraper } = require('./info_module/covid_info');
+
+const { notificationCheck, checkNotification } = require('./routine/notification_check')
 
 require('dotenv').config()
 
@@ -87,6 +90,7 @@ app.use("/api/auth", auth)
 app.use("/api/user", user)
 app.use("/api/blog", blog)
 app.use("/api/send_voice", send_voice)
+app.use("/api/notification", notification )
 
 //ADMIN ACCESS
 if (process.env.ADMIN_ACCESS === "1") {
@@ -109,4 +113,7 @@ app.listen(port, () => {
 	console.log(`Example app listening at port ${port}`)
 	//open connection test
 	databaseConn.initConnection()
+
+	setInterval(checkNotification, 60000)
+	console.log('check notification routine setup')
 })

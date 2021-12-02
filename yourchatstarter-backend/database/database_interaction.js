@@ -16,10 +16,10 @@ module.exports.addRecord = (colName, record) => {
     }).catch()
 }
 
-module.exports.editRecords = (colName, query, action) => {
+module.exports.editRecords = (colName, query, action, option = {}) => {
     return new Promise((resolve, reject) => {
         let col = databaseConn.getConnection().collection(colName)
-        col.updateMany(query, action, function(err, res) {
+        col.updateMany(query, action, option, function(err, res) {
             if (err) {
                 console.err(err)
                 reject()

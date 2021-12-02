@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from '../../serviceWorker';
 
 const pushNotificationSupported = serviceWorker.isPushNotificationSupported();
 // check push notifications are supported by the browser
+  
 
-export default function usePushNotifications() {
+export function usePushNotifications() {
     const [userConsent, setSuserConsent] = useState(Notification.permission);
     //to manage the user consent: Notification.permission is a JavaScript native function that return the current state of the permission
     //We initialize the userConsent with that value
@@ -22,6 +23,7 @@ export default function usePushNotifications() {
         if (pushNotificationSupported) {
             setLoading(true);
             setError(false);
+            console.log("push notification is supported, calling register function")
             serviceWorker.register();
         }
     }, []);
@@ -31,12 +33,12 @@ export default function usePushNotifications() {
     useEffect(() => {
         setLoading(true);
         setError(false);
-        const getExixtingSubscription = async () => {
+        const getExistingSubscription = async () => {
             const existingSubscription = await serviceWorker.getUserSubscription();
             setUserSubscription(existingSubscription);
             setLoading(false);
         };
-        getExixtingSubscription();
+        getExistingSubscription();
     }, []);
     //Retrieve if there is any push notification subscription for the registered service worker
     // this use effect runs only in the first render
@@ -72,8 +74,9 @@ export default function usePushNotifications() {
         setError(false);
         serviceWorker
             .createNotificationSubscription()
-            .then(function (subscrition) {
-                setUserSubscription(subscrition);
+            .then(function (subscription) {
+                console.log(subscription)
+                setUserSubscription(subscription);
                 setLoading(false);
             })
             .catch((err) => {
@@ -90,6 +93,42 @@ export default function usePushNotifications() {
                 setError(err);
                 setLoading(false);
             });
+        // if ('serviceWorker' in navigator) {
+        //     navigator.serviceWorker.ready.then(function (registration) {
+        //         if (!registration.pushManager) {
+        //             console.log('Push manager unavailable.')
+        //             return
+        //         }
+
+        //         registration.pushManager.getSubscription().then(function (existedSubscription) {
+        //             if (existedSubscription === null) {
+        //                 console.log('No subscription detected, make a request.')
+        //                 registration.pushManager.subscribe({
+        //                     applicationServerKey: urlB64ToUint8Array('BJdLsp38HrmZxuR6qsvoDdTwtVBpUb75OLleU5qW8wnNCr58_VZIR-Vck8tGmQSBOOcUso2RhEClNTjmq22fIp8'),
+        //                     userVisibleOnly: true,
+        //                 }).then(function (newSubscription) {
+        //                     console.log('New subscription added.', newSubscription)
+        //                     //sendSubscription(newSubscription)
+        //                 }).catch(function (e) {
+        //                     if (Notification.permission !== 'granted') {
+        //                         console.log('Permission was not granted.')
+        //                     } else {
+        //                         console.error('An error ocurred during the subscription process.', e)
+        //                     }
+        //                 })
+        //             } else {
+        //                 console.log('Existed subscription detected.')
+        //                 //sendSubscription(existedSubscription)
+        //             }
+        //         })
+        //     })
+        //         .catch(function (e) {
+        //             console.error('An error ocurred during Service Worker registration.', e)
+        //         })
+        // }
+        // else {
+        //     console.log('Can not reachable to the service worker');
+        // }
     };
 
     /**
@@ -100,7 +139,7 @@ export default function usePushNotifications() {
         setLoading(true);
         setError(false);
         axios
-            .post('http://localhost:4000/subscription', { data: userSubscription })
+            .post('/api/notification/subscribe', { data: userSubscription })
             .then(function (response) {
                 setPushServerSubscriptionId(response.data.id);
                 setLoading(false);
@@ -117,7 +156,7 @@ export default function usePushNotifications() {
     const onClickSendNotification = async () => {
         setLoading(true);
         setError(false);
-        axios.get(`http://localhost:4000/subscription/${pushServerSubscriptionId}`).catch((error) => {
+        axios.get(`/api/notification/send_notif/${pushServerSubscriptionId}`).catch((error) => {
             setLoading(false);
             setError(error);
         });

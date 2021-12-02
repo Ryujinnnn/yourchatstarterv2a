@@ -50,6 +50,7 @@ class Routes extends Component {
                     <Route exact path='/payment_success'><BillingSuccess /></Route>
                     <Route exact path='/direct_payment'><DirectPayment /></Route>
                     <Route exact path='/history'><BillingHistory /></Route>
+                    <Route exact path='/test'><TestScreen/></Route>
                     <Route exact path='/profile'><Profile /></Route>
                     <Route exact path="/logout">{<Redirect exact from='/logout' to="/"/>}</Route>
                     <Route exact path='/blog'><Blog /></Route>

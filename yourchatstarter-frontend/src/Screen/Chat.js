@@ -1,7 +1,16 @@
 
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import { Alert, Icon } from 'rsuite'
-import { SendButton, MessageBox, MessageContainer, Footer, MessageSuggestionContainer, SpeechInput, Header } from '../Component'
+import { SendButton, MessageBox, MessageContainer, Footer, MessageSuggestionContainer, SpeechInput, Header, ReactSpeechHookWrapper } from '../Component'
+
+async function getUserPreference() {
+    return fetch('api/user/get_preference', {
+        method: 'GET',
+        headers: {
+            'x-access-token': sessionStorage.getItem("token")
+        },
+    }).then(data => data.json())
+}
 
 export class Chat extends Component {
 	constructor(props) {
@@ -14,10 +23,21 @@ export class Chat extends Component {
 			context: {},
 			selectedVoice: null,
             voiceList: [],
+			requestListening: false,
 
 			isSpeechModalVisible: false,
+			user_preference: {
+				//general setting
+				allow_auto_t2s: false,
+				allow_push_notification: false,
+				allow_voice_recording: false,
+				//t2s setting
+				voice_selection: "",
+				voice_rate: 0.8
+			}
 		};
 
+		this.speechHookRef = createRef()
 
 		this.onClickHandler = this.onClickHandler.bind(this)
 		this.onTextChange = this.onTextChange.bind(this)
@@ -28,6 +48,9 @@ export class Chat extends Component {
 		this.onReceivingAudio = this.onReceivingAudio.bind(this)
 		this.onChatBubbleSpeak = this.onChatBubbleSpeak.bind(this)
 		this.loadVoice = this.loadVoice.bind(this)
+
+		this.onSpeechResult = this.onSpeechResult.bind(this)
+		this.onRequestVoice = this.onRequestVoice.bind(this)
 	}
 
 	async componentDidMount() {
@@ -41,12 +64,32 @@ export class Chat extends Component {
 			})
 			.catch(err => console.log(err));
 
+		let preference_res = await getUserPreference()
+		if (preference_res && preference_res.status === "success") {
+			this.setState({
+				user_preference: preference_res.preference
+			})
+		}
+
 		this.synth = await window.speechSynthesis;
 		this.synth.onvoiceschanged = this.loadVoice
 	}
 
 	async loadVoice() {
 		let voiceList = this.synth.getVoices()
+
+		if (this.state.user_preference.voice_selection !== "") {
+			let voiceSelected = voiceList.findIndex((val) => val.name === this.state.user_preference.voice_selection)
+			if (voiceSelected !== -1) {
+				this.setState({
+					voiceList: voiceList,
+					selectedVoice: (voiceSelected !== -1 )? voiceList[voiceSelected] : null
+				})
+				return
+			}
+		}
+
+		Alert.warning("Không có thiết lập giọng nói hoặc không tìm thấy giọng, tìm giọng mặc định tốt nhất...")
 
 		let vnDefaultVoice = voiceList.findIndex((val) => val.lang === "vi-VN" && val.name.includes("Natural"))
 		if (vnDefaultVoice === -1 )vnDefaultVoice = voiceList.findIndex((val) => val.lang === "vi-VN")
@@ -148,6 +191,12 @@ export class Chat extends Component {
 		this.onChatBubbleSpeak(body.response)
 	}
 
+	onSpeechResult(result) {
+		this.setState({
+			post: result
+		})
+	}
+
 	onTextChange(value) {
 		this.setState({
 			post: value
@@ -162,7 +211,7 @@ export class Chat extends Component {
 	}
 
 	onChatBubbleSpeak(text) {
-		if (!this.state.selectedVoice) return
+		if (!this.state.selectedVoice || !this.state.user_preference.allow_auto_t2s) return
         let hyperlink_match = text.match(/\[(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?.*\/]/g)
         let hyperlink_element = <p></p>
         if (hyperlink_match) {
@@ -175,10 +224,15 @@ export class Chat extends Component {
         text = text.replace(/\[(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?.*\/]/g, "")
 		let utterance = new SpeechSynthesisUtterance(text)
         utterance.voice = this.state.selectedVoice
-        utterance.rate = 0.8
+        utterance.rate = this.state.user_preference.voice_rate
         this.synth.speak(utterance)
 	}
 
+	onRequestVoice() {
+		// console.log(this.speechHookRef.current)
+		// this.speechHookRef.current.props.onClick()
+		this.setState({isSpeechModalVisible: true})
+	}
 
 	render() {
 		return (
@@ -192,9 +246,11 @@ export class Chat extends Component {
 					this.setState({isSpeechModalVisible: false})
 				}} onReceivingAudio={this.onReceivingAudio}></SpeechInput>
 				<div>
-					<div onClick={() => {this.setState({isSpeechModalVisible: true})}} style={{display: 'inline', marginTop: 12 }}><Icon icon='microphone' size='2x' style={{marginTop: 10, marginBottom: 10}}/></div>
+					<ReactSpeechHookWrapper onBinding={(ref) => this.speechHookRef.current = ref} onResult={this.onSpeechResult} onListening={() => {Alert.info("Đang nghe")}} onStopped={() => {Alert.info("Đã nghe xong")}}/>
+					{/* <div onClick={this.onRequestVoice} style={{display: 'inline', marginTop: 12 }}><Icon icon='microphone' size='2x' style={{marginTop: 10, marginBottom: 10}}/></div> */}
 					<SendButton text="Gửi" style={{ float: "right" }} onAction={this.onClickHandler}></SendButton>
 				</div>
+				
 				<Footer></Footer>
 			</div>
 		);

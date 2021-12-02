@@ -3,76 +3,76 @@
     "locale": "vi-VN",
     "data": [
         {
-            "intent": "service.weather",
+            "intent": "service.ask_weather",
             "utterances": [
                 "Thời tiết",
-                "thời tiết quảng bình như thế nào",
-                "Thời tiết ở hà nội thế nào?",
-                "Thời tiết ở thành phố hồ chí minh thế nào?",
-                "thời tiết đồng hới như thế nào",
-                "thời tiết hiện tại ở hồ chí minh",
-                "Thời tiết ở thủ đô nước Việt Nam thế nào?"
+                "thời tiết %location% như thế nào",
+                "Thời tiết ở %location% thế nào?",
+                "Thời tiết ở %location% thế nào?",
+                "thời tiết %location% như thế nào",
+                "thời tiết hiện tại ở %location%",
+                "Thời tiết %location%"
             ],
             "answers": [
-                "Hmmm, hình như mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+                "Mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
             ]
         },
         {
-            "intent": "service.exchange_currency",
+            "intent": "service.ask_exchange_rate",
             "utterances": [
-                "23000 VND ra mấy USD?",
+                "%amount% %currency% ra mấy %currency%?",
                 "Giá ngoại tệ",
-                "25000 VND đổi ra bao nhiêu EUR",
-                "23000 đ ra mấy $?",
-                "1 USD đổi ra bao nhiêu VND?",
-                "giá đô la"
+                "%amount% %currency% đổi ra bao nhiêu %currency%",
+                "%amount% %currency% ra mấy %currency%?",
+                "%amount% %currency% đổi ra bao nhiêu %currency%?",
+                "giá %currency%"
             ],
             "answers": [
-                "Hmmm, hình như mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+                "Mình không rõ bạn muốn nhắc đến loại tiền gì"
             ]
         },
         {
-            "intent": "service.exchange_crypto",
+            "intent": "service.ask_crypto",
             "utterances": [
-                "giá tiền ảo ETH sang VND như thế nào",
-                "giá tiền ảo BTC qua USD như thế nào",
-                "giá tiền ảo BTC/USD"
+                "giá tiền ảo %crypto% sang %currency% như thế nào",
+                "giá tiền ảo %crypto% qua %currency% như thế nào",
+                "giá tiền ảo %crypto%/%currency%"
             ],
             "answers": [
-                "Hmmm, hình như mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+                "Mình không rõ bạn muốn nhắc đến loại tiền gì"
             ]
         },
         {
-            "intent": "service.stock",
+            "intent": "service.ask_stock",
             "utterances": [
                 "chứng khoán",
-                "Cổ phiếu GOOGL đang ở mốc bao nhiêu điểm",
-                "Cổ phiểu AMZN đang ở mức bao nhiêu điểm vậy?",
-                "Mã cổ phiếu AAPL đang ở mức bao nhiêu điểm?"
+                "Cổ phiếu %stock_code% đang ở mốc bao nhiêu điểm",
+                "Cổ phiểu %stock_code% đang ở mức bao nhiêu điểm vậy?",
+                "Mã cổ phiếu %stock_code% đang ở mức bao nhiêu điểm?"
             ],
             "answers": [
-                "Hmmm, hình như mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+                "Mình không biết về mã cổ phiếu này. Mình xin lỗi nhé"
             ]
         },
         {
-            "intent": "service.calc",
+            "intent": "service.ask_calc",
             "utterances": [
-                "2+3*12-4 bằng mấy?",
-                "1+1 bằng bao nhiêu?",
-                "30+3-12+1 bằng bao nhiêu?"
+                "%expression% bằng mấy?",
+                "%expression% bằng bao nhiêu?",
+                "%expression% bằng bao nhiêu?"
             ],
             "answers": [
-                "Hmmm, hình như mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+                "Bạn không đọc được phép tính của bạn"
             ]
         },
         {
-            "intent": "service.covid_number",
+            "intent": "service.ask_covid",
             "utterances": [
                 "tình hình covid như thế nào",
-                "tình hình covid ở bắc giang như thế nào"
+                "tình hình covid ở %location% như thế nào"
             ],
             "answers": [
-                "Hmmm, hình như mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+                "Mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
             ]
         },
         {
@@ -81,34 +81,34 @@
                 "bản tin covid"
             ],
             "answers": [
-                "Hmmm, hình như mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+                "Mình chưa cài đặt chức năng này nhé bạn"
             ]
         },
         {
-            "intent": "service.news",
+            "intent": "service.ask_news",
             "utterances": [
                 "Tin tức",
                 "tin tức quốc tế"
             ],
             "answers": [
-                "Hmmm, hình như mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+                "Mình quên mua báo rồi bạn ơi"
             ]
         },
         {
-            "intent": "service.translate",
+            "intent": "service.req_translate",
             "utterances": [
-                "dịch \"I'm beautiful\" ra tiếng việt",
-                "bạn nói yên bình như thế nào bằng tiếng anh?",
-                "dịch \"give me a pen\" ra tiếng việt",
-                "bạn nói sorry như thế nào bằng tiếng việt?",
-                "mình nói trường học trong tiếng Anh như thế nào nhỉ?",
-                "dịch \"trường học\" ra tiếng anh",
-                "dịch \"hello\" ra tiếng việt",
-                "mình nói tôi tài giỏi trong tiếng Anh như thế nào?",
+                "dịch %phrase% ra %language%",
+                "bạn nói %phrase% như thế nào bằng %language%?",
+                "dịch %phrase% ra %language%",
+                "bạn nói %phrase% như thế nào bằng %language%?",
+                "mình nói %phrase% trong %language% như thế nào nhỉ?",
+                "dịch %phrase% ra %language%",
+                "dịch %phrase% ra %language%",
+                "mình nói %phrase% trong %language% như thế nào?",
                 "dịch thuật"
             ],
             "answers": [
-                "Hmmm, hình như mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+                "Mình chưa học ngôn ngữ này nhé bạn"
             ]
         }
     ]

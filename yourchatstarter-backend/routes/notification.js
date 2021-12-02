@@ -2,16 +2,15 @@ const express = require('express')
 const router = express.Router()
 const db = require('../database/database_interaction')
 const { verifyToken } = require('./middleware/verify_token')
-const subscriptions = {};
 var crypto = require('crypto');
 const webpush = require('web-push');
 
 const vapidKeys = {
-    privateKey: 'a' ,
-    publicKey: 'b'
+    privateKey: process.env.PRIVATE_VAPID,
+    publicKey:
+      'BKCgepgxlhniRpbB7E1AjqRlet413-ac-6nJxTu9Wh_7Kw_hjuASZHaoe5qrhZiPbTmm7DKznbZg5P7D1rCHyt8'
 };
-
-webpush.setVapidDetails('mailto:example@yourdomain.org', vapidKeys.publicKey, vapidKeys.privateKey);
+webpush.setVapidDetails('mailto:neroyuki241@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
 
 function createHash(input) {
     const md5sum = crypto.createHash('md5');
@@ -19,32 +18,53 @@ function createHash(input) {
     return md5sum.digest('hex');
 }
 
-router.post('/subscribe', verifyToken, (req, res) => {
+router.post('/subscribe', verifyToken, async (req, res) => {
     const subscriptionRequest = req.body.data;
-    const susbscriptionId = createHash(JSON.stringify(subscriptionRequest));
-    subscriptions[susbscriptionId] = subscriptionRequest;
-    res.status(201).json({ id: susbscriptionId });
+    const subscriptionId = createHash(JSON.stringify(subscriptionRequest))
+
+    let subscriber = {
+        subscriptionId: subscriptionId,
+        subscriptionRequest: subscriptionRequest
+    }
+    let insert_res = await db.addRecord("notification_subscription", subscriber)
+    if (!insert_res) {  
+        res.status(500).json({ 
+            status: 'failed',
+            desc: 'internal server error',
+        })
+    };
+    res.status(201).json({ 
+        status: 'success',
+        desc: 'subscribing successfully',
+        id: subscriptionId 
+    })
 })
 
-router.get('/send_notif/:id', (req, res) => {
+router.get('/send_notif/:id', async (req, res) => {
     const subscriptionId = req.params.id;
-    const pushSubscription = subscriptions[subscriptionId];
-    webpush
-        .sendNotification(
-            pushSubscription,
-            JSON.stringify({
-                title: 'New Product Available ',
-                text: 'HEY! Take a look at this brand new t-shirt!',
-                image: '/images/jason-leung-HM6TMmevbZQ-unsplash.jpg',
-                tag: 'new-product',
-                url: '/new-product-jason-leung-HM6TMmevbZQ-unsplash.html'
-            })
-        )
-        .catch((err) => {
-            console.log(err);
-        });
 
-    res.status(202).json({});
+    let message = {
+        subscriptionId: subscriptionId,
+        next_schedule: new Date(new Date() + 1000 * 120),
+        message: {
+            title: 'From your assistant',
+            text: 'This is a test notification'
+        },
+        type: 'one-time'
+    }
+
+    let insert_res = await db.addRecord("scheduled_message", message)
+    if (!insert_res) {  
+        res.status(500).json({ 
+            status: 'failed',
+            desc: 'internal server error',
+        })
+    };
+    res.status(200).json({ 
+        status: 'success',
+        desc: 'message is scheduled' 
+    })
+
 })
 
 module.exports = router

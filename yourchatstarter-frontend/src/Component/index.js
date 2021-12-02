@@ -35,6 +35,8 @@ import { SubscribeTable } from './SubscribeTable/SubscribeTable'
 import { UserInfoFragment } from "./UserInfoFragement";
 import { UserPreferenceFragment } from "./UserPreferenceFragment";
 import { UserSecurityFragment } from "./UserSecurityFragment";
+import { usePushNotifications } from "./PushNotificationHook";
+import { ReactSpeechRecognition, ReactSpeechHookWrapper } from "./ReactSpeechRecognition";
 
 export {
     BillManager,
@@ -74,4 +76,7 @@ export {
     UserInfoFragment,
     UserSecurityFragment,
     UserPreferenceFragment,
+    usePushNotifications,
+    ReactSpeechRecognition,
+    ReactSpeechHookWrapper,
 }

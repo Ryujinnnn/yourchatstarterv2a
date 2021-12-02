@@ -1,92 +1,79 @@
-import { Component, createRef, useState} from "react";
+import { Component, createRef} from "react";
 import { Button, ButtonToolbar, ControlLabel, Form, FormControl, FormGroup, SelectPicker } from "rsuite";
 // import Footer from "./Component/Footer/Footer";
 // import RegisterPrompt from "./Component/RegisterPrompt/RegisterPrompt";
-import { RegisterPrompt, Footer, Header } from '../Component'
-import { useSpeechRecognition } from 'react-speech-kit';
+import { RegisterPrompt, Footer, Header, usePushNotifications, ReactSpeechRecognition } from '../Component'
 import './Test.css'
 
-
+const PushNotificationtestContainer = (props) => {
+    const {
+      userConsent,
+      pushNotificationSupported,
+      userSubscription,
+      onClickAskUserPermission,
+      onClickSusbribeToPushNotification,
+      onClickSendSubscriptionToPushServer,
+      pushServerSubscriptionId,
+      onClickSendNotification,
+      error,
+      loading
+    } = usePushNotifications();
   
-const ReactSpeechRecognition = () => {
-    const [lang, setLang] = useState('vi-VN');
-    const [value, setValue] = useState('');
-    const [blocked, setBlocked] = useState(false);
-
-    const onEnd = () => {
-        // You could do something here after listening has finished
-    };
-
-    const onResult = (result) => {
-        setValue(result);
-    };
-
-    const changeLang = (event) => {
-        setLang(event.target.value);
-    };
-
-    const onError = (event) => {
-        if (event.error === 'not-allowed') {
-            setBlocked(true);
-        }
-    };
-
-    const { listen, listening, stop, supported } = useSpeechRecognition({
-        onResult,
-        onEnd,
-        onError,
-    });
-
-    const toggle = listening
-        ? stop
-        : () => {
-            setBlocked(false);
-            listen({ lang });
-        };
-
+    const Loading = ({ loading }) =>
+      loading ? <div className='app-loader'>Please wait, we are loading something...</div> : null;
+    const Error = ({ error }) =>
+      error ? (
+        <section className='app-error'>
+          <h2>{error.name}</h2>
+          <p>Error message : {error.message}</p>
+          <p>Error code : {error.code}</p>
+        </section>
+      ) : null;
+  
+    const isConsentGranted = userConsent === 'granted';
+  
     return (
-        <div className="test-recognition">
-            <form id="speech-recognition-form">
-                <br />
-                <h4>Nhận diện giọng nói</h4>
-                {!supported && (
-                    <p>
-                        Oh no, it looks like your browser doesn&#39;t support Speech
-                        Recognition.
-                    </p>
-                )}
-                {supported && (
-                    <div>
-                        <p>
-                            {`Bấm "Nghe" để bắt đầu nhận diện. Sau khi nhận diện xong bấm Dừng`}
-                        </p>
-                        <br />
-                        <label htmlFor="transcript">Kết quả</label>
-                        <br />
-                        <textarea
-                            id="transcript"
-                            name="transcript"
-                            placeholder="Mình chưa nghe thấy gì cả bạn ei :v"
-                            value={value}
-                            rows={3}
-                            //disabled
-                            style={{color: 'black'}}
-                        />
-                        <br />
-                        <button style={{color: 'black'}} disabled={blocked} type="button" onClick={toggle}>
-                            {listening ? 'Dừng' : 'Nghe'}
-                        </button>
-                        {blocked && (
-                            <p style={{ color: 'red' }}>
-                                Trình duyệt của bạn đang chặn quyền truy cập microphone
-                            </p>
-                        )}
-                    </div>
-                )}
-            </form>
-        </div>
+      <div>
+        <header>
+  
+          <p>Push notification are {!pushNotificationSupported && 'NOT'} supported by your device.</p>
+  
+          <p>
+            User consent to recevie push notificaitons is <strong>{userConsent}</strong>.
+          </p>
+  
+          <Error error={error} />
+  
+          <button
+            disabled={!pushNotificationSupported || isConsentGranted}
+            onClick={onClickAskUserPermission}>
+            {isConsentGranted ? 'Consent granted' : ' Ask user permission'}
+          </button>
+  
+          <button
+            disabled={!pushNotificationSupported || !isConsentGranted || userSubscription}
+            onClick={onClickSusbribeToPushNotification}>
+            {userSubscription ? 'Push subscription created' : 'Create Notification subscription'}
+          </button>
+  
+          <button
+            disabled={!userSubscription || pushServerSubscriptionId}
+            onClick={onClickSendSubscriptionToPushServer}>
+            {pushServerSubscriptionId
+              ? 'Subscrption sent to the server'
+              : 'Send subscription to push server'}
+          </button>
+  
+          {pushServerSubscriptionId && (
+            <div>
+              <p>The server accepted the push subscrption!</p>
+              <button onClick={onClickSendNotification}>Send a notification</button>
+            </div>
+          )}
+        </header>
+      </div>
     );
-};
+  }
 
 export class TestScreen extends Component {
     constructor(props) {
@@ -214,7 +201,8 @@ export class TestScreen extends Component {
                         <Button appearance="primary" type="submit">Nói</Button>
                     </ButtonToolbar>
                 </Form>
-                <ReactSpeechRecognition/>
+                <ReactSpeechRecognition />
+                <PushNotificationtestContainer/>
                 <Footer></Footer>
             </div>
         )

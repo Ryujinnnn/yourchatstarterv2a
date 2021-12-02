@@ -20,4 +20,19 @@ router.get('/all_user', async (req, res) => {
     }
 })
 
+
+router.post('/save_user', async (req, res) => {
+    res.status(501).send({
+        status: "failed",
+        desc: "endpointhave yet been implemented"
+    })
+})
+
+router.delete('/from_id/:id', async (req, res) => {
+    res.status(501).send({
+        status: "failed",
+        desc: "endpointhave yet been implemented"
+    })
+})
+
 module.exports = router

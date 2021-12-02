@@ -1,0 +1,4993 @@
+{
+  "options": {
+    "Ben Tre": [
+      "Ben Tre"
+    ],
+    "Cao Bang": [
+      "Cao Bang"
+    ],
+    "Hai Phong": [
+      "Hai Phong"
+    ],
+    "Lai Chau": [
+      "Lai Chau"
+    ],
+    "Lam Dong": [
+      "Lam Dong"
+    ],
+    "Long An": [
+      "Long An"
+    ],
+    "Quang Nam": [
+      "Quang Nam"
+    ],
+    "Quang Ninh": [
+      "Quang Ninh"
+    ],
+    "Son La": [
+      "Son La"
+    ],
+    "Tay Ninh": [
+      "Tay Ninh"
+    ],
+    "Thanh Hoa": [
+      "Thanh Hoa"
+    ],
+    "Thai Binh": [
+      "Thai Binh"
+    ],
+    "Tien Giang": [
+      "Tien Giang"
+    ],
+    "Lang Son": [
+      "Lang Son"
+    ],
+    "An Giang": [
+      "An Giang"
+    ],
+    "Dak Lak": [
+      "Dak Lak"
+    ],
+    "Dong Nai": [
+      "Dong Nai"
+    ],
+    "Dong Thap": [
+      "Dong Thap"
+    ],
+    "Kien Giang": [
+      "Kien Giang"
+    ],
+    "Ha Noi": [
+      "Ha Noi"
+    ],
+    "Ho Chi Minh": [
+      "Ho Chi Minh"
+    ],
+    "Ba Ria-Vung Tau": [
+      "Ba Ria-Vung Tau"
+    ],
+    "Binh Dinh": [
+      "Binh Dinh"
+    ],
+    "Binh Thuan": [
+      "Binh Thuan"
+    ],
+    "Can Tho": [
+      "Can Tho"
+    ],
+    "Gia Lai": [
+      "Gia Lai"
+    ],
+    "Ha Giang": [
+      "Ha Giang"
+    ],
+    "Ha Tay": [
+      "Ha Tay"
+    ],
+    "Ha Tinh": [
+      "Ha Tinh"
+    ],
+    "Hoa Binh": [
+      "Hoa Binh"
+    ],
+    "Khanh Hoa": [
+      "Khanh Hoa"
+    ],
+    "Lao Cai": [
+      "Lao Cai"
+    ],
+    "Ha Nam": [
+      "Ha Nam"
+    ],
+    "Nghe An": [
+      "Nghe An"
+    ],
+    "Ninh Binh": [
+      "Ninh Binh"
+    ],
+    "Ninh Thuan": [
+      "Ninh Thuan"
+    ],
+    "Phu Yen": [
+      "Phu Yen"
+    ],
+    "Quang Binh": [
+      "Quang Binh"
+    ],
+    "Quang Tri": [
+      "Quang Tri"
+    ],
+    "Soc Trang": [
+      "Soc Trang"
+    ],
+    "Thura Thien-Hue": [
+      "Thura Thien-Hue"
+    ],
+    "Tra Vinh": [
+      "Tra Vinh"
+    ],
+    "Tuyen Quang": [
+      "Tuyen Quang"
+    ],
+    "Vinh Long": [
+      "Vinh Long"
+    ],
+    "Yen Bai": [
+      "Yen Bai"
+    ],
+    "Kon Tum": [
+      "Kon Tum"
+    ],
+    "Quang Ngai": [
+      "Quang Ngai"
+    ],
+    "Bin Duong": [
+      "Bin Duong"
+    ],
+    "Hung Yen": [
+      "Hung Yen"
+    ],
+    "Hai Duong": [
+      "Hai Duong"
+    ],
+    "Bac Lieu": [
+      "Bac Lieu"
+    ],
+    "Ca Mau": [
+      "Ca Mau"
+    ],
+    "Thai Nguyen": [
+      "Thai Nguyen"
+    ],
+    "Bac Kan": [
+      "Bac Kan"
+    ],
+    "Da Nang": [
+      "Da Nang"
+    ],
+    "Bin Phuoc": [
+      "Bin Phuoc"
+    ],
+    "Bac Giang": [
+      "Bac Giang"
+    ],
+    "Bac Ninh": [
+      "Bac Ninh"
+    ],
+    "Nam Dinh": [
+      "Nam Dinh"
+    ],
+    "Vinh Phuc": [
+      "Vinh Phuc"
+    ],
+    "Phu Tho": [
+      "Phu Tho"
+    ],
+    "Dien Bien": [
+      "Dien Bien"
+    ],
+    "Dac Nong": [
+      "Dac Nong"
+    ],
+    "Hau Giang": [
+      "Hau Giang"
+    ],
+    "Bỉm Sơn": [
+      "Bỉm Sơn"
+    ],
+    "Diên Khánh": [
+      "Diên Khánh"
+    ],
+    "Sa Pá": [
+      "Sa Pá"
+    ],
+    "Ëp Binh Châu (1)": [
+      "Ëp Binh Châu (1)"
+    ],
+    "Ấp Lộc Thạnh (2)": [
+      "Ấp Lộc Thạnh (2)"
+    ],
+    "Ëp Long Hòa (1)": [
+      "Ëp Long Hòa (1)"
+    ],
+    "Ap Phu Nhon (1)": [
+      "Ap Phu Nhon (1)"
+    ],
+    "Ấp Rừng Lá (1)": [
+      "Ấp Rừng Lá (1)"
+    ],
+    "Bà Rịa": [
+      "Bà Rịa"
+    ],
+    "Bac Ba": [
+      "Bac Ba"
+    ],
+    "Båc Liêu": [
+      "Båc Liêu"
+    ],
+    "Ban M'drack": [
+      "Ban M'drack"
+    ],
+    "Bän Pa Huone": [
+      "Bän Pa Huone"
+    ],
+    "Biên Hòa": [
+      "Biên Hòa"
+    ],
+    "Buôn Mrông (1)": [
+      "Buôn Mrông (1)"
+    ],
+    "Cam Lâm": [
+      "Cam Lâm"
+    ],
+    "Cha Pai": [
+      "Cha Pai"
+    ],
+    "Chuong Nghia": [
+      "Chuong Nghia"
+    ],
+    "Công Cô Ðô": [
+      "Công Cô Ðô"
+    ],
+    "Ðài Th": [
+      "Ðài Th"
+    ],
+    "Ðak Péc": [
+      "Ðak Péc"
+    ],
+    "Dân Phú (4)": [
+      "Dân Phú (4)"
+    ],
+    "Ðæng Bóa (2)": [
+      "Ðæng Bóa (2)"
+    ],
+    "De Pouang": [
+      "De Pouang"
+    ],
+    "Diện Biên Phủ": [
+      "Diện Biên Phủ"
+    ],
+    "Ðố Sơn": [
+      "Ðố Sơn"
+    ],
+    "Ðông Hà": [
+      "Ðông Hà"
+    ],
+    "D÷ng Xoài": [
+      "D÷ng Xoài"
+    ],
+    "Du Long": [
+      "Du Long"
+    ],
+    "Dương Liễu (2)": [
+      "Dương Liễu (2)"
+    ],
+    "Hà Ðông": [
+      "Hà Ðông"
+    ],
+    "Hà Nông Trung (1)": [
+      "Hà Nông Trung (1)"
+    ],
+    "Häi Phòng": [
+      "Häi Phòng"
+    ],
+    "Hiệp Ðức": [
+      "Hiệp Ðức"
+    ],
+    "Hòa Bình": [
+      "Hòa Bình"
+    ],
+    "Hu": [
+      "Hu"
+    ],
+    "Huong Son": [
+      "Huong Son"
+    ],
+    "Khương Trung (2)": [
+      "Khương Trung (2)"
+    ],
+    "Kỳ Sơn": [
+      "Kỳ Sơn"
+    ],
+    "Lai Châu": [
+      "Lai Châu"
+    ],
+    "Làng La": [
+      "Làng La"
+    ],
+    "Lạng Sơn": [
+      "Lạng Sơn"
+    ],
+    "Lào Cai": [
+      "Lào Cai"
+    ],
+    "Lý Nhơn Bằc": [
+      "Lý Nhơn Bằc"
+    ],
+    "Na Nhiên": [
+      "Na Nhiên"
+    ],
+    "Nam Hà": [
+      "Nam Hà"
+    ],
+    "Nghi Sơn": [
+      "Nghi Sơn"
+    ],
+    "Nho Quan": [
+      "Nho Quan"
+    ],
+    "Nhu Xuan": [
+      "Nhu Xuan"
+    ],
+    "Ninh Mã (1)": [
+      "Ninh Mã (1)"
+    ],
+    "Pac Boc": [
+      "Pac Boc"
+    ],
+    "Pac Tà": [
+      "Pac Tà"
+    ],
+    "Phan Lý": [
+      "Phan Lý"
+    ],
+    "Phú Bình (3)": [
+      "Phú Bình (3)"
+    ],
+    "Phú Giang (1)": [
+      "Phú Giang (1)"
+    ],
+    "Phú Xuân (1)": [
+      "Phú Xuân (1)"
+    ],
+    "Phước Hòa": [
+      "Phước Hòa"
+    ],
+    "Plei Ken Ngo (1)": [
+      "Plei Ken Ngo (1)"
+    ],
+    "Plei Klane Kla": [
+      "Plei Klane Kla"
+    ],
+    "Plei Rơngol Dơgrong": [
+      "Plei Rơngol Dơgrong"
+    ],
+    "Quäng Nhiêu (1)": [
+      "Quäng Nhiêu (1)"
+    ],
+    "Qui Nhon": [
+      "Qui Nhon"
+    ],
+    "Sang Huân": [
+      "Sang Huân"
+    ],
+    "Sơn La": [
+      "Sơn La"
+    ],
+    "Sông Mã": [
+      "Sông Mã"
+    ],
+    "Tam Quan": [
+      "Tam Quan"
+    ],
+    "Thôn Hai (3)": [
+      "Thôn Hai (3)"
+    ],
+    "Thôn Thái Dương Hạ (1)": [
+      "Thôn Thái Dương Hạ (1)"
+    ],
+    "Tiên Yên (1)": [
+      "Tiên Yên (1)"
+    ],
+    "Tương Dương": [
+      "Tương Dương"
+    ],
+    "Tuyết Ðiểm (3)": [
+      "Tuyết Ðiểm (3)"
+    ],
+    "Uông Bí": [
+      "Uông Bí"
+    ],
+    "Van Lý (1)": [
+      "Van Lý (1)"
+    ],
+    "Viên Minh (2)": [
+      "Viên Minh (2)"
+    ],
+    "Vo Dat": [
+      "Vo Dat"
+    ],
+    "Xen Con": [
+      "Xen Con"
+    ],
+    "Xóm Con": [
+      "Xóm Con"
+    ],
+    "Xóm Côn Si": [
+      "Xóm Côn Si"
+    ],
+    "Yên Bái": [
+      "Yên Bái"
+    ],
+    "A Yun Pa": [
+      "A Yun Pa"
+    ],
+    "Ai Yin Young": [
+      "Ai Yin Young"
+    ],
+    "An Biên": [
+      "An Biên"
+    ],
+    "An Khê": [
+      "An Khê"
+    ],
+    "An Lão": [
+      "An Lão"
+    ],
+    "Ëp Bích Son": [
+      "Ëp Bích Son"
+    ],
+    "Ap Ca Coi": [
+      "Ap Ca Coi"
+    ],
+    "Duc Mÿ": [
+      "Duc Mÿ"
+    ],
+    "Ấp Mới (1)": [
+      "Ấp Mới (1)"
+    ],
+    "Ap Tan My": [
+      "Ap Tan My"
+    ],
+    "Ấp Thánh Hương": [
+      "Ấp Thánh Hương"
+    ],
+    "Ba Ðông": [
+      "Ba Ðông"
+    ],
+    "Ba Khè": [
+      "Ba Khè"
+    ],
+    "Ba Lang": [
+      "Ba Lang"
+    ],
+    "Phước Bình": [
+      "Phước Bình"
+    ],
+    "Bai Thuong": [
+      "Bai Thuong"
+    ],
+    "Ban Ae Lai": [
+      "Ban Ae Lai"
+    ],
+    "Ban Ay Rieng": [
+      "Ban Ay Rieng"
+    ],
+    "Ban Bat": [
+      "Ban Bat"
+    ],
+    "Ban Cha Hang": [
+      "Ban Cha Hang"
+    ],
+    "Bản Chêng Nươ": [
+      "Bản Chêng Nươ"
+    ],
+    "Ban Coc": [
+      "Ban Coc"
+    ],
+    "Ban Cong Deng": [
+      "Ban Cong Deng"
+    ],
+    "Ban Duong": [
+      "Ban Duong"
+    ],
+    "Bän Kö Ôi": [
+      "Bän Kö Ôi"
+    ],
+    "Bän La": [
+      "Bän La"
+    ],
+    "Bän Mông": [
+      "Bän Mông"
+    ],
+    "Bän Na Nhiu": [
+      "Bän Na Nhiu"
+    ],
+    "Bän Na Pheo": [
+      "Bän Na Pheo"
+    ],
+    "Ban Re": [
+      "Ban Re"
+    ],
+    "Bän Thuy": [
+      "Bän Thuy"
+    ],
+    "Bän Veng": [
+      "Bän Veng"
+    ],
+    "Ban Xã Thu": [
+      "Ban Xã Thu"
+    ],
+    "Bän Xen Con": [
+      "Bän Xen Con"
+    ],
+    "Bän Xèo": [
+      "Bän Xèo"
+    ],
+    "Bang Beng": [
+      "Bang Beng"
+    ],
+    "Bau Môn": [
+      "Bau Môn"
+    ],
+    "Bich Thi": [
+      "Bich Thi"
+    ],
+    "Binh An": [
+      "Binh An"
+    ],
+    "Bình Long": [
+      "Bình Long"
+    ],
+    "Bình Thånh": [
+      "Bình Thånh"
+    ],
+    "Bo Ho Su": [
+      "Bo Ho Su"
+    ],
+    "Buôn Phoke": [
+      "Buôn Phoke"
+    ],
+    "Buôn Ya Soup": [
+      "Buôn Ya Soup"
+    ],
+    "Cái Bè": [
+      "Cái Bè"
+    ],
+    "Cẩm Phả": [
+      "Cẩm Phả"
+    ],
+    "Canh Trap": [
+      "Canh Trap"
+    ],
+    "Cao Lãnh": [
+      "Cao Lãnh"
+    ],
+    "Cao Quán": [
+      "Cao Quán"
+    ],
+    "Cầu Thượng": [
+      "Cầu Thượng"
+    ],
+    "Chà Nòi": [
+      "Chà Nòi"
+    ],
+    "Chán An": [
+      "Chán An"
+    ],
+    "Chau Phú": [
+      "Chau Phú"
+    ],
+    "Chau Thanh": [
+      "Chau Thanh"
+    ],
+    "Chi Nê": [
+      "Chi Nê"
+    ],
+    "Chiêm Hóa": [
+      "Chiêm Hóa"
+    ],
+    "Chiêng Pan": [
+      "Chiêng Pan"
+    ],
+    "Con Chon": [
+      "Con Chon"
+    ],
+    "Con Houa": [
+      "Con Houa"
+    ],
+    "Cµ Chi": [
+      "Cµ Chi"
+    ],
+    "Da Hòa": [
+      "Da Hòa"
+    ],
+    "Đà Nẵng": [
+      "Đà Nẵng"
+    ],
+    "Dak Chat": [
+      "Dak Chat"
+    ],
+    "Dak Pek": [
+      "Dak Pek"
+    ],
+    "Dao Phu Qui": [
+      "Dao Phu Qui"
+    ],
+    "Ðèo Tay Chang": [
+      "Ðèo Tay Chang"
+    ],
+    "Di Linh": [
+      "Di Linh"
+    ],
+    "Diem Phe": [
+      "Diem Phe"
+    ],
+    "Dinh Ðiền Dak Ménou": [
+      "Dinh Ðiền Dak Ménou"
+    ],
+    "Ðông Cao": [
+      "Ðông Cao"
+    ],
+    "Ðồng Hới": [
+      "Ðồng Hới"
+    ],
+    "Ðong Krola": [
+      "Ðong Krola"
+    ],
+    "Dong Phu": [
+      "Dong Phu"
+    ],
+    "Ðông Sàng": [
+      "Ðông Sàng"
+    ],
+    "Ðông Tau": [
+      "Ðông Tau"
+    ],
+    "Ðong Vang": [
+      "Ðong Vang"
+    ],
+    "Duc Lao": [
+      "Duc Lao"
+    ],
+    "Duc Minh": [
+      "Duc Minh"
+    ],
+    "Duong Dong": [
+      "Duong Dong"
+    ],
+    "Duong Long": [
+      "Duong Long"
+    ],
+    "Fac Ta": [
+      "Fac Ta"
+    ],
+    "Gia Nghĩa": [
+      "Gia Nghĩa"
+    ],
+    "Gia Vuc": [
+      "Gia Vuc"
+    ],
+    "Giang Muang Pho": [
+      "Giang Muang Pho"
+    ],
+    "Gò Công": [
+      "Gò Công"
+    ],
+    "Gòranh": [
+      "Gòranh"
+    ],
+    "Hà Giang": [
+      "Hà Giang"
+    ],
+    "Hà Tiên": [
+      "Hà Tiên"
+    ],
+    "Hải Dương": [
+      "Hải Dương"
+    ],
+    "Hàm Tân": [
+      "Hàm Tân"
+    ],
+    "Ham Thuan Bac": [
+      "Ham Thuan Bac"
+    ],
+    "Hàm Yên": [
+      "Hàm Yên"
+    ],
+    "Hau Chung": [
+      "Hau Chung"
+    ],
+    "Hau Nghia": [
+      "Hau Nghia"
+    ],
+    "Hòa Ða": [
+      "Hòa Ða"
+    ],
+    "Hoài Nhon": [
+      "Hoài Nhon"
+    ],
+    "Hoang Xa": [
+      "Hoang Xa"
+    ],
+    "H÷ng Gai": [
+      "H÷ng Gai"
+    ],
+    "Huế": [
+      "Huế"
+    ],
+    "Kê Gà": [
+      "Kê Gà"
+    ],
+    "Kẻ Gi": [
+      "Kẻ Gi"
+    ],
+    "Ke Phong": [
+      "Ke Phong"
+    ],
+    "Kham Duc": [
+      "Kham Duc"
+    ],
+    "Khanh Vinh": [
+      "Khanh Vinh"
+    ],
+    "Khau Khang": [
+      "Khau Khang"
+    ],
+    "Khe Sanh": [
+      "Khe Sanh"
+    ],
+    "Kiêm Long": [
+      "Kiêm Long"
+    ],
+    "Kon Braih": [
+      "Kon Braih"
+    ],
+    "Kon Ko Dô": [
+      "Kon Ko Dô"
+    ],
+    "Lagi": [
+      "Lagi"
+    ],
+    "Làng Cay": [
+      "Làng Cay"
+    ],
+    "Làng Cha": [
+      "Làng Cha"
+    ],
+    "Lang Den": [
+      "Lang Den"
+    ],
+    "Lang Duong": [
+      "Lang Duong"
+    ],
+    "Lang Ke Man": [
+      "Lang Ke Man"
+    ],
+    "Làng Mên": [
+      "Làng Mên"
+    ],
+    "Làng Ông": [
+      "Làng Ông"
+    ],
+    "Làng Pho Rang": [
+      "Làng Pho Rang"
+    ],
+    "Làng Rao": [
+      "Làng Rao"
+    ],
+    "Lang Ro": [
+      "Lang Ro"
+    ],
+    "Làng Than": [
+      "Làng Than"
+    ],
+    "Lao Phou Van": [
+      "Lao Phou Van"
+    ],
+    "Long Châu": [
+      "Long Châu"
+    ],
+    "Long Xuyên": [
+      "Long Xuyên"
+    ],
+    "Loung Hoa": [
+      "Loung Hoa"
+    ],
+    "Luân Châu": [
+      "Luân Châu"
+    ],
+    "Luc Nam": [
+      "Luc Nam"
+    ],
+    "Ma Li Chai": [
+      "Ma Li Chai"
+    ],
+    "Mang Ri": [
+      "Mang Ri"
+    ],
+    "Móng Cái": [
+      "Móng Cái"
+    ],
+    "Mui Chon Dong": [
+      "Mui Chon Dong"
+    ],
+    "Mui da Nang": [
+      "Mui da Nang"
+    ],
+    "Mui Lay": [
+      "Mui Lay"
+    ],
+    "Muong Hin": [
+      "Muong Hin"
+    ],
+    "Mương Hinh": [
+      "Mương Hinh"
+    ],
+    "Muong Lat": [
+      "Muong Lat"
+    ],
+    "Muong Lèo": [
+      "Muong Lèo"
+    ],
+    "Na Ac": [
+      "Na Ac"
+    ],
+    "Na Anh": [
+      "Na Anh"
+    ],
+    "Na Bioc": [
+      "Na Bioc"
+    ],
+    "Na Hang": [
+      "Na Hang"
+    ],
+    "Na Koc": [
+      "Na Koc"
+    ],
+    "Na Loung": [
+      "Na Loung"
+    ],
+    "Na Thiêm": [
+      "Na Thiêm"
+    ],
+    "Na Young": [
+      "Na Young"
+    ],
+    "Nam Bai": [
+      "Nam Bai"
+    ],
+    "Nam Bôn": [
+      "Nam Bôn"
+    ],
+    "Nam Dong": [
+      "Nam Dong"
+    ],
+    "Nam Khap Ban Tang": [
+      "Nam Khap Ban Tang"
+    ],
+    "Nam Lang": [
+      "Nam Lang"
+    ],
+    "Nam Nhung": [
+      "Nam Nhung"
+    ],
+    "Nam Ric": [
+      "Nam Ric"
+    ],
+    "Nhà Bè": [
+      "Nhà Bè"
+    ],
+    "Nha Trang": [
+      "Nha Trang"
+    ],
+    "Ninh Bình": [
+      "Ninh Bình"
+    ],
+    "Ninh Cường": [
+      "Ninh Cường"
+    ],
+    "Ninh Giang": [
+      "Ninh Giang"
+    ],
+    "Ninh Hòa": [
+      "Ninh Hòa"
+    ],
+    "Nong Truong": [
+      "Nong Truong"
+    ],
+    "Ô Môn": [
+      "Ô Môn"
+    ],
+    "Pa Kha": [
+      "Pa Kha"
+    ],
+    "Pac Tha": [
+      "Pac Tha"
+    ],
+    "Pao Boc": [
+      "Pao Boc"
+    ],
+    "Phä Låi": [
+      "Phä Låi"
+    ],
+    "Phan Lý Chàm": [
+      "Phan Lý Chàm"
+    ],
+    "Phan Rang": [
+      "Phan Rang"
+    ],
+    "Phlen Loung": [
+      "Phlen Loung"
+    ],
+    "Pho Trach": [
+      "Pho Trach"
+    ],
+    "Phò Trì": [
+      "Phò Trì"
+    ],
+    "Phú An": [
+      "Phú An"
+    ],
+    "Phù Cát": [
+      "Phù Cát"
+    ],
+    "Phu Chau": [
+      "Phu Chau"
+    ],
+    "Phu Giáo": [
+      "Phu Giáo"
+    ],
+    "Phù Hiên": [
+      "Phù Hiên"
+    ],
+    "Phu Lang Thuong": [
+      "Phu Lang Thuong"
+    ],
+    "Phu Nhi": [
+      "Phu Nhi"
+    ],
+    "Phµ Nho Quan": [
+      "Phµ Nho Quan"
+    ],
+    "Phú Nhơn": [
+      "Phú Nhơn"
+    ],
+    "Trà Vinh": [
+      "Trà Vinh"
+    ],
+    "Phu Xuan Ha": [
+      "Phu Xuan Ha"
+    ],
+    "Phúc Thành": [
+      "Phúc Thành"
+    ],
+    "Phúc Yên": [
+      "Phúc Yên"
+    ],
+    "Phước Lãnh (1)": [
+      "Phước Lãnh (1)"
+    ],
+    "Phuong Tri": [
+      "Phuong Tri"
+    ],
+    "Plei Doch": [
+      "Plei Doch"
+    ],
+    "Plei Khoie": [
+      "Plei Khoie"
+    ],
+    "Plei Kuel": [
+      "Plei Kuel"
+    ],
+    "Plei Morr": [
+      "Plei Morr"
+    ],
+    "Plây Cu": [
+      "Plây Cu"
+    ],
+    "Plei Cần": [
+      "Plei Cần"
+    ],
+    "Poun Loung": [
+      "Poun Loung"
+    ],
+    "Quân Bác": [
+      "Quân Bác"
+    ],
+    "Cà Mau": [
+      "Cà Mau"
+    ],
+    "Quần Phương Hạ": [
+      "Quần Phương Hạ"
+    ],
+    "Quan Phuong Trung Trai": [
+      "Quan Phuong Trung Trai"
+    ],
+    "Quang Ðâu": [
+      "Quang Ðâu"
+    ],
+    "Quang Hoai": [
+      "Quang Hoai"
+    ],
+    "Quí Châu": [
+      "Quí Châu"
+    ],
+    "Quinh Son": [
+      "Quinh Son"
+    ],
+    "Sa Ðéc": [
+      "Sa Ðéc"
+    ],
+    "Sa Huþnh": [
+      "Sa Huþnh"
+    ],
+    "Sa Thay": [
+      "Sa Thay"
+    ],
+    "Son Hoa": [
+      "Son Hoa"
+    ],
+    "Suvui": [
+      "Suvui"
+    ],
+    "Tân An": [
+      "Tân An"
+    ],
+    "Tan An Thon": [
+      "Tan An Thon"
+    ],
+    "Tân Uyên": [
+      "Tân Uyên"
+    ],
+    "Tap Phúc": [
+      "Tap Phúc"
+    ],
+    "Tây Ninh": [
+      "Tây Ninh"
+    ],
+    "Tay Phu": [
+      "Tay Phu"
+    ],
+    "Tchoung Sao": [
+      "Tchoung Sao"
+    ],
+    "Thái Bình": [
+      "Thái Bình"
+    ],
+    "Thái Nguyên": [
+      "Thái Nguyên"
+    ],
+    "Than Poun": [
+      "Than Poun"
+    ],
+    "Thanh Hóa": [
+      "Thanh Hóa"
+    ],
+    "Thoi Thuan": [
+      "Thoi Thuan"
+    ],
+    "Thôn Ðô Vinh": [
+      "Thôn Ðô Vinh"
+    ],
+    "Thôn Khe Xêng": [
+      "Thôn Khe Xêng"
+    ],
+    "Thôn Lạc Nghiệp": [
+      "Thôn Lạc Nghiệp"
+    ],
+    "Thôn Phú An": [
+      "Thôn Phú An"
+    ],
+    "Thôn Sông Pha": [
+      "Thôn Sông Pha"
+    ],
+    "Thôn Thái An": [
+      "Thôn Thái An"
+    ],
+    "Thuan Nghiep": [
+      "Thuan Nghiep"
+    ],
+    "Thượng Ðưc": [
+      "Thượng Ðưc"
+    ],
+    "Thuy U": [
+      "Thuy U"
+    ],
+    "Tié Co": [
+      "Tié Co"
+    ],
+    "Huyện Tiên Phước": [
+      "Huyện Tiên Phước"
+    ],
+    "Tinh Bien": [
+      "Tinh Bien"
+    ],
+    "Tou Rout": [
+      "Tou Rout"
+    ],
+    "Trà Mi": [
+      "Trà Mi"
+    ],
+    "Trà Ôn": [
+      "Trà Ôn"
+    ],
+    "Trai Ha Kau": [
+      "Trai Ha Kau"
+    ],
+    "Tri Lễ": [
+      "Tri Lễ"
+    ],
+    "Tri Tôn": [
+      "Tri Tôn"
+    ],
+    "Truc Lam": [
+      "Truc Lam"
+    ],
+    "Tung Muong": [
+      "Tung Muong"
+    ],
+    "Tuy Hòa": [
+      "Tuy Hòa"
+    ],
+    "Tuy Phong": [
+      "Tuy Phong"
+    ],
+    "Tuyên Quang": [
+      "Tuyên Quang"
+    ],
+    "Van An": [
+      "Van An"
+    ],
+    "Vân Canh": [
+      "Vân Canh"
+    ],
+    "Væn La": [
+      "Væn La"
+    ],
+    "Van Lam Trai": [
+      "Van Lam Trai"
+    ],
+    "Vàng Danh": [
+      "Vàng Danh"
+    ],
+    "Vi Ban": [
+      "Vi Ban"
+    ],
+    "Vinh": [
+      "Vinh"
+    ],
+    "Vinh Linh": [
+      "Vinh Linh"
+    ],
+    "Vĩnh Sơn": [
+      "Vĩnh Sơn"
+    ],
+    "Xa Cam My": [
+      "Xa Cam My"
+    ],
+    "Xã Gia Kiêm": [
+      "Xã Gia Kiêm"
+    ],
+    "Xã Hiêu Tin": [
+      "Xã Hiêu Tin"
+    ],
+    "Xã Phù Sung": [
+      "Xã Phù Sung"
+    ],
+    "Xã Phương Lâm": [
+      "Xã Phương Lâm"
+    ],
+    "Xa Truc": [
+      "Xa Truc"
+    ],
+    "Xóm Khánh Hòa": [
+      "Xóm Khánh Hòa"
+    ],
+    "Xóm Lón": [
+      "Xóm Lón"
+    ],
+    "Xóm Råch Tàu": [
+      "Xóm Råch Tàu"
+    ],
+    "Xóm Trùm Tháp": [
+      "Xóm Trùm Tháp"
+    ],
+    "Xóm Vàm Cái Cùng": [
+      "Xóm Vàm Cái Cùng"
+    ],
+    "Xóm Vàm Láng": [
+      "Xóm Vàm Láng"
+    ],
+    "Xuan Hoa": [
+      "Xuan Hoa"
+    ],
+    "Xuân Lung": [
+      "Xuân Lung"
+    ],
+    "Xuong Kuang": [
+      "Xuong Kuang"
+    ],
+    "Yên Bình Xã": [
+      "Yên Bình Xã"
+    ],
+    "Khanh Son": [
+      "Khanh Son"
+    ],
+    "Xóm Mÿ Ca": [
+      "Xóm Mÿ Ca"
+    ],
+    "Lomg Ho": [
+      "Lomg Ho"
+    ],
+    "Long Phú": [
+      "Long Phú"
+    ],
+    "Ngoc Hien": [
+      "Ngoc Hien"
+    ],
+    "Tµa Chùa": [
+      "Tµa Chùa"
+    ],
+    "Hå Lang": [
+      "Hå Lang"
+    ],
+    "Mèo Våc": [
+      "Mèo Våc"
+    ],
+    "Cat Son Phuong": [
+      "Cat Son Phuong"
+    ],
+    "An Hải (1)": [
+      "An Hải (1)"
+    ],
+    "Ấp An Ðiền": [
+      "Ấp An Ðiền"
+    ],
+    "Ấp Vĩnh An": [
+      "Ấp Vĩnh An"
+    ],
+    "Bắc Giang": [
+      "Bắc Giang"
+    ],
+    "Bắc Hà": [
+      "Bắc Hà"
+    ],
+    "Bạch Mai": [
+      "Bạch Mai"
+    ],
+    "Bản Vay (1)": [
+      "Bản Vay (1)"
+    ],
+    "Bảo Yên": [
+      "Bảo Yên"
+    ],
+    "Bình Phước": [
+      "Bình Phước"
+    ],
+    "Bồng Sơn": [
+      "Bồng Sơn"
+    ],
+    "Buôn Ma Thuột": [
+      "Buôn Ma Thuột"
+    ],
+    "Cam Ðường": [
+      "Cam Ðường"
+    ],
+    "Cam Mỹ": [
+      "Cam Mỹ"
+    ],
+    "Cần Duộc": [
+      "Cần Duộc"
+    ],
+    "Châu Ðốc": [
+      "Châu Ðốc"
+    ],
+    "Chợ Mới": [
+      "Chợ Mới"
+    ],
+    "Chợ Phước Hải": [
+      "Chợ Phước Hải"
+    ],
+    "Củng Sơn": [
+      "Củng Sơn"
+    ],
+    "Dầu Tiếng": [
+      "Dầu Tiếng"
+    ],
+    "Ðịa Ðiếm Bunard (3)": [
+      "Ðịa Ðiếm Bunard (3)"
+    ],
+    "Ðiện Bàn": [
+      "Ðiện Bàn"
+    ],
+    "Ðịnh Bình (2)": [
+      "Ðịnh Bình (2)"
+    ],
+    "Dinh Ðiền Dak Quon": [
+      "Dinh Ðiền Dak Quon"
+    ],
+    "Ðồng Chuế": [
+      "Ðồng Chuế"
+    ],
+    "Ðồng Sài": [
+      "Ðồng Sài"
+    ],
+    "Giàng Mưng Pho": [
+      "Giàng Mưng Pho"
+    ],
+    "Hộ Thông": [
+      "Hộ Thông"
+    ],
+    "Hồ Xá": [
+      "Hồ Xá"
+    ],
+    "Hớn Quản": [
+      "Hớn Quản"
+    ],
+    "Hương Thũy": [
+      "Hương Thũy"
+    ],
+    "Hữu Giang (1)": [
+      "Hữu Giang (1)"
+    ],
+    "Kim Cương": [
+      "Kim Cương"
+    ],
+    "Lộc Ninh": [
+      "Lộc Ninh"
+    ],
+    "Mường Tong": [
+      "Mường Tong"
+    ],
+    "Như Xuân": [
+      "Như Xuân"
+    ],
+    "Ninh Phước (1)": [
+      "Ninh Phước (1)"
+    ],
+    "Nông Trường Nam Ðồng": [
+      "Nông Trường Nam Ðồng"
+    ],
+    "Pắc Ta": [
+      "Pắc Ta"
+    ],
+    "Tùng Nghĩa": [
+      "Tùng Nghĩa"
+    ],
+    "Phú Quốc": [
+      "Phú Quốc"
+    ],
+    "Phước Thịnh (2)": [
+      "Phước Thịnh (2)"
+    ],
+    "Quảng Ninh": [
+      "Quảng Ninh"
+    ],
+    "Rạch Tàu": [
+      "Rạch Tàu"
+    ],
+    "Sóc Trăng": [
+      "Sóc Trăng"
+    ],
+    "Sơn Tây": [
+      "Sơn Tây"
+    ],
+    "Suối Rút": [
+      "Suối Rút"
+    ],
+    "Thăng Bình": [
+      "Thăng Bình"
+    ],
+    "Thổ Khối": [
+      "Thổ Khối"
+    ],
+    "Thôn Bảo An": [
+      "Thôn Bảo An"
+    ],
+    "Tiểu Cần": [
+      "Tiểu Cần"
+    ],
+    "Tú Lệ": [
+      "Tú Lệ"
+    ],
+    "Vạn Thiện (3)": [
+      "Vạn Thiện (3)"
+    ],
+    "Vĩnh Phúc": [
+      "Vĩnh Phúc"
+    ],
+    "Vĩnh Phúc (7)": [
+      "Vĩnh Phúc (7)"
+    ],
+    "Xã Sông Lũy": [
+      "Xã Sông Lũy"
+    ],
+    "Xóm Ba Trại": [
+      "Xóm Ba Trại"
+    ],
+    "Bản Ðuông": [
+      "Bản Ðuông"
+    ],
+    "An Phước": [
+      "An Phước"
+    ],
+    "Ấp An Thuận": [
+      "Ấp An Thuận"
+    ],
+    "Ấp Bắc": [
+      "Ấp Bắc"
+    ],
+    "Ấp Bàu Bàng": [
+      "Ấp Bàu Bàng"
+    ],
+    "Ấp Bình Châu": [
+      "Ấp Bình Châu"
+    ],
+    "Ấp Cả Hoản": [
+      "Ấp Cả Hoản"
+    ],
+    "Ấp Ðầu Giồng": [
+      "Ấp Ðầu Giồng"
+    ],
+    "Ấp Hương Phước": [
+      "Ấp Hương Phước"
+    ],
+    "Ấp Lục": [
+      "Ấp Lục"
+    ],
+    "Ấp Nhà Máy": [
+      "Ấp Nhà Máy"
+    ],
+    "Ấp Tham Thiện": [
+      "Ấp Tham Thiện"
+    ],
+    "Ấp Thiẹn Ái": [
+      "Ấp Thiẹn Ái"
+    ],
+    "Ấp Trạm": [
+      "Ấp Trạm"
+    ],
+    "Bắc Kạn": [
+      "Bắc Kạn"
+    ],
+    "Bắc Mé": [
+      "Bắc Mé"
+    ],
+    "Bắc Ninh": [
+      "Bắc Ninh"
+    ],
+    "Bắc Quang": [
+      "Bắc Quang"
+    ],
+    "Bản Cao": [
+      "Bản Cao"
+    ],
+    "Bản Chieng": [
+      "Bản Chieng"
+    ],
+    "Bản Ðôn": [
+      "Bản Ðôn"
+    ],
+    "Bản Giam": [
+      "Bản Giam"
+    ],
+    "Bản Kao": [
+      "Bản Kao"
+    ],
+    "Bản Ko La": [
+      "Bản Ko La"
+    ],
+    "Bản Kung": [
+      "Bản Kung"
+    ],
+    "Bản Lót": [
+      "Bản Lót"
+    ],
+    "Bản Na Ca": [
+      "Bản Na Ca"
+    ],
+    "Bản Na Tong": [
+      "Bản Na Tong"
+    ],
+    "Bản Nam Che": [
+      "Bản Nam Che"
+    ],
+    "Bản Nặm Mương": [
+      "Bản Nặm Mương"
+    ],
+    "Bản Nam Nen": [
+      "Bản Nam Nen"
+    ],
+    "Bản Pa Thẳng": [
+      "Bản Pa Thẳng"
+    ],
+    "Bản Pho": [
+      "Bản Pho"
+    ],
+    "Bản Po Bai": [
+      "Bản Po Bai"
+    ],
+    "Bàn Thạch": [
+      "Bàn Thạch"
+    ],
+    "Bản Vai": [
+      "Bản Vai"
+    ],
+    "Bẩn Yên Nhân": [
+      "Bẩn Yên Nhân"
+    ],
+    "Bảo Lộc": [
+      "Bảo Lộc"
+    ],
+    "Bến Cỏ": [
+      "Bến Cỏ"
+    ],
+    "Bến Giang": [
+      "Bến Giang"
+    ],
+    "Bến Tranh": [
+      "Bến Tranh"
+    ],
+    "Biển Ðộng": [
+      "Biển Ðộng"
+    ],
+    "Bồ Túc": [
+      "Bồ Túc"
+    ],
+    "Buôn Mă": [
+      "Buôn Mă"
+    ],
+    "Cai Lậy": [
+      "Cai Lậy"
+    ],
+    "Cái Nước": [
+      "Cái Nước"
+    ],
+    "Cam Lộ": [
+      "Cam Lộ"
+    ],
+    "Cần Ðước": [
+      "Cần Ðước"
+    ],
+    "Cần Thơ": [
+      "Cần Thơ"
+    ],
+    "Cao Bằng": [
+      "Cao Bằng"
+    ],
+    "Chấp Lễ": [
+      "Chấp Lễ"
+    ],
+    "Chi Ngại": [
+      "Chi Ngại"
+    ],
+    "Chợ Kem": [
+      "Chợ Kem"
+    ],
+    "Cốc Thành": [
+      "Cốc Thành"
+    ],
+    "Cựu Ðôi": [
+      "Cựu Ðôi"
+    ],
+    "Ða Cỗc": [
+      "Ða Cỗc"
+    ],
+    "Ðà Lạt": [
+      "Ðà Lạt"
+    ],
+    "Ðầm Hà": [
+      "Ðầm Hà"
+    ],
+    "Ðất Ðỏ": [
+      "Ðất Ðỏ"
+    ],
+    "Dĩ An": [
+      "Dĩ An"
+    ],
+    "Ðiền Xá": [
+      "Ðiền Xá"
+    ],
+    "Ðông Ðăng": [
+      "Ðông Ðăng"
+    ],
+    "Ðồng Lý": [
+      "Ðồng Lý"
+    ],
+    "Ðông Tảo Dông": [
+      "Ðông Tảo Dông"
+    ],
+    "Dong Tong Băng": [
+      "Dong Tong Băng"
+    ],
+    "Ðông Triều": [
+      "Ðông Triều"
+    ],
+    "Ðồng Xuân": [
+      "Ðồng Xuân"
+    ],
+    "Ðức Thắng": [
+      "Ðức Thắng"
+    ],
+    "Ðường Keo": [
+      "Ðường Keo"
+    ],
+    "Giá Rai": [
+      "Giá Rai"
+    ],
+    "Giều Cả": [
+      "Giều Cả"
+    ],
+    "Giồng Mé": [
+      "Giồng Mé"
+    ],
+    "Gò Dầu Hạ": [
+      "Gò Dầu Hạ"
+    ],
+    "Hà Ðồng": [
+      "Hà Ðồng"
+    ],
+    "Hà Tĩnh": [
+      "Hà Tĩnh"
+    ],
+    "Hải Long": [
+      "Hải Long"
+    ],
+    "Hội An": [
+      "Hội An"
+    ],
+    "Hưng Yên": [
+      "Hưng Yên"
+    ],
+    "Hữu Ðô": [
+      "Hữu Ðô"
+    ],
+    "Kiện Trung": [
+      "Kiện Trung"
+    ],
+    "Kon Hơnong": [
+      "Kon Hơnong"
+    ],
+    "Kỳ Anh": [
+      "Kỳ Anh"
+    ],
+    "Làng Mộ": [
+      "Làng Mộ"
+    ],
+    "Làng Sẻ": [
+      "Làng Sẻ"
+    ],
+    "Lộc Bình": [
+      "Lộc Bình"
+    ],
+    "Long Lễ": [
+      "Long Lễ"
+    ],
+    "Long Mỹ": [
+      "Long Mỹ"
+    ],
+    "Lục Linh": [
+      "Lục Linh"
+    ],
+    "Lương Khê": [
+      "Lương Khê"
+    ],
+    "Mặc Bắc": [
+      "Mặc Bắc"
+    ],
+    "Mông Dương": [
+      "Mông Dương"
+    ],
+    "Mường Bô": [
+      "Mường Bô"
+    ],
+    "Mường Boum": [
+      "Mường Boum"
+    ],
+    "Mường Tè": [
+      "Mường Tè"
+    ],
+    "Mương Tong": [
+      "Mương Tong"
+    ],
+    "Mỹ Tho": [
+      "Mỹ Tho"
+    ],
+    "Nà Giảo": [
+      "Nà Giảo"
+    ],
+    "Na Sầm": [
+      "Na Sầm"
+    ],
+    "Nam Ðiến": [
+      "Nam Ðiến"
+    ],
+    "Nam Ðịnh": [
+      "Nam Ðịnh"
+    ],
+    "Nghĩa Ðàn": [
+      "Nghĩa Ðàn"
+    ],
+    "Nghĩa Lộ": [
+      "Nghĩa Lộ"
+    ],
+    "Ngọc Trì": [
+      "Ngọc Trì"
+    ],
+    "Nội Xá": [
+      "Nội Xá"
+    ],
+    "Nông Trại": [
+      "Nông Trại"
+    ],
+    "Phan Thiết": [
+      "Phan Thiết"
+    ],
+    "Phát Diệm": [
+      "Phát Diệm"
+    ],
+    "Phố Lu": [
+      "Phố Lu"
+    ],
+    "Phong Thổ": [
+      "Phong Thổ"
+    ],
+    "Thủ Dầu Một": [
+      "Thủ Dầu Một"
+    ],
+    "Phú Lộc": [
+      "Phú Lộc"
+    ],
+    "Phủ Lý": [
+      "Phủ Lý"
+    ],
+    "Phú Thọ": [
+      "Phú Thọ"
+    ],
+    "Phú Vật": [
+      "Phú Vật"
+    ],
+    "Pơlei Breng": [
+      "Pơlei Breng"
+    ],
+    "Quảng Ngãi": [
+      "Quảng Ngãi"
+    ],
+    "Quảng Trach": [
+      "Quảng Trach"
+    ],
+    "Quảng Trị": [
+      "Quảng Trị"
+    ],
+    "Quảng Yên": [
+      "Quảng Yên"
+    ],
+    "Quỳnh Nhai": [
+      "Quỳnh Nhai"
+    ],
+    "Rạch Giá": [
+      "Rạch Giá"
+    ],
+    "Rạch Gòi": [
+      "Rạch Gòi"
+    ],
+    "Sầm Sơn": [
+      "Sầm Sơn"
+    ],
+    "Tam Kỳ": [
+      "Tam Kỳ"
+    ],
+    "Tam Lễ": [
+      "Tam Lễ"
+    ],
+    "Tân Cảnh": [
+      "Tân Cảnh"
+    ],
+    "Thăng Ðức": [
+      "Thăng Ðức"
+    ],
+    "Thánh Lạng Xã": [
+      "Thánh Lạng Xã"
+    ],
+    "Thạnh Phong": [
+      "Thạnh Phong"
+    ],
+    "Thạnh Phú": [
+      "Thạnh Phú"
+    ],
+    "Thanh Thủy": [
+      "Thanh Thủy"
+    ],
+    "Thất Khê": [
+      "Thất Khê"
+    ],
+    "Thiết Trà": [
+      "Thiết Trà"
+    ],
+    "Thới Bình": [
+      "Thới Bình"
+    ],
+    "Thôn Mỹ Chánh": [
+      "Thôn Mỹ Chánh"
+    ],
+    "Thôn Mỹ Thủy": [
+      "Thôn Mỹ Thủy"
+    ],
+    "Thôn Sơn Hải": [
+      "Thôn Sơn Hải"
+    ],
+    "Thốt Nốt": [
+      "Thốt Nốt"
+    ],
+    "Thủ Thừa": [
+      "Thủ Thừa"
+    ],
+    "Trà Bồng": [
+      "Trà Bồng"
+    ],
+    "Trại Hút": [
+      "Trại Hút"
+    ],
+    "Trảng Bàng": [
+      "Trảng Bàng"
+    ],
+    "Trí Ðạo": [
+      "Trí Ðạo"
+    ],
+    "Bến Tre": [
+      "Bến Tre"
+    ],
+    "Tuần Thượng": [
+      "Tuần Thượng"
+    ],
+    "Văn Bàn": [
+      "Văn Bàn"
+    ],
+    "Vạn Ninh": [
+      "Vạn Ninh"
+    ],
+    "Vị Thanh": [
+      "Vị Thanh"
+    ],
+    "Việt Trì": [
+      "Việt Trì"
+    ],
+    "Vĩnh Ðồng": [
+      "Vĩnh Ðồng"
+    ],
+    "Vĩnh Lai": [
+      "Vĩnh Lai"
+    ],
+    "Vĩnh Lộc": [
+      "Vĩnh Lộc"
+    ],
+    "Vĩnh Long": [
+      "Vĩnh Long"
+    ],
+    "Vĩnh Qưới": [
+      "Vĩnh Qưới"
+    ],
+    "Vĩnh Tuy": [
+      "Vĩnh Tuy"
+    ],
+    "Vĩnh Yên": [
+      "Vĩnh Yên"
+    ],
+    "Vũng Tàu": [
+      "Vũng Tàu"
+    ],
+    "Xã Bình Giả": [
+      "Xã Bình Giả"
+    ],
+    "Xã Mường Mán": [
+      "Xã Mường Mán"
+    ],
+    "Xã Thọ Thành": [
+      "Xã Thọ Thành"
+    ],
+    "Xóm Bến Oản": [
+      "Xóm Bến Oản"
+    ],
+    "Xóm Cửa Tiểu": [
+      "Xóm Cửa Tiểu"
+    ],
+    "Xóm Tăng": [
+      "Xóm Tăng"
+    ],
+    "Xuân Bồ": [
+      "Xuân Bồ"
+    ],
+    "Xuân Lộc": [
+      "Xuân Lộc"
+    ],
+    "Yên Lạc": [
+      "Yên Lạc"
+    ],
+    "Kiến An": [
+      "Kiến An"
+    ],
+    "Ðại Ngãi": [
+      "Ðại Ngãi"
+    ],
+    "Ph. Kampông Krâsăng": [
+      "Ph. Kampông Krâsăng"
+    ],
+    "Yên Viên": [
+      "Yên Viên"
+    ],
+    "Ba. Xiêng Lằm": [
+      "Ba. Xiêng Lằm"
+    ],
+    "Cầu Diễn": [
+      "Cầu Diễn"
+    ],
+    "Giồng Gia": [
+      "Giồng Gia"
+    ],
+    "Sai Nghi": [
+      "Sai Nghi"
+    ],
+    "Giao Thạnh": [
+      "Giao Thạnh"
+    ],
+    "Ba. Quảng Yên": [
+      "Ba. Quảng Yên"
+    ],
+    "ấp 1": [
+      "ấp 1"
+    ],
+    "Núi Đối": [
+      "Núi Đối"
+    ],
+    "Ba. Xốp Pu": [
+      "Ba. Xốp Pu"
+    ],
+    "Phú Xuyên": [
+      "Phú Xuyên"
+    ],
+    "Đoàn Xá": [
+      "Đoàn Xá"
+    ],
+    "Đồng Ngư": [
+      "Đồng Ngư"
+    ],
+    "Ba. Đình Thắng": [
+      "Ba. Đình Thắng"
+    ],
+    "Duyên Hải": [
+      "Duyên Hải"
+    ],
+    "Đức Giang": [
+      "Đức Giang"
+    ],
+    "Vĩnh Bảo": [
+      "Vĩnh Bảo"
+    ],
+    "Đông Cao": [
+      "Đông Cao"
+    ],
+    "Na Ca": [
+      "Na Ca"
+    ],
+    "Quán Định": [
+      "Quán Định"
+    ],
+    "Xốp Cốc": [
+      "Xốp Cốc"
+    ],
+    "Sông Đốc": [
+      "Sông Đốc"
+    ],
+    "Ba. Tông Phay": [
+      "Ba. Tông Phay"
+    ],
+    "Ba.Hồng Điên": [
+      "Ba.Hồng Điên"
+    ],
+    "Thái Tân": [
+      "Thái Tân"
+    ],
+    "Định Cư": [
+      "Định Cư"
+    ],
+    "Nghĩa Thành": [
+      "Nghĩa Thành"
+    ],
+    "Việt Quang": [
+      "Việt Quang"
+    ],
+    "Hưng Hải": [
+      "Hưng Hải"
+    ],
+    "Yên Hòa": [
+      "Yên Hòa"
+    ],
+    "Tiền Phong": [
+      "Tiền Phong"
+    ],
+    "Nam Hải": [
+      "Nam Hải"
+    ],
+    "Đông Mông": [
+      "Đông Mông"
+    ],
+    "Chờ": [
+      "Chờ"
+    ],
+    "Nghĩa Tỏm": [
+      "Nghĩa Tỏm"
+    ],
+    "Đông Anh": [
+      "Đông Anh"
+    ],
+    "Sao Đỏ": [
+      "Sao Đỏ"
+    ],
+    "Thương Khánh": [
+      "Thương Khánh"
+    ],
+    "Tam Dương": [
+      "Tam Dương"
+    ],
+    "Vinh Quang": [
+      "Vinh Quang"
+    ],
+    "Mỹ Long": [
+      "Mỹ Long"
+    ],
+    "Đồng Thăng": [
+      "Đồng Thăng"
+    ],
+    "Yên Nhân": [
+      "Yên Nhân"
+    ],
+    "Gia Lộc": [
+      "Gia Lộc"
+    ],
+    "Thanh Xuân": [
+      "Thanh Xuân"
+    ],
+    "Tứ Kỳ": [
+      "Tứ Kỳ"
+    ],
+    "Tam Thái": [
+      "Tam Thái"
+    ],
+    "Tiên Lãng": [
+      "Tiên Lãng"
+    ],
+    "Diêm Phổ": [
+      "Diêm Phổ"
+    ],
+    "Yên Mỹ": [
+      "Yên Mỹ"
+    ],
+    "Kim Tri": [
+      "Kim Tri"
+    ],
+    "Thịnh Long": [
+      "Thịnh Long"
+    ],
+    "Vạn Thành": [
+      "Vạn Thành"
+    ],
+    "Hòa Châu": [
+      "Hòa Châu"
+    ],
+    "Bắc Thành": [
+      "Bắc Thành"
+    ],
+    "Diễn Bình": [
+      "Diễn Bình"
+    ],
+    "Sao Vàng": [
+      "Sao Vàng"
+    ],
+    "Thanh Hà": [
+      "Thanh Hà"
+    ],
+    "Hòa Thành": [
+      "Hòa Thành"
+    ],
+    "Thống Nhất": [
+      "Thống Nhất"
+    ],
+    "Hớn Thành": [
+      "Hớn Thành"
+    ],
+    "Xuân Thượng": [
+      "Xuân Thượng"
+    ],
+    "Chợ Vàm": [
+      "Chợ Vàm"
+    ],
+    "Ba.Na Sai": [
+      "Ba.Na Sai"
+    ],
+    "Chòm Đông": [
+      "Chòm Đông"
+    ],
+    "làng Tram": [
+      "làng Tram"
+    ],
+    "Ba. Nong Đanh": [
+      "Ba. Nong Đanh"
+    ],
+    "Phú Mỹ": [
+      "Phú Mỹ"
+    ],
+    "Ba. Mường Piệt": [
+      "Ba. Mường Piệt"
+    ],
+    "Shuikojie": [
+      "Shuikojie"
+    ],
+    "Ba. Mường Lòng": [
+      "Ba. Mường Lòng"
+    ],
+    "Mỹ Thọ": [
+      "Mỹ Thọ"
+    ],
+    "Ba.Piềng Lau": [
+      "Ba.Piềng Lau"
+    ],
+    "An Châu": [
+      "An Châu"
+    ],
+    "Ba. Xốp Pe": [
+      "Ba. Xốp Pe"
+    ],
+    "Núi Sập": [
+      "Núi Sập"
+    ],
+    "Cồn": [
+      "Cồn"
+    ],
+    "Cái Vồn": [
+      "Cái Vồn"
+    ],
+    "Đắk Tô": [
+      "Đắk Tô"
+    ],
+    "Hải Triều": [
+      "Hải Triều"
+    ],
+    "Vĩnh Bình": [
+      "Vĩnh Bình"
+    ],
+    "Tân Hòa": [
+      "Tân Hòa"
+    ],
+    "Đắk Tram": [
+      "Đắk Tram"
+    ],
+    "Đắk Chum": [
+      "Đắk Chum"
+    ],
+    "Chợ Chúc A": [
+      "Chợ Chúc A"
+    ],
+    "Kon Tuồng": [
+      "Kon Tuồng"
+    ],
+    "Ba. Ca Xiêng": [
+      "Ba. Ca Xiêng"
+    ],
+    "Thanh Long": [
+      "Thanh Long"
+    ],
+    "Nghi Xuân": [
+      "Nghi Xuân"
+    ],
+    "Thanh Liên": [
+      "Thanh Liên"
+    ],
+    "Đak Wak": [
+      "Đak Wak"
+    ],
+    "Trai Quan": [
+      "Trai Quan"
+    ],
+    "Tân Giáo": [
+      "Tân Giáo"
+    ],
+    "Tân Thành": [
+      "Tân Thành"
+    ],
+    "Vân Non": [
+      "Vân Non"
+    ],
+    "La Khươi": [
+      "La Khươi"
+    ],
+    "Ninh Tinh": [
+      "Ninh Tinh"
+    ],
+    "Bình An": [
+      "Bình An"
+    ],
+    "Nhơn Đức": [
+      "Nhơn Đức"
+    ],
+    "Đắk Hà": [
+      "Đắk Hà"
+    ],
+    "Nam Mỹ": [
+      "Nam Mỹ"
+    ],
+    "Nam Điền": [
+      "Nam Điền"
+    ],
+    "Ta Ka": [
+      "Ta Ka"
+    ],
+    "Phú Dương": [
+      "Phú Dương"
+    ],
+    "Chí Tru": [
+      "Chí Tru"
+    ],
+    "Plei Grấp": [
+      "Plei Grấp"
+    ],
+    "Xuân Hòa": [
+      "Xuân Hòa"
+    ],
+    "Kỳ Phong": [
+      "Kỳ Phong"
+    ],
+    "Phú Hưng": [
+      "Phú Hưng"
+    ],
+    "Plei Sôp": [
+      "Plei Sôp"
+    ],
+    "Vân Hòa": [
+      "Vân Hòa"
+    ],
+    "Phú Phong": [
+      "Phú Phong"
+    ],
+    "Minh Tân": [
+      "Minh Tân"
+    ],
+    "Đắk Nay": [
+      "Đắk Nay"
+    ],
+    "Gia Tun": [
+      "Gia Tun"
+    ],
+    "Tân Thúy": [
+      "Tân Thúy"
+    ],
+    "Phú Sen": [
+      "Phú Sen"
+    ],
+    "Đồng Lê": [
+      "Đồng Lê"
+    ],
+    "Dục Lang": [
+      "Dục Lang"
+    ],
+    "Đồng Cao": [
+      "Đồng Cao"
+    ],
+    "Phước Nông": [
+      "Phước Nông"
+    ],
+    "Đồng Lạc": [
+      "Đồng Lạc"
+    ],
+    "Mỹ Hòa": [
+      "Mỹ Hòa"
+    ],
+    "Plei Kần": [
+      "Plei Kần"
+    ],
+    "Đắk Wang": [
+      "Đắk Wang"
+    ],
+    "Phú Nhiêu": [
+      "Phú Nhiêu"
+    ],
+    "Hơ Ring": [
+      "Hơ Ring"
+    ],
+    "Ngọc Lâm": [
+      "Ngọc Lâm"
+    ],
+    "Đồng Lộc": [
+      "Đồng Lộc"
+    ],
+    "Hợp Thung": [
+      "Hợp Thung"
+    ],
+    "Đông Sơn": [
+      "Đông Sơn"
+    ],
+    "Za Rong": [
+      "Za Rong"
+    ],
+    "Bãi Trăng": [
+      "Bãi Trăng"
+    ],
+    "Đức Yên": [
+      "Đức Yên"
+    ],
+    "Phước Hảo": [
+      "Phước Hảo"
+    ],
+    "Tiên Phong": [
+      "Tiên Phong"
+    ],
+    "xóm Kiều": [
+      "xóm Kiều"
+    ],
+    "Quế Kho": [
+      "Quế Kho"
+    ],
+    "Thạnh Mỹ": [
+      "Thạnh Mỹ"
+    ],
+    "Bo": [
+      "Bo"
+    ],
+    "Linh Trụng": [
+      "Linh Trụng"
+    ],
+    "Lương Sơn": [
+      "Lương Sơn"
+    ],
+    "Hát Lót": [
+      "Hát Lót"
+    ],
+    "Sơn Bằng": [
+      "Sơn Bằng"
+    ],
+    "Mường Khến": [
+      "Mường Khến"
+    ],
+    "Hải Phong": [
+      "Hải Phong"
+    ],
+    "Yên Bình": [
+      "Yên Bình"
+    ],
+    "Trạm Trôi": [
+      "Trạm Trôi"
+    ],
+    "Bình Phúc": [
+      "Bình Phúc"
+    ],
+    "Quảng Oai": [
+      "Quảng Oai"
+    ],
+    "Khê Thượng": [
+      "Khê Thượng"
+    ],
+    "Phúc Hài": [
+      "Phúc Hài"
+    ],
+    "Phong Châu": [
+      "Phong Châu"
+    ],
+    "Miếu Môn": [
+      "Miếu Môn"
+    ],
+    "Vôi": [
+      "Vôi"
+    ],
+    "Dương Điềm": [
+      "Dương Điềm"
+    ],
+    "Phú Vân": [
+      "Phú Vân"
+    ],
+    "Bích Động": [
+      "Bích Động"
+    ],
+    "A Roóp": [
+      "A Roóp"
+    ],
+    "Yên Định": [
+      "Yên Định"
+    ],
+    "Kim Thọ": [
+      "Kim Thọ"
+    ],
+    "Cầu Gô": [
+      "Cầu Gô"
+    ],
+    "Khâm Đức": [
+      "Khâm Đức"
+    ],
+    "Hàm Rồng": [
+      "Hàm Rồng"
+    ],
+    "Kim Quang": [
+      "Kim Quang"
+    ],
+    "Tân Yên": [
+      "Tân Yên"
+    ],
+    "Gôi": [
+      "Gôi"
+    ],
+    "Lầm": [
+      "Lầm"
+    ],
+    "Uc Sơn": [
+      "Uc Sơn"
+    ],
+    "Hoa Lư": [
+      "Hoa Lư"
+    ],
+    "Kim bảng": [
+      "Kim bảng"
+    ],
+    "Nước Sốt": [
+      "Nước Sốt"
+    ],
+    "Hà Trung": [
+      "Hà Trung"
+    ],
+    "Sông Công": [
+      "Sông Công"
+    ],
+    "Sơn Nam": [
+      "Sơn Nam"
+    ],
+    "Cầu Treo": [
+      "Cầu Treo"
+    ],
+    "Bu- Đăk Hiêng": [
+      "Bu- Đăk Hiêng"
+    ],
+    "Ba Xốc Nậm": [
+      "Ba Xốc Nậm"
+    ],
+    "Hải Tâm": [
+      "Hải Tâm"
+    ],
+    "Đăk Kin3": [
+      "Đăk Kin3"
+    ],
+    "Ba Đình Thắng": [
+      "Ba Đình Thắng"
+    ],
+    "Sông Thao": [
+      "Sông Thao"
+    ],
+    "Châu Ố": [
+      "Châu Ố"
+    ],
+    "Phú Hòa": [
+      "Phú Hòa"
+    ],
+    "Đồng Lương": [
+      "Đồng Lương"
+    ],
+    "Kim Sơn": [
+      "Kim Sơn"
+    ],
+    "Kon Ho Ram": [
+      "Kon Ho Ram"
+    ],
+    "Núi Thành": [
+      "Núi Thành"
+    ],
+    "Yên Lập": [
+      "Yên Lập"
+    ],
+    "Kon Plông": [
+      "Kon Plông"
+    ],
+    "Vĩnh An": [
+      "Vĩnh An"
+    ],
+    "Kim Hồng": [
+      "Kim Hồng"
+    ],
+    "Lâm Thao": [
+      "Lâm Thao"
+    ],
+    "Kon By": [
+      "Kon By"
+    ],
+    "Con Cặm": [
+      "Con Cặm"
+    ],
+    "Quang Trung": [
+      "Quang Trung"
+    ],
+    "La Hà": [
+      "La Hà"
+    ],
+    "Xuân An": [
+      "Xuân An"
+    ],
+    "Đồng Quặng": [
+      "Đồng Quặng"
+    ],
+    "Thạch Nham": [
+      "Thạch Nham"
+    ],
+    "Hưng Nguyên": [
+      "Hưng Nguyên"
+    ],
+    "Đồng Giang": [
+      "Đồng Giang"
+    ],
+    "Quỳ Hợp": [
+      "Quỳ Hợp"
+    ],
+    "Phấn Kiên": [
+      "Phấn Kiên"
+    ],
+    "Phủ Liễn": [
+      "Phủ Liễn"
+    ],
+    "Kon Bơ Banh": [
+      "Kon Bơ Banh"
+    ],
+    "Cổ Lũy": [
+      "Cổ Lũy"
+    ],
+    "Thể Lo": [
+      "Thể Lo"
+    ],
+    "Đồng Gốc": [
+      "Đồng Gốc"
+    ],
+    "Bu. Kon Plek": [
+      "Bu. Kon Plek"
+    ],
+    "An Thạnh": [
+      "An Thạnh"
+    ],
+    "Biển Hồ": [
+      "Biển Hồ"
+    ],
+    "Phước Lộc Đông": [
+      "Phước Lộc Đông"
+    ],
+    "Giếng Đáy": [
+      "Giếng Đáy"
+    ],
+    "Hồng Thái": [
+      "Hồng Thái"
+    ],
+    "Plei Tơ Ven": [
+      "Plei Tơ Ven"
+    ],
+    "Kon Hòng": [
+      "Kon Hòng"
+    ],
+    "Thọ Tây": [
+      "Thọ Tây"
+    ],
+    "Quán Hành": [
+      "Quán Hành"
+    ],
+    "Trới": [
+      "Trới"
+    ],
+    "Chang Dương": [
+      "Chang Dương"
+    ],
+    "Plei Nhao": [
+      "Plei Nhao"
+    ],
+    "Thái Sơn": [
+      "Thái Sơn"
+    ],
+    "Nghèn": [
+      "Nghèn"
+    ],
+    "Hải Yan": [
+      "Hải Yan"
+    ],
+    "Cày": [
+      "Cày"
+    ],
+    "Chàng Hạ": [
+      "Chàng Hạ"
+    ],
+    "Bàn Thới": [
+      "Bàn Thới"
+    ],
+    "Ba. Co Phát": [
+      "Ba. Co Phát"
+    ],
+    "Mang Yang": [
+      "Mang Yang"
+    ],
+    "Diêu Hạ": [
+      "Diêu Hạ"
+    ],
+    "Minh Long": [
+      "Minh Long"
+    ],
+    "Khuôn Riềng": [
+      "Khuôn Riềng"
+    ],
+    "Bến Vuông": [
+      "Bến Vuông"
+    ],
+    "PLei Kưới": [
+      "PLei Kưới"
+    ],
+    "Chợ Chùa": [
+      "Chợ Chùa"
+    ],
+    "Đèo Gia": [
+      "Đèo Gia"
+    ],
+    "Dê TManh": [
+      "Dê TManh"
+    ],
+    "Tiên Thanh": [
+      "Tiên Thanh"
+    ],
+    "PLei Kong Yong": [
+      "PLei Kong Yong"
+    ],
+    "Hồng Lĩnh": [
+      "Hồng Lĩnh"
+    ],
+    "Tây Sơn": [
+      "Tây Sơn"
+    ],
+    "Bình Ca": [
+      "Bình Ca"
+    ],
+    "Đại Yang": [
+      "Đại Yang"
+    ],
+    "Ngòi Tha": [
+      "Ngòi Tha"
+    ],
+    "Con Riêng": [
+      "Con Riêng"
+    ],
+    "Nhơn Hòa": [
+      "Nhơn Hòa"
+    ],
+    "Vùng Tu": [
+      "Vùng Tu"
+    ],
+    "Yên Sơn": [
+      "Yên Sơn"
+    ],
+    "Phước Điền": [
+      "Phước Điền"
+    ],
+    "Việt Hùng": [
+      "Việt Hùng"
+    ],
+    "Ba. Lam Khê": [
+      "Ba. Lam Khê"
+    ],
+    "Gò Nghiên": [
+      "Gò Nghiên"
+    ],
+    "Hai Riêng": [
+      "Hai Riêng"
+    ],
+    "Phú Nhuận": [
+      "Phú Nhuận"
+    ],
+    "Ba. Trung Chính": [
+      "Ba. Trung Chính"
+    ],
+    "Đồng Chủn": [
+      "Đồng Chủn"
+    ],
+    "Cầu Giát": [
+      "Cầu Giát"
+    ],
+    "ban A Ma Hyal": [
+      "ban A Ma Hyal"
+    ],
+    "Tam Hợp": [
+      "Tam Hợp"
+    ],
+    "Yên Minh": [
+      "Yên Minh"
+    ],
+    "Mỹ Xuân": [
+      "Mỹ Xuân"
+    ],
+    "Long Khánh": [
+      "Long Khánh"
+    ],
+    "Xuân Phong": [
+      "Xuân Phong"
+    ],
+    "Ba Hưng Nhân": [
+      "Ba Hưng Nhân"
+    ],
+    "Phú Tiên": [
+      "Phú Tiên"
+    ],
+    "Ba. Pắc Ma": [
+      "Ba. Pắc Ma"
+    ],
+    "Lãnh Vân": [
+      "Lãnh Vân"
+    ],
+    "An Hội": [
+      "An Hội"
+    ],
+    "Long Thạch": [
+      "Long Thạch"
+    ],
+    "Ba. Huổi Ngan": [
+      "Ba. Huổi Ngan"
+    ],
+    "Ba. Huổi Muôn": [
+      "Ba. Huổi Muôn"
+    ],
+    "Tăng Bạt Hổ": [
+      "Tăng Bạt Hổ"
+    ],
+    "Ba.Khua Vai": [
+      "Ba.Khua Vai"
+    ],
+    "Canh Vinh": [
+      "Canh Vinh"
+    ],
+    "Quang Nghiệm": [
+      "Quang Nghiệm"
+    ],
+    "Poung Leung": [
+      "Poung Leung"
+    ],
+    "Canh Hưng": [
+      "Canh Hưng"
+    ],
+    "Thọ Lộc": [
+      "Thọ Lộc"
+    ],
+    "Lương Bình": [
+      "Lương Bình"
+    ],
+    "Đệ Đức": [
+      "Đệ Đức"
+    ],
+    "Tiểu Khu 1": [
+      "Tiểu Khu 1"
+    ],
+    "Mỹ Đức": [
+      "Mỹ Đức"
+    ],
+    "Mường La": [
+      "Mường La"
+    ],
+    "Tủa Chùa": [
+      "Tủa Chùa"
+    ],
+    "Tân Âp": [
+      "Tân Âp"
+    ],
+    "An Quang": [
+      "An Quang"
+    ],
+    "Bãi Bông": [
+      "Bãi Bông"
+    ],
+    "Ba. Mường Nưa": [
+      "Ba. Mường Nưa"
+    ],
+    "Trung Thứ": [
+      "Trung Thứ"
+    ],
+    "Ân Tường": [
+      "Ân Tường"
+    ],
+    "Ba. Phiêng Hin": [
+      "Ba. Phiêng Hin"
+    ],
+    "Dương Liễu": [
+      "Dương Liễu"
+    ],
+    "Pá Bạt": [
+      "Pá Bạt"
+    ],
+    "Ba. Cô Ma": [
+      "Ba. Cô Ma"
+    ],
+    "Ba. Đồng Cư": [
+      "Ba. Đồng Cư"
+    ],
+    "Trung Lương": [
+      "Trung Lương"
+    ],
+    "Ba. Pú Bầu": [
+      "Ba. Pú Bầu"
+    ],
+    "Hưng Mĩ": [
+      "Hưng Mĩ"
+    ],
+    "M.Đun": [
+      "M.Đun"
+    ],
+    "Thạch Bàn": [
+      "Thạch Bàn"
+    ],
+    "Minh Thắng": [
+      "Minh Thắng"
+    ],
+    "Trụ Hạ": [
+      "Trụ Hạ"
+    ],
+    "Long Bình Tân": [
+      "Long Bình Tân"
+    ],
+    "Neo": [
+      "Neo"
+    ],
+    "Bình Lâm": [
+      "Bình Lâm"
+    ],
+    "Long Đức": [
+      "Long Đức"
+    ],
+    "Quán Hàu": [
+      "Quán Hàu"
+    ],
+    "Nam Sách": [
+      "Nam Sách"
+    ],
+    "Hoàn Lão": [
+      "Hoàn Lão"
+    ],
+    "Xuân Tân": [
+      "Xuân Tân"
+    ],
+    "Lộ 25": [
+      "Lộ 25"
+    ],
+    "Phú Thái": [
+      "Phú Thái"
+    ],
+    "Kim Long": [
+      "Kim Long"
+    ],
+    "Long Giao": [
+      "Long Giao"
+    ],
+    "Cây Xăng": [
+      "Cây Xăng"
+    ],
+    "Tương Hòa": [
+      "Tương Hòa"
+    ],
+    "Phước An": [
+      "Phước An"
+    ],
+    "Sài Đồng": [
+      "Sài Đồng"
+    ],
+    "Thành Xá": [
+      "Thành Xá"
+    ],
+    "Thủy Cam": [
+      "Thủy Cam"
+    ],
+    "Sách Chữ": [
+      "Sách Chữ"
+    ],
+    "Thường Tín": [
+      "Thường Tín"
+    ],
+    "Đồi Ngô": [
+      "Đồi Ngô"
+    ],
+    "Tân Hiệp": [
+      "Tân Hiệp"
+    ],
+    "Khe Tre": [
+      "Khe Tre"
+    ],
+    "Quỳnh Đô": [
+      "Quỳnh Đô"
+    ],
+    "Tân Lập": [
+      "Tân Lập"
+    ],
+    "Từ Sơn": [
+      "Từ Sơn"
+    ],
+    "Hiền Văn": [
+      "Hiền Văn"
+    ],
+    "Đắk Đê": [
+      "Đắk Đê"
+    ],
+    "Uyên Hưng": [
+      "Uyên Hưng"
+    ],
+    "Ái Nghĩa": [
+      "Ái Nghĩa"
+    ],
+    "Ba. Hang Tác": [
+      "Ba. Hang Tác"
+    ],
+    "Bao Vinh": [
+      "Bao Vinh"
+    ],
+    "Nam Phước": [
+      "Nam Phước"
+    ],
+    "Vĩ Dạ": [
+      "Vĩ Dạ"
+    ],
+    "Bình Hòa": [
+      "Bình Hòa"
+    ],
+    "Uống Thượng": [
+      "Uống Thượng"
+    ],
+    "Ba. Nong Hoi Dưới": [
+      "Ba. Nong Hoi Dưới"
+    ],
+    "Tà Rá": [
+      "Tà Rá"
+    ],
+    "Thanh Tuyền": [
+      "Thanh Tuyền"
+    ],
+    "Bình Định": [
+      "Bình Định"
+    ],
+    "Mỹ Phước": [
+      "Mỹ Phước"
+    ],
+    "Ta Ay": [
+      "Ta Ay"
+    ],
+    "Quảng Lộc": [
+      "Quảng Lộc"
+    ],
+    "Suối Liếng": [
+      "Suối Liếng"
+    ],
+    "Thới Hòa": [
+      "Thới Hòa"
+    ],
+    "An Thái": [
+      "An Thái"
+    ],
+    "Ngô Mây": [
+      "Ngô Mây"
+    ],
+    "Cành Chê": [
+      "Cành Chê"
+    ],
+    "Đập Đá": [
+      "Đập Đá"
+    ],
+    "Quán Toan": [
+      "Quán Toan"
+    ],
+    "Vinh Nhật": [
+      "Vinh Nhật"
+    ],
+    "Đồng Cóc": [
+      "Đồng Cóc"
+    ],
+    "Bến Cầu": [
+      "Bến Cầu"
+    ],
+    "Chư Sê": [
+      "Chư Sê"
+    ],
+    "Minh Đức": [
+      "Minh Đức"
+    ],
+    "Bàu Đồn": [
+      "Bàu Đồn"
+    ],
+    "Yên Cát": [
+      "Yên Cát"
+    ],
+    "Cát Bi": [
+      "Cát Bi"
+    ],
+    "Triệu Sơn": [
+      "Triệu Sơn"
+    ],
+    "Đài Chuối": [
+      "Đài Chuối"
+    ],
+    "Hà Dương": [
+      "Hà Dương"
+    ],
+    "Rừng Thông": [
+      "Rừng Thông"
+    ],
+    "Ba Chẽ": [
+      "Ba Chẽ"
+    ],
+    "buôn Hồ": [
+      "buôn Hồ"
+    ],
+    "Quảng Xương": [
+      "Quảng Xương"
+    ],
+    "Khe Tâm": [
+      "Khe Tâm"
+    ],
+    "Ea Đrăng": [
+      "Ea Đrăng"
+    ],
+    "Như Thanh": [
+      "Như Thanh"
+    ],
+    "Kiến Giang": [
+      "Kiến Giang"
+    ],
+    "Long Thuận": [
+      "Long Thuận"
+    ],
+    "Quảng Sơn": [
+      "Quảng Sơn"
+    ],
+    "Thạnh Hóa": [
+      "Thạnh Hóa"
+    ],
+    "Chư Prông": [
+      "Chư Prông"
+    ],
+    "Cả Sáo": [
+      "Cả Sáo"
+    ],
+    "Đông Lĩnh": [
+      "Đông Lĩnh"
+    ],
+    "Bình Hòa Đông": [
+      "Bình Hòa Đông"
+    ],
+    "Thu Bồn": [
+      "Thu Bồn"
+    ],
+    "Đầm Tròn": [
+      "Đầm Tròn"
+    ],
+    "Tiền Lương": [
+      "Tiền Lương"
+    ],
+    "Chiến Thắng": [
+      "Chiến Thắng"
+    ],
+    "Vĩnh Điện": [
+      "Vĩnh Điện"
+    ],
+    "Bút Sơn": [
+      "Bút Sơn"
+    ],
+    "Bồ Mừng": [
+      "Bồ Mừng"
+    ],
+    "Mỹ Quý Tây": [
+      "Mỹ Quý Tây"
+    ],
+    "Cẩm Giàng": [
+      "Cẩm Giàng"
+    ],
+    "Mỹ Thạnh Bắc": [
+      "Mỹ Thạnh Bắc"
+    ],
+    "Ái Tử": [
+      "Ái Tử"
+    ],
+    "Xuân Dương": [
+      "Xuân Dương"
+    ],
+    "Hà Nhà": [
+      "Hà Nhà"
+    ],
+    "Thứa": [
+      "Thứa"
+    ],
+    "ấp Vinh": [
+      "ấp Vinh"
+    ],
+    "Đồng Phú": [
+      "Đồng Phú"
+    ],
+    "ấp 2": [
+      "ấp 2"
+    ],
+    "Phố Mới": [
+      "Phố Mới"
+    ],
+    "Trà Long 1": [
+      "Trà Long 1"
+    ],
+    "Đông Thành": [
+      "Đông Thành"
+    ],
+    "Hồ": [
+      "Hồ"
+    ],
+    "Đa Krông": [
+      "Đa Krông"
+    ],
+    "Nhơn Trạch": [
+      "Nhơn Trạch"
+    ],
+    "Khe Chuối": [
+      "Khe Chuối"
+    ],
+    "Khánh Lộc": [
+      "Khánh Lộc"
+    ],
+    "A Lưới": [
+      "A Lưới"
+    ],
+    "Cẩm Y Đông": [
+      "Cẩm Y Đông"
+    ],
+    "Cẩm Đường": [
+      "Cẩm Đường"
+    ],
+    "Cá Hanh": [
+      "Cá Hanh"
+    ],
+    "Hà Tu": [
+      "Hà Tu"
+    ],
+    "Điểm Phố 1": [
+      "Điểm Phố 1"
+    ],
+    "Tứ Hạ": [
+      "Tứ Hạ"
+    ],
+    "Khương Phú": [
+      "Khương Phú"
+    ],
+    "Nhang Tây": [
+      "Nhang Tây"
+    ],
+    "Khe Lương": [
+      "Khe Lương"
+    ],
+    "Nản Dê": [
+      "Nản Dê"
+    ],
+    "Tam Mỹ": [
+      "Tam Mỹ"
+    ],
+    "Ma Lâm": [
+      "Ma Lâm"
+    ],
+    "Gia Mô": [
+      "Gia Mô"
+    ],
+    "Ba. Chung Chải": [
+      "Ba. Chung Chải"
+    ],
+    "Ba.Pa Ham": [
+      "Ba.Pa Ham"
+    ],
+    "Tăng Kỳ": [
+      "Tăng Kỳ"
+    ],
+    "Ba. Nhiêu Sáng": [
+      "Ba. Nhiêu Sáng"
+    ],
+    "Thiện Hòa": [
+      "Thiện Hòa"
+    ],
+    "Ba.Xe Pu": [
+      "Ba.Xe Pu"
+    ],
+    "Ba. Pa Nậm Cúm": [
+      "Ba. Pa Nậm Cúm"
+    ],
+    "Nà Ngườm": [
+      "Nà Ngườm"
+    ],
+    "Pác Phéc": [
+      "Pác Phéc"
+    ],
+    "Phước Dân": [
+      "Phước Dân"
+    ],
+    "Ba. Tủa Sin Trải": [
+      "Ba. Tủa Sin Trải"
+    ],
+    "Đô Vinh": [
+      "Đô Vinh"
+    ],
+    "Ba. Chiềng Chăn": [
+      "Ba. Chiềng Chăn"
+    ],
+    "Ba Cốc Cằng": [
+      "Ba Cốc Cằng"
+    ],
+    "Chợ Lầu": [
+      "Chợ Lầu"
+    ],
+    "Sìn Hồ": [
+      "Sìn Hồ"
+    ],
+    "Nà Roạc": [
+      "Nà Roạc"
+    ],
+    "Ba. Nậm He": [
+      "Ba. Nậm He"
+    ],
+    "Liên Hương": [
+      "Liên Hương"
+    ],
+    "Huổi Sẩy": [
+      "Huổi Sẩy"
+    ],
+    "Ba. Nà Cang": [
+      "Ba. Nà Cang"
+    ],
+    "Duy Phiên": [
+      "Duy Phiên"
+    ],
+    "Hà Quảng": [
+      "Hà Quảng"
+    ],
+    "Ba Tư": [
+      "Ba Tư"
+    ],
+    "Pác Bó": [
+      "Pác Bó"
+    ],
+    "Giêm Hà": [
+      "Giêm Hà"
+    ],
+    "Ba. Nậm Pang": [
+      "Ba. Nậm Pang"
+    ],
+    "Thông Nông": [
+      "Thông Nông"
+    ],
+    "Ba.Pa Tần": [
+      "Ba.Pa Tần"
+    ],
+    "Lương Trung": [
+      "Lương Trung"
+    ],
+    "Ma Rán": [
+      "Ma Rán"
+    ],
+    "Bến Mộc": [
+      "Bến Mộc"
+    ],
+    "Hồng Lâm": [
+      "Hồng Lâm"
+    ],
+    "Hàm Đức": [
+      "Hàm Đức"
+    ],
+    "Ba. Nà Khoa": [
+      "Ba. Nà Khoa"
+    ],
+    "Tân Mỹ": [
+      "Tân Mỹ"
+    ],
+    "Ngã Ba Gọi": [
+      "Ngã Ba Gọi"
+    ],
+    "Kéo Quý": [
+      "Kéo Quý"
+    ],
+    "Ba. Huổi Củng": [
+      "Ba. Huổi Củng"
+    ],
+    "Thạch Nam": [
+      "Thạch Nam"
+    ],
+    "Hồng Trung": [
+      "Hồng Trung"
+    ],
+    "Ba. Mường Mô": [
+      "Ba. Mường Mô"
+    ],
+    "Quang Long": [
+      "Quang Long"
+    ],
+    "Đá Nổi": [
+      "Đá Nổi"
+    ],
+    "Ba. Sin Sủi Hở": [
+      "Ba. Sin Sủi Hở"
+    ],
+    "Yên Vằng": [
+      "Yên Vằng"
+    ],
+    "Trường Xuân": [
+      "Trường Xuân"
+    ],
+    "Ba. Nà Bờ": [
+      "Ba. Nà Bờ"
+    ],
+    "Ba. Tả Suối Cầu": [
+      "Ba. Tả Suối Cầu"
+    ],
+    "Ba Ngòi": [
+      "Ba Ngòi"
+    ],
+    "Thô Tổng": [
+      "Thô Tổng"
+    ],
+    "Ba. Nà Báng": [
+      "Ba. Nà Báng"
+    ],
+    "Phan Rí Cửa": [
+      "Phan Rí Cửa"
+    ],
+    "Mán Cốc": [
+      "Mán Cốc"
+    ],
+    "Bá.Ngải Chô": [
+      "Bá.Ngải Chô"
+    ],
+    "Thế Chí Tây": [
+      "Thế Chí Tây"
+    ],
+    "Đồng Hà": [
+      "Đồng Hà"
+    ],
+    "Ba. Nậm Cóng": [
+      "Ba. Nậm Cóng"
+    ],
+    "Xuân Viên": [
+      "Xuân Viên"
+    ],
+    "Hang Xung Một": [
+      "Hang Xung Một"
+    ],
+    "Lũng Sủng": [
+      "Lũng Sủng"
+    ],
+    "Nà Đò": [
+      "Nà Đò"
+    ],
+    "Ba.Kha Nội": [
+      "Ba.Kha Nội"
+    ],
+    "Xịa": [
+      "Xịa"
+    ],
+    "Phú Liên": [
+      "Phú Liên"
+    ],
+    "Ba Ma Mu": [
+      "Ba Ma Mu"
+    ],
+    "Nà Quang": [
+      "Nà Quang"
+    ],
+    "Tà Rẹc": [
+      "Tà Rẹc"
+    ],
+    "Nà Tăm": [
+      "Nà Tăm"
+    ],
+    "Yên Thế": [
+      "Yên Thế"
+    ],
+    "Trai Thung Môn": [
+      "Trai Thung Môn"
+    ],
+    "Ba.Nậm Ma": [
+      "Ba.Nậm Ma"
+    ],
+    "Ba. Nà Yên": [
+      "Ba. Nà Yên"
+    ],
+    "Li Tôn": [
+      "Li Tôn"
+    ],
+    "Ba. Phạm Hô Phìng": [
+      "Ba. Phạm Hô Phìng"
+    ],
+    "Trung Kiên": [
+      "Trung Kiên"
+    ],
+    "Đ' Ran": [
+      "Đ' Ran"
+    ],
+    "Hội Phong": [
+      "Hội Phong"
+    ],
+    "Nậm Chả": [
+      "Nậm Chả"
+    ],
+    "Sơn Quả": [
+      "Sơn Quả"
+    ],
+    "Đinh Văn": [
+      "Đinh Văn"
+    ],
+    "Ba.Pá Vùi Sử": [
+      "Ba.Pá Vùi Sử"
+    ],
+    "Ba Sằng Pả": [
+      "Ba Sằng Pả"
+    ],
+    "Hòa Tây": [
+      "Hòa Tây"
+    ],
+    "Liên Minh": [
+      "Liên Minh"
+    ],
+    "Hiệp Thành": [
+      "Hiệp Thành"
+    ],
+    "Ba. Hồng Thu Mán": [
+      "Ba. Hồng Thu Mán"
+    ],
+    "Thắm Vè": [
+      "Thắm Vè"
+    ],
+    "Liên Nghĩa": [
+      "Liên Nghĩa"
+    ],
+    "Phong Điền": [
+      "Phong Điền"
+    ],
+    "Đức Hòa Đông": [
+      "Đức Hòa Đông"
+    ],
+    "Ba. U Ly Chải": [
+      "Ba. U Ly Chải"
+    ],
+    "Tân Tiến": [
+      "Tân Tiến"
+    ],
+    "Ba . Na Niêng": [
+      "Ba . Na Niêng"
+    ],
+    "Bãi Bùng": [
+      "Bãi Bùng"
+    ],
+    "Phú Thành": [
+      "Phú Thành"
+    ],
+    "Hoàn cát": [
+      "Hoàn cát"
+    ],
+    "Nà Kê": [
+      "Nà Kê"
+    ],
+    "Tà Luông": [
+      "Tà Luông"
+    ],
+    "A Dông": [
+      "A Dông"
+    ],
+    "Ba. Cốc Lai": [
+      "Ba. Cốc Lai"
+    ],
+    "A May": [
+      "A May"
+    ],
+    "Phạm Văn Hai": [
+      "Phạm Văn Hai"
+    ],
+    "Đốc Kinh": [
+      "Đốc Kinh"
+    ],
+    "Tân Long A": [
+      "Tân Long A"
+    ],
+    "Ba. Lao Chải": [
+      "Ba. Lao Chải"
+    ],
+    "Ba.Nà Ngô": [
+      "Ba.Nà Ngô"
+    ],
+    "Gành Hào": [
+      "Gành Hào"
+    ],
+    "nông trường Than Uyên": [
+      "nông trường Than Uyên"
+    ],
+    "Trần Văn Thời": [
+      "Trần Văn Thời"
+    ],
+    "Ba.Nà Luông": [
+      "Ba.Nà Luông"
+    ],
+    "Định Bình": [
+      "Định Bình"
+    ],
+    "Kè Cá": [
+      "Kè Cá"
+    ],
+    "Nhà Mát": [
+      "Nhà Mát"
+    ],
+    "Ba. Nậm Pha": [
+      "Ba. Nậm Pha"
+    ],
+    "Ba. Sìn Chải": [
+      "Ba. Sìn Chải"
+    ],
+    "Ngọc Được": [
+      "Ngọc Được"
+    ],
+    "Ba. Mường Hun": [
+      "Ba. Mường Hun"
+    ],
+    "Huỳnh Kỳ": [
+      "Huỳnh Kỳ"
+    ],
+    "Hạ Sơn": [
+      "Hạ Sơn"
+    ],
+    "Nà Thùm": [
+      "Nà Thùm"
+    ],
+    "Ba Bể": [
+      "Ba Bể"
+    ],
+    "Vàm Đầm": [
+      "Vàm Đầm"
+    ],
+    "Ba.Phi Cao": [
+      "Ba.Phi Cao"
+    ],
+    "Mai Vinh": [
+      "Mai Vinh"
+    ],
+    "Việt Thắng": [
+      "Việt Thắng"
+    ],
+    "Thạnh Hòa": [
+      "Thạnh Hòa"
+    ],
+    "Ba. Nà Phông": [
+      "Ba. Nà Phông"
+    ],
+    "Ba. Khuổi Đâu": [
+      "Ba. Khuổi Đâu"
+    ],
+    "Na Ba": [
+      "Na Ba"
+    ],
+    "Thom Héo": [
+      "Thom Héo"
+    ],
+    "Tân Thạnh": [
+      "Tân Thạnh"
+    ],
+    "Nà Mặn": [
+      "Nà Mặn"
+    ],
+    "Kênh 12": [
+      "Kênh 12"
+    ],
+    "Bó Lù": [
+      "Bó Lù"
+    ],
+    "Tiến Kéo": [
+      "Tiến Kéo"
+    ],
+    "Phong Phú": [
+      "Phong Phú"
+    ],
+    "Lê Minh Xuân": [
+      "Lê Minh Xuân"
+    ],
+    "Nậm  Kang": [
+      "Nậm  Kang"
+    ],
+    "Thanh Hòa": [
+      "Thanh Hòa"
+    ],
+    "Thứ Ba": [
+      "Thứ Ba"
+    ],
+    "Phước Lộc": [
+      "Phước Lộc"
+    ],
+    "Dương Minh Châu": [
+      "Dương Minh Châu"
+    ],
+    "Long Hòa": [
+      "Long Hòa"
+    ],
+    "Minh Lương": [
+      "Minh Lương"
+    ],
+    "Tân Trung": [
+      "Tân Trung"
+    ],
+    "Trường Đông": [
+      "Trường Đông"
+    ],
+    "Đông Căn": [
+      "Đông Căn"
+    ],
+    "Châu Thành": [
+      "Châu Thành"
+    ],
+    "Tân Biên": [
+      "Tân Biên"
+    ],
+    "Gò Dầu": [
+      "Gò Dầu"
+    ],
+    "Lương Thiện": [
+      "Lương Thiện"
+    ],
+    "Tân Đông": [
+      "Tân Đông"
+    ],
+    "Tâm Vu": [
+      "Tâm Vu"
+    ],
+    "Tân Châu": [
+      "Tân Châu"
+    ],
+    "Tân Phú": [
+      "Tân Phú"
+    ],
+    "Chánh Nhứt": [
+      "Chánh Nhứt"
+    ],
+    "Đạ Tẻh": [
+      "Đạ Tẻh"
+    ],
+    "Tân Trụ": [
+      "Tân Trụ"
+    ],
+    "Ba. Ô Quy Hồ": [
+      "Ba. Ô Quy Hồ"
+    ],
+    "Xá Tới": [
+      "Xá Tới"
+    ],
+    "Côn Đảo": [
+      "Côn Đảo"
+    ],
+    "Lợi An": [
+      "Lợi An"
+    ],
+    "Phân Trường 5": [
+      "Phân Trường 5"
+    ],
+    "Ba Tháp": [
+      "Ba Tháp"
+    ],
+    "Lý Thái Bủ": [
+      "Lý Thái Bủ"
+    ],
+    "Mỹ Tường": [
+      "Mỹ Tường"
+    ],
+    "Bàu Tỏng": [
+      "Bàu Tỏng"
+    ],
+    "Hữu Thiện": [
+      "Hữu Thiện"
+    ],
+    "Long Tân": [
+      "Long Tân"
+    ],
+    "Lai Hung": [
+      "Lai Hung"
+    ],
+    "Lạc Nghiệp": [
+      "Lạc Nghiệp"
+    ],
+    "Tân Bình": [
+      "Tân Bình"
+    ],
+    "Lam Sơn": [
+      "Lam Sơn"
+    ],
+    "Phú Quý": [
+      "Phú Quý"
+    ],
+    "Long Sơn": [
+      "Long Sơn"
+    ],
+    "Tiên Kỳ": [
+      "Tiên Kỳ"
+    ],
+    "Long Chữ": [
+      "Long Chữ"
+    ],
+    "Nam Bình": [
+      "Nam Bình"
+    ],
+    "Hương Nam 4": [
+      "Hương Nam 4"
+    ],
+    "Bồng Trang": [
+      "Bồng Trang"
+    ],
+    "Phước Long Thọ": [
+      "Phước Long Thọ"
+    ],
+    "Thuận Hiêp": [
+      "Thuận Hiêp"
+    ],
+    "Trung Sơn": [
+      "Trung Sơn"
+    ],
+    "ấp 4": [
+      "ấp 4"
+    ],
+    "Phước Trung": [
+      "Phước Trung"
+    ],
+    "Lý Sơn": [
+      "Lý Sơn"
+    ],
+    "Minh Hòa": [
+      "Minh Hòa"
+    ],
+    "Sông Ray": [
+      "Sông Ray"
+    ],
+    "Cầu Cây": [
+      "Cầu Cây"
+    ],
+    "Việt Lâm": [
+      "Việt Lâm"
+    ],
+    "Trang Hoàng": [
+      "Trang Hoàng"
+    ],
+    "Nghĩa Hiệp": [
+      "Nghĩa Hiệp"
+    ],
+    "Đa Ve": [
+      "Đa Ve"
+    ],
+    "Ba.Pù Quan": [
+      "Ba.Pù Quan"
+    ],
+    "Vị Xuyên": [
+      "Vị Xuyên"
+    ],
+    "Ninh Sơn": [
+      "Ninh Sơn"
+    ],
+    "Rã Trên": [
+      "Rã Trên"
+    ],
+    "Ta Mốt": [
+      "Ta Mốt"
+    ],
+    "Phố Cát": [
+      "Phố Cát"
+    ],
+    "Phú Thạnh": [
+      "Phú Thạnh"
+    ],
+    "Phước Cùng": [
+      "Phước Cùng"
+    ],
+    "Ba. Cốc Phường": [
+      "Ba. Cốc Phường"
+    ],
+    "Kim Tân": [
+      "Kim Tân"
+    ],
+    "Nậm Tấn": [
+      "Nậm Tấn"
+    ],
+    "Yên Động": [
+      "Yên Động"
+    ],
+    "X.Teunene": [
+      "X.Teunene"
+    ],
+    "Hồ Tràm": [
+      "Hồ Tràm"
+    ],
+    "Sản Chư Ván": [
+      "Sản Chư Ván"
+    ],
+    "Lang Chánh": [
+      "Lang Chánh"
+    ],
+    "Suối Kiơt": [
+      "Suối Kiơt"
+    ],
+    "Cành Nàng": [
+      "Cành Nàng"
+    ],
+    "Tân Hợp": [
+      "Tân Hợp"
+    ],
+    "Xuân Hưng": [
+      "Xuân Hưng"
+    ],
+    "Quang Vinh": [
+      "Quang Vinh"
+    ],
+    "Xuân Tây": [
+      "Xuân Tây"
+    ],
+    "Quảng Bạ": [
+      "Quảng Bạ"
+    ],
+    "Nông Cống": [
+      "Nông Cống"
+    ],
+    "Phú Hải Trong": [
+      "Phú Hải Trong"
+    ],
+    "Nà Nghịa": [
+      "Nà Nghịa"
+    ],
+    "Tân Xuân": [
+      "Tân Xuân"
+    ],
+    "Tân Nghĩa": [
+      "Tân Nghĩa"
+    ],
+    "Vĩnh Ngọc": [
+      "Vĩnh Ngọc"
+    ],
+    "Haỉa Lâm": [
+      "Haỉa Lâm"
+    ],
+    "Tân Minh": [
+      "Tân Minh"
+    ],
+    "Thuận An": [
+      "Thuận An"
+    ],
+    "Kim Liên": [
+      "Kim Liên"
+    ],
+    "Ba. Xuân Hồng": [
+      "Ba. Xuân Hồng"
+    ],
+    "Tằng Loỏng": [
+      "Tằng Loỏng"
+    ],
+    "Ba Ghe": [
+      "Ba Ghe"
+    ],
+    "Thạch Trại": [
+      "Thạch Trại"
+    ],
+    "Khánh Yên": [
+      "Khánh Yên"
+    ],
+    "Phan Lâm": [
+      "Phan Lâm"
+    ],
+    "Hợp Lễ": [
+      "Hợp Lễ"
+    ],
+    "Bạch Long Vĩ": [
+      "Bạch Long Vĩ"
+    ],
+    "Văn Kê": [
+      "Văn Kê"
+    ],
+    "Sa Cat": [
+      "Sa Cat"
+    ],
+    "Phan Dụng": [
+      "Phan Dụng"
+    ],
+    "Độc Lập": [
+      "Độc Lập"
+    ],
+    "Ma Dai": [
+      "Ma Dai"
+    ],
+    "Ba. Chòm Can": [
+      "Ba. Chòm Can"
+    ],
+    "La Dạ": [
+      "La Dạ"
+    ],
+    "Cây Súng": [
+      "Cây Súng"
+    ],
+    "Đông Giang": [
+      "Đông Giang"
+    ],
+    "Phố Ràng": [
+      "Phố Ràng"
+    ],
+    "Nam Đành": [
+      "Nam Đành"
+    ],
+    "Bàu Ruộng": [
+      "Bàu Ruộng"
+    ],
+    "Khu Làng Nhẻo": [
+      "Khu Làng Nhẻo"
+    ],
+    "Pé Trang": [
+      "Pé Trang"
+    ],
+    "Càng Long": [
+      "Càng Long"
+    ],
+    "R'Han Blang": [
+      "R'Han Blang"
+    ],
+    "Mỹ Thạnh": [
+      "Mỹ Thạnh"
+    ],
+    "Nậm Đét": [
+      "Nậm Đét"
+    ],
+    "M' Dung": [
+      "M' Dung"
+    ],
+    "Ma Đa Gui": [
+      "Ma Đa Gui"
+    ],
+    "Băng Dung": [
+      "Băng Dung"
+    ],
+    "Phước Long": [
+      "Phước Long"
+    ],
+    "M' Trong": [
+      "M' Trong"
+    ],
+    "Lò Suối Tòng": [
+      "Lò Suối Tòng"
+    ],
+    "Tà Nung": [
+      "Tà Nung"
+    ],
+    "Ba. Tả Chai": [
+      "Ba. Tả Chai"
+    ],
+    "Đạ M'Ri": [
+      "Đạ M'Ri"
+    ],
+    "Phù Chu Văn": [
+      "Phù Chu Văn"
+    ],
+    "Ea Ka": [
+      "Ea Ka"
+    ],
+    "Phú Định": [
+      "Phú Định"
+    ],
+    "M' Đrak": [
+      "M' Đrak"
+    ],
+    "Trà Co": [
+      "Trà Co"
+    ],
+    "nông trường 718A": [
+      "nông trường 718A"
+    ],
+    "Suối Ngô": [
+      "Suối Ngô"
+    ],
+    "Vĩ Mà": [
+      "Vĩ Mà"
+    ],
+    "Chiêm Pơ Dau": [
+      "Chiêm Pơ Dau"
+    ],
+    "Phường 3": [
+      "Phường 3"
+    ],
+    "Đức Phú": [
+      "Đức Phú"
+    ],
+    "Cốc Xâm": [
+      "Cốc Xâm"
+    ],
+    "Ea Knốp": [
+      "Ea Knốp"
+    ],
+    "Đồng Kho": [
+      "Đồng Kho"
+    ],
+    "Nà Hầu": [
+      "Nà Hầu"
+    ],
+    "Môn Sài Lương": [
+      "Môn Sài Lương"
+    ],
+    "Ba. Chiềng Hưng": [
+      "Ba. Chiềng Hưng"
+    ],
+    "Vĩnh Trụ": [
+      "Vĩnh Trụ"
+    ],
+    "Nam To Nua": [
+      "Nam To Nua"
+    ],
+    "Đại Lý": [
+      "Đại Lý"
+    ],
+    "Ô Mê": [
+      "Ô Mê"
+    ],
+    "Tả Suối Làng": [
+      "Tả Suối Làng"
+    ],
+    "An Qúy": [
+      "An Qúy"
+    ],
+    "Ba. Nà Ha": [
+      "Ba. Nà Ha"
+    ],
+    "Bình Mỹ": [
+      "Bình Mỹ"
+    ],
+    "Ea Knết": [
+      "Ea Knết"
+    ],
+    "Ba Tân Hồng": [
+      "Ba Tân Hồng"
+    ],
+    "Kiện Khê": [
+      "Kiện Khê"
+    ],
+    "Tau Khán 2": [
+      "Tau Khán 2"
+    ],
+    "ban Mon": [
+      "ban Mon"
+    ],
+    "Phố Gà": [
+      "Phố Gà"
+    ],
+    "Trung Hòa": [
+      "Trung Hòa"
+    ],
+    "Vĩnh Linh": [
+      "Vĩnh Linh"
+    ],
+    "Văn Yên": [
+      "Văn Yên"
+    ],
+    "Ba. Phiêng Púng": [
+      "Ba. Phiêng Púng"
+    ],
+    "Văn Chấn": [
+      "Văn Chấn"
+    ],
+    "Bu. Bih": [
+      "Bu. Bih"
+    ],
+    "Cống Tâm": [
+      "Cống Tâm"
+    ],
+    "Lộc Hiệp": [
+      "Lộc Hiệp"
+    ],
+    "Chiềng Khoang": [
+      "Chiềng Khoang"
+    ],
+    "Quyết Tiến": [
+      "Quyết Tiến"
+    ],
+    "Kim Động": [
+      "Kim Động"
+    ],
+    "Đa kia": [
+      "Đa kia"
+    ],
+    "Krông Năng": [
+      "Krông Năng"
+    ],
+    "Đoàn Kết": [
+      "Đoàn Kết"
+    ],
+    "Đào Lâm": [
+      "Đào Lâm"
+    ],
+    "Ba. Pha Khò": [
+      "Ba. Pha Khò"
+    ],
+    "Thác Mơ": [
+      "Thác Mơ"
+    ],
+    "Tân Phong": [
+      "Tân Phong"
+    ],
+    "ban Blanh": [
+      "ban Blanh"
+    ],
+    "Trần Cao": [
+      "Trần Cao"
+    ],
+    "Đan Nghĩa": [
+      "Đan Nghĩa"
+    ],
+    "LamPlai": [
+      "LamPlai"
+    ],
+    "Ha Lương": [
+      "Ha Lương"
+    ],
+    "tập đoàn 3A": [
+      "tập đoàn 3A"
+    ],
+    "Vương": [
+      "Vương"
+    ],
+    "Ba. Sập Viết": [
+      "Ba. Sập Viết"
+    ],
+    "Ngòi Song": [
+      "Ngòi Song"
+    ],
+    "nông trường Ea Pốc": [
+      "nông trường Ea Pốc"
+    ],
+    "Lý Lịch": [
+      "Lý Lịch"
+    ],
+    "Ba. Tà Yàng": [
+      "Ba. Tà Yàng"
+    ],
+    "Lưu Giáo": [
+      "Lưu Giáo"
+    ],
+    "Quế": [
+      "Quế"
+    ],
+    "Điê Ya": [
+      "Điê Ya"
+    ],
+    "Cổ Phúc": [
+      "Cổ Phúc"
+    ],
+    "Ba. Khom Khàm": [
+      "Ba. Khom Khàm"
+    ],
+    "Đồng Văn": [
+      "Đồng Văn"
+    ],
+    "Quảng Phú": [
+      "Quảng Phú"
+    ],
+    "Điện Biên Đông": [
+      "Điện Biên Đông"
+    ],
+    "Sơn Dương": [
+      "Sơn Dương"
+    ],
+    "Pi Tre": [
+      "Pi Tre"
+    ],
+    "Lanh Bánh": [
+      "Lanh Bánh"
+    ],
+    "Tà Giang": [
+      "Tà Giang"
+    ],
+    "Na Son": [
+      "Na Son"
+    ],
+    "Chợ Xoan": [
+      "Chợ Xoan"
+    ],
+    "Ba. Nà Vạc": [
+      "Ba. Nà Vạc"
+    ],
+    "Hàng Trạm": [
+      "Hàng Trạm"
+    ],
+    "Quảng Hòa": [
+      "Quảng Hòa"
+    ],
+    "Berla": [
+      "Berla"
+    ],
+    "Ba. Pá Hua": [
+      "Ba. Pá Hua"
+    ],
+    "Cẩm Bình": [
+      "Cẩm Bình"
+    ],
+    "Da Chay": [
+      "Da Chay"
+    ],
+    "Đồng Bàn": [
+      "Đồng Bàn"
+    ],
+    "Quảng Cư": [
+      "Quảng Cư"
+    ],
+    "Ngọc Lặc": [
+      "Ngọc Lặc"
+    ],
+    "thôn 1": [
+      "thôn 1"
+    ],
+    "Lũng Hoài": [
+      "Lũng Hoài"
+    ],
+    "Cẩm Thủy": [
+      "Cẩm Thủy"
+    ],
+    "Nà Giốc": [
+      "Nà Giốc"
+    ],
+    "Đông Phương": [
+      "Đông Phương"
+    ],
+    "Đông Luông": [
+      "Đông Luông"
+    ],
+    "Thăng Long": [
+      "Thăng Long"
+    ],
+    "Tô Hạp": [
+      "Tô Hạp"
+    ],
+    "thôn 3": [
+      "thôn 3"
+    ],
+    "Nha Bich": [
+      "Nha Bich"
+    ],
+    "Bình Minh": [
+      "Bình Minh"
+    ],
+    "Na Hoàn": [
+      "Na Hoàn"
+    ],
+    "Ba.Bang Bun": [
+      "Ba.Bang Bun"
+    ],
+    "Me": [
+      "Me"
+    ],
+    "Cil Liang": [
+      "Cil Liang"
+    ],
+    "Rạng Đông": [
+      "Rạng Đông"
+    ],
+    "Phố Hích": [
+      "Phố Hích"
+    ],
+    "Đồi Đại": [
+      "Đồi Đại"
+    ],
+    "Dung Hma": [
+      "Dung Hma"
+    ],
+    "Đu": [
+      "Đu"
+    ],
+    "Ba. Luân Màn": [
+      "Ba. Luân Màn"
+    ],
+    "Đồi Vấu": [
+      "Đồi Vấu"
+    ],
+    "Liên Sơn": [
+      "Liên Sơn"
+    ],
+    "Minh Hưng": [
+      "Minh Hưng"
+    ],
+    "ban Dồm": [
+      "ban Dồm"
+    ],
+    "Krông Kmar": [
+      "Krông Kmar"
+    ],
+    "Ba. Púng Báng": [
+      "Ba. Púng Báng"
+    ],
+    "Nà Tiên": [
+      "Nà Tiên"
+    ],
+    "Đạ Sa": [
+      "Đạ Sa"
+    ],
+    "Phố Rịa": [
+      "Phố Rịa"
+    ],
+    "Giang Tiên": [
+      "Giang Tiên"
+    ],
+    "Ba. Pu Xút": [
+      "Ba. Pu Xút"
+    ],
+    "Lạnh Anh": [
+      "Lạnh Anh"
+    ],
+    "Tân Lợi": [
+      "Tân Lợi"
+    ],
+    "Nước Nóng": [
+      "Nước Nóng"
+    ],
+    "Đơn Du": [
+      "Đơn Du"
+    ],
+    "Ba. Nậm Khún": [
+      "Ba. Nậm Khún"
+    ],
+    "Vụ bản": [
+      "Vụ bản"
+    ],
+    "buôn Dar": [
+      "buôn Dar"
+    ],
+    "Gốc Tiên": [
+      "Gốc Tiên"
+    ],
+    "Láng Tranh": [
+      "Láng Tranh"
+    ],
+    "Tô Bình": [
+      "Tô Bình"
+    ],
+    "Trà Vi": [
+      "Trà Vi"
+    ],
+    "Đà Bắc": [
+      "Đà Bắc"
+    ],
+    "Kiến Xương": [
+      "Kiến Xương"
+    ],
+    "Khau Dàng": [
+      "Khau Dàng"
+    ],
+    "Ba Trại": [
+      "Ba Trại"
+    ],
+    "Bu Kon Chất": [
+      "Bu Kon Chất"
+    ],
+    "Xuân Trường": [
+      "Xuân Trường"
+    ],
+    "Giồng K'": [
+      "Giồng K'"
+    ],
+    "Lai Xá": [
+      "Lai Xá"
+    ],
+    "Tân Hưng": [
+      "Tân Hưng"
+    ],
+    "Gò Vành": [
+      "Gò Vành"
+    ],
+    "Ba Độc": [
+      "Ba Độc"
+    ],
+    "bản Biên": [
+      "bản Biên"
+    ],
+    "Bùi Thông": [
+      "Bùi Thông"
+    ],
+    "Kon Bông 2": [
+      "Kon Bông 2"
+    ],
+    "Nà Tan": [
+      "Nà Tan"
+    ],
+    "Trung Một": [
+      "Trung Một"
+    ],
+    "Lai Chua": [
+      "Lai Chua"
+    ],
+    "Hoa Thám": [
+      "Hoa Thám"
+    ],
+    "Vĩnh Hưng": [
+      "Vĩnh Hưng"
+    ],
+    "Phú Thầy": [
+      "Phú Thầy"
+    ],
+    "Phùng": [
+      "Phùng"
+    ],
+    "Thanh Tước 3": [
+      "Thanh Tước 3"
+    ],
+    "Hai Bình Tứ": [
+      "Hai Bình Tứ"
+    ],
+    "Nà Leng": [
+      "Nà Leng"
+    ],
+    "Nà Lai": [
+      "Nà Lai"
+    ],
+    "Đồng Phố": [
+      "Đồng Phố"
+    ],
+    "Trà Nêu": [
+      "Trà Nêu"
+    ],
+    "Bằng Lũng": [
+      "Bằng Lũng"
+    ],
+    "Sóc Sơn": [
+      "Sóc Sơn"
+    ],
+    "Âu Thọ A": [
+      "Âu Thọ A"
+    ],
+    "Mậu Lực": [
+      "Mậu Lực"
+    ],
+    "Dân Lập": [
+      "Dân Lập"
+    ],
+    "Đồng La": [
+      "Đồng La"
+    ],
+    "Đồng Liên": [
+      "Đồng Liên"
+    ],
+    "Trà Lạc": [
+      "Trà Lạc"
+    ],
+    "Vĩnh Tường": [
+      "Vĩnh Tường"
+    ],
+    "Cổ Lễ": [
+      "Cổ Lễ"
+    ],
+    "Con O": [
+      "Con O"
+    ],
+    "Phúc Thọ": [
+      "Phúc Thọ"
+    ],
+    "Trà Xuân": [
+      "Trà Xuân"
+    ],
+    "Nà bản": [
+      "Nà bản"
+    ],
+    "thôn 6": [
+      "thôn 6"
+    ],
+    "Liên Quan": [
+      "Liên Quan"
+    ],
+    "Tà Mong": [
+      "Tà Mong"
+    ],
+    "Lộc Thắng": [
+      "Lộc Thắng"
+    ],
+    "Nà Doc": [
+      "Nà Doc"
+    ],
+    "An Ninh": [
+      "An Ninh"
+    ],
+    "Ngã Tư Vác": [
+      "Ngã Tư Vác"
+    ],
+    "An Thành": [
+      "An Thành"
+    ],
+    "Trung Thẳng": [
+      "Trung Thẳng"
+    ],
+    "Khe Cam": [
+      "Khe Cam"
+    ],
+    "Thanh Miện": [
+      "Thanh Miện"
+    ],
+    "Kông Chrô": [
+      "Kông Chrô"
+    ],
+    "Nhân Ngãi": [
+      "Nhân Ngãi"
+    ],
+    "Ba. Đồng bảng": [
+      "Ba. Đồng bảng"
+    ],
+    "Trường Sơn": [
+      "Trường Sơn"
+    ],
+    "Krông Ktu": [
+      "Krông Ktu"
+    ],
+    "Ba. A Lang": [
+      "Ba. A Lang"
+    ],
+    "Cà Liếp A": [
+      "Cà Liếp A"
+    ],
+    "Long Hồ": [
+      "Long Hồ"
+    ],
+    "Khoái Châu": [
+      "Khoái Châu"
+    ],
+    "Hở Đơng": [
+      "Hở Đơng"
+    ],
+    "Phú Hòa Yên": [
+      "Phú Hòa Yên"
+    ],
+    "Thâm Thạo": [
+      "Thâm Thạo"
+    ],
+    "Phú Minh": [
+      "Phú Minh"
+    ],
+    "Tà Lào": [
+      "Tà Lào"
+    ],
+    "A Tang": [
+      "A Tang"
+    ],
+    "Đồng Mỏ": [
+      "Đồng Mỏ"
+    ],
+    "Phú Tân": [
+      "Phú Tân"
+    ],
+    "Chùa Hang": [
+      "Chùa Hang"
+    ],
+    "Kte Lớn": [
+      "Kte Lớn"
+    ],
+    "Trà Nóc": [
+      "Trà Nóc"
+    ],
+    "Nà Mười": [
+      "Nà Mười"
+    ],
+    "Song Hưng": [
+      "Song Hưng"
+    ],
+    "Vũ Thư": [
+      "Vũ Thư"
+    ],
+    "Krong": [
+      "Krong"
+    ],
+    "Hưng Hà": [
+      "Hưng Hà"
+    ],
+    "Kông H' Dang": [
+      "Kông H' Dang"
+    ],
+    "Quang Phúc": [
+      "Quang Phúc"
+    ],
+    "Bò Đái": [
+      "Bò Đái"
+    ],
+    "Hồng Bàng": [
+      "Hồng Bàng"
+    ],
+    "Kon Đ'rang Ye": [
+      "Kon Đ'rang Ye"
+    ],
+    "Hang Đừng": [
+      "Hang Đừng"
+    ],
+    "Quý Lân": [
+      "Quý Lân"
+    ],
+    "La Tiến": [
+      "La Tiến"
+    ],
+    "Thung Mặn": [
+      "Thung Mặn"
+    ],
+    "K' Bang": [
+      "K' Bang"
+    ],
+    "Bãi Tre": [
+      "Bãi Tre"
+    ],
+    "De Kop": [
+      "De Kop"
+    ],
+    "Đông Hưng": [
+      "Đông Hưng"
+    ],
+    "An Lợi": [
+      "An Lợi"
+    ],
+    "Ba. Nà Bài": [
+      "Ba. Nà Bài"
+    ],
+    "Thị Tứ": [
+      "Thị Tứ"
+    ],
+    "Ba. Pa Kha": [
+      "Ba. Pa Kha"
+    ],
+    "Sam Coóc": [
+      "Sam Coóc"
+    ],
+    "Tân Bảo": [
+      "Tân Bảo"
+    ],
+    "Sa Rài": [
+      "Sa Rài"
+    ],
+    "Lương Khánh": [
+      "Lương Khánh"
+    ],
+    "Pắc Quang": [
+      "Pắc Quang"
+    ],
+    "ấp Năm": [
+      "ấp Năm"
+    ],
+    "Ang Mo": [
+      "Ang Mo"
+    ],
+    "Tịch Khanh": [
+      "Tịch Khanh"
+    ],
+    "Liêm Tiến": [
+      "Liêm Tiến"
+    ],
+    "Ấm Thượng": [
+      "Ấm Thượng"
+    ],
+    "An Lộc Thi": [
+      "An Lộc Thi"
+    ],
+    "Dak Rung": [
+      "Dak Rung"
+    ],
+    "An Hòa": [
+      "An Hòa"
+    ],
+    "Khau Pin": [
+      "Khau Pin"
+    ],
+    "Trung Hải": [
+      "Trung Hải"
+    ],
+    "Phú Việt": [
+      "Phú Việt"
+    ],
+    "Vĩnh Thành": [
+      "Vĩnh Thành"
+    ],
+    "Đăk Mil": [
+      "Đăk Mil"
+    ],
+    "Nà Phi": [
+      "Nà Phi"
+    ],
+    "Xuân Mai": [
+      "Xuân Mai"
+    ],
+    "Na Hoàng": [
+      "Na Hoàng"
+    ],
+    "Cầu Đức": [
+      "Cầu Đức"
+    ],
+    "Minh Tiến": [
+      "Minh Tiến"
+    ],
+    "Bình La": [
+      "Bình La"
+    ],
+    "Lũng Tòng": [
+      "Lũng Tòng"
+    ],
+    "Soọc Mạ": [
+      "Soọc Mạ"
+    ],
+    "Đon Đak NamLa": [
+      "Đon Đak NamLa"
+    ],
+    "Ngãi Tư": [
+      "Ngãi Tư"
+    ],
+    "Thuận Nam": [
+      "Thuận Nam"
+    ],
+    "Cửa Mẹc": [
+      "Cửa Mẹc"
+    ],
+    "An Bình": [
+      "An Bình"
+    ],
+    "Hoành Viễn": [
+      "Hoành Viễn"
+    ],
+    "Vĩnh Hòa": [
+      "Vĩnh Hòa"
+    ],
+    "Hương Mỹ": [
+      "Hương Mỹ"
+    ],
+    "Tân Thanh": [
+      "Tân Thanh"
+    ],
+    "Cam Nát": [
+      "Cam Nát"
+    ],
+    "Trà Phô": [
+      "Trà Phô"
+    ],
+    "Pò Phèo": [
+      "Pò Phèo"
+    ],
+    "Ea T'Ling": [
+      "Ea T'Ling"
+    ],
+    "An Thái Trung": [
+      "An Thái Trung"
+    ],
+    "Nà Cạn": [
+      "Nà Cạn"
+    ],
+    "Đăk Giăng": [
+      "Đăk Giăng"
+    ],
+    "Nam Đà": [
+      "Nam Đà"
+    ],
+    "Đức Tài": [
+      "Đức Tài"
+    ],
+    "Hòa Phú": [
+      "Hòa Phú"
+    ],
+    "Bon R'cap": [
+      "Bon R'cap"
+    ],
+    "Đăk Mâm": [
+      "Đăk Mâm"
+    ],
+    "ấp Chợ": [
+      "ấp Chợ"
+    ],
+    "Lộc Sơn": [
+      "Lộc Sơn"
+    ],
+    "TinhWil Manh": [
+      "TinhWil Manh"
+    ],
+    "An Thuận": [
+      "An Thuận"
+    ],
+    "Tân Thi": [
+      "Tân Thi"
+    ],
+    "U Minh": [
+      "U Minh"
+    ],
+    "Ia Pia": [
+      "Ia Pia"
+    ],
+    "Ngã Năm": [
+      "Ngã Năm"
+    ],
+    "Huỳnh Hữu Nghĩa": [
+      "Huỳnh Hữu Nghĩa"
+    ],
+    "Mỹ Một": [
+      "Mỹ Một"
+    ],
+    "Si Ne": [
+      "Si Ne"
+    ],
+    "Ba. Bó Sập": [
+      "Ba. Bó Sập"
+    ],
+    "Thứ Mười Một": [
+      "Thứ Mười Một"
+    ],
+    "Ea Súp": [
+      "Ea Súp"
+    ],
+    "Ba. Còng Khà": [
+      "Ba. Còng Khà"
+    ],
+    "Ba. Na Hao": [
+      "Ba. Na Hao"
+    ],
+    "Ngan Dừa": [
+      "Ngan Dừa"
+    ],
+    "Xeo Quao": [
+      "Xeo Quao"
+    ],
+    "Ba. Mé Giáng": [
+      "Ba. Mé Giáng"
+    ],
+    "Plei Mơ Nang": [
+      "Plei Mơ Nang"
+    ],
+    "Ba. Gò Cừ": [
+      "Ba. Gò Cừ"
+    ],
+    "Đồng Sơn": [
+      "Đồng Sơn"
+    ],
+    "Ia Kha": [
+      "Ia Kha"
+    ],
+    "Phước Bửu": [
+      "Phước Bửu"
+    ],
+    "Ba Nà Suối": [
+      "Ba Nà Suối"
+    ],
+    "Ba.Lang Su Sin": [
+      "Ba.Lang Su Sin"
+    ],
+    "Plei Tu": [
+      "Plei Tu"
+    ],
+    "Lê Minh Châu": [
+      "Lê Minh Châu"
+    ],
+    "Vân Trạch": [
+      "Vân Trạch"
+    ],
+    "Ba Mường Nhé": [
+      "Ba Mường Nhé"
+    ],
+    "Long Hải": [
+      "Long Hải"
+    ],
+    "Ba. Đoàn Kết": [
+      "Ba. Đoàn Kết"
+    ],
+    "Trung Thuận": [
+      "Trung Thuận"
+    ],
+    "Hùng Quốc": [
+      "Hùng Quốc"
+    ],
+    "Lưu Cơ": [
+      "Lưu Cơ"
+    ],
+    "Cầu Quan": [
+      "Cầu Quan"
+    ],
+    "Ba Khuổi Rẽ": [
+      "Ba Khuổi Rẽ"
+    ],
+    "Tân Lạc": [
+      "Tân Lạc"
+    ],
+    "Bằng Ca": [
+      "Bằng Ca"
+    ],
+    "Thanh Tân": [
+      "Thanh Tân"
+    ],
+    "Cái Cối": [
+      "Cái Cối"
+    ],
+    "Plei A Pơch": [
+      "Plei A Pơch"
+    ],
+    "Tú Loan": [
+      "Tú Loan"
+    ],
+    "Bà Nhi": [
+      "Bà Nhi"
+    ],
+    "Hồng Quang": [
+      "Hồng Quang"
+    ],
+    "Đại Tân": [
+      "Đại Tân"
+    ],
+    "Ba Nậm Hẳn": [
+      "Ba Nậm Hẳn"
+    ],
+    "Chư Ty": [
+      "Chư Ty"
+    ],
+    "Tắc Ngã": [
+      "Tắc Ngã"
+    ],
+    "An Trạch": [
+      "An Trạch"
+    ],
+    "Tây Gát": [
+      "Tây Gát"
+    ],
+    "Măch Đen": [
+      "Măch Đen"
+    ],
+    "Ba. Nậm Na A": [
+      "Ba. Nậm Na A"
+    ],
+    "Phú Tâm": [
+      "Phú Tâm"
+    ],
+    "Ba. Mường Tông": [
+      "Ba. Mường Tông"
+    ],
+    "Ca Giun": [
+      "Ca Giun"
+    ],
+    "Ba. Nậm Chinh": [
+      "Ba. Nậm Chinh"
+    ],
+    "Ba. Năng Hóa": [
+      "Ba. Năng Hóa"
+    ],
+    "Tổng Cáng": [
+      "Tổng Cáng"
+    ],
+    "Ba.Cha Lo": [
+      "Ba.Cha Lo"
+    ],
+    "Phú Đức": [
+      "Phú Đức"
+    ],
+    "Ba.Thăm Pa": [
+      "Ba.Thăm Pa"
+    ],
+    "Ba. Pò Cáp": [
+      "Ba. Pò Cáp"
+    ],
+    "Cổ Cò": [
+      "Cổ Cò"
+    ],
+    "Bon Bsai Dariai": [
+      "Bon Bsai Dariai"
+    ],
+    "Đa Nung": [
+      "Đa Nung"
+    ],
+    "Ma Ty": [
+      "Ma Ty"
+    ],
+    "Ba. Piềng Pèn": [
+      "Ba. Piềng Pèn"
+    ],
+    "Đồng Cau": [
+      "Đồng Cau"
+    ],
+    "Quận 1": [
+      "Quận 1"
+    ],
+    "Dak Rwe": [
+      "Dak Rwe"
+    ],
+    "Hanoi": [
+      "Hanoi"
+    ],
+    "Thành Phố Hồ Chí Minh": [
+      "Thành Phố Hồ Chí Minh"
+    ]
+  }
+}
