@@ -30,12 +30,14 @@ const Parser = require('expr-eval').Parser;
 // tanh x	Hyperbolic tangent of x (x is in radians)
 // trunc x	Integral part of a X, looks like floor(x) unless for negative number
 
-module.exports.run = (entities, option, context, input = "") => {
+module.exports.run = (entities, option, context, input = "", isLocal = false) => {
     //using entity extraction is too unreliable
     return new Promise((resolve, reject) => {
+        //console.log('this is ask_calc intent')
         let response = ""
         let expr_str = ""
         let expr_list = input.match(/([\d\(\+\-]).*([\d\)])/)
+        //console.log(expr_list)
         if (entities['wit$math_expression:math_expression']) {
             expr_str = entities['wit$math_expression:math_expression'][0].body
             response = `bằng ${Parser.evaluate(expr_str)} nhé`

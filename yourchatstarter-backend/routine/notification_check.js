@@ -3,7 +3,7 @@ var crypto = require('crypto');
 const webpush = require('web-push');
 
 module.exports.checkNotification = async () => {
-    console.log('scanning pending message')
+    //console.log('scanning pending message')
     let pending_message_query = {
         next_schedule: { $lt: new Date() }
     }

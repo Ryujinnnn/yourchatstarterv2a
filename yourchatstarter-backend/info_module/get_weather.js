@@ -1,7 +1,9 @@
 function query(locationString) {
     return new Promise(async (resolve, reject) => {
         
-        let url = `http://api.openweathermap.org/data/2.5/weather?q=${encodeURI(locationString)}&appid=${process.env.OPENWEATHER_TOKEN}&lang=vi`
+        let url = encodeURI(`http://api.openweathermap.org/data/2.5/weather?q=${(locationString)}&appid=${process.env.OPENWEATHER_TOKEN}&lang=vi`)
+            .replace('%C3%90', '%C4%90')                    //fix the letter Đ encode incorrectly
+        console.log(url)
         let res = await fetch(url)
         //console.log(res)
         if (res.status != 200) {
