@@ -1,29 +1,11 @@
 {
-    "Ben Tre": {
-        "uri": "Ben%20Tre",
-        "lat": "10.1245254",
-        "lon": "106.4690447",
-        "name": "Bến Tre, Việt Nam"
-    },
-    "Cao Bang": {
-        "uri": "Cao%20Bang",
-        "lat": "22.7730867",
-        "lon": "106.0017225",
-        "name": "Tỉnh Cao Bằng, Việt Nam"
-    },
-    "Hai Phong": {
+    "Hải Phòng": {
         "uri": "Hai%20Phong",
         "lat": "20.858864",
         "lon": "106.6749591",
         "name": "Hải Phòng, Việt Nam"
     },
-    "Lai Chau": {
-        "uri": "Lai%20Chau",
-        "lat": "22.3048728",
-        "lon": "102.9628862",
-        "name": "Tỉnh Lai Châu, Việt Nam"
-    },
-    "Lam Dong": {
+    "Lâm Đồng": {
         "uri": "Lam%20Dong"
     },
     "Long An": {
@@ -32,47 +14,17 @@
         "lon": "106.6393092",
         "name": "Long An, Xã Long An, Huyện Cần Giuộc, Tỉnh Long An, Việt Nam"
     },
-    "Quang Nam": {
+    "Quảng Nam": {
         "uri": "Quang%20Nam",
         "lat": "15.1807799",
         "lon": "108.0757713",
         "name": "Trà Tập, Nam Trà My, Quảng Nam, Vietnam, Nam Trà My, Tỉnh Quảng Nam, Việt Nam"
     },
-    "Quang Ninh": {
-        "uri": "Quang%20Ninh",
-        "lat": "21.1718046",
-        "lon": "107.2012742",
-        "name": "Tỉnh Quảng Ninh, Việt Nam"
-    },
-    "Son La": {
-        "uri": "Son%20La",
-        "lat": "21.1508502",
-        "lon": "103.8884294",
-        "name": "Tỉnh Sơn La, Việt Nam"
-    },
-    "Tay Ninh": {
-        "uri": "Tay%20Ninh",
-        "lat": "11.404629",
-        "lon": "106.0033909",
-        "name": "Tỉnh Tây Ninh, Việt Nam"
-    },
-    "Thanh Hoa": {
-        "uri": "Thanh%20Hoa"
-    },
-    "Thai Binh": {
-        "uri": "Thai%20Binh",
-        "lat": "20.5296832",
-        "lon": "106.3876068",
-        "name": "Tỉnh Thái Bình, Việt Nam"
-    },
-    "Tien Giang": {
+    "Tiền Giang": {
         "uri": "Tien%20Giang",
         "lat": "10.3884105",
         "lon": "107.0959286",
         "name": "Tien Giang, Căn cứ Dịch vụ Dầu khí Sao Mai-Bến Đình, Thắng Nhất, Vũng Tàu, Tỉnh Bà Rịa-Vũng Tàu, 78000, Việt Nam"
-    },
-    "Lang Son": {
-        "uri": "Lang%20Son"
     },
     "An Giang": {
         "uri": "An%20Giang",
@@ -80,59 +32,47 @@
         "lon": "107.0721181",
         "name": "an giang, Nguyễn Duy Trinh, Tân Phú, Phú Mỹ, Phường Phú Mỹ, Thị xã Phú Mỹ, Tỉnh Bà Rịa-Vũng Tàu, Việt Nam"
     },
-    "Dak Lak": {
+    "Đắk Lắk": {
         "uri": "Dak%20Lak",
         "lat": "12.8399392",
         "lon": "108.2284947",
         "name": "Đắk Lắk, Việt Nam"
     },
-    "Dong Nai": {
+    "Đồng Nai": {
         "uri": "Dong%20Nai",
         "lat": "11.0063212",
         "lon": "107.1921807",
         "name": "Tỉnh Đồng Nai, Việt Nam"
     },
-    "Dong Thap": {
+    "Đồng Tháp": {
         "uri": "Dong%20Thap",
         "lat": "10.6266659",
         "lon": "105.6316218",
         "name": "Đồng Tháp, Việt Nam"
     },
-    "Kien Giang": {
+    "Kiên Giang": {
         "uri": "Kien%20Giang",
         "lat": "9.9113945",
         "lon": "105.2533879",
         "name": "Kiên Giang, Việt Nam"
     },
-    "Ha Noi": {
+    "Hà Nội": {
         "uri": "Ha%20Noi"
     },
-    "Ho Chi Minh": {
+    "Thành phố Hồ Chí Minh": {
         "uri": "Ho%20Chi%20Minh",
         "lat": "10.7758439",
         "lon": "106.7017555",
         "name": "Thành phố Hồ Chí Minh, Quận Nhứt, 71006, Việt Nam"
     },
-    "Ba Ria-Vung Tau": {
+    "Bà Rịa - Vũng Tàu": {
         "uri": "Ba%20Ria-Vung%20Tau",
         "lat": "10.3486485",
         "lon": "107.0765028",
         "name": "Vũng Tàu, Tỉnh Bà Rịa-Vũng Tàu, Việt Nam"
     },
-    "Binh Dinh": {
-        "uri": "Binh%20Dinh",
-        "lat": "14.1525201",
-        "lon": "108.9239618",
-        "name": "Tỉnh Bình Định, Việt Nam"
-    },
-    "Binh Thuan": {
+    "Bình Thuận": {
         "uri": "Binh%20Thuan"
-    },
-    "Can Tho": {
-        "uri": "Can%20Tho",
-        "lat": "10.0451859",
-        "lon": "105.7448944",
-        "name": "Thành phố Cần Thơ, Việt Nam"
     },
     "Gia Lai": {
         "uri": "Gia%20Lai",
@@ -140,193 +80,67 @@
         "lon": "108.2608263",
         "name": "Tỉnh Gia Lai, Việt Nam"
     },
-    "Ha Giang": {
-        "uri": "Ha%20Giang",
-        "lat": "22.8264592",
-        "lon": "104.9846342",
-        "name": "Thành phố Hà Giang, Tỉnh Hà Giang, Việt Nam"
-    },
-    "Ha Tay": {
+    "Hà Tây": {
         "uri": "Ha%20Tay",
         "lat": "21.1409186",
         "lon": "105.5060305",
         "name": "Thị xã Sơn Tây, Hà Nội, Việt Nam"
     },
-    "Ha Tinh": {
-        "uri": "Ha%20Tinh"
-    },
-    "Hoa Binh": {
-        "uri": "Hoa%20Binh",
-        "lat": "20.6609177",
-        "lon": "105.3924747",
-        "name": "Hòa Bình, Việt Nam"
-    },
-    "Khanh Hoa": {
+    "Khánh Hoà": {
         "uri": "Khanh%20Hoa",
         "lat": "12.1960803",
         "lon": "108.9950386",
         "name": "Khánh Hòa, Việt Nam"
     },
-    "Lao Cai": {
-        "uri": "Lao%20Cai",
-        "lat": "22.2967657",
-        "lon": "104.0566164",
-        "name": "Tỉnh Lào Cai, Việt Nam"
-    },
-    "Ha Nam": {
+    "Hà Nam": {
         "uri": "Ha%20Nam"
     },
-    "Nghe An": {
+    "Nghệ An": {
         "uri": "Nghe%20An",
         "lat": "19.3738868",
         "lon": "104.9233469",
         "name": "Tỉnh Nghệ An, Việt Nam"
     },
-    "Ninh Binh": {
-        "uri": "Ninh%20Binh",
-        "lat": "20.2545421",
-        "lon": "105.9764854",
-        "name": "Ninh Bình, Tỉnh Ninh Bình, 08000, Việt Nam"
-    },
-    "Ninh Thuan": {
+    "Ninh Thuận": {
         "uri": "Ninh%20Thuan"
     },
-    "Phu Yen": {
+    "Phú Yên": {
         "uri": "Phu%20Yen",
         "lat": "13.2126552",
         "lon": "109.0834225",
         "name": "Tỉnh Phú Yên, Việt Nam"
     },
-    "Quang Binh": {
+    "Quảng Bình": {
         "uri": "Quang%20Binh",
         "lat": "17.5462658",
         "lon": "106.2576229",
         "name": "Tỉnh Quảng Bình, Việt Nam"
     },
-    "Quang Tri": {
-        "uri": "Quang%20Tri",
-        "lat": "16.8581352",
-        "lon": "106.8588935",
-        "name": "Quảng Trị, Việt Nam"
-    },
-    "Soc Trang": {
-        "uri": "Soc%20Trang",
-        "lat": "9.5664427",
-        "lon": "105.876444",
-        "name": "Tỉnh Sóc Trăng, Việt Nam"
-    },
-    "Thura Thien-Hue": {
-        "uri": "Thura%20Thien-Hue"
-    },
-    "Tra Vinh": {
-        "uri": "Tra%20Vinh",
-        "lat": "9.7704606",
-        "lon": "106.3563806",
-        "name": "Trà Vinh, Việt Nam"
-    },
-    "Tuyen Quang": {
-        "uri": "Tuyen%20Quang",
-        "lat": "21.7879695",
-        "lon": "105.217387",
-        "name": "Tuyên Quang, Tỉnh Tuyên Quang, Việt Nam"
-    },
-    "Vinh Long": {
-        "uri": "Vinh%20Long"
-    },
-    "Yen Bai": {
-        "uri": "Yen%20Bai",
-        "lat": "21.69611",
-        "lon": "104.8752392",
-        "name": "Thành phố Yên Bái, Tỉnh Yên Bái, Việt Nam"
-    },
     "Kon Tum": {
         "uri": "Kon%20Tum"
     },
-    "Quang Ngai": {
-        "uri": "Quang%20Ngai",
-        "lat": "14.9635349",
-        "lon": "108.6642632",
-        "name": "Tỉnh Quảng Ngãi, Việt Nam"
-    },
-    "Bin Duong": {
+    "Bình Dương": {
         "uri": "Bin%20Duong",
         "lat": "11.2240687",
         "lon": "106.6674681",
         "name": "Tỉnh Bình Dương, Việt Nam"
     },
-    "Hung Yen": {
-        "uri": "Hung%20Yen",
-        "lat": "20.8193369",
-        "lon": "106.0314504",
-        "name": "Tỉnh Hưng Yên, Việt Nam"
-    },
-    "Hai Duong": {
-        "uri": "Hai%20Duong",
-        "lat": "20.9443681",
-        "lon": "106.3780373",
-        "name": "Hai Duong city, Việt Nam"
-    },
-    "Bac Lieu": {
+    "Bạc Liêu": {
         "uri": "Bac%20Lieu",
         "lat": "9.3477317",
         "lon": "105.5097064",
         "name": "Tỉnh Bạc Liêu, Việt Nam"
     },
-    "Ca Mau": {
-        "uri": "Ca%20Mau"
-    },
-    "Thai Nguyen": {
-        "uri": "Thai%20Nguyen",
-        "lat": "21.592477",
-        "lon": "105.8435398",
-        "name": "Thành phố Thái Nguyên, Tỉnh Thái Nguyên, Việt Nam"
-    },
-    "Bac Kan": {
-        "uri": "Bac%20Kan",
-        "lat": "22.2571701",
-        "lon": "105.8588958",
-        "name": "Tỉnh Bắc Kạn, Việt Nam"
-    },
-    "Da Nang": {
-        "uri": "Da%20Nang",
-        "lat": "16.068",
-        "lon": "108.212",
-        "name": "Đà Nẵng, Việt Nam"
-    },
-    "Bin Phuoc": {
-        "uri": "Bin%20Phuoc",
-        "lat": "11.6790213",
-        "lon": "106.797558",
-        "name": "Tỉnh Bình Phước, Việt Nam"
-    },
-    "Bac Giang": {
-        "uri": "Bac%20Giang"
-    },
-    "Bac Ninh": {
-        "uri": "Bac%20Ninh"
-    },
-    "Nam Dinh": {
+    "Nam Định": {
         "uri": "Nam%20Dinh"
     },
-    "Vinh Phuc": {
-        "uri": "Vinh%20Phuc",
-        "lat": "18.416893",
-        "lon": "105.695355",
-        "name": "Vĩnh Phúc, Can Lộc, Hà Tĩnh, Việt Nam"
-    },
-    "Phu Tho": {
-        "uri": "Phu%20Tho",
-        "lat": "21.4000047",
-        "lon": "105.2238899",
-        "name": "Phú Thọ, Tỉnh Phú Thọ, Việt Nam"
-    },
-    "Dien Bien": {
+    "Điện Biên": {
         "uri": "Dien%20Bien"
     },
-    "Dac Nong": {
+    "Đắc Nông": {
         "uri": "Dac%20Nong"
     },
-    "Hau Giang": {
+    "Hậu Giang": {
         "uri": "Hau%20Giang",
         "lat": "9.7633197",
         "lon": "105.6379524",

@@ -42,7 +42,7 @@ module.exports.run = (entities, option, context, input = "", isLocal = false) =>
             expr_str = entities['wit$math_expression:math_expression'][0].body
             response = `bằng ${Parser.evaluate(expr_str)} nhé`
         }
-        else if (expr_list.length > 0) {
+        else if (expr_list && expr_list.length > 0) {
             expr_str = expr_list[0]
             try {
                 let expr_res = Parser.evaluate(expr_str)

@@ -1,6 +1,7 @@
 const { NlpManager, ConversationContext} = require('node-nlp')
 const fs = require('fs') 
 const { wiki_query } = require('../info_module/wikidata_info')
+const { get_knowledge } = require('../info_module/google_info/get_knowledge')
 
 //https://vimeo.com/574939993?fbclid=IwAR0nH8OmzFXwHz8dVTNPHvXMkEHUv1mGaFSGcEUoRol6zu2hRYqIAT19XCI
 
@@ -9,7 +10,7 @@ let nlp = null
 let context = null
 
 module.exports.setupInstance = async () => {
-    const options = { languages: ['vi']};
+    const options = { languages: ['vi'], nlu: { useNoneFeature: true } };
 	manager = new NlpManager(options);
 	nlp = manager.nlp
     context = new ConversationContext()
@@ -61,12 +62,29 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                 }
                 //fall back to wiki search if no intent was found
                 else if (res.intent === "None") {
-                    await wiki_query(input).then(wiki_res => {
-                        answer = wiki_res[0].label + " là " + wiki_res[0].description 
+                    // await wiki_query(input).then(wiki_res => {
+                    //     answer = wiki_res[0].label + " là " + wiki_res[0].description 
+                    // })
+                    // .catch(() => {
+                    //     answer = res.answer
+                    // })
+                    console.log('none intent found')
+                    await get_knowledge(input).then(google_res => {
+                        first_res = google_res.itemListElement[0]
+                        if (first_res.result.detailedDescription)
+                        {
+                            answer = first_res.result.detailedDescription.articleBody
+                        }
+                        else {
+                            answer = `${first_res.result.name} là ${first_res.result.description}` 
+                        }
+                        // console.dỉr(google_res, {depth: null})
                     })
-                    .catch(() => {
+                    .catch((e) => {
+                        console.log(e)
                         answer = res.answer
                     })
+
                 }
                 else {
                     answer = res.answer

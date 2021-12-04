@@ -18,4 +18,6 @@ for (let i = 1; i < m.length; i++)
 
 console.table(m)
 console.log(m[m.length - 1][m[0].length - 1])
-console.log(editDistance('intelligent', 'integration'))
+
+
+//console.log(editDistance('intelligent', 'integration'))

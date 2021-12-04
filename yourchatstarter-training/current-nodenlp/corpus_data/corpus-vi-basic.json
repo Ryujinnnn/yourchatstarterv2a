@@ -861,7 +861,9 @@
         {
             "intent": "None",
             "utterances": [
-
+                "%location%",
+                "%news_category%",
+                "%expression%"
             ],
             "answers": [
                 "Xin lỗi bạn, mình không hiểu bạn đang nói gì"

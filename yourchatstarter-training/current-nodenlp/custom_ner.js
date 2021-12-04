@@ -19,7 +19,6 @@ const default_resolution = {
 
 class customNERImplementation {
 
-
     //inject this resolution 
     constructor(name, locale = "en") {
         this.name = name

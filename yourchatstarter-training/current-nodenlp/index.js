@@ -4,7 +4,7 @@ const crypto_pair = require('./ner_data/crypto.json')
 const stocks_list = require('./ner_data/stocks_nasdaq.json')
 
 async function main() {
-	const options = { languages: ['vi']};
+	const options = { languages: ['vi'], forceNER: true };
 	const manager = new NlpManager(options);
 
 	// manager.container.registerConfiguration('bert', {
@@ -27,6 +27,8 @@ async function main() {
 		manager.addNamedEntityText('location', location_canon_name, 'vi', location_canon_name);
 	}
 
+	manager.addNamedEntityText('location', 'Thành phố Hồ Chí Minh', 'vi', ['TP.HCM', 'TP. Hồ Chí Minh', 'thành phố hồ chí minh'])
+
 	for (let i = 0; i < stocks_list.length; i++) {
 		const stock_entry = stocks_list[i]
 		manager.addNamedEntityText('stock_code', stock_entry.Symbol, 'vi', stock_entry.Symbol)
@@ -47,6 +49,21 @@ async function main() {
 	manager.addNamedEntityText('language', 'vi', 'vi', ["tiếng việt"])
 	manager.addNamedEntityText('language', 'fr', 'vi', ["tiếng pháp"])
 	manager.addNamedEntityText('language', 'de', 'vi', ["tiếng đức"])
+
+	manager.addNamedEntityText('news_category', 'startup', 'vi', ['startup', 'start-up', 'start up', 'khởi nghiệp'])
+	manager.addNamedEntityText('news_category', 'đời sống', 'vi', ['đời sống', 'cuộc sống'])
+	manager.addNamedEntityText('news_category', 'thể thao', 'vi', ['thể thao'])
+	manager.addNamedEntityText('news_category', 'du lịch', 'vi', ['du lịch'])
+	manager.addNamedEntityText('news_category', 'giải trí', 'vi', ['giải trí'])
+	manager.addNamedEntityText('news_category', 'khoa học', 'vi', ['khoa học'])
+	manager.addNamedEntityText('news_category', 'số hóa', 'vi', ['số hóa', 'công nghệ'])
+	manager.addNamedEntityText('news_category', 'quốc tế', 'vi', ['quốc tế', 'nước ngoài', 'nước ngoài'])
+	manager.addNamedEntityText('news_category', 'xe hơi', 'vi', ['ô tô'])
+	manager.addNamedEntityText('news_category', 'giáo dục', 'vi', ['giáo dục'])
+	manager.addNamedEntityText('news_category', 'pháp luật', 'vi', ['pháp luật', 'luật pháp'])
+	manager.addNamedEntityText('news_category', 'kinh doanh', 'vi', ['kinh doanh', 'doanh nghiệp'])
+	manager.addNamedEntityText('news_category', 'sức khoẻ', 'vi', ['sức khỏe'])
+	manager.addNamedEntityText('news_category', 'chuyện vui', 'vi', ['chuyện vui', 'hài hước', 'chuyện cười'])
 
 	nlp.slotManager.addSlot('service.ask_weather', 'location', true, { vi: 'Bạn có thể cho mình biết là thời tiết ở đâu được không?' });
 	nlp.slotManager.addSlot('service.req_translate', 'phrase', true, { vi: 'Bạn có thể cho mình biết là bạn muốn dịch gì được không?' });
