@@ -108,6 +108,17 @@
             "answers": [
                 "Mình chưa học ngôn ngữ này nhé bạn"
             ]
+        },
+        {
+            "intent": "service.req_notification",
+            "utterances": [
+                "nhắc tôi",
+                "nhắc tôi %phrase%?",
+                "nhắc tôi %phrase% lúc %datetime%"
+            ],
+            "answers": [
+                "Mình xin lỗi, mình hiện tại không thể lưu lại được yêu cầu của bạn :("
+            ]
         }
     ]
 }

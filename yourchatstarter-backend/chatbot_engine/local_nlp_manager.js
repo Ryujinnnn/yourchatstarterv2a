@@ -2,6 +2,7 @@ const { NlpManager, ConversationContext} = require('node-nlp')
 const fs = require('fs') 
 const { wiki_query } = require('../info_module/wikidata_info')
 const { get_knowledge } = require('../info_module/google_info/get_knowledge')
+const context_handle = require('../chatbot_engine/context_handler')
 
 //https://vimeo.com/574939993?fbclid=IwAR0nH8OmzFXwHz8dVTNPHvXMkEHUv1mGaFSGcEUoRol6zu2hRYqIAT19XCI
 
@@ -60,31 +61,38 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                     }
                 
                 }
-                //fall back to wiki search if no intent was found
                 else if (res.intent === "None") {
-                    // await wiki_query(input).then(wiki_res => {
-                    //     answer = wiki_res[0].label + " là " + wiki_res[0].description 
-                    // })
-                    // .catch(() => {
-                    //     answer = res.answer
-                    // })
-                    console.log('none intent found')
-                    await get_knowledge(input).then(google_res => {
-                        first_res = google_res.itemListElement[0]
-                        if (first_res.result.detailedDescription)
-                        {
-                            answer = first_res.result.detailedDescription.articleBody
-                        }
-                        else {
-                            answer = `${first_res.result.name} là ${first_res.result.description}` 
-                        }
-                        // console.dỉr(google_res, {depth: null})
-                    })
-                    .catch((e) => {
-                        console.log(e)
-                        answer = res.answer
-                    })
 
+                    // try to process pending context
+
+                    [answer, context] = await context_handle(res, input, option, context, IntentHandler)
+
+                    if (answer == "") {
+                        //if context failed to get anything out, fallback to google search prompt
+                       
+                        await get_knowledge(input).then(async google_res => {
+                            //TODO: GKG result is pretty fucking bad, might need to do a strict match for GKG result before fallback to wiki
+                            if (!google_res.itemListElement || google_res.itemListElement.length === 0) {
+                                //if no google knowledge graph is found, use wikipedia for prompt
+                                await wiki_query(input).then(wiki_res => {
+                                    answer = wiki_res[0].label + " là " + wiki_res[0].description
+                                })
+                            }
+                            else {
+                                first_res = google_res.itemListElement[0]
+                                if (first_res.result.detailedDescription) {
+                                    answer = first_res.result.detailedDescription.articleBody
+                                }
+                                else {
+                                    answer = `${first_res.result.name} là ${first_res.result.description}`
+                                }
+                            }
+                        })
+                        .catch((e) => {
+                            console.log(e)
+                            answer = res.answer
+                        })
+                    }
                 }
                 else {
                     answer = res.answer

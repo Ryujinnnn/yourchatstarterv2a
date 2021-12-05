@@ -1,6 +1,6 @@
 const initial_context = {
-    infomation_key: [],
-    context_stack: [],
+    information_key: [],
+    intent_stack: [],
     suggestion_list: [],
 }
 

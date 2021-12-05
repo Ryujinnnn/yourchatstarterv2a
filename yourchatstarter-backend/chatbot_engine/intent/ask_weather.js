@@ -3,16 +3,19 @@ const get_weather = require('../../info_module/get_weather')
 module.exports.run = (entities, option, context, isLocal = false) => {
     return new Promise(async (resolve, reject) => {
         let response = ""
-        let context_entry = {
-            intent: "ask_weather",
-            modifier: [],
-            sentiment: []
+
+        let context_intent_entry = {
+            intent: this.name,
+            addition_entities: [],
+            confirmed_entities: [],
+            missing_entities: []
         }
+
         if (isLocal) {  
             let location_entity = entities.find((val) => val.entity === "location")
             if (!location_entity) {
                 response = "Bạn có thể nói rõ thời tiết ở đâu được không?"
-                context_entry.modifier.push("-location")
+                context_intent_entry.missing_entities.push('location')
             }
             else {
                 let location = location_entity.option
@@ -25,7 +28,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
         else {
             if (!entities['wit$location:location']) {
                 response = "Bạn có thể nói rõ thời tiết ở đâu được không?"
-                context_entry.modifier.push("-location")
+                context_intent_entry.missing_entities.push('location')
             }
             else {
                 console.log("fetching weather")
@@ -36,7 +39,8 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                     (e) => response = `Mình không biết thời tiết đang như thế nào ở đó rồi :(`)
             }
         }
-        context.context_stack.push(context_entry)
+        context.intent_stack.push(context_intent_entry)
+        context.suggestion_list = ["Bản khỏe không", "Thời tiết ở TP.HCM như thế nào?"]
         resolve([response, context])
     })
 }
