@@ -12,7 +12,7 @@ router.post('/', verifyToken, async (req, res) => {
     let context = input.context;
     let is_local = input.is_local
 
-    if (!context || !context.past_client_message) {
+    if (!context) {
         context = initial_context
     }
 

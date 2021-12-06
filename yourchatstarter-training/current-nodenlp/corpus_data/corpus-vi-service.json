@@ -114,7 +114,10 @@
             "utterances": [
                 "nhắc tôi",
                 "nhắc tôi %phrase%?",
-                "nhắc tôi %phrase% lúc %datetime%"
+                "nhắc tôi %phrase% sau 3 giờ nữa",
+                "nhắc tôi %phrase% sau 30 phút nữa",
+                "nhắc tôi %phrase% hôm sau",
+                "nhắc tôi %phrase% 2 tiếng sau"
             ],
             "answers": [
                 "Mình xin lỗi, mình hiện tại không thể lưu lại được yêu cầu của bạn :("

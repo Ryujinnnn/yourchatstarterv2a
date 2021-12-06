@@ -859,6 +859,30 @@
             ]
         },
         {
+            "intent": "user.affirmination",
+            "utterances": [
+                "Đồng ý",
+                "Có",
+                "Chắc chắn",
+                "Dĩ nhiên rồi",
+                "Đúng vậy"
+            ],
+            "answers": [
+                "Bạn muốn đồng ý về gì cơ?"
+            ]
+        },
+        {
+            "intent": "user.cancelation",
+            "utterances": [
+                "Hủy",
+                "Không",
+                "Từ chối"
+            ],
+            "answers": [
+                "Xin lỗi bạn, bạn muốn hủy bỏ gì nhỉ"
+            ]
+        },
+        {
             "intent": "None",
             "utterances": [
                 "%location%",

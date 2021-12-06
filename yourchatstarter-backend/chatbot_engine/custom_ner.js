@@ -54,7 +54,7 @@ class customNERImplementation {
         let pattern = new RegExp(rule.pattern)
 
         let match_str = [...input.matchAll(pattern)]
-        match_str.forEach((val) => {
+        match_str.forEach((val, index) => {
             const match_str = val[0]
             const match_len = match_str.length
             res = {
@@ -69,7 +69,8 @@ class customNERImplementation {
                     type: this.name,
                     str: match_str,
                     value: (rule.output) ? rule.output : match_str,
-                }
+                },
+                alias: this.name + "_" + index
             }
         })
 

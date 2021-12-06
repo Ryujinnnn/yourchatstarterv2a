@@ -3,12 +3,15 @@ const fs = require('fs')
 const { wiki_query } = require('../info_module/wikidata_info')
 const { get_knowledge } = require('../info_module/google_info/get_knowledge')
 const context_handle = require('../chatbot_engine/context_handler')
+const { customNER } = require('./custom_ner')
 
 //https://vimeo.com/574939993?fbclid=IwAR0nH8OmzFXwHz8dVTNPHvXMkEHUv1mGaFSGcEUoRol6zu2hRYqIAT19XCI
 
 let manager = null
 let nlp = null
 let context = null
+let date_vi = null
+let phrase_ner = null
 
 module.exports.setupInstance = async () => {
     const options = { languages: ['vi'], nlu: { useNoneFeature: true } };
@@ -21,6 +24,52 @@ module.exports.setupInstance = async () => {
         const data = fs.readFileSync('./chatbot_engine/model.nlp', 'utf8');
         manager.import(data);
         console.log('model is loaded')
+
+        console.log('initializing custom NER')
+
+        date_vi = new customNER("date", "vi")
+        date_vi.addNewDictRule(["mai", "hôm sau"], new Date(new Date().valueOf() + 1000 * 3600 * 24), 0.8)
+        date_vi.addNewDictRule(["hôm qua", "hôm trước"], new Date(new Date().valueOf() - 1000 * 3600 * 24), 0.8)
+        date_vi.addNewDictRule(["hôm nay"], new Date(), 0.8)
+    
+    
+        date_vi.addNewDictRule(["giờ nữa", "giờ sau", "tiếng nữa", "tiếng sau", "h nữa", "h sau", "g nữa", "g sau"], 
+            (prefix_val, match_str, suffix_val) => {
+                let val = 1
+                try {
+                    val = parseFloat(prefix_val)
+                }
+                catch (e) {console.log('error parsing prefix')}
+                return new Date(new Date().valueOf() + 1000 * 3600 * val)
+            }, 1, /\s+\d+\s*$/g, null
+        )
+    
+        date_vi.addNewDictRule(["phút nữa", "phút sau", "ph nữa", "ph sau"], 
+            (prefix_val, match_str, suffix_val) => {
+                let val = 1
+                try {
+                    val = parseFloat(prefix_val)
+                }
+                catch (e) {console.log('error parsing prefix')}
+                return new Date(new Date().valueOf() + 1000 * 60 * val)
+            }, 1, /\s+\d+\s*$/g, null
+        )
+    
+        date_vi.addNewDictRule(["ngày sau"], 
+            (prefix_val, match_str, suffix_val) => {
+                let val = 1
+                try {
+                    val = parseFloat(prefix_val)
+                }
+                catch (e) {console.log('error parsing prefix')}
+                return new Date(new Date().valueOf() + 1000 * 3600 * 24 * val)
+            }, 1, /\s+\d+\s*$/g, null
+        )
+        console.log('custom NER is loaded')
+
+        // phrase_ner = new customNER("phrase", "vi")
+        // phrase_ner.addNewRegexRule(/"[^"]+"/g)
+
         return true;
     }
     else {
@@ -44,6 +93,9 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
         }
         else {
             let res = await nlp.process('vi', input)
+            res.entities = res.entities.concat(date_vi.process(input))
+            //res.entities = res.entities.concat(phrase_ner.process(input))
+
             let answer = ""
             if (res) {
                 //TODO: match against specifically made intent first, if none is found, return answer from the trained data
