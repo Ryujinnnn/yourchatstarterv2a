@@ -21,12 +21,12 @@ const context = {
 module.exports = (parsed_data, input, option, context, IntentHandler) => {
     return new Promise(async (resolve, reject) => {
         let response = ""
+        let action = {}
         //console.log(context)
         if (!context.intent_stack || !context.information_key || !context.suggestion_list) {
-            resolve([response, context])
+            resolve([response, context, action])
             return
         }
-        //TODO: redesign this garbage
         let entities = parsed_data.entities
         if (context.intent_stack && context.intent_stack.length >= 0) {
             //try to figure out if user input match any possible entity fit an entry from all the missing_modifier 
@@ -39,6 +39,7 @@ module.exports = (parsed_data, input, option, context, IntentHandler) => {
                 entities.forEach((entity_entry) => {
                     //check if missing entity contain the pending entity
                     if (intent_stack[i].missing_entities.includes(entity_entry.entity)) {
+                        entity_entry.from_context = true
                         intent_stack[i].confirmed_entities.push(entity_entry)
                         intent_updated = true
                     }
@@ -48,8 +49,8 @@ module.exports = (parsed_data, input, option, context, IntentHandler) => {
                     // if the closest to the stack have its entity updated, retry the intent with the new entities
                     let intent = IntentHandler.get(intent_stack[i].intent)
                     if (intent) {
-                        if (intent.name === "ask_calc") [response, context] = await intent.run(intent_stack[i].confirmed_entities, option, context, input, true)
-                        else [response, context] = await intent.run(intent_stack[i].confirmed_entities, option, context, true)
+                        if (intent.name === "ask_calc") [response, context, action] = await intent.run(intent_stack[i].confirmed_entities, option, context, input, true)
+                        else [response, context, action] = await intent.run(intent_stack[i].confirmed_entities, option, context, true)
                     }
                     else {
                         answer = "Chức năng chưa được xây dựng"
@@ -62,6 +63,6 @@ module.exports = (parsed_data, input, option, context, IntentHandler) => {
         while (context.intent_stack.length > 15) {
             context.intent_stack.shift()
         }
-        resolve([response, context])
+        resolve([response, context, action])
     })  
 }

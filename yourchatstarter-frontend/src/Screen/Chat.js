@@ -116,6 +116,7 @@ export class Chat extends Component {
 			method: 'POST',
 			headers: {
 				'x-access-token': sessionStorage.getItem("token"),
+				'subscriber-id': localStorage.getItem("notificationSubId"),
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
@@ -168,7 +169,8 @@ export class Chat extends Component {
 		let req = {
 			method: 'POST',
 			headers: {
-				'x-access-token': sessionStorage.getItem("token")
+				'x-access-token': sessionStorage.getItem("token"),
+				'subscriber-id': localStorage.getItem("notificationSubId")
 			},
 			body: formData
 		}

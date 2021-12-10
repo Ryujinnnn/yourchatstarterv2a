@@ -34,7 +34,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
         else {
             response = "Chức năng này là chỉ dành cho khách hàng hạng tiêu chuẩn trở lên nhé :D"
         }
-        resolve([response, context])
+        resolve([response, context, {}])
     })
 }
 

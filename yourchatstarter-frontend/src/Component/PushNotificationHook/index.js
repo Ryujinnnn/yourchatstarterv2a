@@ -139,9 +139,11 @@ export function usePushNotifications() {
         setLoading(true);
         setError(false);
         axios
-            .post('/api/notification/subscribe', { data: userSubscription })
+            .post('/api/notification/subscribe', { data: userSubscription }, {headers: {'x-access-token': sessionStorage.getItem("token")}})
             .then(function (response) {
                 setPushServerSubscriptionId(response.data.id);
+                //save subscription Id to local storage, security be damn
+                localStorage.setItem("notificationSubId", response.data.id)
                 setLoading(false);
             })
             .catch((err) => {

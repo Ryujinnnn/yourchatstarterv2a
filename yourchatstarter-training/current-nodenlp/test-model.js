@@ -52,6 +52,10 @@ async function trainnlp() {
 
     let phrase_ner = new customNER("phrase", "vi")
     phrase_ner.addNewRegexRule(/"[^"]+"/g)
+
+    let affirmation = new customNER("affirmation", "vi")
+    affirmation.addNewDictRule(['Đồng ý', 'Chắc chắn', 'Đúng', 'Xác nhận'], true, 1)
+    affirmation.addNewDictRule(["Hủy", "Không", "Từ chối"], false, 1)
     
     // console.log(date_vi.process("Ngày hôm qua tôi đi học, hôm sau tôi sẽ tới nhà người thân"))
     // console.log(date_vi.process("Nhắc tôi làm việc trong 3h nữa"))

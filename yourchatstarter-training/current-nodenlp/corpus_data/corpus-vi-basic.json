@@ -859,35 +859,14 @@
             ]
         },
         {
-            "intent": "user.affirmination",
-            "utterances": [
-                "Đồng ý",
-                "Có",
-                "Chắc chắn",
-                "Dĩ nhiên rồi",
-                "Đúng vậy"
-            ],
-            "answers": [
-                "Bạn muốn đồng ý về gì cơ?"
-            ]
-        },
-        {
-            "intent": "user.cancelation",
-            "utterances": [
-                "Hủy",
-                "Không",
-                "Từ chối"
-            ],
-            "answers": [
-                "Xin lỗi bạn, bạn muốn hủy bỏ gì nhỉ"
-            ]
-        },
-        {
             "intent": "None",
             "utterances": [
                 "%location%",
                 "%news_category%",
-                "%expression%"
+                "%expression%",
+                "Đồng ý",
+                "Hủy bỏ",
+                "Đúng"
             ],
             "answers": [
                 "Xin lỗi bạn, mình không hiểu bạn đang nói gì"

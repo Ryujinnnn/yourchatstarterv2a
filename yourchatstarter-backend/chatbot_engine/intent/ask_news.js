@@ -27,7 +27,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                 (e) => response = `Hôm nay mình quên mua báo rồi bạn ơi :(`
             )
         }
-        resolve([response, context])
+        resolve([response, context, {}])
     })
 }
 

@@ -11,7 +11,7 @@ let manager = null
 let nlp = null
 let context = null
 let date_vi = null
-let phrase_ner = null
+let affirmation = null
 
 module.exports.setupInstance = async () => {
     const options = { languages: ['vi'], nlu: { useNoneFeature: true } };
@@ -65,10 +65,13 @@ module.exports.setupInstance = async () => {
                 return new Date(new Date().valueOf() + 1000 * 3600 * 24 * val)
             }, 1, /\s+\d+\s*$/g, null
         )
-        console.log('custom NER is loaded')
+        
+        affirmation = new customNER("affirmation", "vi")
+        affirmation.addNewDictRule(['Đồng ý', 'Chắc chắn', 'Đúng', 'Xác nhận'], "yes", 0.9)
+        affirmation.addNewDictRule(["Hủy", "Không", "Từ chối"], "no", 0.9)
 
-        // phrase_ner = new customNER("phrase", "vi")
-        // phrase_ner.addNewRegexRule(/"[^"]+"/g)
+        console.log('custom NER is loaded')
+        
 
         return true;
     }
@@ -83,20 +86,21 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
         console.log(input)
         if (!input || input.length < 1) {
             let answer = "Tin nhắn của bạn quá ngắn, hãy gõ thêm gì đó vào nhé =)"
-            resolve([answer, context])
+            resolve([answer, context, {}])
             return
         }
         else if (input.length > 270) {
             let answer = "Tin nhắn của bạn quá dài, hãy cố gõ dưới 270 kí tự thôi nhé =)"
-            resolve([answer, context])
+            resolve([answer, context, {}])
             return
         }
         else {
             let res = await nlp.process('vi', input)
             res.entities = res.entities.concat(date_vi.process(input))
-            //res.entities = res.entities.concat(phrase_ner.process(input))
+            res.entities = res.entities.concat(affirmation.process(input))
 
             let answer = ""
+            let action = {}
             if (res) {
                 //TODO: match against specifically made intent first, if none is found, return answer from the trained data
                 console.log(res)
@@ -105,8 +109,8 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                     let intent = IntentHandler.get(res.intent.replace("service.", ""))
                     if (intent) {
                         let entities = res.entities;
-                        if (intent.name === "ask_calc") [answer, context] = await intent.run(entities, option, context, input, true)
-                        else [answer, context] = await intent.run(entities, option, context, true)
+                        if (intent.name === "ask_calc") [answer, context, action] = await intent.run(entities, option, context, input, true)
+                        else [answer, context, action] = await intent.run(entities, option, context, true)
                     }
                     else {
                         answer = "Chức năng chưa được xây dựng"
@@ -117,7 +121,7 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
 
                     // try to process pending context
 
-                    [answer, context] = await context_handle(res, input, option, context, IntentHandler)
+                    [answer, context, action] = await context_handle(res, input, option, context, IntentHandler)
 
                     if (answer == "") {
                         //if context failed to get anything out, fallback to google search prompt
@@ -149,7 +153,7 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                 else {
                     answer = res.answer
                 }
-                resolve([answer, context])
+                resolve([answer, context, action])
                 return
             }
         }

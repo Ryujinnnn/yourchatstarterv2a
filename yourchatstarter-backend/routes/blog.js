@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../database/database_interaction')
+const { ObjectID } = require('mongodb')
 
 router.get('/newest_blog', async (req, res) => {
     let blog_res = await db.queryRecordLimit('blog', {}, 3, {content: 0}, {createOn: -1})
@@ -35,7 +36,7 @@ router.get('/all_blog', async (req, res) => {
 router.post('/blog', async (req, res) => {
     let input = req.body;
     let tokenQuery = {
-        articleId: input.articleId
+        articleId: new ObjectID(input.articleId)
     }
     let blog_res = await db.queryRecord('blog', tokenQuery)
     //console.log(blog_res)

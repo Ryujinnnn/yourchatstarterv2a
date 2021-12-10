@@ -4,6 +4,7 @@ const db = require('../database/database_interaction')
 const chatbot = require('../chatbot_engine')
 const { verifyToken } = require('./middleware/verify_token')
 const { initial_context } = require('../chatbot_engine/data_model')
+const { actionDispatch } = require('../routine/action_dispatcher')
 
 router.post('/', verifyToken, async (req, res) => {
     //console.log(req)
@@ -23,15 +24,25 @@ router.post('/', verifyToken, async (req, res) => {
 
     console.log(option)
 
-    let response = "", updated_context;
+    let response = "", updated_context, action 
+
     if (is_local) { 
-        [response, updated_context] = await chatbot.get_response_local(message, option, context)}
+        [response, updated_context, action] = await chatbot.get_response_local(message, option, context)}
     else {
-        [response, updated_context] = await chatbot.get_response(message, option, context)
+        [response, updated_context, action] = await chatbot.get_response(message, option, context)
     }
+
+    console.log(action)
+
+    if (action && action !== {}) {
+        //the whole req object is not needed but fuck it
+        actionDispatch(action, req)
+    }
+
     res.send({
         response: response,
-        context: updated_context
+        context: updated_context,
+        action: action
     });
 });
 

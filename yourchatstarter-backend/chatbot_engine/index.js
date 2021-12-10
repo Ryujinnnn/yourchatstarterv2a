@@ -26,10 +26,10 @@ const uncertainResponsePool = [
 
 module.exports.get_response_local = (input, option = {}, context = {}) => {
     return new Promise(async (resolve, reject) => {
-        let response = "";
-        [response, context] = await NodeNlpInstance.processInput(input, option, context, IntentHandler)
+        let response = "", action;
+        [response, context, action] = await NodeNlpInstance.processInput(input, option, context, IntentHandler)
         //console.log(res)
-        resolve([response, context])
+        resolve([response, context, action])
     })
 }
 

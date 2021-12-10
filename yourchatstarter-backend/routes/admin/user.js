@@ -1,34 +1,43 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../../database/database_interaction')
+const { verifyToken } = require('../middleware/verify_token')
 
 //TODO: hide this
 
-router.get('/all_user', async (req, res) => {
-    let user_res = await db.queryRecord('user', {}, {hashed_password: 0})
-    //console.log(user_res)
-    if (user_res.length == 0) {
+router.get('/all_user', verifyToken, async (req, res) => {
+    let user_res = await db.queryRecord('user', {}, {hashed_password: 0}).catch(e => err = e)
+
+    if (err) {
         res.send({
-            status: 'failed'
+            status: 'failed',
+            desc: err
         })
     }
     else {
         res.send({
             status: 'success',
-            user_list: user_res
+            blog: blog_res
         })
     }
 })
 
-
-router.post('/save_user', async (req, res) => {
+router.get('/from_id/:id', verifyToken, async (req, res) => {
     res.status(501).send({
         status: "failed",
         desc: "endpointhave yet been implemented"
     })
 })
 
-router.delete('/from_id/:id', async (req, res) => {
+
+router.post('/save_user', verifyToken, async (req, res) => {
+    res.status(501).send({
+        status: "failed",
+        desc: "endpointhave yet been implemented"
+    })
+})
+
+router.delete('/from_id/:id', verifyToken, async (req, res) => {
     res.status(501).send({
         status: "failed",
         desc: "endpointhave yet been implemented"

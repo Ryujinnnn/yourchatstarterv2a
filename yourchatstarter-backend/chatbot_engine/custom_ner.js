@@ -80,6 +80,7 @@ class customNERImplementation {
     processDictRule(input, rule) {
         let res = null
         let candidate = [] 
+        input = input.toLowerCase()
         rule.options.forEach((val) => {
             //console.log(`checking against ${val}, minimum dist will be ${Math.round(val.length - val.length * rule.threshold)}`)
             let new_candidate = [...fuzzySearch(val, input, Math.round(val.length - val.length * rule.threshold))]

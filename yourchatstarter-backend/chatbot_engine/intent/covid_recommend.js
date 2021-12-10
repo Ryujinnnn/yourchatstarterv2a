@@ -7,7 +7,7 @@ module.exports.run = (entities, option, context) => {
         modifier: [],
         sentiment: []
     })
-    return ["Các bạn hãy tuân thủ quy tắc 5K: Khẩu trang, khoảng cách, không tập trung, khai báo và khử khuẩn nhé :D", context]
+    return ["Các bạn hãy tuân thủ quy tắc 5K: Khẩu trang, khoảng cách, không tập trung, khai báo và khử khuẩn nhé :D", context, {}]
 }
 
 module.exports.name = "covid_recommend"

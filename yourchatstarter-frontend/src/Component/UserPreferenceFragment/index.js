@@ -1,6 +1,43 @@
 import { Component } from "react";
-import { Button, Checkbox, ControlLabel, Divider, Form, FormControl, FormGroup, SelectPicker, Slider } from "rsuite";
+import { usePushNotifications } from "..";
+import { Button, Checkbox, ControlLabel, Divider, Form, FormControl, FormGroup, Icon, SelectPicker, Slider } from "rsuite";
 import './Style.css' 
+
+const NotificationSetup = (props) => {
+    const {
+        userConsent,
+        pushNotificationSupported,
+        userSubscription,
+        onClickAskUserPermission,
+        onClickSusbribeToPushNotification,
+        onClickSendSubscriptionToPushServer,
+        pushServerSubscriptionId,
+        onClickSendNotification,
+        error,
+        loading
+    } = usePushNotifications();
+
+    const Error = ({ error }) =>
+        error ? (<div>
+            <Icon icon='close-circle' style={{ color: 'red' }} /><p>{error.name} - {error.message} ({error.code})</p>
+        </div>
+        ) : null;
+
+    const Success = (props) => 
+        <div style={{display: 'inline-block', marginLeft: 20, float: 'right'}}><Icon icon="check-circle" style={{color: 'greenyellow'}}></Icon> <p style={{display: 'inline'}}>{props.message}</p></div>
+    
+
+    const needPermission = !(userConsent || !pushNotificationSupported)
+    const needSubsciption = !(!userConsent || !pushNotificationSupported || userSubscription)
+    const needSendSubscriptionToServer = !(!userSubscription || pushServerSubscriptionId)
+
+    return (<div>
+        <Error error={error}></Error>
+        <Button style={{marginBottom: 10}} disabled={!needPermission} onClick={onClickAskUserPermission} color="blue">Cho phép dịch vụ gửi thông báo</Button> {userConsent && <Success message="Người dùng đã cho phép"></Success>}<br/>
+        <Button style={{marginBottom: 10}} disabled={!needSubsciption} onClick={onClickSusbribeToPushNotification} color="blue">Tạo địa chỉ nhận thông báo</Button> {userSubscription && <Success message="Địa chỉ đã được đăng ký"></Success>}<br/>
+        <Button style={{marginBottom: 10}} disabled={!needSendSubscriptionToServer} onClick={onClickSendSubscriptionToPushServer} color="blue">Đăng ký thiết bị nhận thông báo</Button> {pushServerSubscriptionId && <Success message="Thiết bị đã có thể nhận thông báo từ dịch vụ"></Success>}
+    </div>)
+}
 
 export class UserPreferenceFragment extends Component {
     constructor(props) {
@@ -93,6 +130,8 @@ export class UserPreferenceFragment extends Component {
                     formValue: formValue
                 })
             }} defaultChecked={(this.props.data) ? this.props.data.allow_auto_t2s || false : false} > Luôn phát âm phản hồi</Checkbox>
+            <Divider>Dịch vụ nhận thông báo</Divider>
+            <NotificationSetup></NotificationSetup>
             <Divider>Dịch vụ phát âm</Divider>
             <div style={{display: 'flex', flexDirection: "row", alignItems: 'center'}}>
                 <ControlLabel style={{flex: 1}}>Chọn giọng </ControlLabel>

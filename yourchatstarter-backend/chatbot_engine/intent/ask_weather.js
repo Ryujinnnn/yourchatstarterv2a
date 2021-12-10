@@ -18,6 +18,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                 context_intent_entry.missing_entities.push('location')
             }
             else {
+                context_intent_entry.confirmed_entities.push(location_entity)
                 let location = location_entity.option
                 await get_weather(location)
                     .then(

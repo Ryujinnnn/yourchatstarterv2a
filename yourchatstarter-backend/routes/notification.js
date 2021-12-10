@@ -10,6 +10,7 @@ const vapidKeys = {
     publicKey:
       'BKCgepgxlhniRpbB7E1AjqRlet413-ac-6nJxTu9Wh_7Kw_hjuASZHaoe5qrhZiPbTmm7DKznbZg5P7D1rCHyt8'
 };
+
 webpush.setVapidDetails('mailto:neroyuki241@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
 
 function createHash(input) {
@@ -22,11 +23,19 @@ router.post('/subscribe', verifyToken, async (req, res) => {
     const subscriptionRequest = req.body.data;
     const subscriptionId = createHash(JSON.stringify(subscriptionRequest))
 
-    let subscriber = {
+    let subscriber_query = {
         subscriptionId: subscriptionId,
-        subscriptionRequest: subscriptionRequest
     }
-    let insert_res = await db.addRecord("notification_subscription", subscriber)
+
+    let subscriber_action = {
+        $set: {
+            userId: req.user_id, 
+            // subscriptionId: subscriptionId,
+            subscriptionRequest: subscriptionRequest
+        }
+
+    }
+    let insert_res = await db.editRecords("notification_subscription", subscriber_query, subscriber_action, {upsert: true})
     if (!insert_res) {  
         res.status(500).json({ 
             status: 'failed',

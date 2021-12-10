@@ -57,7 +57,7 @@ module.exports.run = (entities, option, context, input = "", isLocal = false) =>
             response = "Bạn muốn tính gì?"
         }
         //console.log(response)
-        resolve([response, context])
+        resolve([response, context, {}])
     })
 }
 
