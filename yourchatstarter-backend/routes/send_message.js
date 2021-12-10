@@ -14,7 +14,11 @@ router.post('/', verifyToken, async (req, res) => {
     let is_local = input.is_local
 
     if (!context || !context.intent_stack || !context.information_key || !context.suggestion_list) {
-        context = initial_context
+        context = {
+            information_key: [],
+            intent_stack: [],
+            suggestion_list: [],
+        }
     }
 
     let option = {
@@ -24,7 +28,7 @@ router.post('/', verifyToken, async (req, res) => {
 
     console.log(option)
 
-    let response = "", updated_context = context, action = {}
+    let response = "", updated_context, action = {}
 
     if (is_local) { 
         [response, updated_context, action] = await chatbot.get_response_local(message, option, context)}
