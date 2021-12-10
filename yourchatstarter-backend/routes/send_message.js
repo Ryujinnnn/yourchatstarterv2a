@@ -13,7 +13,7 @@ router.post('/', verifyToken, async (req, res) => {
     let context = input.context;
     let is_local = input.is_local
 
-    if (!context) {
+    if (!context || !context.intent_stack || !context.information_key || !context.suggestion_list) {
         context = initial_context
     }
 
