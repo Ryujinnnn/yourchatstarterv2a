@@ -2,18 +2,19 @@ const express = require('express')
 const router = express.Router()
 const db = require('../../database/database_interaction')
 const { verifyToken } = require('../middleware/verify_token')
+const { ObjectID } = require('mongodb')
 
 //TODO: hide this
 
 router.get('/all_bill', verifyToken, async (req, res) => {
-    if (!req.username) {
+    if (!req.user_id) {
         res.status(401).send({
-            status: "failed",
-            desc: "token verification failed",
-            user: return_user_result
+            status: 'failed',
+            desc: 'unauthorized'
         })
-        return 
+        return
     }
+
     let bill_res = await db.queryRecord('billing', {})
     //console.log(user_res)
     if (bill_res.length == 0) {
@@ -30,24 +31,22 @@ router.get('/all_bill', verifyToken, async (req, res) => {
 })
 
 router.get('/from_id/:id', verifyToken, async (req, res) => {
-    if (!req.username) {
+    if (!req.user_id) {
         res.status(401).send({
-            status: "failed",
-            desc: "token verification failed",
-            user: return_user_result
+            status: 'failed',
+            desc: 'unauthorized'
         })
-        return 
+        return
     }
 })
 
 router.post('/save_bill', verifyToken, async (req, res) => {
-    if (!req.username) {
+    if (!req.user_id) {
         res.status(401).send({
-            status: "failed",
-            desc: "token verification failed",
-            user: return_user_result
+            status: 'failed',
+            desc: 'unauthorized'
         })
-        return 
+        return
     }
 
     res.status(501).send({
@@ -56,7 +55,15 @@ router.post('/save_bill', verifyToken, async (req, res) => {
     })
 })
 
-router.delete('/from_id/:id', async (req, res) => {
+router.delete('/from_id/:id', verifyToken, async (req, res) => {
+    if (!req.user_id) {
+        res.status(401).send({
+            status: 'failed',
+            desc: 'unauthorized'
+        })
+        return
+    } 
+
     res.status(501).send({
         status: "failed",
         desc: "endpointhave yet been implemented"

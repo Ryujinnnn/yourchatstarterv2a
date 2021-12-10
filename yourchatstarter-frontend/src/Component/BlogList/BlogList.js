@@ -4,7 +4,7 @@ const { Component } = require("react");
 
 const Entry = props => {
     const tag_group = props.tag.map((val, index) => {
-        return (<Tag color={val.color}>{val.name}</Tag>)
+        return (<Tag style={{backgroundColor: val.color}}>{val.name}</Tag>)
     })
     return (
         <Panel bordered bodyFill style={{margin: 20, textAlign: 'left', display: 'block', height: 240}} >

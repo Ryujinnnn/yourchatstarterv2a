@@ -19,14 +19,14 @@
     margin-top: 16px
 }
 
-.blog-editor-modal .rs-form-horizontal .rs-form-group .rs-picker-date, .rs-picker-select, textarea, .rs-picker-input {
+.blog-editor-modal .rs-form-horizontal .rs-form-group .rs-picker-date, textarea {
     margin: 15px;
     width: 100%;
 }
 
-.blog-editor-modal .rs-form-horizontal .rs-form-group .rs-picker-input {
+/* .blog-editor-modal .rs-form-horizontal .rs-form-group .rs-picker-input {
     height: 36px;
-}
+} */
 
 .blog-editor-modal .rs-form-horizontal .rs-form-group .rs-form-control-wrapper {
     width: 70%;

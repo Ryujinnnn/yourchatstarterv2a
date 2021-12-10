@@ -4,17 +4,30 @@ const db = require('../../database/database_interaction')
 const { verifyToken } = require('../middleware/verify_token')
 const { ObjectID } = require('mongodb')
 
+var stringToColour = function(str) {
+    var hash = 0;
+    for (var i = 0; i < str.length; i++) {
+      hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    var colour = '#';
+    for (var i = 0; i < 3; i++) {
+      var value = (hash >> (i * 8)) & 0xFF;
+      colour += ('00' + value.toString(16)).slice(-2);
+    }
+    return colour;
+  }
+
 //TODO: hide this
 
 router.get('/all_blog', verifyToken , async (req, res) => {
-    if (!req.username) {
+    if (!req.user_id) {
         res.status(401).send({
-            status: "failed",
-            desc: "token verification failed",
-            user: return_user_result
+            status: 'failed',
+            desc: 'unauthorized'
         })
-        return 
+        return
     }
+
     let err = null
     let blog_res = await db.queryRecord('blog', {}, {content: 0}).catch(e => err = e)
 
@@ -27,24 +40,23 @@ router.get('/all_blog', verifyToken , async (req, res) => {
     else {
         res.send({
             status: 'success',
-            blog: blog_res
+            blog_list: blog_res
         })
     }
 })
 
 router.get('/from_id/:id', verifyToken, async (req, res) => {
-    if (!req.username) {
+    if (!req.user_id) {
         res.status(401).send({
-            status: "failed",
-            desc: "token verification failed",
-            user: return_user_result
+            status: 'failed',
+            desc: 'unauthorized'
         })
-        return 
+        return
     }
 
     let id = req.params.id
 
-    if (!id || ObjectID.isValid(id)) {
+    if (!id || !ObjectID.isValid(id)) {
         res.status(400).send({
             status: "failed",
             desc: "bad request"
@@ -76,18 +88,17 @@ router.get('/from_id/:id', verifyToken, async (req, res) => {
 })
 
 router.post('/save_blog', verifyToken, async (req, res) => {
-    if (!req.username) {
+    if (!req.user_id) {
         res.status(401).send({
-            status: "failed",
-            desc: "token verification failed",
-            user: return_user_result
+            status: 'failed',
+            desc: 'unauthorized'
         })
-        return 
+        return
     }
 
     let input = req.body;
 
-    if (!input.title || !input.desc || !input.tag || !input.thumbnail_link || !input.content) {
+    if (!input.title || !input.desc || !input.imageLink || !input.content) {
         res.status(400).send({
             status: "failed",
             desc: "bad request"
@@ -96,15 +107,15 @@ router.post('/save_blog', verifyToken, async (req, res) => {
     }
 
     let blog_query = {
-        _id: input.id || new ObjectID()
+        _id: new ObjectID(input._id) || new ObjectID()
     }
 
     let blog_action = {
         $set: {
             title: input.title,
             desc: input.desc,
-            tag: input.tag,
-            imageLink: input.thumbnail_link,
+            // tag: input.tag,
+            imageLink: input.imageLink,
             content: input.content
         },
         $setOnInsert: {
@@ -112,6 +123,15 @@ router.post('/save_blog', verifyToken, async (req, res) => {
             createOn: new Date()
         }
     }
+
+    let pending_tag = []
+    if (input.display_tag) {
+        input.display_tag.forEach((val) => {
+            pending_tag.push({name: val, color: stringToColour(val)})
+        })
+    }
+
+    blog_action.$set.tag = pending_tag
 
     let err = null
     let blog_action_res = await db.editRecords("blog", blog_query, blog_action, {upsert: true}).catch(e => err = e)
@@ -131,18 +151,17 @@ router.post('/save_blog', verifyToken, async (req, res) => {
 })
 
 router.delete('/from_id/:id', verifyToken, async (req, res) => {
-    if (!req.username) {
+    if (!req.user_id) {
         res.status(401).send({
-            status: "failed",
-            desc: "token verification failed",
-            user: return_user_result
+            status: 'failed',
+            desc: 'unauthorized'
         })
-        return 
+        return
     }
 
     let id = req.params.id
 
-    if (!id || ObjectID.isValid(id)) {
+    if (!id || !ObjectID.isValid(id)) {
         res.status(400).send({
             status: "failed",
             desc: "bad request"

@@ -28,7 +28,12 @@ export class BillManager extends Component {
     }
 
     callApi = async () => {
-        const response = await fetch('/api/admin/bill/all_bill');
+        const response = await fetch('/api/admin/bill/all_bill', {
+            method: 'GET',
+            headers: {
+                'x-access-token': sessionStorage.getItem("token")
+            }
+        });
         const body = await response.json();
         return body;
     };
