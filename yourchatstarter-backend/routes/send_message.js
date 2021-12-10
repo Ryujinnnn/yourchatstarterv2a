@@ -24,7 +24,7 @@ router.post('/', verifyToken, async (req, res) => {
 
     console.log(option)
 
-    let response = "", updated_context, action 
+    let response = "", updated_context = context, action = {}
 
     if (is_local) { 
         [response, updated_context, action] = await chatbot.get_response_local(message, option, context)}
