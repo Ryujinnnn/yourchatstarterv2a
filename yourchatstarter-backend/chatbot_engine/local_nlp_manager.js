@@ -4,6 +4,7 @@ const { wiki_query } = require('../info_module/wikidata_info')
 const { get_knowledge } = require('../info_module/google_info/get_knowledge')
 const context_handle = require('../chatbot_engine/context_handler')
 const { customNER } = require('./custom_ner')
+const { Language } = require('@nlpjs/language');
 
 //https://vimeo.com/574939993?fbclid=IwAR0nH8OmzFXwHz8dVTNPHvXMkEHUv1mGaFSGcEUoRol6zu2hRYqIAT19XCI
 
@@ -99,12 +100,13 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
             res.entities = res.entities.concat(date_vi.process(input))
             res.entities = res.entities.concat(affirmation.process(input))
 
+            //console.log(res)
             let answer = ""
             let action = {}
             if (res) {
                 //TODO: match against specifically made intent first, if none is found, return answer from the trained data
                 console.log(res)
-                if (res.intent.startsWith("service.")) {
+                if (res.intent.startsWith("service.") && res.score > 0.7) {
                     //restructure entity
                     let intent = IntentHandler.get(res.intent.replace("service.", ""))
                     if (intent) {
@@ -117,41 +119,68 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                     }
                 
                 }
-                else if (res.intent === "None") {
+                else if (res.intent === "None" || res.score <= 0.7) {
 
                     // try to process pending context
 
-                    [answer, context, action] = await context_handle(res, input, option, context, IntentHandler)
+                    [answer, context, action] = await context_handle(res, input, option, context, IntentHandler).catch((err) => {console.log(err); answer = ""})
 
                     if (answer == "") {
-                        //if context failed to get anything out, fallback to google search prompt
-                       
-                        await get_knowledge(input).then(async google_res => {
-                            //TODO: GKG result is pretty fucking bad, might need to do a strict match for GKG result before fallback to wiki
-                            if (!google_res.itemListElement || google_res.itemListElement.length === 0) {
-                                //if no google knowledge graph is found, use wikipedia for prompt
-                                await wiki_query(input).then(wiki_res => {
-                                    answer = wiki_res[0].label + " là " + wiki_res[0].description
-                                })
+                        let vn_desc_not_found = false
+                        //if context failed to get anything out, fallback to a wiki search
+                        console.log("context cant be resolve, attempting wiki")
+                        await wiki_query(input).then(wiki_res => {
+                            if (!wiki_res || wiki_res.length === 0) {
+                                vn_desc_not_found = true
+                                return
                             }
-                            else {
-                                first_res = google_res.itemListElement[0]
-                                if (first_res.result.detailedDescription) {
-                                    answer = first_res.result.detailedDescription.articleBody
+                            let lang = new Language().guessBest(wiki_res[0].description).alpha3 !== "vie"
+                            if (lang) {
+                                //wikidata have a tendency to return non-vietnamese result despite forcing it to, check the desc to see if its in vietnamese or not
+                                vn_desc_not_found = true
+                            }
+                            answer = wiki_res[0].label + " là " + wiki_res[0].description
+                            context.suggestion_list = ['Vinamilk', 'Đồng Hới', "Covid-19"]
+                        }, (reason) => {
+                            console.log(reason)
+                            vn_desc_not_found = true
+                        }).catch((e) => {
+                            console.log(e)
+                            vn_desc_not_found = true
+                        })
+
+                        //wikidata result is more reliable but in case it goes wack, fallback to google knowledge graph search (GKG)
+                        if (vn_desc_not_found) {
+                            console.log("wii res not found, finding in GKG")
+                            await get_knowledge(input).then(async google_res => {
+                                //TODO: GKG result is pretty fucking bad, might need to do a strict or fuzzy match for GKG result
+                                //console.dir(google_res, {depth: null})
+
+                                //google_res.itemListElement[0].result.name
+                                if (!google_res.itemListElement || google_res.itemListElement.length === 0) {
+                                    throw new Error("no google result")
                                 }
                                 else {
-                                    answer = `${first_res.result.name} là ${first_res.result.description}`
+                                    first_res = google_res.itemListElement[0]
+                                    if (first_res.result.detailedDescription) {
+                                        answer = first_res.result.detailedDescription.articleBody
+                                    }
+                                    else {
+                                        answer = `${first_res.result.name} là ${first_res.result.description}`
+                                    }
+                                    context.suggestion_list = ['Việt Nam', 'Taylor Swift', "Petrolimex"]
                                 }
-                            }
-                        })
-                        .catch((e) => {
-                            console.log(e)
-                            answer = res.answer
-                        })
+                            })
+                            .catch((e) => {
+                                console.log(e)
+                                answer = res.answer
+                            })
+                        }
                     }
                 }
                 else {
                     answer = res.answer
+                    context.suggestion_list = ['Chào bạn', 'Mình phải đi đây', "Bạn thích làm gì lúc rảnh", "Bạn thật tuyệt"]
                 }
                 resolve([answer, context, action])
                 return

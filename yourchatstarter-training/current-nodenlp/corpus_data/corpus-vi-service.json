@@ -122,6 +122,17 @@
             "answers": [
                 "Mình xin lỗi, mình hiện tại không thể lưu lại được yêu cầu của bạn :("
             ]
+        },
+        {
+            "intent": "service.ask_vaccination",
+            "utterances": [
+                "tình hình tiêm chủng covid",
+                "tình hình tiêm vaccine covid",
+                "tiêm chủng covid tại việt nam"
+            ],
+            "answers": [
+                "Mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+            ]
         }
     ]
 }

@@ -5,11 +5,15 @@ export class MessageContainer extends Component {
     componentDidMount() {
         this.scrollToBottom();
       }
-    componentDidUpdate () {
+    componentDidUpdate() {
         this.scrollToBottom()
     }
     scrollToBottom = () => {
-        this.el.scrollIntoView({ behavior: 'smooth', block: 'end' })
+        this.el.scrollBy({
+            top: this.el.scrollHeight,
+            left: 0,
+            behavior: 'smooth'
+        })
     }
 
     render() {
@@ -28,9 +32,8 @@ export class MessageContainer extends Component {
         })
 
         return (
-            <div style={style}>
+            <div style={style} ref={el => { this.el = el; }} >
                 {messageListDisplay}
-                <div ref={el => { this.el = el; }} />
             </div>
         )
     }   

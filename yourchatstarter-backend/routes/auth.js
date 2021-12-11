@@ -127,7 +127,6 @@ router.get('/logout', verifyToken ,() => {
 })
 
 router.get('/verify_token', verifyToken, async (req, res) => {
-    let input = req.body;
     
     if (!req.username) {
         res.send({
@@ -141,7 +140,8 @@ router.get('/verify_token', verifyToken, async (req, res) => {
             status: "success",
             desc: "token verification success",
             is_paid: req.is_paid,
-            plan: req.plan
+            plan: req.plan,
+            is_admin: req.username === "neroyuki"
         })
         return
     }

@@ -83,7 +83,18 @@ module.exports.get_vaccination_data = () => {
         })
 }
 
-module.exports.get_brief_data = () => {
+module.exports.get_ping = () => {
+    return new Promise((resolve, reject) => {
+        axios.get('https://static.pipezero.com/covid/data.json', config)
+            .then((res) => {
+                if (res.status == 500 || res.status == 404) {
+                    console.log('woah there stop')
+                    reject("internal server error")
+                    return
+                }
+                resolve("success")
+            }, (err) => {reject(err)})
+    })
 }
 
 module.exports.get_country_stat_first_page = () => {

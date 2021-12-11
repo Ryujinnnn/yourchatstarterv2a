@@ -13,6 +13,12 @@ async function verifyToken(credentials) {
 }
 class _Navigation extends Component {
 
+    constructor(props) {
+        super(props) 
+        this.state = {
+            isAdmin: false
+        }
+    }
     
     async componentDidMount() {
         if (sessionStorage.getItem('token')) {
@@ -23,6 +29,11 @@ class _Navigation extends Component {
                 alert("Your token is expired/invalid, please login again")
                 sessionStorage.removeItem('token')
                 this.props.history.push('/login')
+            }
+            else if (token_result.is_admin) {
+                this.setState({
+                    isAdmin: true
+                })
             }
         }
     }
@@ -43,6 +54,7 @@ class _Navigation extends Component {
                                 <a href="/function"><Dropdown.Item>Chức năng</Dropdown.Item></a>
                                 <a href="/blog"><Dropdown.Item>Blog</Dropdown.Item></a>
                             </Dropdown>
+                            {this.state.isAdmin && <a href="/admin"><Nav.Item>Quản trị viên</Nav.Item></a>}
                         </Nav>
                         <Nav pullRight>
                             <Dropdown title="Tài khoản của tôi">

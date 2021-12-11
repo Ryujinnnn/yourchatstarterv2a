@@ -154,7 +154,6 @@ export class Chat extends Component {
 			messageList: [...this.state.messageList, { text: this.state.post, isFromClient: true }]
 		})
 		//console.log(this.state.messageList)
-		this.render()
 		this.handleSubmit()
 	}
 
@@ -240,7 +239,7 @@ export class Chat extends Component {
 		return (
 			<div className="Chat">
 				<Header></Header>
-				<MessageContainer messageList={this.state.messageList} onSpeak={this.onChatBubbleSpeak}></MessageContainer>
+				<MessageContainer messageList={this.state.messageList} onSpeak={this.onChatBubbleSpeak} ></MessageContainer>
 				<MessageSuggestionContainer messageList={(this.state.context.suggestion_list) ? this.state.context.suggestion_list : []}
 					onSuggestSelection={this.onSuggestSelection}></MessageSuggestionContainer>
 				<MessageBox onChange={this.onTextChange} text={this.state.post} handleKeyDown={this.handleKeyPress}></MessageBox>

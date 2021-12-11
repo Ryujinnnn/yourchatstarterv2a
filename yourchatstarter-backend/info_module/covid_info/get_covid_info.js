@@ -30,6 +30,14 @@ module.exports.get_stat = (location = "") => {
 }
 
 
+module.exports.get_vaccination = () => {
+    return new Promise(async (resolve, reject) => {
+        let data = fs.readFileSync('vaccination.json')
+        let stat = JSON.parse(data)
+        resolve(stat)
+    })
+}
+
 //stat by last 10 day (not up-to-date with individual stat)
 module.exports.get_last_10_day_stat = () => {
 

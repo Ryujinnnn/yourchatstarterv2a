@@ -103,6 +103,8 @@ if (process.env.ADMIN_ACCESS === "1") {
 	app.use('/api/admin/bill', admin_bill)
 	const admin_service = require('./routes/admin/service')
 	app.use('/api/admin/service', admin_service)
+	const api_health_service = require('./routes/admin/api_health_check')
+	app.use('/api/admin/api_health', api_health_service)
 }
 
 app.get('*', (req, res) => {
