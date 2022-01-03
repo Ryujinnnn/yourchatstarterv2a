@@ -42,7 +42,7 @@ module.exports.run = (entities, option, context, isLocal = true) => {
             if (enough_entity && (!affirmation || !affirmation.from_context)) {
                 let phrase_val = phrase.utteranceText
                 let date_val = date.resolution.value
-                response = `Bạn có muốn đặt thông báo nội dung ${phrase_val} lúc ${date_val.toLocaleString('vi-VN')}`
+                response = `Bạn có muốn đặt thông báo nội dung ${phrase_val} lúc ${date_val.toLocaleString('vi-VN', {timeZone: 'Asia/Saigon'})}`
                 context_intent_entry.missing_entities.push('affirmation')
                 context.suggestion_list = ['Đồng ý', 'Hủy bỏ']
                 enough_entity = false
