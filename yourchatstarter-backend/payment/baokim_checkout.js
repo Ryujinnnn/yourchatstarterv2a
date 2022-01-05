@@ -1,4 +1,5 @@
 const SANDBOX_ENDPOINT = "https://sandbox-api.baokim.vn/payment/"
+const PRODUCTION_ENDPOINT = "https://api.baokim.vn/payment/"
 const { v4: uuidv4 } = require('uuid');
 const jwt = require('jsonwebtoken')
 const FormData = require('form-data');
@@ -22,8 +23,8 @@ function generateAccessToken(data) {
 module.exports = function checkout(purchaseInfo) {
     return new Promise(async (resolve, reject) => {
         const PRODUCTION_SERVER_ENPOINT = 'http://yourchatstarter.xyz'
-        const DEVELOPMENT_SERVER_ENDPOINT = 'http://localhost:3000'
-        const SERVER_ENDPOINT = PRODUCTION_SERVER_ENPOINT
+        const DEVELOPMENT_SERVER_ENDPOINT = 'http://localhost:5000'
+        const SERVER_ENDPOINT = DEVELOPMENT_SERVER_ENDPOINT
         
 
         let payment_data = {
@@ -31,7 +32,7 @@ module.exports = function checkout(purchaseInfo) {
             total_amount: purchaseInfo.amount,
             description: `purchase for yourchatstarter ${purchaseInfo.plan_name} subscription`,
             url_success: `${SERVER_ENDPOINT}/payment_success`,
-            merchant_id: 35612,
+            merchant_id: 35725,
             url_detail:  `${SERVER_ENDPOINT}/payment_failure`,
             lang: "vi",
             accept_bank: 1,
@@ -76,9 +77,9 @@ module.exports = function checkout(purchaseInfo) {
             }
         }
 
-        let res = await fetch("https://api.baokim.vn/payment/api/v4/order/send/", setting)
-        let res_obj = await res.json()
+        let res = await fetch(PRODUCTION_ENDPOINT + "api/v4/order/send", setting)
         console.log(res)
+        let res_obj = await res.json().catch((e) => {resolve({message: e, data: null})})
         console.log(res_obj)
         resolve(res_obj)
     })

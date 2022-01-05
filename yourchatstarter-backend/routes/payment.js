@@ -218,6 +218,14 @@ router.post('/submit_info', verifyToken, async (req, res) => {
     //let payment_link = checkout(purchaseInfo)
     let payment_link = await baokim_checkout(purchaseInfo)
 
+    if (!payment_link.data) {
+        res.send({
+            status: "failure",
+            desc: "payment server error"
+        })
+        return
+    }
+
     let pending_billing_record = {
         token: input.user_token,
         order_id: purchaseInfo.order_id,
