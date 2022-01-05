@@ -16,7 +16,7 @@ const databaseConn = require('./database/database_connection')
 const fs = require('fs');
 const { init_scraper } = require('./info_module/covid_info');
 
-const { notificationCheck, checkNotification } = require('./routine/notification_check')
+const { notificationCheck, checkNotification } = require('./routine/notification_check');
 
 require('dotenv').config()
 
@@ -76,6 +76,10 @@ app.get('/baokimbcec0b1b88e18cbd26a200ed970d55a3.txt', (req, res) => {
 
 app.get('/baokim60568749f73e1e7523bb6b6f994f1c2d.txt', (req, res) => {
 	res.sendFile(path.join(__dirname + '/baokim60568749f73e1e7523bb6b6f994f1c2d.txt'))
+})
+
+app.get('/baokim3e276ded664110597c4a13f528d97f3f.txt', (req, res) => {
+	res.sendFile(path.join(__dirname + '/baokim3e276ded664110597c4a13f528d97f3f.txt'))
 })
 
 

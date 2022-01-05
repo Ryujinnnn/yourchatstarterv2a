@@ -78,8 +78,8 @@ module.exports = function checkout(purchaseInfo) {
 
         let res = await fetch("https://api.baokim.vn/payment/api/v4/order/send/", setting)
         let res_obj = await res.json()
-        //console.log(res)
-        //console.log(res_obj)
+        console.log(res)
+        console.log(res_obj)
         resolve(res_obj)
     })
 }
