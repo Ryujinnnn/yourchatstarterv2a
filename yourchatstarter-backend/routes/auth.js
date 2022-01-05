@@ -171,7 +171,7 @@ router.post('/change_password', verifyToken, async (req, res) => {
     }
     let query_result = await db.queryRecord("user", queryInfo)
 
-    if (!query_result || query_result.lenght === 0) {
+    if (!query_result || query_result.length === 0) {
         res.status(401).send({
             status: "failed",
             desc: "old password is incorrect"
