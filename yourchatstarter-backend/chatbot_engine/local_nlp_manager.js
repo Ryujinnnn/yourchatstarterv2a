@@ -68,7 +68,7 @@ module.exports.setupInstance = async () => {
         )
         
         affirmation = new customNER("affirmation", "vi")
-        affirmation.addNewDictRule(['Đồng ý', 'Chắc chắn', 'Đúng', 'Xác nhận'], "yes", 0.9)
+        affirmation.addNewDictRule(['Đồng ý', 'Chắc chắn', 'Đúng', 'Xác nhận', "oke", "ok", "okay"], "yes", 0.9)
         affirmation.addNewDictRule(["Hủy", "Không", "Từ chối"], "no", 0.9)
 
         console.log('custom NER is loaded')

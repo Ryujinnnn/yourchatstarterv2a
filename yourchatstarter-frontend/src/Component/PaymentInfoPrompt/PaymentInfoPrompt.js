@@ -7,7 +7,8 @@ function getCheckoutLink(info) {
     return fetch('api/payment/submit_info', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'x-access-token': sessionStorage.getItem("token")
         },
         body: JSON.stringify(info)
     }).then(data => data.json())
