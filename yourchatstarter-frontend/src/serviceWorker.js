@@ -81,13 +81,19 @@ export function register(config) {
       console.log('invalid public url, aborting')
       return;
     }
-    window.addEventListener('load', () => {
-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
-
-      console.log("window loading, will try to register a service worker at", swUrl)
+    const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+    if (document.readyState === "complete") {
+      console.log("window loaded, trying to register a service worker at", swUrl)
       console.log('trying to register new notification subscriber')
       registerValidSW(swUrl, config);
-    })
+    }
+    else {
+      window.addEventListener('load', () => {
+        console.log("window loading, will try to register a service worker at", swUrl)
+        console.log('trying to register new notification subscriber')
+        registerValidSW(swUrl, config);
+      })
+    }
   }
 }
 
