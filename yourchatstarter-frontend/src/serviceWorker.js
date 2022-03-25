@@ -64,6 +64,7 @@ export function register(config) {
         });
       } else {
         // Is not localhost. Just register service worker
+        console.log('not localhost, trying to register new notification subscriber')
         registerValidSW(swUrl, config);
       }
     });
@@ -71,6 +72,7 @@ export function register(config) {
 }
 
 function registerValidSW(swUrl, config) {
+  console.log(swUrl)
   navigator.serviceWorker
     .register(swUrl, {scope: '/'})
     .then((registration) => {

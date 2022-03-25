@@ -86,7 +86,8 @@
             "intent": "service.ask_news",
             "utterances": [
                 "Tin tức",
-                "tin tức quốc tế"
+                "tin tức quốc tế",
+                "Tin báo"
             ],
             "answers": [
                 "Mình quên mua báo rồi bạn ơi"

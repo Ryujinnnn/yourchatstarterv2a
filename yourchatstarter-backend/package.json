@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "binding": "^3.0.3",
+    "canvas": "^2.9.0",
     "cheerio": "^1.0.0-rc.9",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
