@@ -14,11 +14,19 @@ function query(locationString) {
         else {
             let obj = JSON.parse(await res.text())
             let result = {
+                name: obj.name,
                 temp: obj.main.temp - 273,
                 temp_feel: obj.main.feels_like - 273,
                 max_temp: obj.main.temp_max - 273,
                 min_temp: obj.main.temp_min - 273,
-                desc: obj.weather[0].description
+                humidity: obj.main.humidity,
+                desc: obj.weather[0].description,
+                icon: obj.weather[0].icon, 
+                wind: obj.wind || {speed: 0, deg: 0, gust: 0},
+                rain: obj.rain || {past1h: 0, past3h: 0},
+                snow: obj.snow || {past1h: 0, past3h: 0},
+                visibility: obj.visibility
+                //visibility: obj.
             }
             resolve(result)
         }

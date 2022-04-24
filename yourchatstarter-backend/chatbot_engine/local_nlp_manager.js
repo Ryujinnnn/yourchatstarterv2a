@@ -100,6 +100,9 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
             res.entities = res.entities.concat(date_vi.process(input))
             res.entities = res.entities.concat(affirmation.process(input))
 
+            //TODO: sentiment analysis here
+            //get_sentiment(input)
+
             //console.log(res)
             let answer = ""
             let action = {}

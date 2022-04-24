@@ -134,6 +134,20 @@
             "answers": [
                 "Mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
             ]
+        },
+        {
+            "intent": "service.ask_location",
+            "utterances": [
+                "%location% ở đâu",
+                "Thành phố Hồ Chí Minh ở đâu",
+                "định vị %location%",
+                "định vị Hà Nội",
+                "Dĩ An ở đâu",
+                "Đồng Hới ở đâu"
+            ],
+            "answers": [
+                "Mình không thể tìm được nó ở đâu cả. Xin lỗi bạn :("
+            ]
         }
     ]
 }

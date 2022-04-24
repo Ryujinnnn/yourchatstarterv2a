@@ -1,4 +1,5 @@
 const get_weather = require('../../info_module/get_weather')
+const { weather_current } = require('../../info_module/infographic_generator')
 
 module.exports.run = (entities, option, context, isLocal = false) => {
     return new Promise(async (resolve, reject) => {
@@ -22,8 +23,16 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                 let location = location_entity.option
                 await get_weather(location)
                     .then(
-                    (weather_res) => {response = `Hiện tại ở ${location} trời đang ${weather_res.desc}, nhiệt độ khoảng ${weather_res.temp.toFixed(2)} độ C`},
+                    async (weather_res) => {
+                        console.log(weather_res)
+                        response = `Hiện tại ở ${location} trời đang ${weather_res.desc}, nhiệt độ khoảng ${weather_res.temp.toFixed(2)} độ C`
+                        await weather_current(weather_res)
+                            .then(
+                            (data_uri) => {response += "\n![weather infographic](" + data_uri + ")"},
+                            (e) => response += ``)
+                    },
                     (e) => response = `Mình không biết thời tiết đang như thế nào ở đó rồi :(`)
+
             }
         }
         else {

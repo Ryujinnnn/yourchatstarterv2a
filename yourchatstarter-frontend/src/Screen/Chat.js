@@ -12,6 +12,15 @@ async function getUserPreference() {
     }).then(data => data.json())
 }
 
+function action_parser(input) {
+	if (input.action === "SHOW_MAP") {
+		return {
+			name: "SHOW_MAP",
+			coord: input.data.message.split(" ")
+		}
+	}
+}
+
 export class Chat extends Component {
 	constructor(props) {
 		super(props)
@@ -131,10 +140,15 @@ export class Chat extends Component {
 		//console.log(req)
 		const res = await fetch('/api/send_message', req);
 		const body = JSON.parse(await res.text());
-		console.log(body)
+		//console.log(body)
+		let action_result = null
+		if (body.action !== undefined) {
+			console.log(body.action)
+			action_result = action_parser(body.action)
+		}
 		//console.log(body.response)
 		this.setState({
-			messageList: [...this.state.messageList, { text: body.response, isFromClient: false }],
+			messageList: [...this.state.messageList, { text: body.response, isFromClient: false, additionalAction: action_result}],
 			context: body.context
 		})
 
@@ -212,17 +226,21 @@ export class Chat extends Component {
 	}
 
 	onChatBubbleSpeak(text) {
+		//TODO: make onChatBubbleSpeak to only speak text content
 		if (!this.state.selectedVoice || !this.state.user_preference.allow_auto_t2s) return
-        let hyperlink_match = text.match(/\[(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?.*\/]/g)
-        let hyperlink_element = <p></p>
-        if (hyperlink_match) {
-            let hyperlink_match_entry = hyperlink_match[0]
-            let comp = hyperlink_match_entry.split(" - ")
-            let ref_link = comp[0].replace('[', "").trim()
-            let ref_text = comp[1].replace('/]', "").trim()
-            hyperlink_element = <a href={ref_link} style={{color: 'black', backgroundColor: '#44ff44', padding: 5}}>{ref_text}</a>
-        }
-        text = text.replace(/\[(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?.*\/]/g, "")
+        // let hyperlink_match = text.match(/\[(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?.*\/]/g)
+        // let hyperlink_element = <p></p>
+        // if (hyperlink_match) {
+        //     let hyperlink_match_entry = hyperlink_match[0]
+        //     let comp = hyperlink_match_entry.split(" - ")
+        //     let ref_link = comp[0].replace('[', "").trim()
+        //     let ref_text = comp[1].replace('/]', "").trim()
+        //     hyperlink_element = <a href={ref_link} style={{color: 'black', backgroundColor: '#44ff44', padding: 5}}>{ref_text}</a>
+        // }
+        // text = text.replace(/\[(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?.*\/]/g, "")
+		//console.log('before', text)
+		text = text.replace(/__|\*|\#|!*(?:\[([^\]]*)\]\([^)]*\))/g, "")
+		//console.log('after', text)
 		let utterance = new SpeechSynthesisUtterance(text)
         utterance.voice = this.state.selectedVoice
         utterance.rate = this.state.user_preference.voice_rate

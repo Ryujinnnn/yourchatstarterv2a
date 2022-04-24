@@ -28,7 +28,7 @@ export class MessageContainer extends Component {
         }
 
         const messageListDisplay = this.props.messageList.map((message, index) => {
-            return (<MessageItem key={index} text={message.text} isFromClient={message.isFromClient}></MessageItem>)
+            return (<MessageItem key={index} text={message.text} isFromClient={message.isFromClient} additionalAction={message.additionalAction}></MessageItem>)
         })
 
         return (

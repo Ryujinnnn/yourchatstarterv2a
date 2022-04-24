@@ -11,7 +11,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
             if (news_category_entity) category = news_category_entity.option
             await get_news(category).then(
                 (news_res) => {
-                    response = `[${new Date(news_res.created_at).toLocaleString('vi-VN')}] ${news_res.title}: ${news_res.desc} [${news_res.article_link} - Đọc thêm tại VNExpress/]. Bạn muốn đọc tin tức nào khác không?`
+                    response = `[${new Date(news_res.created_at).toLocaleString('vi-VN')}] ${news_res.title}: ${news_res.desc} [Đọc thêm tại VNExpress](${news_res.article_link}). Bạn muốn đọc tin tức nào khác không?`
                     context.suggestion_list = ['Tin tức quốc tế', 'Tin tức sức khỏe', "Không mình cảm ơn"]
                 },
                 (e) => response = `Hôm nay mình quên mua báo rồi bạn ơi :(`
@@ -21,7 +21,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
             if (entities['news_category:news_category']) category = entities['news_category:news_category'][0].value
             await get_news(category).then(
                 (news_res) => {
-                    response = `[${new Date(news_res.created_at).toLocaleString('vi-VN')}] ${news_res.title}: ${news_res.desc} [${news_res.article_link} - Đọc thêm tại VNExpress/]. Bạn muốn đọc tin tức nào khác không?`
+                    response = `[${new Date(news_res.created_at).toLocaleString('vi-VN')}] ${news_res.title}: ${news_res.desc} [Đọc thêm tại VNExpress](${news_res.article_link}). Bạn muốn đọc tin tức nào khác không?`
                     context.suggestion_list = ['Tin tức quốc tế', 'Tin tức sức khỏe', "Không mình cảm ơn"]
                 },
                 (e) => response = `Hôm nay mình quên mua báo rồi bạn ơi :(`

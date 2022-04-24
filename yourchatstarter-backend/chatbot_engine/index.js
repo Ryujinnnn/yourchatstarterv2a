@@ -3,6 +3,7 @@ const random_index = require('./utils/random_helper')
 const context_handling = require('./context_handler')
 const NodeNlpInstance = require('./local_nlp_manager')
 const { wiki_query } = require('../info_module/wikidata_info')
+const { init_canvas } = require('../info_module/infographic_generator')
 
 let IntentHandler = undefined
 let isLocalInstanceAvailable = false
@@ -11,6 +12,8 @@ module.exports.init_engine = function init_engine(handlerCollection) {
     IntentHandler = handlerCollection 
     //TODO: setup node-nlp model
     isLocalInstanceAvailable = NodeNlpInstance.setupInstance()
+    //initialize node canvas instance
+    init_canvas()
     console.log('chatbot initialized')
 }
 

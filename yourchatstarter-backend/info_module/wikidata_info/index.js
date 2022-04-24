@@ -14,3 +14,6 @@ module.exports.wiki_query = (text) => {
     })
 
 }
+module.exports.wiki_fact = (entity, property) => {
+    
+}

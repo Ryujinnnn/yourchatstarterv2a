@@ -5,7 +5,7 @@ const wdk = WBK({
   sparqlEndpoint: 'https://query.wikidata.org/sparql'
 })
 
-module.exports = function search(keyword) {
+function search(keyword) {
     const url = wdk.searchEntities({
         search: keyword,
         format: 'json',
@@ -24,3 +24,10 @@ module.exports = function search(keyword) {
     })
 
 }
+
+async function test() {
+    const res = await search('bán kinh')
+    console.log(res)
+}
+
+module.exports = search

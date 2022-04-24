@@ -21,6 +21,7 @@ async function main() {
 	])
 
 	const locationKeys = Object.keys(location_vn);
+	console.log('loading location data...')
 	for (let i = 0; i < locationKeys.length; i += 1) {
 		const location = location_vn[locationKeys[i]];
 		const location_canon_name = locationKeys[i]
@@ -29,6 +30,7 @@ async function main() {
 
 	manager.addNamedEntityText('location', 'Thành phố Hồ Chí Minh', 'vi', ['TP.HCM', 'TP. Hồ Chí Minh', 'thành phố hồ chí minh'])
 
+	console.log('loading stock code data...')
 	for (let i = 0; i < stocks_list.length; i++) {
 		const stock_entry = stocks_list[i]
 		manager.addNamedEntityText('stock_code', stock_entry.Symbol, 'vi', stock_entry.Symbol)
@@ -37,6 +39,8 @@ async function main() {
 	// manager.addRegexEntity('email', 'vi', /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/)
 	// manager.addRegexEntity('http_url', 'vi', /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/ )
 	manager.addRegexEntity('phrase', "vi", /"[^"]+"/)
+	manager.addRegexEntity('location_prompt', "vi", /^.*(?= ở đâu)/)
+	manager.addRegexEntity('location_prompt', "vi", /(?<=định vị ).*$/)
 	// manager.addRegexEntity('date', 'vi', /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/)
 	// manager.addRegexEntity('time', 'vi', /((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))/)
 	// manager.addRegexEntity('time', 'vi', /^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/)
