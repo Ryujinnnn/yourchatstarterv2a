@@ -148,6 +148,54 @@
             "answers": [
                 "Mình không thể tìm được nó ở đâu cả. Xin lỗi bạn :("
             ]
+        }, 
+        {
+            "intent": "service.ask_entity_property",
+            "utterances": [
+                "tác giả của tiểu thuyết chạng vạng",
+                "ngày sinh của barrack obama",
+                "dân số của thành phố hồ chí minh",
+                "ngày sinh của nguyễn phú trọng"
+            ],
+            "answer": [
+                "Mình không biết bạn ơi :("
+            ]
+        },
+        {
+            "intent": "service.ask_conversion",
+            "utterances": [
+                "1 kg đổi ra bao nhiêu gram",
+                "đổi 27m ra ft",
+                "32 độ C bằng bao nhiêu kelvin"
+            ],
+            "answer": [
+                "Mình không đổi được bạn ơi :("
+            ]
+        },
+        {
+            "intent": "service.ask_weather_forecast",
+            "utterances": [
+                "dự báo thời tiết",
+                "thời tiết Hà Nội sắp tới",
+                "thời tiết đồng hới sắp tới",
+                "thời tiết bắc giang dự kiến như thế nào",
+                "dự báo thời tiết thành phố Hồ Chí minh",
+                "dự báo thời tiết %location%"
+            ],
+            "answer": [
+                "Mình không dự báo được thời tiết nơi này :("
+            ]
+        },
+        {
+            "intent": "service.req_open_app",
+            "utterances": [
+                "mở spotify",
+                "mở ứng dụng Youtube",
+                "mở app Gmail"
+            ],
+            "answer": [
+                "Mình không biết bạn muốn mở ứng dụng gì :("
+            ]
         }
     ]
 }

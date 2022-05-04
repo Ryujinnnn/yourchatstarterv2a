@@ -27,10 +27,11 @@ class customNERImplementation {
         this.dictRule = []
     }
     
-    addNewRegexRule(pattern, output = null) {
+    addNewRegexRule(pattern, output = null, process_output = null) {
         let new_rule = {
             pattern: pattern,
-            output: output //null to reflect found string
+            output: output, //null to reflect found string
+            process_output: process_output
         }
 
         this.regexRule.push(new_rule)
@@ -54,7 +55,7 @@ class customNERImplementation {
         let pattern = new RegExp(rule.pattern)
 
         let match_str = [...input.matchAll(pattern)]
-        match_str.forEach((val, index) => {
+        match_str.forEach((val) => {
             const match_str = val[0]
             const match_len = match_str.length
             res = {
@@ -69,8 +70,11 @@ class customNERImplementation {
                     type: this.name,
                     str: match_str,
                     value: (rule.output) ? rule.output : match_str,
-                },
-                alias: this.name + "_" + index
+                }
+            }
+
+            if (rule.process_output) {
+                res.resolution.value = rule.process_output(match_str)
             }
         })
 
@@ -80,7 +84,6 @@ class customNERImplementation {
     processDictRule(input, rule) {
         let res = null
         let candidate = [] 
-        input = input.toLowerCase()
         rule.options.forEach((val) => {
             //console.log(`checking against ${val}, minimum dist will be ${Math.round(val.length - val.length * rule.threshold)}`)
             let new_candidate = [...fuzzySearch(val, input, Math.round(val.length - val.length * rule.threshold))]
@@ -160,4 +163,41 @@ class customNERImplementation {
     }
 }
 
+function cleanEntities(initial_entities) {
+    let entities_res = []
+    //console.log(initial_entities)
+    //eliminate sub entity
+    initial_entities.forEach((entity) => {
+        let find = initial_entities.find((val) => {
+            console.log((entity.entity === val.entity) && (entity.start >= val.start) && (entity.end <= val.end) && (val.alias && entity.alias !== val.alias))
+            return (entity.entity === val.entity) && (entity.start >= val.start) && (entity.end <= val.end) && (val.alias && entity.alias !== val.alias)
+        })
+        if (!find) {
+            entities_res.push(entity)
+        }
+        else {
+            console.log('aaaaaaa')
+        }
+    })
+    console.log(entities_res)
+    //re-label the alias
+    let entities_final = []
+    let current_entity = ""
+    let current_entity_counter = 0
+    entities_res.forEach((entity) => {
+        if (entity.entity !== current_entity) {
+            current_entity = entity.entity
+            current_entity_counter = 0
+        }
+        else {
+            current_entity_counter += 1
+        }
+        entity.alias = entity.entity + "_" + current_entity_counter
+        entities_final.push(entity)
+    })
+    //console.log(entities_final)
+    return entities_final
+}
+
 module.exports.customNER = customNERImplementation
+module.exports.cleanEntities = cleanEntities

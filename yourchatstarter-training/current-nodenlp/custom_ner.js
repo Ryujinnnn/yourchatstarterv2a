@@ -27,10 +27,11 @@ class customNERImplementation {
         this.dictRule = []
     }
     
-    addNewRegexRule(pattern, output = null) {
+    addNewRegexRule(pattern, output = null, process_output = null) {
         let new_rule = {
             pattern: pattern,
-            output: output //null to reflect found string
+            output: output, //null to reflect found string
+            process_output: process_output
         }
 
         this.regexRule.push(new_rule)
@@ -70,6 +71,10 @@ class customNERImplementation {
                     str: match_str,
                     value: (rule.output) ? rule.output : match_str,
                 }
+            }
+
+            if (rule.process_output) {
+                res.resolution.value = rule.process_output(match_str)
             }
         })
 

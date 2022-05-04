@@ -2,6 +2,8 @@ const { NlpManager, ConversationContext} = require('node-nlp')
 const location_vn = require('./ner_data/geolocation_VN.json')
 const crypto_pair = require('./ner_data/crypto.json')
 const stocks_list = require('./ner_data/stocks_nasdaq.json')
+const currency_list = require('./ner_data/currency.json')
+const conversion_units = require('./ner_data/conversion_units.json')
 
 async function main() {
 	const options = { languages: ['vi'], forceNER: true };
@@ -35,6 +37,21 @@ async function main() {
 		const stock_entry = stocks_list[i]
 		manager.addNamedEntityText('stock_code', stock_entry.Symbol, 'vi', stock_entry.Symbol)
 	}
+
+	console.log('loading conversion unit data...')
+	for (let i = 0; i < conversion_units.length; i++) {
+		const unit_entry = conversion_units[i]
+		manager.addNamedEntityText('conversion_unit', unit_entry.name, 'vi', unit_entry.alias)
+	}
+
+	console.log('loading currency unit data...')
+	let currency_key = Object.keys(currency_list)
+	let currency_alias = Object.values(currency_list)
+	//console.log(currency_alias)
+	for (let i = 0; i < currency_key.length; i++) {
+		manager.addNamedEntityText('currency', currency_key[i], 'vi', [currency_key[i], ...currency_alias[i]])
+	}
+
 	
 	// manager.addRegexEntity('email', 'vi', /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/)
 	// manager.addRegexEntity('http_url', 'vi', /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/ )
@@ -45,14 +62,17 @@ async function main() {
 	// manager.addRegexEntity('time', 'vi', /((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))/)
 	// manager.addRegexEntity('time', 'vi', /^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/)
 	// manager.addRegexEntity('time', 'vi', /(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)/)
-	manager.addNamedEntityText('currency', 'VND', 'vi', ["VND", "việt nam đồng", "đ"])
-	manager.addNamedEntityText('currency', 'USD', 'vi', ["USD", "đô la", "$"])
+	// manager.addNamedEntityText('currency', 'VND', 'vi', ["VND", "việt nam đồng", "đ"])
+	// manager.addNamedEntityText('currency', 'USD', 'vi', ["USD", "đô la", "$"])
 	manager.addNamedEntityText('crypto', 'BTC', 'vi', ["BTC", "bitcoin"])
 	manager.addNamedEntityText('crypto', 'ETH', 'vi', ["ETH", "etherium"])
 	manager.addNamedEntityText('language', 'en', 'vi', ["tiếng anh"])
 	manager.addNamedEntityText('language', 'vi', 'vi', ["tiếng việt"])
 	manager.addNamedEntityText('language', 'fr', 'vi', ["tiếng pháp"])
 	manager.addNamedEntityText('language', 'de', 'vi', ["tiếng đức"])
+	manager.addNamedEntityText('app_name', 'spotify', 'vi', ['spotify'])
+	manager.addNamedEntityText('app_name', 'youtube', 'vi', ['youtube'])
+	manager.addNamedEntityText('app_name', 'gmail', 'vi', ['gmail', 'google mail'])
 
 	manager.addNamedEntityText('news_category', 'startup', 'vi', ['startup', 'start-up', 'start up', 'khởi nghiệp'])
 	manager.addNamedEntityText('news_category', 'đời sống', 'vi', ['đời sống', 'cuộc sống'])

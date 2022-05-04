@@ -1,8 +1,5 @@
 const get_exchange = require('../../info_module/get_exchange')
 
-const currencyString2Symbol = {
-    "Dollar": "USD"
-}
 
 module.exports.run = (entities, option, context, isLocal = false) => {
     const permitted_tier = ["standard", "premium", "lifetime"]
@@ -14,7 +11,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                 console.log(entities)
 
                 let from_currency = entities.find((val) => val.entity === "currency" && val.alias === "currency_0") 
-                let amount = entities.find((val) => val.entity === "number") 
+                let amount = entities.find((val) => val.entity === "custom_number") 
                 let to_currency =  entities.find((val) => val.entity === "currency" && val.alias === "currency_1") 
 
                 if (from_currency && amount && to_currency) {
