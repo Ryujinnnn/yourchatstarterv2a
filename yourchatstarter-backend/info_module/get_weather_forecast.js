@@ -42,7 +42,7 @@ function forecast(locationString) {
                 '48h': parse_result[3],
                 '72h': parse_result[4],
             }
-            console.log(final_res)
+            //console.log(final_res)
             resolve(final_res)
         }
     })

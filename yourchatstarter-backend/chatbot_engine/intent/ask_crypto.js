@@ -1,4 +1,5 @@
 const {crypto} = require('../../info_module/get_stockmarket')
+const { crypto_infographic } = require('../../info_module/infographic_generator')
 
 module.exports.run = (entities, option, context, isLocal = false) => {
     const permitted_tier = ["standard", "premium", "lifetime"]
@@ -19,10 +20,17 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                     let crypto_val = crypto_entity.option
                     let currency_val = currency_entity.option
                     let symbol = crypto_val + "/" + currency_val
-                        await crypto(symbol)
-                            .then(
-                            (crypto_res) => {response = `Tỉ giá ${symbol} đang được niêm yết ở mức 1 ${crypto_val} = ${crypto_res.cryptoIndex} ${currency_val} (${(crypto_res.cryptoChangePercent > 0)? "+" + crypto_res.cryptoChangePercent.toFixed(3) : crypto_res.cryptoChangePercent.toFixed(3) }% trong 24h qua) nhé`},
-                            (e) => response = `Mình không thể tìm được cặp giá trị này bạn ơi :(`)
+                    let crypto_res = await crypto(symbol).catch(e => console.log(e))
+                    if (!crypto_res) {
+                        response = `Mình không thể tìm được cặp giá trị này bạn ơi :(`
+                    }
+                    else {
+                    response = `Tỉ giá ${symbol} đang được niêm yết ở mức 1 ${crypto_val} = ${crypto_res.cryptoIndex} ${currency_val} (${(crypto_res.cryptoChangePercent > 0)? "+" + crypto_res.cryptoChangePercent.toFixed(3) : crypto_res.cryptoChangePercent.toFixed(3) }% trong 24h qua) nhé`
+                    await crypto_infographic(crypto_res.timeSeries)
+                        .then(
+                        (data_uri) => {response += "\n![crypto infographic](" + data_uri + ")"},
+                        (e) => response += ``)
+                    }
                 }
             }
             else {

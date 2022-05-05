@@ -1,5 +1,5 @@
 const get_forecast = require('../../info_module/get_weather_forecast')
-const { weather_current } = require('../../info_module/infographic_generator')
+const { forecast_infographic } = require('../../info_module/infographic_generator')
 
 module.exports.run = (entities, option, context, isLocal = false) => {
     return new Promise(async (resolve, reject) => {
@@ -24,12 +24,12 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                 await get_forecast(location)
                     .then(
                     async (weather_res) => {
-                        console.log(weather_res)
+                        //console.log(weather_res)
                         response = `Dự báo thời tiết cho ${location} như sau`
-                        // await weather_current(weather_res)
-                        //     .then(
-                        //     (data_uri) => {response += "\n![weather infographic](" + data_uri + ")"},
-                        //     (e) => response += ``)
+                        await forecast_infographic(weather_res)
+                            .then(
+                            (data_uri) => {response += "\n![weather infographic](" + data_uri + ")"},
+                            (e) => response += ``)
                     },
                     (e) => response = `Mình không biết thời tiết đang như thế nào ở đó rồi :(`)
 

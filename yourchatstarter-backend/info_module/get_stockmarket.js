@@ -40,6 +40,7 @@ module.exports.crypto = (symbol) => {
             cryptoIndex: 0,
             cryptoChangeRaw: 0,
             cryptoChangePercent: 0,
+            timeSeries: []
         }
         //console.log(res)
         if (res.status != 200) {
@@ -56,6 +57,7 @@ module.exports.crypto = (symbol) => {
         let pastIntervalIndex = parseFloat(obj.values[1].close)
         return_res.cryptoChangeRaw = return_res.cryptoIndex - pastIntervalIndex
         return_res.cryptoChangePercent = ((return_res.cryptoIndex / pastIntervalIndex) - 1) * 100
+        return_res.timeSeries = obj.values
         //console.log(return_res)
         resolve(return_res)  
     })
