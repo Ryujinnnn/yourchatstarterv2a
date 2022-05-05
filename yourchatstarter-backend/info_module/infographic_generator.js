@@ -116,7 +116,7 @@ function crypto_infographic(data) {
         const frame_height = 150
         const ctx = canvas.getContext('2d')
 
-        console.log(data)
+        //console.log(data)
         ctx.fillStyle = 'rgb(255, 255, 255)'
         ctx.fillRect(0, 0, 420, 180)
 
@@ -134,12 +134,19 @@ function crypto_infographic(data) {
             data[0].high
         );
 
-        console.log(min_value, max_value)
+        //console.log(min_value, max_value)
         const step = parseFloat(((max_value - min_value) * 1.2 / 10).toPrecision(2))
+        let precision_scale = 2
+        while (min_value < (min_value - 0.1 * (max_value - min_value)).toPrecision(precision_scale) || max_value > (min_value - 0.1 * (max_value - min_value)).toPrecision(precision_scale) + step * 10) {
+            precision_scale += 1
+            if (precision_scale === 20) break
+        } 
         let step_arr = []
         for (let i = 0; i <= 10; i++) {
-            step_arr.push(parseFloat((min_value - 0.1 * (max_value - min_value)).toPrecision(2)) + step * i)
+            step_arr.push(parseFloat((min_value - 0.1 * (max_value - min_value)).toPrecision(precision_scale)) + step * i)
         }
+
+        //console.log(step_arr)
 
         //parse the time series and high/low series (in reversed)
         let time_series = []
@@ -194,8 +201,6 @@ function crypto_infographic(data) {
         low_series.forEach((x, i) => {
             ctx.fillRect(50 + 6 + 12 * i - 2, 10 + (1 - (x - step_arr[0]) / (step_arr[10] - step_arr[0])) * frame_height - 2, 4, 4)
         })
-
-        console.log(step_arr)
 
         const datauri = canvas.toDataURL()
         resolve(datauri)

@@ -1,5 +1,5 @@
 const get_exchange = require('../../info_module/get_exchange')
-
+const { crypto_infographic } = require('../../info_module/infographic_generator')
 
 module.exports.run = (entities, option, context, isLocal = false) => {
     const permitted_tier = ["standard", "premium", "lifetime"]
@@ -20,11 +20,17 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                     let amount_val = amount.resolution.value
                     let to_currency_val = to_currency.option || currencyString2Symbol[to_currency.resolution.unit]
 
-                    await get_exchange(amount_val, from_currency_val, to_currency_val)
-                        .then(
-                            (forex_res) => { response = `${amount_val} ${from_currency_val} đổi ra được ${forex_res.result} ${to_currency_val} nhé` },
-                            (e) => response = `Mình không đổi loại tiền này được bạn ạ :(`
-                        )
+                    let forex_res = await get_exchange(amount_val, from_currency_val, to_currency_val).catch(e => console.log(e))
+                    if (!forex_res) {
+                        response = `Mình không đổi loại tiền này được bạn ạ :(`
+                    }
+                    else {
+                        response = `${amount_val} ${from_currency_val} đổi ra được ${forex_res.result} ${to_currency_val} nhé`
+                        await crypto_infographic(stock_res.timeSeries)
+                            .then(
+                            (data_uri) => {response += "\n![stock infographic](" + data_uri + ")"},
+                            (e) => response += ``)
+                    }
                 }
                 else {
                     response = 'Mình không rõ bạn muốn đổi từ tiền gì ra tiền gì :('

@@ -44,9 +44,11 @@
             "intent": "service.ask_stock",
             "utterances": [
                 "chứng khoán",
-                "Cổ phiếu %stock_code% đang ở mốc bao nhiêu điểm",
-                "Cổ phiểu %stock_code% đang ở mức bao nhiêu điểm vậy?",
-                "Mã cổ phiếu %stock_code% đang ở mức bao nhiêu điểm?"
+                "cổ phiếu %stock_code% đang ở mốc bao nhiêu điểm",
+                "cổ phiểu %stock_code% đang ở mức bao nhiêu điểm vậy?",
+                "mã cổ phiếu %stock_code% đang ở mức bao nhiêu điểm?",
+                "cổ phiếu %stock_code% hiện tại bao nhiêu điểm",
+                "mốc điểm cổ phiếu %stock_code%"
             ],
             "answers": [
                 "Mình không biết về mã cổ phiếu này. Mình xin lỗi nhé"

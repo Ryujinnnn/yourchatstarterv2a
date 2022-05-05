@@ -3,7 +3,7 @@
 const ENDPOINT = `https://api.twelvedata.com`
 
 module.exports = (code) => {
-    let url = `${ENDPOINT}/time_series?symbol=${code}&interval=1min&apikey=${process.env.TWELVEDATA_API}`
+    let url = `${ENDPOINT}/time_series?symbol=${code}&interval=1day&apikey=${process.env.TWELVEDATA_API}`
     //console.log(url)
 
     return new Promise(async (resolve, reject) => {
@@ -12,13 +12,14 @@ module.exports = (code) => {
             stockIndex: 0,
             stockChangeRaw: 0,
             stockChangePercent: 0,
+            timeSeries: []
         }
         if (res.status != 200) {
             resolve(return_res)
             return
         }
         let obj = await res.json()
-        //console.log(obj)
+        console.log(obj)
         if (obj.status != 'ok') {
             resolve(return_res)
             return
@@ -27,6 +28,7 @@ module.exports = (code) => {
         let pastIntervalIndex = parseFloat(obj.values[1].close)
         return_res.stockChangeRaw = return_res.stockIndex - pastIntervalIndex
         return_res.stockChangePercent = ((return_res.stockIndex / pastIntervalIndex) - 1) * 100
+        return_res.timeSeries = obj.values
         resolve(return_res)  
     })
 }

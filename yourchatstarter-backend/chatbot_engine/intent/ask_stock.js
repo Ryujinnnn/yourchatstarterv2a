@@ -1,4 +1,5 @@
 const get_stockmarket = require('../../info_module/get_stockmarket')
+const { crypto_infographic } = require('../../info_module/infographic_generator')
 
 module.exports.run = (entities, option, context, isLocal = false) => {
     const permitted_tier = ["standard", "premium", "lifetime"]
@@ -12,10 +13,17 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                 }
                 else {
                     let code = stock_code.option
-                    await get_stockmarket(code)
-                        .then(
-                        (stock_res) => {response = `Mã cổ phiếu ${code} đang được niêm yết ở mức ${stock_res.stockIndex} điểm ở sàn NASDAQ nhé`},
-                        (e) => response = `Mình không thể tìm được mã cổ phiếu này :(`)
+                    let stock_res = await get_stockmarket(code).catch(e => console.log(e))
+                    if (!stock_res) {
+                        response = `Mình không thể tìm được mã cổ phiếu này :(`
+                    }
+                    else {
+                        response = `Mã cổ phiếu ${code} đang được niêm yết ở mức ${stock_res.stockIndex} điểm ở sàn NASDAQ nhé`
+                        await crypto_infographic(stock_res.timeSeries)
+                            .then(
+                            (data_uri) => {response += "\n![stock infographic](" + data_uri + ")"},
+                            (e) => response += ``)
+                    }
                 }
             }
             else {

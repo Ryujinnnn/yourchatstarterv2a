@@ -25,11 +25,11 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                         response = `Mình không thể tìm được cặp giá trị này bạn ơi :(`
                     }
                     else {
-                    response = `Tỉ giá ${symbol} đang được niêm yết ở mức 1 ${crypto_val} = ${crypto_res.cryptoIndex} ${currency_val} (${(crypto_res.cryptoChangePercent > 0)? "+" + crypto_res.cryptoChangePercent.toFixed(3) : crypto_res.cryptoChangePercent.toFixed(3) }% trong 24h qua) nhé`
-                    await crypto_infographic(crypto_res.timeSeries)
-                        .then(
-                        (data_uri) => {response += "\n![crypto infographic](" + data_uri + ")"},
-                        (e) => response += ``)
+                        response = `Tỉ giá ${symbol} đang được niêm yết ở mức 1 ${crypto_val} = ${crypto_res.cryptoIndex} ${currency_val} (${(crypto_res.cryptoChangePercent > 0)? "+" + crypto_res.cryptoChangePercent.toFixed(3) : crypto_res.cryptoChangePercent.toFixed(3) }% trong 24h qua) nhé`
+                        await crypto_infographic(crypto_res.timeSeries)
+                            .then(
+                            (data_uri) => {response += "\n![crypto infographic](" + data_uri + ")"},
+                            (e) => response += ``)
                     }
                 }
             }
