@@ -30,7 +30,7 @@ async function main() {
 		manager.addNamedEntityText('location', location_canon_name, 'vi', location_canon_name);
 	}
 
-	manager.addNamedEntityText('location', 'Thành phố Hồ Chí Minh', 'vi', ['TP.HCM', 'TP. Hồ Chí Minh', 'thành phố hồ chí minh'])
+	manager.addNamedEntityText('location', 'Thành phố Hồ Chí Minh', 'vi', ['TP.HCM', 'TP. Hồ Chí Minh', 'thành phố hồ chí minh', 'Thành phố Hồ Chí Minh'])
 
 	console.log('loading stock code data...')
 	for (let i = 0; i < stocks_list.length; i++) {

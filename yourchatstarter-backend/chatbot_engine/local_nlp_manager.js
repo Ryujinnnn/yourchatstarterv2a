@@ -107,6 +107,9 @@ module.exports.setupInstance = async () => {
             return val
         })
 
+        let interval_ner = new customNER("interval", "vi")
+        interval_ner.addNewDictRule
+
         custom_ner_pool = [date_vi, affirmation, number_ner]
         console.log('custom NER is loaded')
 

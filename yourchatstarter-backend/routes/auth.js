@@ -25,21 +25,21 @@ router.post('/login', async (req, res) => {
         }
         let action_result = await db.addRecord("session", sessionInfo)
         if (action_result) {
-            res.send({
+            res.status(200).send({
                 status: "success",
                 desc: "login success",
                 token: token,
             })
         }
         else {
-            res.send({
+            res.status(500).send({
                 status: "failure",
                 desc: "internal server error",
             })
         }
     }
     else {
-        res.send({
+        res.status(401).send({
             status: "failure",
             desc: "username or password not match"
         })

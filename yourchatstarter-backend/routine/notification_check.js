@@ -28,7 +28,7 @@ module.exports.checkNotification = async () => {
                         title: val.message.title,
                         text: val.message.text,
                         tag: 'yourchatstarter-message',
-                        url: 'localhost:3000/chat'
+                        url: 'https://yourchatstarter.xyz/chat'
                     })
                 ).catch((err) => {
                     console.log(err);
@@ -50,7 +50,7 @@ module.exports.checkNotification = async () => {
                     title: val.message.title,
                     text: val.message.text,
                     tag: 'yourchatstarter-message',
-                    url: 'localhost:3000/chat'
+                    url: 'https://yourchatstarter.xyz/chat'
                 })
             ).catch((err) => {
                 console.log(err);

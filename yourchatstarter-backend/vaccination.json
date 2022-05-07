@@ -1,9 +1,9 @@
 {
-    "allocatedDate": "2022-05-04",
+    "allocatedDate": "2022-05-06",
     "vaccineTotal": 0,
     "vaccineAllocation": 0,
-    "objectInjection": 215159324,
-    "totalPopulation": 137273,
-    "totalOneInjected": 215159324,
+    "objectInjection": 215539479,
+    "totalPopulation": 188703,
+    "totalOneInjected": 215539479,
     "totalTwiceInjected": 0
 }

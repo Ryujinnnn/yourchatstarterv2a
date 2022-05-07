@@ -49,6 +49,37 @@ router.post('/subscribe', verifyToken, async (req, res) => {
     })
 })
 
+router.post('/subscribe_push', verifyToken, async (req, res) => {
+    const subscriptionId = req.body.client_id;
+    //const subscriptionId = createHash(JSON.stringify(subscriptionRequest))
+
+    let subscriber_query = {
+        subscriptionId: subscriptionId,
+    }
+
+    let subscriber_action = {
+        $set: {
+            userId: req.user_id, 
+            // subscriptionId: subscriptionId,
+            // subscriptionRequest: subscriptionRequest,
+            subscriptionType: 'push'
+        }
+
+    }
+    let insert_res = await db.editRecords("notification_subscription", subscriber_query, subscriber_action, {upsert: true})
+    if (!insert_res) {  
+        res.status(500).json({ 
+            status: 'failed',
+            desc: 'internal server error',
+        })
+    };
+    res.status(201).json({ 
+        status: 'success',
+        desc: 'subscribing successfully',
+        id: subscriptionId 
+    })
+})
+
 router.get('/send_notif/:id', async (req, res) => {
     const subscriptionId = req.params.id;
 
