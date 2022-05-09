@@ -50,7 +50,7 @@ router.post('/subscribe', verifyToken, async (req, res) => {
 })
 
 router.post('/subscribe_push', verifyToken, async (req, res) => {
-    const subscriptionId = req.body.client_id;
+    const subscriptionId = req.body.data.subscriber_id;
     //const subscriptionId = createHash(JSON.stringify(subscriptionRequest))
 
     let subscriber_query = {
@@ -62,7 +62,7 @@ router.post('/subscribe_push', verifyToken, async (req, res) => {
             userId: req.user_id, 
             // subscriptionId: subscriptionId,
             // subscriptionRequest: subscriptionRequest,
-            subscriptionType: 'push'
+            type: 'onesignal'
         }
 
     }

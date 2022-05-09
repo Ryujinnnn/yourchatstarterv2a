@@ -26,7 +26,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                     }
                     else {
                         response = `${amount_val} ${from_currency_val} đổi ra được ${forex_res.result} ${to_currency_val} nhé`
-                        await crypto_infographic(stock_res.timeSeries)
+                        await crypto_infographic(forex_res.timeSeries)
                             .then(
                             (data_uri) => {response += "\n![stock infographic](" + data_uri + ")"},
                             (e) => response += ``)

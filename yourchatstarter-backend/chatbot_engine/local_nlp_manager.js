@@ -108,9 +108,28 @@ module.exports.setupInstance = async () => {
         })
 
         let interval_ner = new customNER("interval", "vi")
-        interval_ner.addNewDictRule
+        interval_ner.addNewDictRule(["mỗi ngày"], 
+            {
+                start_time: new Date().valueOf(),
+                interval: 24 * 3600 * 1000
+            }
+        )
+        
+        interval_ner.addNewDictRule(["mỗi giờ"], 
+            {
+                start_time: new Date().valueOf(),
+                interval: 3600 * 1000
+            }
+        )
+    
+        interval_ner.addNewDictRule(["mỗi tuần"], 
+            {
+                start_time: new Date().valueOf(),
+                interval: 7 * 24 * 3600 * 1000
+            }
+        )
 
-        custom_ner_pool = [date_vi, affirmation, number_ner]
+        custom_ner_pool = [date_vi, affirmation, number_ner, interval_ner]
         console.log('custom NER is loaded')
 
         return true;

@@ -12,6 +12,8 @@ module.exports.addNotification = async (scheduledMessageInfo) => {
         type: scheduledMessageInfo.type
     }
 
+    if (scheduledMessageInfo.type === "interval") message.interval = scheduledMessageInfo.interval
+
     let insert_res = await db.addRecord("scheduled_message", message)
 
     if (insert_res) {

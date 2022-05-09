@@ -73,6 +73,28 @@ async function trainnlp() {
         }, 1, /\s+\d+\s*$/g, null
     )
 
+    let interval_ner = new customNER("interval", "vi")
+    interval_ner.addNewDictRule(["mỗi ngày"], 
+        {
+            start_time: new Date().valueOf(),
+            interval: 24 * 3600 * 1000
+        }
+    )
+    
+    interval_ner.addNewDictRule(["mỗi giờ"], 
+        {
+            start_time: new Date().valueOf(),
+            interval: 3600 * 1000
+        }
+    )
+
+    interval_ner.addNewDictRule(["mỗi tuần"], 
+        {
+            start_time: new Date().valueOf(),
+            interval: 7 * 24 * 3600 * 1000
+        }
+    )
+
     let phrase_ner = new customNER("phrase", "vi")
     phrase_ner.addNewRegexRule(/"[^"]+"/g)
 
@@ -111,8 +133,8 @@ async function trainnlp() {
 
         // console.log(phrase_ner.process("Nhắc tôi \"Học bài\" sau 3 giờ"))
         //let res = await nlp.process('1 gram đổi ra bao nhiêu kg')
-        let res = await nlp.process('1 bạt thái đổi ra bao nhiêu việt nam đồng')
-        res.entities = res.entities.concat(number_ner.process('1 bạt thái đổi ra bao nhiêu việt nam đồng'))
+        let res = await nlp.process('thông báo cho tôi về tin tức mỗi ngày')
+        res.entities = res.entities.concat(interval_ner.process('thông báo cho tôi về tin tức mỗi ngày'))
         console.dir(res, {depth: null})
 
         // res = await nlp.process("22000 VND đổi ra bao nhiêu USD?")

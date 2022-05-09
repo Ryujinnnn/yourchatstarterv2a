@@ -10,8 +10,10 @@ module.exports.actionDispatch = async (action, req) => {
             userId: req.user_id,
             message: action.data.message,
             next_schedule: new Date(action.data.time),
-            type: action.data.type
+            type: action.data.type,
         }
+
+        if (action.data.type === "interval") scheduledMessageInfo.interval = action.data.interval
 
         addNotification(scheduledMessageInfo)
     }

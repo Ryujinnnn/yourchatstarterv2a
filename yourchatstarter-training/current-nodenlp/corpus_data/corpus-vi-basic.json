@@ -866,7 +866,8 @@
                 "%expression%",
                 "Đồng ý",
                 "Hủy bỏ",
-                "Đúng"
+                "Đúng",
+                "đồng ý"
             ],
             "answers": [
                 "Xin lỗi bạn, mình không hiểu bạn đang nói gì"

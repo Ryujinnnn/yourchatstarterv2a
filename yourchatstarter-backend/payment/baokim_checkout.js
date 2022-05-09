@@ -22,8 +22,8 @@ function generateAccessToken(data) {
 
 module.exports = function checkout(purchaseInfo) {
     return new Promise(async (resolve, reject) => {
-        const PRODUCTION_SERVER_ENPOINT = 'http://yourchatstarter.xyz'
-        const DEVELOPMENT_SERVER_ENDPOINT = 'http://localhost:5000'
+        const PRODUCTION_SERVER_ENPOINT = 'https://yourchatstarter.xyz'
+        const DEVELOPMENT_SERVER_ENDPOINT = 'https://localhost:5000'
         const SERVER_ENDPOINT = PRODUCTION_SERVER_ENPOINT
         
 

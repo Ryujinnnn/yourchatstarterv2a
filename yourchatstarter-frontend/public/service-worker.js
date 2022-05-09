@@ -9,11 +9,10 @@ function receivePushNotification(event) {
       data: url,
       body: text,
       icon: image,
-      vibrate: [200, 100, 200],
+      // vibrate: [200, 100, 200],
       tag: tag,
-      image: image,
-      badge: 'https://spyna.it/icons/favicon.ico',
-      actions: [{ action: 'Detail', title: 'View', icon: 'https://via.placeholder.com/128/ff0000' }]
+      // image: image,
+      actions: [{ action: 'Detail', title: 'View'}]
     };
     event.waitUntil(self.registration.showNotification(title, options));
   }

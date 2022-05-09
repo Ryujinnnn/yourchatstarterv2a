@@ -6,6 +6,7 @@
             "intent": "service.ask_weather",
             "utterances": [
                 "Thời tiết",
+                "thời tiết ở hà nội như thế nào",
                 "thời tiết %location% như thế nào",
                 "Thời tiết ở %location% thế nào?",
                 "thời tiết hiện tại ở %location%",
@@ -89,7 +90,8 @@
             "utterances": [
                 "Tin tức",
                 "tin tức quốc tế",
-                "Tin báo"
+                "Tin báo",
+                "Tin tức %news_category%"
             ],
             "answers": [
                 "Mình quên mua báo rồi bạn ơi"
@@ -193,10 +195,22 @@
             "utterances": [
                 "mở spotify",
                 "mở ứng dụng Youtube",
-                "mở app Gmail"
+                "mở app gmail",
+                "mở ứng dụng %app_name%"
             ],
             "answer": [
                 "Mình không biết bạn muốn mở ứng dụng gì :("
+            ]
+        },
+        {
+            "intent": "service.req_fetch_notif",
+            "utterances": [
+                "Thông tin cho tôi về thời tiết mỗi ngày",
+                "Thông báo cho tôi về tin tức mỗi giờ",
+                "Thông báo cho tôi về thời tiết mỗi tuần"
+            ],
+            "answer": [
+                "Mình không biết bạn muốn nhận thông báo về gì :("
             ]
         }
     ]

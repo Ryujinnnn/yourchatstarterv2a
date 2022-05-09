@@ -25,7 +25,7 @@ module.exports.wiki_property = (property, entity) => {
             //get first result, if it contain value field, resolve answer from value and unit, else resolve item label
             let answer = ""
             if (res.value) {
-                answer = `${res.value} ${(res.unitLabel && res.unitLabel !== "1")? res.unitLabel : ""}`
+                answer = `${res.value.toLocaleString('vi-VN')} ${(res.unitLabel && res.unitLabel !== "1")? res.unitLabel : ""}`
             }
             else {
                 //additional check if its iso date

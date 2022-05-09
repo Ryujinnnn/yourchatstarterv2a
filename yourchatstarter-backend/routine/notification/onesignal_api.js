@@ -26,7 +26,7 @@ function onesignal_api() {
     })
 }
 
-function send_notification(message, title = "YourChatStarter", action = {}, client_id = []) {
+function send_notification(content, title = "YourChatStarter", action = {}, client_id = []) {
     const option = {
         headers: {
             "Content-Type": "application/json; charset=utf-8",
@@ -36,7 +36,7 @@ function send_notification(message, title = "YourChatStarter", action = {}, clie
     }
     const message = {
         app_id: "c4f18d2d-08d5-450d-9865-3fe344cfb813",
-        contents: {"en": "Test awooga"},
+        contents: {"en": content},
         channel_for_external_user_ids: "push",
         include_player_ids: client_id
     }
@@ -50,6 +50,4 @@ function send_notification(message, title = "YourChatStarter", action = {}, clie
     })
 }
 
-onesignal_api()
-
-module.exports = onesignal_api
+module.exports.send_notification = send_notification
