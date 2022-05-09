@@ -21,6 +21,15 @@ function createHash(input) {
 
 router.post('/subscribe', verifyToken, async (req, res) => {
     const subscriptionRequest = req.body.data;
+
+    if (!subscriptionRequest) {
+        res.status(400).json({ 
+            status: 'failed',
+            desc: 'no subscriber request is sent',
+        })
+        return
+    }
+
     const subscriptionId = createHash(JSON.stringify(subscriptionRequest))
 
     let subscriber_query = {
@@ -52,6 +61,14 @@ router.post('/subscribe', verifyToken, async (req, res) => {
 router.post('/subscribe_push', verifyToken, async (req, res) => {
     const subscriptionId = req.body.data.subscriber_id;
     //const subscriptionId = createHash(JSON.stringify(subscriptionRequest))
+
+    if (!subscriptionId) {
+        res.status(400).json({ 
+            status: 'failed',
+            desc: 'no subscriber id is sent',
+        })
+        return
+    }
 
     let subscriber_query = {
         subscriptionId: subscriptionId,

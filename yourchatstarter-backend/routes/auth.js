@@ -97,7 +97,7 @@ router.post('/register', async (req, res) => {
     return
 })
 
-router.get('/logout', verifyToken ,() => {
+router.get('/logout', verifyToken , (req, res) => {
     //TODO: delete sender token
     if (!req.user_id) {
         res.send({
