@@ -1,4 +1,4 @@
-const { addNotification } = require("./notification_data")
+const { addNotification, removeNotification } = require("./notification_data")
 
 module.exports.actionDispatch = async (action, req) => {
     if (action.action === "REQUEST_NOTIFICATION") {
