@@ -34,8 +34,7 @@ module.exports.run = (entities, option, context, isLocal = true) => {
                     action: "CANCEL_NOTIFICATION",
                     data: {
                         message: "activity:weather", 
-                        time: new Date(interval_val.start_time).toISOString(),
-                        interval: interval_val.interval,
+                        time: new Date().toISOString(),
                         type: 'interval'
                     }
                 }
