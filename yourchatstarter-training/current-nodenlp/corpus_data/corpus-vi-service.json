@@ -229,6 +229,7 @@
                 "Thông báo cho tôi về thời tiết mỗi tuần",
                 "Thông tin cho tôi về thời tiết ở Hà Nội mỗi ngày",
                 "Thông tin cho tôi về thời tiết ở %location% mỗi ngày",
+                "Thông tin thời tiết ở %location% mỗi ngày",
                 "Thông báo cho tôi về thời tiết ở TP Hồ Chí Minh mỗi tuần"
             ],
             "answer": [
@@ -236,7 +237,7 @@
             ]
         },
         {
-            "intent": "service.req_weather_notif",
+            "intent": "service.cancel_weather_notif",
             "utterances": [
                 "Hủy thông báo thời tiết cho tôi"
             ],

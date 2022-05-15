@@ -62,6 +62,11 @@ module.exports.checkNotification = async () => {
             let subscriber_res = await db.queryRecord("notification_subscription", subscriber_query)
             if (!subscriber_res || subscriber_res.length === 0) return
 
+            if (subscriber_res[0].type === "onesignal") {
+                send_notification(val.message.text, "YourChatStarter", {}, [subscriber_res[0].subscriptionId])
+                return
+            }
+
             webpush.sendNotification(
                 subscriber_res[0].subscriptionRequest,
                 JSON.stringify({

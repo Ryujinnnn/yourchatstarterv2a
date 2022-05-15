@@ -18,8 +18,8 @@ module.exports.run = (entities, option, context, isLocal = true) => {
             let affirmation = entities.find((val) => val.entity === "affirmation")
 
             if (enough_entity && (!affirmation || !affirmation.from_context)) {
-                let interval_val = interval.resolution.value
-                let location = location_entity.option
+                // let interval_val = interval.resolution.value
+                // let location = location_entity.option
                 response = `Bạn có muốn hủy nhận thông báo tin tức`
                 context_intent_entry.missing_entities.push('affirmation')
                 context.suggestion_list = ['Đồng ý', 'Hủy bỏ']
@@ -27,9 +27,6 @@ module.exports.run = (entities, option, context, isLocal = true) => {
             }
 
             if (enough_entity) {
-                // create a subscription (server-side?)
-                let location = location_entity.option
-                let interval_val = interval.resolution.value
                 action = {
                     action: "CANCEL_NOTIFICATION",
                     data: {
