@@ -1,4 +1,5 @@
 const db = require('../database/database_interaction')
+const { ObjectID } = require('mongodb')
 
 module.exports.addNotification = async (scheduledMessageInfo) => {
     let message = {
@@ -29,7 +30,7 @@ module.exports.removeNotification = async (scheduledMessageQuery) => {
         },
     }
 
-    if (scheduledMessageQuery.userId) query.userId = scheduledMessageQuery.userId
+    if (scheduledMessageQuery.userId) query.userId = new ObjectID(scheduledMessageQuery.userId)
     else if (scheduledMessageQuery.subscriberId) query.subscriptionId = scheduledMessageInfo.subscriberId
     else return false
 
