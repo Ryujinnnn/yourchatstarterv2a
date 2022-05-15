@@ -1,5 +1,6 @@
 const db = require('../database/database_interaction')
 const { get_news } = require("../info_module/get_news")
+const get_weather = require('../info_module/get_weather')
 const { send_notification } = require('./notification/onesignal_api')
 var crypto = require('crypto');
 const webpush = require('web-push');
@@ -18,6 +19,12 @@ module.exports.checkNotification = async () => {
         if (val.message.text.startsWith("activity:news")) {
             let news_res = await get_news()
             val.message.text = `[${new Date(news_res.created_at).toLocaleString('vi-VN')}] ${news_res.title}: ${news_res.desc}`
+        }
+
+        if (val.message.text.startsWith("activity:weather")) {
+            let location = val.message.text.split('/')[1]
+            let weather_res = await get_weather(location)
+            val.message.text = `Hiện tại ở ${location} trời đang ${weather_res.desc}, nhiệt độ khoảng ${weather_res.temp.toFixed(2)} độ C`
         }
 
         if (val.userId) {

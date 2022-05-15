@@ -55,7 +55,7 @@ module.exports.run = (entities, option, context, isLocal = true) => {
                 action = {
                     action: "REQUEST_NOTIFICATION",
                     data: {
-                        message: "activity:weather/", 
+                        message: "activity:weather/" + location, 
                         time: interval_val.start_time,
                         interval: interval_val.interval,
                         type: 'interval'
