@@ -133,8 +133,8 @@ async function trainnlp() {
 
         // console.log(phrase_ner.process("Nhắc tôi \"Học bài\" sau 3 giờ"))
         //let res = await nlp.process('1 gram đổi ra bao nhiêu kg')
-        let res = await nlp.process('thông báo cho tôi tin tức mỗi ngày')
-        res.entities = res.entities.concat(interval_ner.process('thông báo cho tôi tin tức mỗi ngày'))
+        let res = await nlp.process('Hủy thông báo thời tiết cho tôi')
+        res.entities = res.entities.concat(interval_ner.process('Hủy thông báo thời tiết cho tôi'))
         console.dir(res, {depth: null})
 
         // res = await nlp.process("22000 VND đổi ra bao nhiêu USD?")
