@@ -1,0 +1,41 @@
+{
+    "name": "[Vietnamese] Basic Info Query Question",
+    "locale": "vi-VN",
+    "data": [
+        {
+            "intent": "embeded.ask_time",
+            "utterances": [
+                "hiện tại đang là mấy giờ",
+                "mấy giờ rồi",
+                "cho mình hỏi giờ đang mấy giờ",
+                "thời gian hiện tại"
+            ],
+            "answers": [
+                "Hiện tại đang là |data|"
+            ]
+        },
+        {
+            "intent": "embeded.ask_date",
+            "utterances": [
+                "hôm nay là ngày mấy",
+                "ngày hôm nay là ngày nào",
+                "ngày hiện tại"
+            ],
+            "answers": [
+                "Ngày hôm nay là |data|"
+            ]
+        },
+        {
+            "intent": "embeded.ask_day_of_week",
+            "utterances": [
+                "hôm nay là ngày thứ mấy",
+                "hôm nay thứ mấy vậy",
+                "thứ mấy hôm nay nhỉ",
+                "hôm nay là thứ mấy trong tuần"
+            ],
+            "answers": [
+                "Ngày hôm nay là |data|"
+            ]
+        }
+    ]
+}

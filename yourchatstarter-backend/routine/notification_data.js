@@ -26,7 +26,7 @@ module.exports.addNotification = async (scheduledMessageInfo) => {
 module.exports.removeNotification = async (scheduledMessageQuery) => {
     let query = {
         message: {
-            text: scheduledMessageInfo.message
+            text: scheduledMessageQuery.message
         },
     }
 

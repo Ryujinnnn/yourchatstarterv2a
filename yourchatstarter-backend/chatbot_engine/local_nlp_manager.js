@@ -1,6 +1,7 @@
 const { NlpManager, ConversationContext } = require('node-nlp')
 const fs = require('fs')
 const context_handle = require('../chatbot_engine/context_handler')
+const { embeded_answer } = require('../info_module/basic_answer_query')
 const { customNER, cleanEntities } = require('./custom_ner')
 const freeform_query = require('./freeform_query')
 
@@ -179,12 +180,16 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                         let entities = res.entities;
                         if (intent.name === "ask_calc") [answer, context, action] = await intent.run(entities, option, context, input, true)
                         else if (intent.name === "ask_entity_property") [answer, context] = await intent.run(entities, option, context, input, true)
-                        else[answer, context, action] = await intent.run(entities, option, context, true)
+                        else [answer, context, action] = await intent.run(entities, option, context, true)
                     }
                     else {
                         answer = "Chức năng chưa được xây dựng"
                     }
 
+                }
+                else if (res.intent.startsWith('embeded.') && res.score > 0.7) {
+                    answer = embeded_answer(res.intent, res.answer)
+                    context.suggestion_list = ['Chào bạn', 'Mình phải đi đây', "Bạn thích làm gì lúc rảnh", "Bạn thật tuyệt"]
                 }
                 else if (res.intent === "None" || res.score <= 0.7) {
                     // try to process pending context

@@ -133,7 +133,7 @@ async function trainnlp() {
 
         // console.log(phrase_ner.process("Nhắc tôi \"Học bài\" sau 3 giờ"))
         //let res = await nlp.process('1 gram đổi ra bao nhiêu kg')
-        let res = await nlp.process('Hủy thông báo thời tiết cho tôi')
+        let res = await nlp.process('Mấy giờ rồi')
         res.entities = res.entities.concat(interval_ner.process('Hủy thông báo thời tiết cho tôi'))
         console.dir(res, {depth: null})
 

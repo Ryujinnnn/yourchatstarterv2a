@@ -19,7 +19,8 @@ async function main() {
 
 	await manager.nlp.addCorpora([
 		'./corpus_data/corpus-vi-basic.json',
-		'./corpus_data/corpus-vi-service.json'
+		'./corpus_data/corpus-vi-service.json',
+		'./corpus_data/corpus-vi-semi-basic.json',
 	])
 
 	const locationKeys = Object.keys(location_vn);
