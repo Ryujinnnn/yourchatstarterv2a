@@ -203,11 +203,37 @@
             ]
         },
         {
-            "intent": "service.req_fetch_notif",
+            "intent": "service.req_news_notif",
+            "utterances": [
+                "Thông báo cho tôi về tin tức mỗi giờ",
+            ],
+            "answer": [
+                "Mình không biết bạn muốn nhận thông báo về gì :("
+            ]
+        },
+        {
+            "intent": "service.cancel_news_notif",
+            "utterances": [
+                "Hủy thông báo tin tức cho tôi"
+            ],
+            "answer": [
+                "Mình không biết bạn muốn nhận thông báo về gì :("
+            ]
+        },
+        {
+            "intent": "service.req_weather_notif",
             "utterances": [
                 "Thông tin cho tôi về thời tiết mỗi ngày",
-                "Thông báo cho tôi về tin tức mỗi giờ",
                 "Thông báo cho tôi về thời tiết mỗi tuần"
+            ],
+            "answer": [
+                "Mình không biết bạn muốn nhận thông báo về gì :("
+            ]
+        },
+        {
+            "intent": "service.req_weather_notif",
+            "utterances": [
+                "Hủy thông báo thời tiết cho tôi"
             ],
             "answer": [
                 "Mình không biết bạn muốn nhận thông báo về gì :("
