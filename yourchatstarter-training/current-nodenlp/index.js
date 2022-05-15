@@ -75,9 +75,6 @@ async function main() {
 	manager.addNamedEntityText('app_name', 'youtube', 'vi', ['youtube'])
 	manager.addNamedEntityText('app_name', 'gmail', 'vi', ['gmail', 'google mail'])
 
-	manager.addNamedEntityText('notification_type', 'weather', 'vi', ['thời tiết', 'Thời tiết'])
-	manager.addNamedEntityText('notification_type', 'news', 'vi', ['tin tức', 'Tin tức'])
-
 	manager.addNamedEntityText('news_category', 'startup', 'vi', ['startup', 'start-up', 'start up', 'khởi nghiệp'])
 	manager.addNamedEntityText('news_category', 'đời sống', 'vi', ['đời sống', 'cuộc sống'])
 	manager.addNamedEntityText('news_category', 'thể thao', 'vi', ['thể thao'])

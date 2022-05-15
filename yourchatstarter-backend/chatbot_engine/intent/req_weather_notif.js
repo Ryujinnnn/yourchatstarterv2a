@@ -56,7 +56,7 @@ module.exports.run = (entities, option, context, isLocal = true) => {
                     action: "REQUEST_NOTIFICATION",
                     data: {
                         message: "activity:weather/" + location, 
-                        time: interval_val.start_time,
+                        time: new Date(interval_val.start_time).toISOString(),
                         interval: interval_val.interval,
                         type: 'interval'
                     }
