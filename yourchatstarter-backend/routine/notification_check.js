@@ -17,13 +17,15 @@ module.exports.checkNotification = async () => {
 
     message_res.forEach(async (val) => {
         if (val.message.text.startsWith("activity:news")) {
-            let news_res = await get_news()
+            let news_res = await get_news().catch(err => console.log(err))
+            if (!news_res) return
             val.message.text = `[${new Date(news_res.created_at).toLocaleString('vi-VN')}] ${news_res.title}: ${news_res.desc}`
         }
 
         if (val.message.text.startsWith("activity:weather")) {
             let location = val.message.text.split('/')[1]
-            let weather_res = await get_weather(location)
+            let weather_res = await get_weather(location).catch(err => console.log(err))
+            if (!weather_res) return
             val.message.text = `Hiện tại ở ${location} trời đang ${weather_res.desc}, nhiệt độ khoảng ${weather_res.temp.toFixed(2)} độ C`
         }
 

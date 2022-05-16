@@ -75,3 +75,18 @@ module.exports.queryRecordLimit = (colName, query, limit, projection = {}, mysor
         })
     }).catch()
 }
+
+module.exports.aggregateRecord = (colName, pipeline) => {
+    return new Promise((resolve, reject) => {
+        let col = databaseConn.getConnection().collection(colName)
+        col.aggregate(pipeline).toArray(function (err, res) {
+            if (err) {
+                console.err(err)
+                reject()
+            }
+            else {
+                resolve(res)
+            }
+        })
+    }).catch()
+}

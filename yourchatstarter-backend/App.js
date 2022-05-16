@@ -109,6 +109,8 @@ if (process.env.ADMIN_ACCESS === "1") {
 	app.use('/api/admin/service', admin_service)
 	const api_health_service = require('./routes/admin/api_health_check')
 	app.use('/api/admin/api_health', api_health_service)
+	const app_stat = require('./routes/admin/app_stat')
+	app.use('/api/admin/app_stat', app_stat)
 }
 
 app.get('*', (req, res) => {

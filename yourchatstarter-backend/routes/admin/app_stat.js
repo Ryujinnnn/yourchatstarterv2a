@@ -14,37 +14,94 @@ router.get('/message_timeseries/:id', verifyToken, async (req, res) => {
     }
 })
 
-router.get('/user_count/:id', verifyToken, async (req, res) => {
+router.get('/user_count', verifyToken, async (req, res) => {
     if (!req.user_id) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
         })
         return
+    }
+    let pipeline = [
+        {
+            $count: "user_count"
+        }
+    ]
+
+    let agg_res = await db.aggregateRecord("user", pipeline)
+
+    if (!agg_res || agg_res.length === 0) {
+        res.status(500).send({
+            status: 'failed'
+        })
+    }
+    else {
+        res.status(200).send({
+            status: 'success',
+            result: agg_res[0].user_count
+        })
     }
 })
 
-router.get('/session_count/:id', verifyToken, async (req, res) => {
+router.get('/session_count', verifyToken, async (req, res) => {
     if (!req.user_id) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
         })
         return
+    }
+    let pipeline = [
+        {
+            $count: "user_count"
+        }
+    ]
+
+    let agg_res = await db.aggregateRecord("session", pipeline)
+
+    if (!agg_res || agg_res.length === 0) {
+        res.status(500).send({
+            status: 'failed'
+        })
+    }
+    else {
+        res.status(200).send({
+            status: 'success',
+            result: agg_res[0].user_count
+        })
     }
 })
 
-router.get('/subcriber_count/:id', verifyToken, async (req, res) => {
+router.get('/subcriber_count', verifyToken, async (req, res) => {
     if (!req.user_id) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
         })
         return
+    }
+    let pipeline = [
+        {
+            $count: "user_count"
+        }
+    ]
+
+    let agg_res = await db.aggregateRecord("notification_subscriber", pipeline)
+
+    if (!agg_res || agg_res.length === 0) {
+        res.status(500).send({
+            status: 'failed'
+        })
+    }
+    else {
+        res.status(200).send({
+            status: 'success',
+            result: agg_res[0].user_count
+        })
     }
 })
 
-router.get('/schedule_count/:id', verifyToken, async (req, res) => {
+router.get('/schedule_count', verifyToken, async (req, res) => {
     if (!req.user_id) {
         res.status(401).send({
             status: 'failed',
@@ -52,4 +109,26 @@ router.get('/schedule_count/:id', verifyToken, async (req, res) => {
         })
         return
     }
+    let pipeline = [
+        {
+            $count: "user_count"
+        }
+    ]
+
+    let agg_res = await db.aggregateRecord("scheduled_message", pipeline)
+
+    if (!agg_res || agg_res.length === 0) {
+        res.status(500).send({
+            status: 'failed'
+        })
+    }
+    else {
+        res.status(200).send({
+            status: 'success',
+            result: agg_res[0].user_count
+        })
+    }
 })
+
+
+module.exports = router
