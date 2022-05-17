@@ -4,6 +4,7 @@ const context_handle = require('../chatbot_engine/context_handler')
 const { embeded_answer } = require('../info_module/basic_answer_query')
 const { customNER, cleanEntities } = require('./custom_ner')
 const freeform_query = require('./freeform_query')
+const { session_storage } = require('../database/session_storage')
 
 //https://vimeo.com/574939993?fbclid=IwAR0nH8OmzFXwHz8dVTNPHvXMkEHUv1mGaFSGcEUoRol6zu2hRYqIAT19XCI
 
@@ -157,6 +158,8 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
             return
         }
         else {
+            session_storage.message_receive += 1
+
             let res = await nlp.process('vi', input)
             custom_ner_pool.forEach(instance => {
                 res.entities = res.entities.concat(instance.process(input))
@@ -175,6 +178,7 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                 //console.log(res)
                 if (res.intent.startsWith("service.") && res.score > 0.7) {
                     //restructure entity
+                    session_storage.defined_intent += 1
                     let intent = IntentHandler.get(res.intent.replace("service.", ""))
                     if (intent) {
                         let entities = res.entities;
@@ -188,6 +192,7 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
 
                 }
                 else if (res.intent.startsWith('embeded.') && res.score > 0.7) {
+                    session_storage.defined_intent += 1
                     answer = embeded_answer(res.intent, res.answer)
                     context.suggestion_list = ['Chào bạn', 'Mình phải đi đây', "Bạn thích làm gì lúc rảnh", "Bạn thật tuyệt"]
                 }
@@ -199,16 +204,22 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                     // if context failed to be resolved, try freeform query
 
                     if (answer == "") {
+                        session_storage.freeform_search += 1
                         console.log('fail to resolve any context, try freeform query')
                         //console.log([answer, context])
                         answer = await freeform_query(context, input, res)
                         if (!answer) {
+                            session_storage.unknown_intent += 1
                             answer = res.answer
                         }
                         //console.log(answer)
                     }
+                    else {
+                        session_storage.slot_filling += 1
+                    }
                 }
                 else {
+                    session_storage.defined_intent += 1
                     answer = res.answer
                     context.suggestion_list = ['Chào bạn', 'Mình phải đi đây', "Bạn thích làm gì lúc rảnh", "Bạn thật tuyệt"]
                 }

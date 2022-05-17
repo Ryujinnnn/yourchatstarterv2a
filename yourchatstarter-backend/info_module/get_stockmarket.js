@@ -19,7 +19,7 @@ module.exports = (code) => {
             return
         }
         let obj = await res.json()
-        console.log(obj)
+        //console.log(obj)
         if (obj.status != 'ok') {
             resolve(return_res)
             return

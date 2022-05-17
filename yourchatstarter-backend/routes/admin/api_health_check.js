@@ -5,7 +5,7 @@ const { verifyToken } = require('../middleware/verify_token')
 const get_covid_info = require('../../info_module/covid_info/get_covid_info')
 const { get_ping } = require('../../info_module/covid_info')
 const { get_knowledge } = require('../../info_module/google_info/get_knowledge')
-const search_api = require('../../info_module/wikidata_info/search_api')
+const { search } = require('../../info_module/wikidata_info/search_api')
 const convert = require('../../info_module/get_exchange')
 const { get_news } = require('../../info_module/get_news')
 const get_stock = require('../../info_module/get_stockmarket')
@@ -28,7 +28,7 @@ function tryEndpoint() {
         }
         if (await get_ping().catch((e) => {})) res.covid = true
         if (await get_knowledge("USA").catch((e) => {})) res.google = true
-        if (await search_api("việt nam").catch((e) => {})) res.wiki = true
+        if (await search("việt nam").catch((e) => {})) res.wiki = true
         if (await convert(1, "USD", "VND").catch((e) => {})) res.exchange = true
         if (await get_news().catch((e) => {})) res.news = true
         if (await get_stock("AMZN").catch((e) => {})) res.stock = true

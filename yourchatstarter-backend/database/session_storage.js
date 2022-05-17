@@ -1,5 +1,9 @@
 //global scope storage LOL
 
-export const session_storage = {
-    
+module.exports.session_storage = {
+    message_receive: 0,
+    defined_intent: 0,
+    freeform_search: 0,
+    slot_filling: 0,
+    unknown_intent: 0,
 }

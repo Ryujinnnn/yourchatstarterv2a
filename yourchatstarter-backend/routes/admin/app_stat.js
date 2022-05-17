@@ -4,7 +4,7 @@ const db = require('../../database/database_interaction')
 const { verifyToken } = require('../middleware/verify_token')
 const { ObjectID } = require('mongodb')
 
-router.get('/message_timeseries/:id', verifyToken, async (req, res) => {
+router.get('/message_timeseries', verifyToken, async (req, res) => {
     if (!req.user_id) {
         res.status(401).send({
             status: 'failed',
@@ -12,6 +12,57 @@ router.get('/message_timeseries/:id', verifyToken, async (req, res) => {
         })
         return
     }
+
+    let pipeline = [
+        {
+            $group: {
+                _id: {
+                    $subtract: [
+                        { $subtract: [ "$time", new Date("1970-01-01") ] },
+                        { $mod: [ 
+                            { $subtract: [ "$time", new Date("1970-01-01") ] },
+                            1000 * 60 * 15
+                        ]}
+                    ]
+                },
+                message_receive: {
+                    $sum: "$message_receive"
+                },
+                defined_intent: {
+                    $sum: "$defined_intent"
+                },
+                slot_filling: {
+                    $sum: "$slot_filling"
+                },
+                freeform_search: {
+                    $sum: "$freeform_search"
+                },
+                unknown_intent: {
+                    $sum: "$unknown_intent"
+                }
+            }
+        },
+        {
+            $sort: {
+                _id: -1
+            }
+        }
+    ]
+
+    let agg_res = await db.aggregateRecord("message_stat", pipeline)
+
+    if (!agg_res || agg_res.length === 0) {
+        res.status(500).send({
+            status: 'failed'
+        })
+    }
+    else {
+        res.status(200).send({
+            status: 'success',
+            result: agg_res
+        })
+    }
+    
 })
 
 router.get('/user_count', verifyToken, async (req, res) => {
@@ -86,7 +137,7 @@ router.get('/subcriber_count', verifyToken, async (req, res) => {
         }
     ]
 
-    let agg_res = await db.aggregateRecord("notification_subscriber", pipeline)
+    let agg_res = await db.aggregateRecord("notification_subscription", pipeline)
 
     if (!agg_res || agg_res.length === 0) {
         res.status(500).send({
