@@ -1,7 +1,7 @@
 const express = require('express')
 const { initial_context } = require('../chatbot_engine/data_model')
 const router = express.Router()
-const { get_sentiment } = require('./chatbot_engine/external_service/sentiment_analysist')
+const { get_sentiment } = require('../chatbot_engine/external_service/sentiment_analysist')
 
 router.get('/', function (req, res) {
     let context = initial_context
