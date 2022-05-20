@@ -5,6 +5,7 @@ const { embeded_answer } = require('../info_module/basic_answer_query')
 const { customNER, cleanEntities } = require('./custom_ner')
 const freeform_query = require('./freeform_query')
 const { session_storage } = require('../database/session_storage')
+const { get_sentiment } = require('./external_service/sentiment_analysist')
 
 //https://vimeo.com/574939993?fbclid=IwAR0nH8OmzFXwHz8dVTNPHvXMkEHUv1mGaFSGcEUoRol6zu2hRYqIAT19XCI
 
@@ -164,7 +165,10 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
             custom_ner_pool.forEach(instance => {
                 res.entities = res.entities.concat(instance.process(input))
             })
-
+            // let sentiment_res = await get_sentiment(input).catch(e => console.log(e))
+            // if (sentiment_res) {
+            //     console.log(sentiment_res)
+            // }
             res.entities = cleanEntities(res.entities)
 
             //TODO: sentiment analysis here
