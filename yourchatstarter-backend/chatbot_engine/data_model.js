@@ -1,8 +1,6 @@
 const initial_context = {
-    past_client_message: [],
-    past_bot_message: [],
-    infomation_key: [],
-    active_context: [],
+    information_key: [],
+    intent_stack: [],
     suggestion_list: [],
 }
 

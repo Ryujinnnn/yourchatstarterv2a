@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { Table } from 'rsuite'
+import { Divider, Icon, IconButton, Table } from 'rsuite'
 
 const { Column, HeaderCell, Cell } = Table;
 
@@ -18,16 +18,22 @@ export class BillManager extends Component {
     requestFetch() {
         this.callApi()
             .then(res => {
-                    this.setState({ 
-                        data: res.bill_list
-                    })
-                    //console.log(this.state.context)
+                if (!res.bill_list) return
+                this.setState({ 
+                    data: res.bill_list
+                })
+                //console.log(this.state.context)
             })
             .catch(err => console.log(err));
     }
 
     callApi = async () => {
-        const response = await fetch('/api/admin/bill/all_bill');
+        const response = await fetch('/api/admin/bill/all_bill', {
+            method: 'GET',
+            headers: {
+                'x-access-token': sessionStorage.getItem("token")
+            }
+        });
         const body = await response.json();
         return body;
     };
@@ -37,6 +43,16 @@ export class BillManager extends Component {
           
         return (
             <div>
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'end', alignItems: 'center'}}>
+                    <div style={{flex: 1}}>
+                    <p>Hiện tại có {this.state.data.length} hóa đơn thanh toán ví dịch vụ hệ thống</p>
+                    </div>
+                    <div style={{flex: 1}}>
+                    <IconButton style={{float: 'right'}} icon={<Icon icon="plus"></Icon>} onClick={this.onNewUser} color="green"> Thêm mới</IconButton>
+                    </div>
+                </div>
+                <Divider />
+
                 <Table
                     height={400}
                     data={this.state.data}

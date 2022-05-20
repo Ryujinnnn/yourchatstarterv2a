@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -20,59 +21,87 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <!-- HTML Meta Tags -->
-    <title>YourChatStarter - Chatbot cung cấp thông tin cho bạn</title>
-    <meta name="description" content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay (Từ thời tiết, ngoại tệ, chứng khoán đến tình hình dịch COVID-19)"/>
-    <meta name="keywords" content="Chatbot, thông tin, thời tiết, dịch thuật, COVID-19 tại Việt Nam, Chatbot nhận diện giọng nói, AI Chatbot" />
-	<link rel="canonical" href="https://yourchatstarter.xyz" />
+  <!-- HTML Meta Tags -->
+  <title>YourChatStarter - Chatbot cung cấp thông tin cho bạn</title>
+  <meta name="description"
+    content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay (Từ thời tiết, ngoại tệ, chứng khoán đến tình hình dịch COVID-19)" />
+  <meta name="keywords"
+    content="Chatbot, thông tin, thời tiết, dịch thuật, COVID-19 tại Việt Nam, Chatbot nhận diện giọng nói, AI Chatbot" />
+  <link rel="canonical" href="https://yourchatstarter.xyz" />
 
-    <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="YourChatStarter - Chatbot cung cấp thông tin cho bạn"/>
-    <meta itemprop="description" content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay"/>
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="YourChatStarter - Chatbot cung cấp thông tin cho bạn" />
+  <meta itemprop="description" content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay" />
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="http://www.yourchatstarter.xyz"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="YourChatStarter - Chatbot cung cấp thông tin cho bạn"/>
-    <meta property="og:description" content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay"/>
-    <meta property="og:image" content=""/>
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="http://www.yourchatstarter.xyz" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="YourChatStarter - Chatbot cung cấp thông tin cho bạn" />
+  <meta property="og:description" content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay" />
+  <meta property="og:image" content="" />
 
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="YourChatStarter - Chatbot cung cấp thông tin cho bạn"/>
-    <meta name="twitter:description" content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay"/>
-    <meta name="twitter:image" content=""/>
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="YourChatStarter - Chatbot cung cấp thông tin cho bạn" />
+  <meta name="twitter:description" content="Dùng chatbot để trả lời những câu hỏi thường nhật của bạn ngay hôm nay" />
+  <meta name="twitter:image" content="" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZC3T7H2X8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZC3T7H2X8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-      gtag('config', 'G-DZC3T7H2X8');
-    </script>
+    gtag('config', 'G-DZC3T7H2X8');
+  </script>
 
-    <!-- Google adsense verification -->
-    <script data-ad-client="ca-pub-7096081600185363" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  </head>
-  <body>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/60af47f36699c7280da92883/1f6mb24bp';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-      })();
-    </script>
-    <!--End of Tawk.to Script-->
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <!-- Google adsense verification -->
+  <script data-ad-client="ca-pub-7096081600185363" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: "c4f18d2d-08d5-450d-9865-3fe344cfb813",
+        safari_web_id: "web.onesignal.auto.44228ff7-6812-4ce7-8396-b26a8a4cb6f4",
+        notifyButton: {
+          enable: true,
+        },
+        subdomainName: "ychatstarter",
+      });
+    });
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="" />
+
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+
+</head>
+
+<body>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/60af47f36699c7280da92883/1f6mb24bp';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -82,5 +111,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>

@@ -5,6 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 const db = require('../database/database_interaction')
 const crypto = require('crypto');
 const baokim_checkout = require('../payment/baokim_checkout');
+const { verifyToken } = require('./middleware/verify_token');
 
 router.post('/confirm_payment', async (req, res) => {
     console.log("receiving transaction confirmation info")
@@ -194,7 +195,14 @@ router.get('/confirm_payment', async (req, res) => {
     // }
 })
 
-router.post('/submit_info', async (req, res) => {
+router.post('/submit_info', verifyToken, async (req, res) => {
+    if (!req.user_id) {
+        res.status(401).send({
+            status: 'failed',
+            desc: 'unauthorized'
+        })
+        return
+    }
     let input = req.body
 
     let purchaseInfo = {
@@ -209,6 +217,14 @@ router.post('/submit_info', async (req, res) => {
 
     //let payment_link = checkout(purchaseInfo)
     let payment_link = await baokim_checkout(purchaseInfo)
+
+    if (!payment_link.data) {
+        res.send({
+            status: "failure",
+            desc: "payment server error"
+        })
+        return
+    }
 
     let pending_billing_record = {
         token: input.user_token,

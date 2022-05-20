@@ -1,0 +1,17 @@
+{
+  "name": "yourchatstarter-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "node-fetch": "^2.6.1",
+    "node-nlp": "^4.22.1"
+  }
+}

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBrain, faCommentsDollar, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 const { Component } = require("react");
 
-class RespondPanel extends Component {
+export class RespondPanel extends Component {
     render() {
         return (
             <div>
@@ -12,5 +12,3 @@ class RespondPanel extends Component {
         )
     }
 }
-
-export default RespondPanel

@@ -2,7 +2,7 @@ import './Style.css'
 import { Row, Col, Divider } from 'rsuite'
 const { Component } = require("react");
 
-class FeaturePanel extends Component {
+export class FeaturePanel extends Component {
     render() {
         return (
             <div className="feature-panel-container">
@@ -34,5 +34,3 @@ class FeaturePanel extends Component {
         )
     }
 }
-
-export default FeaturePanel

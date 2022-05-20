@@ -26,7 +26,7 @@ const FeatureEntry = (props) => {
     </div>)
 }
 
-class FeaturePicture extends Component {
+export class FeaturePicture extends Component {
     render() {
         return (<div>
             <FeatureEntry imgSrc={weather_example} title="Tra cứu thông tin thời tiết" 
@@ -50,5 +50,3 @@ class FeaturePicture extends Component {
         </div>)
     }
 }
-
-export default FeaturePicture

@@ -7,13 +7,14 @@ function getCheckoutLink(info) {
     return fetch('api/payment/submit_info', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'x-access-token': sessionStorage.getItem("token")
         },
         body: JSON.stringify(info)
     }).then(data => data.json())
 }
 
-class PaymentInfoPrompt extends Component {
+class _PaymentInfoPrompt extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -44,6 +45,7 @@ class PaymentInfoPrompt extends Component {
         }
     }
 
+    //TODO: pass this down to PaymentInfoScreen instead
     componentDidMount() {
         if (this.props.plan === "premium") {
             this.setState({
@@ -149,4 +151,4 @@ class PaymentInfoPrompt extends Component {
     }
 }
 
-export default withRouter(PaymentInfoPrompt)
+export const PaymentInfoPrompt = withRouter(_PaymentInfoPrompt)

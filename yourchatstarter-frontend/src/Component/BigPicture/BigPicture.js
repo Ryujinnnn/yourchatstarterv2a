@@ -3,7 +3,7 @@ import './Style.css'
 import {Carousel} from 'rsuite';
 const { Component } = require("react");
 
-class BigPicture extends Component {
+export class BigPicture extends Component {
     render() {
         const getStartedView = (
             <div className="centered">
@@ -61,5 +61,3 @@ class BigPicture extends Component {
         )
     }
 }
-
-export default BigPicture

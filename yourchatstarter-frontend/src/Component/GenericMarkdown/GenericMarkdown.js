@@ -3,7 +3,7 @@ import MarkdownView from 'react-showdown';
 import './Style.css'
 import { Tag, TagGroup } from 'rsuite'
 
-class GenericMarkdown extends Component {
+export class GenericMarkdown extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -51,7 +51,7 @@ class GenericMarkdown extends Component {
     render() {
         console.log(this.state)
         const tag_group = (this.state.tag.length !== 0) ? this.state.tag.map((val, index) => {
-            return (<Tag key={index} color={val.color}>{val.name}</Tag>)
+            return (<Tag key={index} style={{backgroundColor: val.color}}>{val.name}</Tag>)
         }) : (<div></div>)
 
         return (
@@ -68,5 +68,3 @@ class GenericMarkdown extends Component {
         )
     }
 }
-
-export default GenericMarkdown

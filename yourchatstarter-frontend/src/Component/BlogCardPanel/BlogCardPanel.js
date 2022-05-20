@@ -14,7 +14,7 @@ const Card = props => (
     </Panel>
 );
 
-class BlogCardPanel extends Component {
+export class BlogCardPanel extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -59,5 +59,3 @@ class BlogCardPanel extends Component {
         )
     }
 }
-
-export default BlogCardPanel

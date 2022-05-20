@@ -1,0 +1,6 @@
+app.pid
+main.log
+__pycache__/
+phobert-base/
+training_output/
+VnCoreNLP/

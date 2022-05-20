@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import './Style.css'
 
-class Footer extends Component {
+export class Footer extends Component {
     render() {
         return (
             <div className="footer-distributed">
@@ -40,5 +40,3 @@ class Footer extends Component {
         )
     }
 }
-
-export default Footer

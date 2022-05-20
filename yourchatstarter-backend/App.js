@@ -9,11 +9,15 @@ const payment = require('./routes/payment')
 const auth = require('./routes/auth')
 const user = require('./routes/user')
 const blog = require('./routes/blog')
+const notification = require('./routes/notification')
 
 const chatbot = require('./chatbot_engine')
 const databaseConn = require('./database/database_connection')
 const fs = require('fs');
 const { init_scraper } = require('./info_module/covid_info');
+
+const { notificationCheck, checkNotification } = require('./routine/notification_check');
+const { updateStat } = require('./routine/update_stat');
 
 require('dotenv').config()
 
@@ -75,6 +79,10 @@ app.get('/baokim60568749f73e1e7523bb6b6f994f1c2d.txt', (req, res) => {
 	res.sendFile(path.join(__dirname + '/baokim60568749f73e1e7523bb6b6f994f1c2d.txt'))
 })
 
+app.get('/baokim3e276ded664110597c4a13f528d97f3f.txt', (req, res) => {
+	res.sendFile(path.join(__dirname + '/baokim3e276ded664110597c4a13f528d97f3f.txt'))
+})
+
 
 app.get('/robots.txt', (req, res) => {
 	res.sendFile(path.join(__dirname + '/../yourchatstarter-frontend/build/robots.txt'))
@@ -87,6 +95,7 @@ app.use("/api/auth", auth)
 app.use("/api/user", user)
 app.use("/api/blog", blog)
 app.use("/api/send_voice", send_voice)
+app.use("/api/notification", notification )
 
 //ADMIN ACCESS
 if (process.env.ADMIN_ACCESS === "1") {
@@ -99,6 +108,10 @@ if (process.env.ADMIN_ACCESS === "1") {
 	app.use('/api/admin/bill', admin_bill)
 	const admin_service = require('./routes/admin/service')
 	app.use('/api/admin/service', admin_service)
+	const api_health_service = require('./routes/admin/api_health_check')
+	app.use('/api/admin/api_health', api_health_service)
+	const app_stat = require('./routes/admin/app_stat')
+	app.use('/api/admin/app_stat', app_stat)
 }
 
 app.get('*', (req, res) => {
@@ -109,4 +122,8 @@ app.listen(port, () => {
 	console.log(`Example app listening at port ${port}`)
 	//open connection test
 	databaseConn.initConnection()
+
+	setInterval(checkNotification, 60000)
+	setInterval(updateStat, 60000)
+	console.log('check notification routine setup')
 })

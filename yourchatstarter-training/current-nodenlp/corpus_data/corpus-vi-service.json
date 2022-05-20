@@ -1,0 +1,249 @@
+{
+    "name": "[Vietnamese] Service Conversation",
+    "locale": "vi-VN",
+    "data": [
+        {
+            "intent": "service.ask_weather",
+            "utterances": [
+                "Thời tiết",
+                "thời tiết ở hà nội như thế nào",
+                "thời tiết %location% như thế nào",
+                "Thời tiết ở %location% thế nào?",
+                "thời tiết hiện tại ở %location%",
+                "Thời tiết %location%"
+            ],
+            "answers": [
+                "Mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+            ]
+        },
+        {
+            "intent": "service.ask_exchange_rate",
+            "utterances": [
+                "%amount% %currency% ra mấy %currency%?",
+                "Giá ngoại tệ",
+                "%amount% %currency% đổi ra bao nhiêu %currency%",
+                "%amount% %currency% ra mấy %currency%?",
+                "%amount% %currency% đổi ra bao nhiêu %currency%?",
+                "giá %currency%"
+            ],
+            "answers": [
+                "Mình không rõ bạn muốn nhắc đến loại tiền gì"
+            ]
+        },
+        {
+            "intent": "service.ask_crypto",
+            "utterances": [
+                "giá tiền ảo %crypto% sang %currency% như thế nào",
+                "giá tiền ảo %crypto% qua %currency% như thế nào",
+                "giá tiền ảo %crypto%/%currency%"
+            ],
+            "answers": [
+                "Mình không rõ bạn muốn nhắc đến loại tiền gì"
+            ]
+        },
+        {
+            "intent": "service.ask_stock",
+            "utterances": [
+                "chứng khoán",
+                "cổ phiếu %stock_code% đang ở mốc bao nhiêu điểm",
+                "cổ phiểu %stock_code% đang ở mức bao nhiêu điểm vậy?",
+                "mã cổ phiếu %stock_code% đang ở mức bao nhiêu điểm?",
+                "cổ phiếu %stock_code% hiện tại bao nhiêu điểm",
+                "mốc điểm cổ phiếu %stock_code%"
+            ],
+            "answers": [
+                "Mình không biết về mã cổ phiếu này. Mình xin lỗi nhé"
+            ]
+        },
+        {
+            "intent": "service.ask_calc",
+            "utterances": [
+                "%expression% bằng mấy?",
+                "%expression% bằng bao nhiêu?",
+                "%expression% bằng bao nhiêu?"
+            ],
+            "answers": [
+                "Bạn không đọc được phép tính của bạn"
+            ]
+        },
+        {
+            "intent": "service.ask_covid",
+            "utterances": [
+                "tình hình covid như thế nào",
+                "tình hình covid ở %location% như thế nào"
+            ],
+            "answers": [
+                "Mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+            ]
+        },
+        {
+            "intent": "service.covid_news",
+            "utterances": [
+                "bản tin covid"
+            ],
+            "answers": [
+                "Mình chưa cài đặt chức năng này nhé bạn"
+            ]
+        },
+        {
+            "intent": "service.ask_news",
+            "utterances": [
+                "Tin tức",
+                "tin tức quốc tế",
+                "Tin báo",
+                "Tin tức %news_category%"
+            ],
+            "answers": [
+                "Mình quên mua báo rồi bạn ơi"
+            ]
+        },
+        {
+            "intent": "service.req_translate",
+            "utterances": [
+                "dịch %phrase% ra %language%",
+                "bạn nói %phrase% như thế nào bằng %language%?",
+                "dịch %phrase% ra %language%",
+                "bạn nói %phrase% như thế nào bằng %language%?",
+                "mình nói %phrase% trong %language% như thế nào nhỉ?",
+                "dịch %phrase% ra %language%",
+                "dịch %phrase% ra %language%",
+                "mình nói %phrase% trong %language% như thế nào?",
+                "dịch thuật"
+            ],
+            "answers": [
+                "Mình chưa học ngôn ngữ này nhé bạn"
+            ]
+        },
+        {
+            "intent": "service.req_notification",
+            "utterances": [
+                "nhắc tôi",
+                "nhắc tôi %phrase%?",
+                "nhắc tôi %phrase% sau 3 giờ nữa",
+                "nhắc tôi %phrase% sau 30 phút nữa",
+                "nhắc tôi %phrase% hôm sau",
+                "nhắc tôi %phrase% 2 tiếng sau"
+            ],
+            "answers": [
+                "Mình xin lỗi, mình hiện tại không thể lưu lại được yêu cầu của bạn :("
+            ]
+        },
+        {
+            "intent": "service.ask_vaccination",
+            "utterances": [
+                "tình hình tiêm chủng covid",
+                "tình hình tiêm vaccine covid",
+                "tiêm chủng covid tại việt nam"
+            ],
+            "answers": [
+                "Mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
+            ]
+        },
+        {
+            "intent": "service.ask_location",
+            "utterances": [
+                "%location% ở đâu",
+                "Thành phố Hồ Chí Minh ở đâu",
+                "định vị %location%",
+                "định vị Hà Nội",
+                "Dĩ An ở đâu",
+                "Đồng Hới ở đâu"
+            ],
+            "answers": [
+                "Mình không thể tìm được nó ở đâu cả. Xin lỗi bạn :("
+            ]
+        }, 
+        {
+            "intent": "service.ask_entity_property",
+            "utterances": [
+                "tác giả của tiểu thuyết chạng vạng",
+                "ngày sinh của barrack obama",
+                "dân số của thành phố hồ chí minh",
+                "ngày sinh của nguyễn phú trọng"
+            ],
+            "answer": [
+                "Mình không biết bạn ơi :("
+            ]
+        },
+        {
+            "intent": "service.ask_conversion",
+            "utterances": [
+                "1 kg đổi ra bao nhiêu gram",
+                "đổi 27m ra ft",
+                "32 độ C bằng bao nhiêu kelvin"
+            ],
+            "answer": [
+                "Mình không đổi được bạn ơi :("
+            ]
+        },
+        {
+            "intent": "service.ask_weather_forecast",
+            "utterances": [
+                "dự báo thời tiết",
+                "thời tiết Hà Nội sắp tới",
+                "thời tiết đồng hới sắp tới",
+                "thời tiết bắc giang dự kiến như thế nào",
+                "dự báo thời tiết thành phố Hồ Chí minh",
+                "dự báo thời tiết %location%"
+            ],
+            "answer": [
+                "Mình không dự báo được thời tiết nơi này :("
+            ]
+        },
+        {
+            "intent": "service.req_open_app",
+            "utterances": [
+                "mở spotify",
+                "mở ứng dụng Youtube",
+                "mở app gmail",
+                "mở ứng dụng %app_name%"
+            ],
+            "answer": [
+                "Mình không biết bạn muốn mở ứng dụng gì :("
+            ]
+        },
+        {
+            "intent": "service.req_news_notif",
+            "utterances": [
+                "Thông báo cho tôi về tin tức mỗi giờ",
+                "Thông báo cho tôi về tin tức đời sống mỗi ngày",
+                "Thông báo cho tôi về tin tức %news_category% mỗi ngày"
+            ],
+            "answer": [
+                "Mình không biết bạn muốn nhận thông báo về gì :("
+            ]
+        },
+        {
+            "intent": "service.cancel_news_notif",
+            "utterances": [
+                "Hủy thông báo tin tức cho tôi"
+            ],
+            "answer": [
+                "Mình không biết bạn muốn nhận thông báo về gì :("
+            ]
+        },
+        {
+            "intent": "service.req_weather_notif",
+            "utterances": [
+                "Thông tin cho tôi về thời tiết mỗi ngày",
+                "Thông báo cho tôi về thời tiết mỗi tuần",
+                "Thông tin cho tôi về thời tiết ở Hà Nội mỗi ngày",
+                "Thông tin cho tôi về thời tiết ở %location% mỗi ngày",
+                "Thông tin thời tiết ở %location% mỗi ngày",
+                "Thông báo cho tôi về thời tiết ở TP Hồ Chí Minh mỗi tuần"
+            ],
+            "answer": [
+                "Mình không biết bạn muốn nhận thông báo về gì :("
+            ]
+        },
+        {
+            "intent": "service.cancel_weather_notif",
+            "utterances": [
+                "Hủy thông báo thời tiết cho tôi"
+            ],
+            "answer": [
+                "Mình không biết bạn muốn nhận thông báo về gì :("
+            ]
+        }
+    ]
+}

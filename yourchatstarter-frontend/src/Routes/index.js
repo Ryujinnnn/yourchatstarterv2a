@@ -4,27 +4,9 @@ import {
     Route,
     Switch,
 } from 'react-router-dom'
-
-import Chat from '../Chat'
-import Login from '../Login'
-import About from '../About'
-import Landing from '../Landing'
-import Subscribe from '../Subscribe'
-import Register from '../Register'
-import PaymentInfo from '../PaymentInfo'
-import BillingSuccess from '../BillingSuccess'
-import BillingFailure from '../BillingFailure'
-import BillingHistory from '../BillingHistory'
-import NotFound from '../NotFound'
 import { Component } from 'react'
-import Navigation from '../Component/Navigation/Navigation'
-import Profile from '../Profile'
-import DirectPayment from '../DirectPayment'
-import Blog from '../Blog'
-import BlogPost from '../BlogPost'
-import AboutUs from '../AboutUs'
-import { AdminPanel } from '../AdminPanel'
-  
+
+import {Chat, Subscribe, Login, AboutUs, About, Register, Blog, BlogPost, Landing, NotFound, PaymentInfo, BillingFailure, BillingSuccess, BillingHistory, DirectPayment, Profile, AdminPanel, TestScreen} from '../Screen'
 
 class Routes extends Component {
 
@@ -34,7 +16,6 @@ class Routes extends Component {
 
             return (
                 <Router>
-                    <Navigation></Navigation>
                     <Switch>
                         <Route exact path="/chat"><Chat /></Route>
                         <Route exact path="/subscribe"><Subscribe /></Route>
@@ -43,6 +24,7 @@ class Routes extends Component {
                         <Route exact path="/function"><About /></Route>
                         <Route exact path="/register"><Register /></Route>
                         <Route path='/payment'><Login /></Route>
+                        <Route exact path='/test'><TestScreen/></Route>
                         <Route exact path='/history'><Login /></Route>
                         <Route exact path="/logout">{<Redirect exact from='/logout' to="/"/>}</Route>
                         <Route exact path='/blog'><Blog /></Route>
@@ -54,8 +36,8 @@ class Routes extends Component {
             )
         }
         else return (
+            
             <Router>
-                <Navigation></Navigation>
                 <Switch>
                     <Route exact path="/chat"><Chat /></Route>
                     <Route exact path="/subscribe"><Subscribe /></Route>
@@ -68,6 +50,7 @@ class Routes extends Component {
                     <Route exact path='/payment_success'><BillingSuccess /></Route>
                     <Route exact path='/direct_payment'><DirectPayment /></Route>
                     <Route exact path='/history'><BillingHistory /></Route>
+                    <Route exact path='/test'><TestScreen/></Route>
                     <Route exact path='/profile'><Profile /></Route>
                     <Route exact path="/logout">{<Redirect exact from='/logout' to="/"/>}</Route>
                     <Route exact path='/blog'><Blog /></Route>

@@ -5,21 +5,21 @@ import './Style.css'
 import { bufferToWave } from "../../utils/AudioHelper";
 
 export class SpeechInput extends Component {
-    constructor(props) {
-        super(props)
-        // this.capture_script = document.createElement('script');
-        // this.capture_script.src = './capture_script.js';
-        // this.capture_script.async = true;
-        this.state = {
-            stopped: false,
-            shouldStop: false,
+	constructor(props) {
+		super(props)
+		// this.capture_script = document.createElement('script');
+		// this.capture_script.src = './capture_script.js';
+		// this.capture_script.async = true;
+		this.state = {
+			stopped: false,
+			shouldStop: false,
 
-            granted: false,
+			granted: false,
 			rejectedReason: '',
 			recording: false,
 			paused: false,
-        }
-        this.handleGranted = this.handleGranted.bind(this);
+		}
+		this.handleGranted = this.handleGranted.bind(this);
 		this.handleDenied = this.handleDenied.bind(this);
 		this.handleStart = this.handleStart.bind(this);
 		this.handleStop = this.handleStop.bind(this);
@@ -67,7 +67,7 @@ export class SpeechInput extends Component {
 
 				this.props.onReceivingAudio(wavBlob)
 
-			})    
+			})
 		}
 
 		//Load blob
@@ -102,44 +102,44 @@ export class SpeechInput extends Component {
 		a.click();
 	}
 
-    componentDidMount() {
-        //console.log(navigator.mediaDevices)
-        // navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-        //     .then(this.handleSuccess);
-    }
+	componentDidMount() {
+		//console.log(navigator.mediaDevices)
+		// navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+		//     .then(this.handleSuccess);
+	}
 
-    render() {
-        const granted = this.state.granted;
+	render() {
+		const granted = this.state.granted;
 		const rejectedReason = this.state.rejectedReason;
 		const recording = this.state.recording;
 		const paused = this.state.paused;
 
-        return (
-            <MediaCapturer
-					constraints={{ audio: true }}
-					mimeType="audio/webm"
-					timeSlice={10}
-					onGranted={this.handleGranted}
-					onDenied={this.handleDenied}
-					onStart={this.handleStart}
-					onStop={this.handleStop}
-					onPause={this.handlePause}
-					onResume={this.handleResume}
-					onError={this.handleError} 
-					onStreamClosed={this.handleStreamClose}
-					render={({ request, start, stop, pause, resume }) => 
-                    <Modal show={this.props.isVisible} onHide={() => {if (recording) stop(); this.props.onRequestClose()}} size='xs'>
-                        <Modal.Header>
-                            <Modal.Title></Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <p>{
-								(!granted)? "Xin bạn hãy cung cấp quyền truy cấp microphone cho chúng tôi để sử dụng tính năng này" :
-								(recording)? "Nói gì đó vào microphone rồi bấm \"Kết thúc\"" : "Bấm \"Bắt đầu\" để nói chuyện"
+		return (
+			<MediaCapturer
+				constraints={{ audio: true }}
+				mimeType="audio/webm"
+				timeSlice={10}
+				onGranted={this.handleGranted}
+				onDenied={this.handleDenied}
+				onStart={this.handleStart}
+				onStop={this.handleStop}
+				onPause={this.handlePause}
+				onResume={this.handleResume}
+				onError={this.handleError}
+				onStreamClosed={this.handleStreamClose}
+				render={({ request, start, stop, pause, resume }) =>
+					<Modal show={this.props.isVisible} onHide={() => { if (recording) stop(); this.props.onRequestClose() }} size='xs'>
+						<Modal.Header>
+							<Modal.Title></Modal.Title>
+						</Modal.Header>
+						<Modal.Body>
+							<p>{
+								(!granted) ? "Xin bạn hãy cung cấp quyền truy cấp microphone cho chúng tôi để sử dụng tính năng này" :
+									(recording) ? "Nói gì đó vào microphone rồi bấm \"Kết thúc\"" : "Bấm \"Bắt đầu\" để nói chuyện"
 							}</p>
-                        </Modal.Body>
-                        <Modal.Footer>
-                            {!granted && <Button onClick={request}>Yêu cầu quyền truy cập microphone</Button>}
+						</Modal.Body>
+						<Modal.Footer>
+							{!granted && <Button onClick={request}>Yêu cầu quyền truy cập microphone</Button>}
 							<IconButton icon={<Icon icon="microphone" />} placement="left"
 								onClick={() => {
 									start()
@@ -159,12 +159,12 @@ export class SpeechInput extends Component {
 								color='blue'>
 								Kết thúc
 							</IconButton>
-                        </Modal.Footer>
-                    </Modal>
-                    // <form action="/send_message_speech">
-                    //     <input type="file" accept="audio/*" capture />
-                    // </form>
-                } />
-        )
-    }
+						</Modal.Footer>
+					</Modal>
+					// <form action="/send_message_speech">
+					//     <input type="file" accept="audio/*" capture />
+					// </form>
+				} />
+		)
+	}
 }

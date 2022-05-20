@@ -2,19 +2,23 @@ import { Component } from "react";
 import { withRouter } from 'react-router-dom'
 import './Style.css'
 import { Navbar, Nav, Dropdown, Icon} from 'rsuite'
-import 'rsuite/dist/styles/rsuite-dark.css';
 
 async function verifyToken(credentials) {
     return fetch('api/auth/verify_token', {
-        method: 'POST',
+        method: 'GET',
         headers: {
-            'Content-Type': 'application/json'
+            'x-access-token': sessionStorage.getItem("token")
         },
-        body: JSON.stringify(credentials)
     }).then(data => data.json())
 }
-class Navigation extends Component {
+class _Navigation extends Component {
 
+    constructor(props) {
+        super(props) 
+        this.state = {
+            isAdmin: false
+        }
+    }
     
     async componentDidMount() {
         if (sessionStorage.getItem('token')) {
@@ -25,6 +29,11 @@ class Navigation extends Component {
                 alert("Your token is expired/invalid, please login again")
                 sessionStorage.removeItem('token')
                 this.props.history.push('/login')
+            }
+            else if (token_result.is_admin) {
+                this.setState({
+                    isAdmin: true
+                })
             }
         }
     }
@@ -45,6 +54,7 @@ class Navigation extends Component {
                                 <a href="/function"><Dropdown.Item>Chức năng</Dropdown.Item></a>
                                 <a href="/blog"><Dropdown.Item>Blog</Dropdown.Item></a>
                             </Dropdown>
+                            {this.state.isAdmin && <a href="/admin"><Nav.Item>Quản trị viên</Nav.Item></a>}
                         </Nav>
                         <Nav pullRight>
                             <Dropdown title="Tài khoản của tôi">
@@ -81,4 +91,4 @@ class Navigation extends Component {
     }
 }
 
-export default withRouter(Navigation)
+export const Navigation = withRouter(_Navigation)

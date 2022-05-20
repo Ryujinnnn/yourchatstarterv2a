@@ -11,7 +11,8 @@ async function getUserInfo(query) {
     }).then(data => data.json())
 }
 
-class ProfileContainer extends Component {
+// @deprecated
+export class ProfileContainer extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -47,5 +48,3 @@ class ProfileContainer extends Component {
         )
     }
 }
-
-export default ProfileContainer
