@@ -9,8 +9,9 @@
     "start": "cd yourchatstarter-backend && node App.js",
     "heroku-postbuild": "cd yourchatstarter-frontend && npm install && npm run build",
     "do-depend": "cd yourchatstarter-backend && npm install && cd ../yourchatstarter-frontend && npm install && cd ..",
-    "do-start": "cd yourchatstarter-frontend && npm run build && cd ../yourchatstarter-phobert && nohup python3 app.py && cd ../yourchatstarter-backend && pm2 start App.js",
-    "do-quickstart": "cd yourchatstarter-phobert && nohup python3 app.py && cd ../yourchatstarter-backend && pm2 start App.js"
+    "do-start": "cd yourchatstarter-frontend && npm run build && cd ../yourchatstarter-backend && pm2 start App.js",
+    "do-quickstart": "cd yourchatstarter-backend && pm2 start App.js",
+    "do-start-with-python": "cd yourchatstarter-frontend && npm run build && cd ../yourchatstarter-backend && pm2 start App.js && cd ../yourchatstarter-phobert && nohup python3 app.py"
   },
   "engines": {
     "node": "16.x"

@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
     })
 })
 
-router.post('/test_sentiment', function (req, res) {
+router.post('/test_sentiment', async function (req, res) {
     let input = req.body;
     let text = input.text;
     let sentiment_res = await get_sentiment(text).catch(e => console.log(e))
