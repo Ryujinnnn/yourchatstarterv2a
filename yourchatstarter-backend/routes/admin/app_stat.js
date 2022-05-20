@@ -39,6 +39,15 @@ router.get('/message_timeseries', verifyToken, async (req, res) => {
                 },
                 unknown_intent: {
                     $sum: "$unknown_intent"
+                },
+                negative_utterance: {
+                    $sum: "$negative_utterance"
+                },
+                positive_utterance: {
+                    $sum: "$positive_utterance"
+                },
+                neutral_utterance: {
+                    $sum: "$neutral_utterance"
                 }
             }
         },

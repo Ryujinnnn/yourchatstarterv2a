@@ -6,6 +6,7 @@ const { customNER, cleanEntities } = require('./custom_ner')
 const freeform_query = require('./freeform_query')
 const { session_storage } = require('../database/session_storage')
 const { get_sentiment } = require('./external_service/sentiment_analysist')
+const random_helper = require('./utils/random_helper')
 
 //https://vimeo.com/574939993?fbclid=IwAR0nH8OmzFXwHz8dVTNPHvXMkEHUv1mGaFSGcEUoRol6zu2hRYqIAT19XCI
 
@@ -13,6 +14,22 @@ let manager = null
 let nlp = null
 let context = null
 let custom_ner_pool = []
+
+const negative_sentiment_response_pool = [
+    ". Mình xin lỗi nếu mình có làm bạn tức giận"
+]
+
+const negative_unclear_response_pool = [
+    "Mình không chắc bạn muốn làm gì nhưng mà đừng nóng bạn nhé"
+]
+
+const positive_sentiment_response_pool = [
+    ". Mình mừng vì bạn thấy vui"
+]
+
+const positive_unclear_response_pool = [
+    "Mình không rõ là bạn muốn nói gì lắm, nhưng bạn có vẻ đang cảm thấy vui, mình cũng thấy vui cho bạn"
+]
 
 module.exports.setupInstance = async () => {
     const options = {
@@ -165,18 +182,16 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
             custom_ner_pool.forEach(instance => {
                 res.entities = res.entities.concat(instance.process(input))
             })
-            // let sentiment_res = await get_sentiment(input).catch(e => console.log(e))
-            // if (sentiment_res) {
-            //     console.log(sentiment_res)
-            // }
-            res.entities = cleanEntities(res.entities)
+            //sentiment analysis here
+            let sentiment_res = await get_sentiment(input).catch(e => console.log(e))
 
-            //TODO: sentiment analysis here
-            //get_sentiment(input)
+            //clean entities list
+            res.entities = cleanEntities(res.entities)
 
             console.log(res)
             let answer = ""
             let action = {}
+            let unknown_intent = false
             if (res) {
                 //TODO: match against specifically made intent first, if none is found, return answer from the trained data
                 //console.log(res)
@@ -212,8 +227,11 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                         console.log('fail to resolve any context, try freeform query')
                         //console.log([answer, context])
                         answer = await freeform_query(context, input, res)
-                        if (!answer) {
+
+                        // at this point the bot gives up
+                        if (answer == "") {
                             session_storage.unknown_intent += 1
+                            unknown_intent = true
                             answer = res.answer
                         }
                         //console.log(answer)
@@ -227,6 +245,23 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                     answer = res.answer
                     context.suggestion_list = ['Chào bạn', 'Mình phải đi đây', "Bạn thích làm gì lúc rảnh", "Bạn thật tuyệt"]
                 }
+
+                if (sentiment_res && sentiment_res.certainty > 70) {
+                    if (sentiment_res.intent === "negative") {
+                        session_storage.negative_utterance += 1
+                        if (unknown_intent) answer = negative_unclear_response_pool[random_helper(negative_unclear_response_pool.length)]
+                        else if (Math.random() > 0.25) answer += negative_sentiment_response_pool[random_helper(negative_sentiment_response_pool.length)]
+                    }
+                    else if (sentiment_res.intent === "positive") {
+                        session_storage.positive_utterance += 1
+                        if (unknown_intent) answer = positive_unclear_response_pool[random_helper(positive_unclear_response_pool.length)]
+                        else if (Math.random() > 0.8) answer += positive_sentiment_response_pool[random_helper(positive_sentiment_response_pool.length)]
+                    }
+                    else if (sentiment_res.intent === "neutral") {
+                        session_storage.neutral_utterance += 1
+                    }
+                }
+
                 resolve([answer, context, action])
                 return
             }

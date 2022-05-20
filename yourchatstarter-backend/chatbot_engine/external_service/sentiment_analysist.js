@@ -7,9 +7,13 @@ module.exports.get_sentiment = function get_sentiment(input) {
         axios.post('http://localhost:8000/classify', {text: input}, err => {
             console.log(err)
             reject("error in sentiment analysis server")
+            return
         }).then(res => {
-            console.log(res.data)    
+            //console.log(res.data)    
             resolve(res.data) 
+        }).catch((e) => {
+            reject("error in sentiment analysis server")
+            return
         })
     })
 }
