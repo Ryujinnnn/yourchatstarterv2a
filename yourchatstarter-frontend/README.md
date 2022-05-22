@@ -1,1 +1,1 @@
-front-end
+YourChatStarter's frontend repository, contain the web frontend of the chatbot service. I am suck at designing UI so cut me some slack thank you

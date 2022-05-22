@@ -1,0 +1,1 @@
+YourChatStarter's backend repository, housing the chatbot engine (dealing with Intent Classification, Named Enitty Recognition and Natural Language Generation task) as well as all relevant RESTful API to operate the chatbot service

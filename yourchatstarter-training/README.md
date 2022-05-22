@@ -1,0 +1,1 @@
+This is where the Intent Classification and Name Entity Recognition task feed forward neural network is trained. Include all the fun corpus and data
