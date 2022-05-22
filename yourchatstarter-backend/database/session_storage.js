@@ -6,4 +6,8 @@ module.exports.session_storage = {
     freeform_search: 0,
     slot_filling: 0,
     unknown_intent: 0,
+
+    positive_utterance: 0,
+    neutral_utterance: 0,
+    negative_utterance: 0,
 }

@@ -18,7 +18,7 @@ const options = {
 
 const LineChart = (props) => {
 
-    console.log(props.data)
+    //console.log(props.data)
 
     const graph_data = {
         labels: new Array(96).fill(0).map((x, i) => `-${(24 - i / 4).toFixed(2)}h`),
@@ -62,7 +62,43 @@ const LineChart = (props) => {
     }
 
     return (
-        <Line data={graph_data} options={options} height={120}/>
+        <Line data={graph_data} options={options} height={80}/>
+    )
+};
+
+const SentimentLineChart = (props) => {
+
+    //console.log(props.data)
+
+    const graph_data = {
+        labels: new Array(96).fill(0).map((x, i) => `-${(24 - i / 4).toFixed(2)}h`),
+        datasets: [
+            {
+                label: 'Tích cực',
+                data: props.data.positive || [],
+                fill: false,
+                backgroundColor: 'rgb(20, 255, 20)',
+                borderColor: 'rgba(80, 255, 80, 0.2)',
+            },
+            {
+                label: 'Trung tính',
+                data: props.data.neutral || [],
+                fill: false,
+                backgroundColor: 'rgb(200, 200, 200)',
+                borderColor: 'rgba(255, 255, 255, 0.2)',
+            },
+            {
+                label: 'Tiêu cực',
+                data: props.data.negative || [],
+                fill: false,
+                backgroundColor: 'rgb(255, 20, 20)',
+                borderColor: 'rgba(255, 80, 80, 0.2)',
+            }
+        ],
+    }
+
+    return (
+        <Line data={graph_data} options={options} height={80}/>
     )
 };
 
@@ -90,6 +126,11 @@ export class DashboardPanel extends Component {
                 slot_filling: [],
                 freeform_search: [],
                 unknown_intent: []
+            },
+            sentiment_timeseries: {
+                negative: [],
+                positive: [],
+                neutral: [],
             }
         };
     }
@@ -162,11 +203,16 @@ export class DashboardPanel extends Component {
         res = await this.getMessageCount().catch(e => console.log(e))
         if (res && res.status === "success") {
             let timeseries_data = this.state.timeseries_data
+            let sentiment_timeseries = this.state.sentiment_timeseries
             timeseries_data.message_receive = new Array(TIMESERIES_LENGTH).fill(0)
             timeseries_data.defined_intent = new Array(TIMESERIES_LENGTH).fill(0)
             timeseries_data.slot_filling = new Array(TIMESERIES_LENGTH).fill(0)
             timeseries_data.freeform_search = new Array(TIMESERIES_LENGTH).fill(0)
             timeseries_data.unknown_intent = new Array(TIMESERIES_LENGTH).fill(0)
+
+            sentiment_timeseries.negative = new Array(TIMESERIES_LENGTH).fill(0)
+            sentiment_timeseries.neutral = new Array(TIMESERIES_LENGTH).fill(0)
+            sentiment_timeseries.positive = new Array(TIMESERIES_LENGTH).fill(0)
             res.result.forEach(entry => {
                 let id = Math.floor(((new Date()).valueOf() - entry._id) / 900000)
                 //console.log(id)
@@ -175,9 +221,16 @@ export class DashboardPanel extends Component {
                 timeseries_data.slot_filling[Math.max(TIMESERIES_LENGTH - 1 - id, 0)] = entry.slot_filling
                 timeseries_data.freeform_search[Math.max(TIMESERIES_LENGTH - 1 - id, 0)] = entry.freeform_search
                 timeseries_data.unknown_intent[Math.max(TIMESERIES_LENGTH - 1 - id, 0)] = entry.unknown_intent
+
+                sentiment_timeseries.negative[Math.max(TIMESERIES_LENGTH - 1 - id, 0)] = entry.negative_utterance
+                sentiment_timeseries.neutral[Math.max(TIMESERIES_LENGTH - 1 - id, 0)] = entry.neutral_utterance
+                sentiment_timeseries.positive[Math.max(TIMESERIES_LENGTH - 1 - id, 0)] = entry.positive_utterance
             })
             //console.log(timeseries_data)
-            this.setState({timeseries_data: timeseries_data})
+            this.setState({
+                timeseries_data: timeseries_data,
+                sentiment_timeseries: sentiment_timeseries
+            })
         }
     }
 
@@ -192,8 +245,13 @@ export class DashboardPanel extends Component {
                 <InfoCard title="Số tin nhắn đang chờ được gửi" value={this.state.schedule_count}></InfoCard>
             </div>
             <div style={{ width: '98%', minHeight: 80, border: '1px solid gray', borderRadius: 10, padding: 20, marginTop: 20 }}>
-                <h6>Số doạn chat Chatbot đã nhận được</h6>
+                <h6>Phân loại số doạn chat Chatbot đã nhận được</h6>
                 <LineChart data={this.state.timeseries_data}></LineChart>
+            </div>
+
+            <div style={{ width: '98%', minHeight: 80, border: '1px solid gray', borderRadius: 10, padding: 20, marginTop: 20 }}>
+                <h6>Dữ liệu sắc thái xác định qua đoạn Chat</h6>
+                <SentimentLineChart data={this.state.sentiment_timeseries}></SentimentLineChart>
             </div>
         </div>)
     }

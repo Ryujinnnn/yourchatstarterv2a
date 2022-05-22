@@ -179,7 +179,7 @@ function cleanEntities(initial_entities) {
             console.log('aaaaaaa')
         }
     })
-    console.log(entities_res)
+    //console.log(entities_res)
     //re-label the alias
     let entities_final = []
     let current_entity = ""

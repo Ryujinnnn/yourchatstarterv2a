@@ -72,7 +72,7 @@ module.exports = async function (context, input, intent_res) {
         })
         .catch((e) => {
             console.log(e)
-            answer = intent_res.answer
+            answer = ""
         })
     }
     //console.log([answer, context])

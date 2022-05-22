@@ -1,0 +1,1 @@
+Cutting edge stuff for the Chatbot, include a fine-tuned PhoBERT model for sentiment analysis task and a fine-tuned BARTPho model for dialog generation task (Only the PhoBERT one is in used as the BARTPho model is wayyyyy too expensive to deploy)

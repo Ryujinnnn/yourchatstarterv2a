@@ -1,0 +1,3 @@
+[submodule "yourchatstarter-mobile/YourChatStarter"]
+	path = yourchatstarter-mobile/YourChatStarter
+	url = https://github.com/Ryujinnnn/YourChatStarter.git
