@@ -1,6 +1,6 @@
 {
     "name": "[Vietnamese] Basic Conversation",
-    "locale": "vi-VN",
+    "locale": "vi",
     "data": [
         {
             "intent": "greeting.hello",
@@ -15,6 +15,11 @@
                 "Chào buổi tối",
                 "Xin chào bạn",
                 "Chào bạn tôi"
+            ],
+            "test": [
+                "Xin chào bạn tôi",
+                "Chào em",
+                "Chào ông"
             ],
             "answers": [
                 "Chào bạn",
