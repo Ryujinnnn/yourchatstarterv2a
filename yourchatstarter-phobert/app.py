@@ -24,12 +24,11 @@ class CORSComponent(object):
             ))
 
 class ClassifyText(object):
-    def __init__(self):
+    def __init__(self, tokenizer, wordsegmenter):
         self.classes = ['positive', 'neutral', 'negative']
         MAX_LEN = 256
-        self.rdrsegmenter = VnCoreNLP("./VnCoreNLP/VnCoreNLP-1.1.1.jar", annotators="wseg",
-                                 max_heap_size='-Xmx500m')
-        self.tokenizer = AutoTokenizer.from_pretrained("./phobert-base", local_files_only=True)
+        self.rdrsegmenter = wordsegmenter
+        self.tokenizer = tokenizer
         self.bert_classifier_model = BERTClassifier(len(self.classes))
         self.bert_classifier_trainer = ClassifierTrainner(bert_model=self.bert_classifier_model, train_dataloader=None,
                                                      valid_dataloader=None,cuda_device="cpu",use_mode=True)
@@ -53,10 +52,45 @@ class ClassifyText(object):
         resp.body=json.dumps(result, ensure_ascii=False)
         resp.status=falcon.HTTP_200
 
+class TokenizeText(object):
+    def __init__(self, tokenizer, wordsegmenter):
+        self.rdrsegmenter = wordsegmenter
+        self.tokenizer = tokenizer
+
+    def on_post(self, req, resp):
+        data = json.load(req.bounded_stream)
+        txt = unquote(data.get('text'))
+        txt = self.rdrsegmenter.tokenize(txt)
+        txt = ' '.join([' '.join(x) for x in txt])
+        token = self.tokenizer.tokenize(txt)
+        # print('Predicted label for {} is {}'.format(txt, pred_label))
+        # print(tokens)
+        # print(pred_res)
+        result = {
+            "tokens": token
+        }
+        resp.body=json.dumps(result, ensure_ascii=False)
+        resp.status=falcon.HTTP_200
+
+class Ping:
+    def on_get(self, req, resp):
+        result = {
+            "status": "success"
+        }
+        resp.body = json.dumps(result, ensure_ascii=False)
+        resp.status = falcon.HTTP_200
+
+wordsegmenter = VnCoreNLP("./VnCoreNLP/VnCoreNLP-1.1.1.jar", annotators="wseg",
+                                 max_heap_size='-Xmx500m')
+tokenizer = AutoTokenizer.from_pretrained("./phobert-base", local_files_only=True)
 
 port = os.environ.get('PORT', '8000')
 api = falcon.API(middleware=[CORSComponent()])
-api.add_route('/classify', ClassifyText())
+
+api.add_route('/classify', ClassifyText(tokenizer, wordsegmenter))
+api.add_route('/tokenize', TokenizeText(tokenizer, wordsegmenter))
+api.add_route('/ping', Ping())
+
 # If you don't want to start the server from code but from shell, then use
 # this code snippet:
 #   waitress-serve --port=8000 app:api
