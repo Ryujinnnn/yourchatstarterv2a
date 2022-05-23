@@ -9,9 +9,9 @@
     "start": "cd yourchatstarter-backend && node App.js",
     "heroku-postbuild": "cd yourchatstarter-frontend && npm install && npm run build",
     "do-depend": "cd yourchatstarter-backend && npm install && cd ../yourchatstarter-frontend && npm install && cd ..",
-    "do-start": "cd yourchatstarter-frontend && npm run build && cd ../yourchatstarter-backend && pm2 start App.js",
-    "do-quickstart": "cd yourchatstarter-backend && pm2 start App.js",
-    "do-start-with-python": "cd yourchatstarter-frontend && npm run build && cd ../yourchatstarter-backend && pm2 start App.js && cd ../yourchatstarter-phobert && nohup python3 -u app.py > main.log 2>&1 & echo $! > app.pid",
+    "do-start": "cd yourchatstarter-frontend && npm run build && cd ../yourchatstarter-backend && pm2 start App.js && cd ..",
+    "do-quickstart": "cd yourchatstarter-backend && pm2 start App.js && cd ..",
+    "start-python": "cd yourchatstarter-phobert && nohup python3 -u app.py > main.log 2>&1 & echo $! > app.pid && cd ..",
     "check-python": "ps -p \"$(cat yourchatstarter-phobert/app.pid)\"",
     "kill-python": "kill -p \"$(cat yourchatstarter-phobert/app.pid)\""
   },
