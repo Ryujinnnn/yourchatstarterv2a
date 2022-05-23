@@ -1,4 +1,5 @@
 const { NlpManager, ConversationContext} = require('node-nlp')
+const { LangBert } = require('@nlpjs/lang-bert')
 const location_vn = require('./ner_data/geolocation_VN.json')
 const crypto_pair = require('./ner_data/crypto.json')
 const stocks_list = require('./ner_data/stocks_nasdaq.json')
@@ -6,14 +7,30 @@ const currency_list = require('./ner_data/currency.json')
 const conversion_units = require('./ner_data/conversion_units.json')
 
 async function main() {
-	const options = { languages: ['vi'], forceNER: true };
+	const options = { languages: ['vi'], forceNER: true, autoSave: false };
 	const manager = new NlpManager(options);
 
-	// manager.container.registerConfiguration('bert', {
-	// 	url: 'http://localhost:8000/tokenize',
+	manager.describeLanguage('vi', 'Vietnamese');
+
+	// manager.container.registerConfiguration('basic', {
+	// 	vocabs: [{
+	// 		locales: 'vi',
+	// 		fileName: './vocab.txt'}
+	// 	],
 	// 	languages: ['vi']
-	// });
-	// manager.container.use(LangBert);
+	// })
+
+	let use_bert = false
+
+	conf = process.argv.slice(2) || []
+	if (conf.includes('--bert')) use_bert = true
+	if (use_bert) {
+		manager.container.registerConfiguration('bert', {
+			url: 'http://localhost:8000/tokenize',
+			languages: ['vi']
+		});
+		manager.container.use(LangBert);
+	}
 	// const dock = await dockStart({ use: ['Basic'] });
 	let nlp = manager.nlp
 
@@ -139,6 +156,8 @@ async function main() {
 	// manager.addAnswer('vi', 'agent.travel', 'Ok bạn, mình sẽ lưu lại')
 
 	await nlp.train();
+	if (use_bert) manager.save('model-bert.nlp')
+	else manager.save('model.nlp')
 	//connector.say('Say something!');
 }
 

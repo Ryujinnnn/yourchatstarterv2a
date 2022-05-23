@@ -1,6 +1,6 @@
 {
     "name": "[Vietnamese] Basic Info Query Question",
-    "locale": "vi-VN",
+    "locale": "vi",
     "data": [
         {
             "intent": "embeded.ask_time",

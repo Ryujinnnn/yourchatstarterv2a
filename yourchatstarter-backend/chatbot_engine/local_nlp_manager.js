@@ -7,6 +7,8 @@ const freeform_query = require('./freeform_query')
 const { session_storage } = require('../database/session_storage')
 const { get_sentiment } = require('./external_service/sentiment_analysist')
 const random_helper = require('./utils/random_helper')
+const { LangBert } = require('@nlpjs/lang-bert')
+const { default: axios } = require('axios')
 
 //https://vimeo.com/574939993?fbclid=IwAR0nH8OmzFXwHz8dVTNPHvXMkEHUv1mGaFSGcEUoRol6zu2hRYqIAT19XCI
 
@@ -65,10 +67,26 @@ module.exports.setupInstance = async () => {
     nlp = manager.nlp
     context = new ConversationContext()
 
-    if (fs.existsSync('./chatbot_engine/model.nlp')) {
+    if (fs.existsSync('./chatbot_engine/model.nlp') || fs.existsSync('./chatbot_engine/model-bert.nlp')) {
         console.log('found model file, importing...')
-        const data = fs.readFileSync('./chatbot_engine/model.nlp', 'utf8');
-        manager.import(data);
+        //try to ping python server
+        let try_python = await fetch('http://localhost:8000/ping')
+        if (try_python.status == 200) {
+            console.log('python server found, using bert tokenizer')
+            manager.container.registerConfiguration('bert', {
+                url: 'http://localhost:8000/tokenize',
+                languages: ['vi']
+            });
+            manager.container.use(LangBert);
+
+            const data = fs.readFileSync('./chatbot_engine/model-bert.nlp', {encoding: 'utf-8'});
+            manager.import(data);
+        }
+        else {
+            console.log('python server not found, fallback to default tokenizer')
+            const data = fs.readFileSync('./chatbot_engine/model.nlp', {encoding: 'utf-8'});
+            manager.import(data);
+        }
         console.log('model is loaded')
 
         console.log('initializing custom NER')
