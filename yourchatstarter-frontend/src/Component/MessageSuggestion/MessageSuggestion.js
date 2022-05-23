@@ -20,7 +20,7 @@ export class MessageSuggestion extends Component {
             textDecoration: "none",
             fontSize: "14px",
             margin: "4px 2px",
-            borderRadius: "12px",
+            borderRadius: "10px",
             height: '30px',
             float: 'left',
             display: "inline-block",

@@ -98,6 +98,7 @@ body {
 .btn {
   padding: 3em 0;
   text-align: center;
+
 }
 
 .btn a {
@@ -106,8 +107,16 @@ body {
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
-  text-decoration: none
+  text-decoration: none;
+  transition: linear 200ms;
+  border-radius: 10px;
 }
+
+.btn a:hover {
+  transform: scale(1.1);
+  background-color: #30ab51;
+}
+
 .hot {
     position: absolute;
     top: -7px;
@@ -155,4 +164,12 @@ body {
 
 .ultimite .price {
   background: #b91d47
+}
+
+.plan {
+  transition: linear 200ms;
+}
+
+.plan:hover {
+  transform: scale(1.1);
 }

@@ -108,8 +108,7 @@ section {
 	display: inline-block;
 }
 
-.footer-distributed form input,
-.footer-distributed form textarea{
+.footer-distributed form input, .footer-distributed form textarea{
 	display: block;
 	border-radius: 3px;
 	box-sizing: border-box;
@@ -123,7 +122,7 @@ section {
 	font-weight: normal;
 	color:  #d1d2d2;
 
-	width: 400px;
+	width: 500px;
 	padding: 18px;
 }
 
@@ -150,7 +149,8 @@ section {
 
 .footer-distributed form textarea{
 	height: 100px;
-	margin-bottom: 20px;
+	margin-left: 0px;
+	margin-bottom: 15px;
 }
 
 .footer-distributed form button{
