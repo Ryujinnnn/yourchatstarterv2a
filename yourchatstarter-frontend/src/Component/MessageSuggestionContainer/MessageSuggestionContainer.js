@@ -18,7 +18,7 @@ export class MessageSuggestionContainer extends Component {
             height: "40px",
             overflowX: 'hidden',
             overflowY: 'hidden',
-
+            borderRadius: '10px'
         }
 
         let messageSuggestionListDisplay = this.props.messageList.map((message, index) => {

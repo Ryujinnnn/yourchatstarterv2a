@@ -24,7 +24,8 @@ export class SendButton extends Component {
             width: "10vw",
             minWidth: 100,
             display: "inline-block",
-            float: "right"
+            float: "right",
+            borderRadius: '10px'
         };
         return (<button style={style} onClick={this.onClickHandler}>{this.props.text}</button>);
     }

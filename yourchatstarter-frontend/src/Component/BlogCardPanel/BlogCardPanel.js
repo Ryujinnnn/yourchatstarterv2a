@@ -3,7 +3,7 @@ import { Col, Row, Panel, Button } from 'rsuite'
 const { Component } = require("react");
 
 const Card = props => (
-    <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: '90%', height: 460}}>
+    <Panel className="blog-card-panel" shaded bordered bodyFill style={{ display: 'inline-block', width: '90%', height: 460}}>
         <img src={(props.imageLink)? props.imageLink : "https://via.placeholder.com/240x240"} width="100%" height={240} alt="blog" style={{objectFit: 'cover'}}/>
         <Panel style={{height: 150}} header={props.title}>
             <p style={{overflow: 'hidden', height: 100}}>

@@ -9,3 +9,11 @@
 .user-profile-info .rs-input {
     margin: 0px 0px
 }
+/* 
+.user-profile-info > .rs-form .rs-form-group {
+    min-width: 100%;
+} */
+
+.user-profile-info > .rs-form .rs-form-control-wrapper {
+    min-width: 75%;
+}

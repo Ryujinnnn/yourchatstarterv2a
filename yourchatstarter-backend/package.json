@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nlpjs/lang-bert": "^4.23.4",
     "axios": "^0.21.1",
     "binding": "^3.0.3",
     "canvas": "^2.9.0",
@@ -28,7 +29,7 @@
     "markdown-to-txt": "^2.0.0",
     "moment": "^2.29.1",
     "mongodb": "^3.6.6",
-    "node-nlp": "^4.22.1",
+    "node-nlp": "^4.24.0",
     "node-wit": "^6.0.1",
     "rss-to-json": "^1.1.3",
     "uuid": "^8.3.2",

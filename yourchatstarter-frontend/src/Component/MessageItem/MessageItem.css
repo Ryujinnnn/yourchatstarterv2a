@@ -8,6 +8,7 @@
     color: black;
     animation: bounce-in 1s 1;
     transform-origin: left bottom;
+    animation: popout 200ms ease;
 }
 
 .message p > img {
@@ -15,23 +16,35 @@
   margin: 10px 10px 5px 10px;
 }
 .message p:after {
-    top: 88%;
+    top: 100%;
     left: 0;
     position: absolute;
     content: '';
     border: 0.75rem solid;
     border-color: lightblue transparent transparent lightblue;
 }
-  
+
 .messageOpponent p {
   transform-origin: right top;
   background: lightpink;
 }
+
 .messageOpponent p:after {
     top: -35%;
     left: auto;
     right: 0;
     border-color: transparent lightpink lightpink transparent;
+}
+
+@keyframes popout {
+  from{transform:scale(0)}
+  80%{transform:scale(1.2)}
+  to{transform:scale(1)}
+}
+@-webkit-keyframes popout {
+  from{-webkit-transform:scale(0)}
+  80%{-webkit-transform:scale(1.2)}
+  to{-webkit-transform:scale(1)}
 }
 
 .map { 

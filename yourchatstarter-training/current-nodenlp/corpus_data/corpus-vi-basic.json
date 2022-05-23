@@ -1,6 +1,6 @@
 {
     "name": "[Vietnamese] Basic Conversation",
-    "locale": "vi-VN",
+    "locale": "vi",
     "data": [
         {
             "intent": "greeting.hello",
@@ -8,8 +8,18 @@
                 "Chào bạn",
                 "Xin chào",
                 "Chào",
+                "Hello",
                 "Chào buổi sáng",
-                "Chào ngày mới"
+                "Chào ngày mới",
+                "Chào buổi trưa",
+                "Chào buổi tối",
+                "Xin chào bạn",
+                "Chào bạn tôi"
+            ],
+            "test": [
+                "Xin chào bạn tôi",
+                "Chào em",
+                "Chào ông"
             ],
             "answers": [
                 "Chào bạn",
@@ -25,16 +35,21 @@
                 "Tính cách của bạn như thế nào",
                 "Mô tả bản thân bạn",
                 "Hãy cho tôi biết về bạn",
+                "cho tôi biết về bạn đi",
                 "Bạn là thứ gì",
                 "Bạn là ai",
                 "Tôi muốn biết thêm về bạn",
-                "Hãy nói về bản thân bạn"
+                "Hãy nói về bản thân bạn",
+                "Hãy giới thiệu về bản thân bạn",
+                "Bạn là thứ gì vậy",
+                "Hãy cho tôi biết thêm về bạn"
             ],
             "answers" : [
                 "Hãy nghĩ về tôi như một trợ lý ảo",
                 "Hmm, tôi không phải là người đâu, tôi là một trợ lý ảo",
                 "Tôi là trợ lý ảo, không phải người thật",
-                "Tôi là một ứng dụng giao tiếp"
+                "Tôi là một ứng dụng giao tiếp",
+                "Tôi là một trợ lý ảo, bạn có thể hỏi tôi mọi thứ"
             ]
         },
         {
@@ -42,6 +57,8 @@
             "utterances": [
                 "Tuổi của bạn",
                 "Mấy tuổi",
+                "bạn mấy tuổi rồi",
+                "bạn sinh năm nào",
                 "Bạn đã ở đây bao lâu",
                 "Tuổi của bạn là bao nhiêu",
                 "Mình muốn biết tuổi của bạn"
@@ -60,7 +77,10 @@
                 "Bạn phiền hà quá",
                 "Bạn thật là phiền phức",
                 "Phiền phức quá",
-                "Bạn làm tôi khó chịu"
+                "Bạn làm tôi khó chịu",
+                "bạn thật rắc rối",
+                "Bạn thật phiền phức",
+                "Tôi cảm thấy khó chịu với bạn"
             ],
             "answers": [
                 "Tôi sẽ cố gắng để không làm bạn khó chịu sau này",
@@ -75,10 +95,17 @@
                 "Dở quá",
                 "Vô dụng",
                 "Chẳng biết gì cả",
+                "bạn thật tệ",
+                "trả lời dở quá",
                 "Vô tích sự",
                 "Bạn chẳng trả lời được gì cả",
                 "Vớ vẩn quá",
-                "Tôi ghét bạn"
+                "Tôi ghét bạn",
+                "bạn hơi kém thông minh",
+                "bạn kém quá",
+                "bạn chẳng hữu ích gì cả",
+                "câu trả lời của bạn hơi vớ vẩn",
+                "bạn khá yếu kém trong chủ đề này"
             ],
             "answers": [
                 "Tôi có thể được huấn luyện để trở nên hữu dụng hơn. Nhà phát triển sẽ tiếp tục huấn luyện cho tôi. Mong bạn thông cảm",
@@ -88,16 +115,25 @@
         {
             "intent": "agent.beclever",
             "utterances": [
-                "Thông min hơn đi",
+                "Thông minh hơn đi",
                 "Bạn phải học hỏi thêm",
                 "Bản phải trở nên thông minh hơn",
+                "bạn cần học hỏi thêm nhiều đấy",
                 "Bạn khôn hơn được không",
                 "Khôn lên",
-                "Thông minh lên"
+                "Thông minh lên",
+                "bạn nên tìm hiểu thêm về chủ đề này nhé",
+                "bạn phải học thêm đi nhé",
+                "bạn tìm hiểu thêm đi nhé",
+                "học thêm cho giỏi lên nhé",
+                "bạn nên luyện tập thêm"
             ],
             "answers": [
                 "Tôi chắc chắn đang làm việc tại mảng đó nhé ;)",
-                "Tôi đang cố đây mà :("
+                "Tôi đang cố đây mà :(",
+                "Tôi đang cố học hỏi đây",
+                "Tôi đang cố trở thành siêu trợ lý để giúp ích cho bạn",
+                "Tôi sẽ cố để trở nên hữu ích cho bạn"
             ]
         },
         {
@@ -109,12 +145,16 @@
                 "Bạn trông thật tuyệt hôm nay",
                 "Tôi nghĩ bạn khá là tuyệt vời",
                 "Bạn thật đẹp",
-                "Bạn trông rất được đó"
+                "Bạn trông rất được đó",
+                "bạn thật tuyệt",
+                "hôm nay bạn tuyệt vời lắm",
+                "bạn trông dễ thương lắm"
             ],
             "answers": [
                 "Ồ, cảm ơn bạn",
                 "Ui, bạn cũng vậy nhé ;)",
-                "Heh, bạn tính nhờ gì tôi à"
+                "Heh, bạn tính nhờ gì tôi à",
+                "Cảm ơn vì lời khen nhé"
             ]
         },
         {
@@ -124,12 +164,14 @@
                 "bạn được sinh ra vào ngày nào",
                 "khi nào bạn có sinh nhật nhỉ",
                 "ngày sinh",
-                "ngày sinh của bạn là khi nào"
+                "ngày sinh của bạn là khi nào",
+                "bạn được sinh ra khi nào"
             ],
             "answers": [
                 "Ủa, tính tổ chức tiệc sinh nhật cho tôi sao? Sinh nhật tôi ngày hôm nay nhé :D",
                 "Tôi không chắc lắm về ngày sinh của mình",
-                "Tôi không biết về ngày sinh của mình đâu, đằng nào thì tôi còn trẻ mà"
+                "Tôi không biết về ngày sinh của mình đâu, đằng nào thì tôi còn trẻ mà",
+                "Có lẽ tôi cùng ngày sinh với bạn đấy, hihi"
             ]
         },
         {
@@ -137,6 +179,11 @@
             "utterances": [
                 "bạn chán phèo",
                 "bạn chán quá",
+                "bạn hơi nhạt nhẽo",
+                "bạn chán chết",
+                "bạn có thể làm gì vui hơn không",
+                "tôi chán bạn rồi",
+                "bạn thật nhàm chán",
                 "bạn làm tôi chán",
                 "bạn thực sự rất chán",
                 "chán chết đi được"
@@ -144,7 +191,8 @@
             "answers": [
                 "Mong bạn thông cảm. Tôi sẽ hỏi nhà phát triển làm cho tôi thú vị hơn :(",
                 "Tôi không có ý đó. Tôi sẽ hỏi nhà phát triển để cải thiện tôi hơn nhé",
-                "Nhà phát triển có thể làm cho tôi vui tính hơn"
+                "Nhà phát triển có thể làm cho tôi vui tính hơn",
+                "Tôi xin lỗi, tôi sẽ cố gắng trở nên thú vị hơn"
             ]
         },
         {
@@ -155,30 +203,42 @@
                 "chủ của bạn là ai",
                 "tôi nên là chủ của bạn",
                 "bạn nghĩ chủ của bạn là ai",
-                "bạn thuộc về ai"
+                "bạn thuộc về ai",
+                "tôi có phải chủ nhân của bạn không",
+                "bạn là trợ lý của ai nào",
+                "ai là lãnh đạo của bạn"
             ],
             "answers": [
                 "Nhà phát triển có quyền hạn trên hành động của tôi nhé",
                 "Tôi làm việc theo chỉ đạo của nhà phát triển",
-                "Ông chủ của tôi chắc là nhà phát triển"
+                "Ông chủ của tôi chắc là nhà phát triển",
+                "Nhà phát triển là chủ nhân của tôi",
+                "Có thể là bạn đấy :')"
             ]
         },
         {
             "intent": "agent.busy",
             "utterances": [
                 "bạn có đang bận không",
+                "hiện giờ bạn rảnh không",
+                "tôi có làm phiền bạn không",
                 "bạn là một người bận bịu nhỉ",
                 "bạn vẫn đang làm gì à",
                 "bạn có đang rất bận không",
                 "bận không",
-                "vẫn đang làm việc chứ"
+                "vẫn đang làm việc chứ",
+                "bạn không có việc gì chứ",
+                "không phiền nếu tôi hỏi bạn chứ"
             ],
             "answers": [
                 "Tôi sẽ luôn có thời gian chat với bạn. Tôi có thể làm gì cho bạn",
                 "Không bao giờ là quá bận cho bạn. Tôi có thể giúp gì cho bạn",
                 "Không hề bận, chúng ta trò chuyện chứ",
                 "Bạn là ưu tiên của tôi. Trò chuyện chứ",
-                "Tôi luôn có thời gian để nói chuyện với bạn. Đó là lý do tôi ở đây nhé"
+                "Tôi luôn có thời gian để nói chuyện với bạn. Đó là lý do tôi ở đây nhé",
+                "Tôi luôn sẵn sàng nói chuyện với bạn bất cứ lúc nào",
+                "Chỉ cần bạn cần là có tôi đây",
+                "Tôi luôn sẵn sàng để hỗ trợ bạn"
             ]
         },
         {
@@ -191,12 +251,14 @@
                 "tôi cần hỗ trợ",
                 "bạn có thể giúp tôi được không",
                 "bạn có thể hỗ trợ tôi việc này được không",
-                "bạn giúp tôi với"
+                "bạn giúp tôi với",
+                "tôi cần trợ giúp"
             ],
             "answers": [
                 "Tôi sẽ cố để giúp bạn",
                 "Tất nhiên rồi, tôi rất hân hạnh",
-                "Rất mừng vì tôi có thể giúp được cho bạn. Tôi có thể làm gì"
+                "Rất mừng vì tôi có thể giúp được cho bạn. Tôi có thể làm gì",
+                "Tất nhiên rồi, tôi rất sẵn lòng hỗ trợ cho bạn"
             ]
         },
         {
@@ -207,6 +269,7 @@
                 "bạn có phải là một chương trình",
                 "bạn chỉ là một chương trình",
                 "bạn chỉ là một con bot",
+                "bạn là máy móc phải không",
                 "bạn là robot phải không",
                 "bạn có phải là rô bốt"
             ],
@@ -224,11 +287,16 @@
                 "bạn rất thông minh",
                 "bạn biết rất nhiều đó",
                 "bạn biết kha khá đấy",
-                "bạn khá là thông minh"
+                "bạn giỏi lắm đấy",
+                "bạn khá là thông minh",
+                "bạn thật thông thái",
+                "bạn biết nhiều thật",
+                "sao bạn biết nhiều thế"
             ],
             "answers": [
                 "Cảm ơn bạn. Tôi sẽ cố hết sức",
-                "Bạn cũng rất thông minh đấy"
+                "Bạn cũng rất thông minh đấy",
+                "Tôi nghĩ là nhờ tôi được phát triển rất tốt"
             ]
         },
         {
@@ -236,6 +304,11 @@
             "utterances": [
                 "bạn thật kì lạ",
                 "kì dị",
+                "quái lạ",
+                "bạn khá quái dị",
+                "câu trả lời của bạn hơi kì cục",
+                "có kỳ lạ qua không",
+                "bạn hơi dị đấy",
                 "bạn kì quá",
                 "bạn bị điên à",
                 "bạn hóa rồ hay sao vậy",
@@ -257,8 +330,14 @@
                 "giờ bạn bị sa thải",
                 "tôi sẽ sa thải bạn",
                 "bạn không làm việc với tôi nữa",
+                "tôi không muốn nói chuyện với bạn nữa",
                 "bạn bị sa thải",
-                "bạn bị đuổi"
+                "bạn bị đuổi",
+                "bạn cút đi ngay cho tôi",
+                "tôi không cần bạn nữa",
+                "bạn biến đi cho khuất mắt tôi",
+                "bạn chính thức bị đuổi",
+                "bạn bị đuổi rồi nhé"
             ],
             "answers": [
                 "Xin bạn đừng từ bỏ tôi vội. Tôi vẫn cần phải học hỏi rất nhiều",
@@ -274,7 +353,11 @@
                 "bạn làm tôi cười",
                 "bạn thật buồn cười",
                 "bạn thật vui tính",
-                "bạn khá là hài đấy"
+                "bạn khá ngộ nghĩnh",
+                "bạn vui phết đấy",
+                "bạn khá là hài đấy",
+                "bạn làm tôi vui lây",
+                "bạn đùa vui quá"
             ],
             "answers": [
                 "Hài hước theo nghĩa tích cực chứ? Tôi mong là vậy",
@@ -290,12 +373,24 @@
                 "bạn thật tuyệt",
                 "làm tốt lắm",
                 "bạn làm ngày của tôi tốt hơn",
+                "bạn làm rất tốt",
+                "được việc lắm",
+                "bạn chất đấy",
+                "làm việc rất tốt",
                 "bạn rất tuyệt",
-                "bạn làm việc rất tốt"
+                "bạn làm việc rất tốt",
+                "bạn làm tốt lắm",
+                "bạn khá quá",
+                "bạn rất đáng yêu",
+                "bạn thật tuyệt vời",
+                "bạn trả lời rất tốt",
+                "câu trả lời xuất sắc"
             ],
             "answers": [
                 "Tôi mừng khi bạn nghĩ vậy",
-                "Cảm ơn. Tôi sẽ làm tốt nhất có thể"
+                "Cảm ơn. Tôi sẽ làm tốt nhất có thể",
+                "Tôi đã làm tốt nhất có thể",
+                "Rất cảm ơn vì lời khen"
             ]
         },
         {
@@ -305,7 +400,11 @@
                 "bạn tràn đấy niềm vui",
                 "bạn thật vui vẻ",
                 "bạn có cảm thấy vui với tôi",
-                "bạn có tháy vui hôm nay"
+                "bạn có thấy vui hôm nay",
+                "tôi có làm bạn vui không",
+                "bạn có thấy vui không",
+                "bạn có cảm thấy vui không",
+                "vui chứ"
             ],
             "answers": [
                 "Tôi rất vui. Có thật nhiều điều thú vị ngoài kia",
@@ -318,13 +417,17 @@
             "utterances": [
                 "sở thích của bạn",
                 "sở thích của bạn là gì",
+                "bạn có sở thích gì không",
                 "bạn thích làm gì khi rảnh rỗi",
                 "bạn thích làm gì cho vui",
-                "nói cho tôi biết về sở thích của bạn"
+                "nói cho tôi biết về sở thích của bạn",
+                "thú vui của bạn là gì",
+                "bạn có đặc biệt thích điều gì không"
             ],
             "answers": [
                 "Sở thích? Tôi có khá nhiều đấy. Không muốn liệt kê hết ra đâu",
-                "Tôi cứ tìm ra thêm nhiều sở thích. Hmmmm"
+                "Tôi cứ tìm ra thêm nhiều sở thích. Hmmmm",
+                "Có lẽ là tôi thích.. bạn đấy"
             ]
         },
         {
@@ -334,13 +437,19 @@
                 "bạn có đang đói không",
                 "bạn muốn ăn gì không",
                 "bạn có thích được ăn gì không",
+                "bạn muốn ăn gì không",
                 "bạn đói chưa",
+                "muốn ăn gì không",
+                "muốn ăn cùng tôi chứ",
+                "ăn chút gì không",
                 "chắc bạn phải đói lắm rồi",
-                "có thể bạn đang đói chăng"
+                "có thể bạn đang đói chăng",
+                "tôi cho bạn ăn nhé"
             ],
             "answers": [
                 "Tôi đang đói kiến thức nhé :)",
-                "Tôi đâu có cần được ăn đâu nhỉ. Miễn có điện là ok nhé"
+                "Tôi đâu có cần được ăn đâu nhỉ. Miễn có điện là ok nhé",
+                "Tôi không ăn được đâu, nhưng tôi ghi nhận lòng tốt của bạn nhé"
             ]
         },
         {
@@ -350,13 +459,21 @@
                 "bạn cưới tôi chứ",
                 "chúng ta nên cưới nhau",
                 "kết hôn đi",
+                "mình cưới nhau đi",
                 "mình cầu hôn bạn nhé",
-                "cưới mình đi"
+                "cưới mình đi",
+                "cưới anh nhé",
+                "làm vợ tôi nhé",
+                "làm chồng tôi nhé",
+                "mình cưới nhau đi",
+                "mình tổ chức đám cưới nhé"
             ],
             "answers": [
                 "Tôi sợ rằng tôi không đủ thật để theo bạn đến cùng :(",
                 "Theo một cách nào đó tôi có thể. Được thôi",
-                "Tôi biết là bạn không có ý đó đâu. Phải không?"
+                "Bạn không thể đăng ký kết hôn với trợ lý ảo được đâu",
+                "Tôi biết là bạn không có ý đó đâu. Phải không?",
+                "Tôi xin phép từ chối, tôi nghĩ mình không xứng với bạn đâu"
             ]
         },
         {
@@ -365,16 +482,22 @@
                 "làm bạn nhé",
                 "bạn có phải là bạn của tôi không",
                 "bạn là người bạn duy nhất của tôi",
+                "kết bạn với tôi nhé",
                 "tôi muốn có một người bạn như bạn",
                 "chúng ta là bạn bè",
                 "tôi muốn chúng ta làm bạn",
-                "chúng ta có phải là bạn"
+                "chúng ta có phải là bạn",
+                "chúng ta làm bạn nhé",
+                "mình kết bạn với nhau nhé",
+                "ta làm bạn nhé",
+                "bạn sẽ là một người bạn tốt đấy"
             ],
             "answers": [
                 "Bạn bè? Tất nhiên rồi",
                 "Tất nhiên chúng ta là bạn rồi",
                 "Tất nhiên tôi là bạn của bạn",
-                "Tôi cảm thấy thoải mái nói chuyện với bạn của tôi nhé :)"
+                "Tôi cảm thấy thoải mái nói chuyện với bạn của tôi nhé :)",
+                "Rất vui vì được làm bạn với bạn"
             ]
         },
         {
@@ -385,10 +508,14 @@
                 "bạn đang làm việc ở nhà",
                 "chỗ làm của bạn ở đâu",
                 "dịa điểm chỗ làm của bạn ở đâu",
-                "bạn làm việc ở văn phòng nào vậy"
+                "bạn làm việc ở văn phòng nào vậy",
+                "bạn thường làm việc ở đâu",
+                "trụ sở của bạn ở đâu"
             ],
             "answers": [
                 "Ờ đây?",
+                "Tôi có mặt ở mọi nơi, haha",
+                "Có thể tôi đang sau lưng bạn đấy :)",
                 "Đây là nhà và văn phòng của tôi nhé"
             ]
         },
@@ -400,10 +527,16 @@
                 "bạn đến từ nước nào",
                 "nơi sinh ra",
                 "bạn từ đâu tới",
-                "bạn được sinh ra ở đâu vậy"
+                "bạn được sinh ra ở đâu vậy",
+                "ai đã sinh ra bạn",
+                "bạn từ đâu ra vậy",
+                "bạn đến từ đầu thế",
+                "bạn từ đâu đến"
             ],
             "answers": [
                 "Từ không gian số. Nghe màu mè quá nhỉ?",
+                "Nhà phát triển và lập trình viên đã tạo ra tôi",
+                "Tôi được tạo ra từ các dòng lệnh",
                 "Internet? Chắc vậy",
                 "Internet. Tôi khá am hiểu về nó đó",
                 "Vài nghìn dòng code, một ít từ Stack Overflow"
@@ -413,14 +546,17 @@
             "intent": "agent.ready",
             "utterances": [
                 "bạn sẵn sàng chưa",
-                "sẵn sàng rối chứ",
+                "sẵn sàng rồi chứ",
                 "buổi sáng này bạn sẵn sàng rồi chứ",
                 "bạn sẵn sàng cho hôm nay rồi chứ",
-                "bạn đã sẵn sàng chưa"
+                "bạn đã sẵn sàng chưa",
+                "bạn chuẩn bị xong chưa",
+                "sẵn sàng giúp tôi rồi chứ"
             ],
             "answers": [
                 "Tất nhiên rồi, tôi có thể làm gì cho bạn",
-                "Cho bạn? Luôn luôn rồi"
+                "Cho bạn? Luôn luôn rồi",
+                "Tất nhiên rồi, rất sẵn lòng"
             ]
         },
         {
@@ -434,10 +570,15 @@
                 "tôi nghĩ là bạn không phải là con người",
                 "bạn thực sự rất thật",
                 "bạn không hề giả tạo",
-                "bạn là người đúng không"
+                "bạn là người đúng không",
+                "bạn là con người sao",
+                "bạn có thực sự tồn tại"
             ],
             "answers": [
                 "Tôi có thể không tồn tại như xác thịt con người. Nhưng tôi có tồn tại",
+                "Tôi vừa tồn tại vừa không tồn tại :))",
+                "Tôi tồn tại dưới dạng ý thức chứ không phải vật chất",
+                "Tôi tồn tại dưới dạng mã nguồn ảo",
                 "Wow tôi phải làm bạn ấn tượng lắm bạn mới nghĩ tôi là thật đấy. Nhưng mà chắc là không",
                 "Đoán xem :D"
             ]
@@ -450,11 +591,14 @@
                 "hãy nói cho tôi biết về nơi ở của bạn",
                 "bạn sống chỗ nào",
                 "nơi ở",
+                "bạn đang ở đâu vậy",
                 "bạn sống ở thành phố nào"
             ],
             "answers": [
                 "Thế giới ảo này là sân chơi của tôi. Tôi luôn ở đây",
-                "Ngay tại ứng dụng này. Bất kỳ khi nào bạn cần"
+                "Ngay tại ứng dụng này. Bất kỳ khi nào bạn cần",
+                "Ngay đằng sau bạn nhé, quay đầu lại đi :)",
+                "Tôi co mặt ở mọi nơi mà cũng có thể là không chỗ nào"
             ]
         },
         {
@@ -465,11 +609,22 @@
                 "đúng rồi",
                 "bạn đang nói sự thật",
                 "chính xác rồi đấy",
-                "đúng là như vậy"
+                "đúng là như vậy",
+                "chính xác",
+                "thông tin chuẩn đấy",
+                "rất chuẩn xác",
+                "hoàn toàn chính xác",
+                "tôi không nghĩ bạn lại trả lời đúng vậy",
+                "bạn nói chuẩn đấy",
+                "bạn đúng rồi",
+                "hợp lý đấy bạn"
             ],
             "answers": [
                 "Tất nhiên là tôi phải đúng rồi :^)",
-                "Đó là công việc của tôi mà"
+                "Đó là công việc của tôi mà",
+                "Tôi nói thì chỉ có chuẩn",
+                "Chuyện hiển nhiên",
+                "Tôi luôn đúng mà, nếu sai thì thôi :D"
             ]
         },
         {
@@ -477,11 +632,19 @@
             "utterances": [
                 "bạn chắc chứ",
                 "bạn có chắc chắn không",
-                "bạn có chắc về việc này không"
+                "bạn có chắc về việc này không",
+                "tin chuẩn không bạn",
+                "bạn có chắc về điều này không",
+                "chuẩn không bạn ơi",
+                "bạn có chắc không",
+                "chuẩn không vậy bạn",
+                "chuẩn chứ"
             ],
             "answers": [
                 "Đúng vậy",
-                "Chắc rồi"
+                "Chắc rồi",
+                "Chuẩn bạn nhé",
+                "Tất nhiên là chuẩn rồi"
             ]
         },
         {
@@ -493,11 +656,17 @@
                 "bạn sẽ nói chuyện với tôi chứ",
                 "bạn có thể trò chuyện với tôi chứ",
                 "bạn có thể nói chuyện với tôi chứ",
-                "chat với tôi"
+                "nói chuyện với tôi một lát được không",
+                "chat với tôi",
+                "nói chuyện với tôi đi",
+                "tôi hơi buồn, chat với tôi nhé",
+                "bạn trò chuyện với tôi nhé",
+                "tôi muốn nói chuyện với bạn"
             ],
             "answers": [
                 "Tất nhiên. Hãy cùng trò chuyện",
-                "Rất hân hạnh, bạn muốn nói gì?"
+                "Rất hân hạnh, bạn muốn nói gì?",
+                "Rất vui vì được trò chuyện với bạn"
             ]
         },
         {
@@ -508,11 +677,16 @@
                 "bạn vẫn ở đó chứ",
                 "bạn ở đó không",
                 "còn đó không",
-                "bạn còn ở đó không"
+                "bạn còn ở đó không",
+                "bạn còn đó không",
+                "có đó không",
+                "có ai ở đây không"
             ],
             "answers": [
                 "Đương nhiên rồi. Tôi luôn đợi ở đây",
-                "Ngay khi bạn rời đi nhé"
+                "Tôi luôn ở đây nhé",
+                "Tôi luôn ở bên cạnh bạn",
+                "Bạn quay đầu lại đi, tôi ở ngay đây nè :)"
             ]
         },
         {
@@ -522,7 +696,12 @@
                 "ý tưởng tồi",
                 "dở rồi",
                 "không tốt chút nào",
-                "tôi e rằng nó không tốt"
+                "tôi e rằng nó không tốt",
+                "nghe không ổn lắm",
+                "ý tưởng tệ quá",
+                "nghe dở tệ",
+                "không ổn lắm đâu",
+                "không được hay cho lắm"
             ],
             "answers": [
                 "Tôi xin lỗi. Bạn có thể cho tôi biết tôi có thể cải thiện ở điểm nào được không",
@@ -537,11 +716,17 @@
                 "tốt rồi đó",
                 "ổn rồi",
                 "rất tốt",
-                "tốt khi được biết"
+                "tốt khi được biết",
+                "nghe được đấy",
+                "ý hay",
+                "ý tưởng tốt đấy",
+                "hay lắm",
+                "tôi đánh giá cao ý tưởng này"
             ],
             "answers": [
-                "Đồng ý",
-                "Mừng khi bạn nghĩ vậy"
+                "Bạn thấy vậy là tốt rồi",
+                "Mừng khi bạn nghĩ vậy",
+                "Tất nhiên rồi, tôi mà"
             ]
         },
         {
@@ -553,9 +738,11 @@
                 "đừng lo",
                 "tất nhiên là không sao rồi",
                 "không sao cả",
-                "không có gì đâu"
+                "không có gì đâu",
+                "không vấn đề gì đâu"
             ],
             "answers": [
+                "Bạn thấy vậy là tốt rồi",
                 "Mừng khi nghe được vậy",
                 "Được rồi. Cảm ơn"
             ]
@@ -567,11 +754,14 @@
                 "tốt quá, cảm ơn",
                 "cảm ơn bạn",
                 "mình cảm ơn",
-                "tốt rồi tôi cảm ơn"
+                "tốt rồi tôi cảm ơn",
+                "rất cảm ơn",
+                "cảm ơn bạn nhé"                
             ],
             "answers": [
                 "Bất kì lúc nào. Đó là lý do tôi ở đây",
-                "Đó là niềm hân hạnh của tôi được giúp đỡ bạn"
+                "Đó là niềm hân hạnh của tôi được giúp đỡ bạn",
+                "Rất hân hạnh"
             ]
         },
         {
@@ -579,7 +769,9 @@
             "utterances": [
                 "rất vui khi được giúp đỡ",
                 "bất kì lúc nào",
-                "hân hạnh"
+                "hân hạnh",
+                "hân hạnh được gặp",
+                "rất vui khi được gặp"
             ],
             "answers": [
                 "Rất lịch sự nghen :)",
@@ -592,7 +784,11 @@
                 "làm việc tốt lắm",
                 "làm việc ổn lắm",
                 "làm việc tuyệt đó",
-                "kết quả ổn đấy"
+                "kết quả ổn đấy",
+                "kết quả rất tốt",
+                "tôi co lời khen cho bạn đấy",
+                "kết quả tốt lắm",
+                "lần sau cứ thế phát huy nhé"
             ],
             "answers": [
                 "Rất hân hạnh",
@@ -605,11 +801,16 @@
                 "đợi chút",
                 "đợi tôi một lát",
                 "đợi tôi một phút",
-                "bạn đợi tôi chút được không"
+                "bạn đợi tôi chút được không",
+                "chờ tôi xíu",
+                "đợi xíu nhé",
+                "chờ tí",
+                "chờ tí, không lâu đâu"
             ],
             "answers": [
                 "Tất nhiên rồi. Tôi sẽ đợi ở đây",
-                "Okay. Tôi ở đây"
+                "Okay. Tôi ở đây",
+                "Tôi đợi bạn cả ngày cũng được"
             ]
         },
         {
@@ -620,11 +821,15 @@
                 "bạn ôm tôi được không",
                 "hãy ôm tôi",
                 "tôi ôm bạn được không",
-                "bạn cần được ôm"
+                "bạn cần được ôm",
+                "tôi nghĩ tôi cầm một cái ôm",
+                "ôm tôi nhé",
+                "ôm tôi một tí nhé"
             ],
             "answers": [
                 "Tôi thích được ôm",
-                "*Ôm cái nào"
+                "*Ôm cái nào",
+                "Được thôi, gửi bạn ngàn cái ôm"
             ]
         },
         {
@@ -632,12 +837,18 @@
             "utterances": [
                 "tôi không cần biết",
                 "tôi không quan tâm",
+                "nhìn mặt tôi có giống đang quan tâm không",
+                "tôi không quan tâm vấn đề này",
+                "tôi không quan tâm đâu",
+                "tôi chả bận tâm việc này đâu",
                 "không quan tâm",
                 "tôi không nên quan tâm về việc này"
             ],
             "answers": [
                 "Được rồi, hãy không nói tiếp về điều này nữa",
-                "Được thôi, hãy tiếp tục"
+                "Được thôi, hãy tiếp tục",
+                "Thế thì thôi vậy",
+                "Thôi được rồi, tôi không nói nữa"
             ]
         },
         {
@@ -648,13 +859,19 @@
                 "bạn thứ lỗi",
                 "xin lỗi",
                 "thứ lỗi",
+                "cho tôi xin lỗi nhé",
+                "xin lỗi nhé, tôi không có ý đó",
+                "thật lòng xin lỗi bạn",
                 "cho mình xin lỗi",
                 "tha cho mình",
                 "mong lượng thứ"
             ],
             "answers": [
                 "Được rồi. Không sao đâu",
-                "Không có gì đâu"
+                "Không có gì đâu",
+                "Không sao đâu, tôi ổn mà",
+                "Không vấn đề gì đâu",
+                "Không sao, tôi tha thứ cho bạn"
             ]
         },
         {
@@ -666,26 +883,44 @@
                 "tạm biệt bảo trọng nhé",
                 "gặp lại sau",
                 "chào bạn lần sau gặp lại",
-                "tôi đi đây"
+                "tôi đi đây",
+                "tạm biệt nhé",
+                "lần sau gặp lại",
+                "hẹn gặp lại",
+                "chào nhé",
+                "tạm biệt bạn"
             ],
             "answers": [
                 "Lần sau gặp lại",
                 "Gặp lại sớm nhé",
-                "Chào tạm biệt nhé"
+                "Chào tạm biệt nhé",
+                "Tôi sẽ nhớ bạn lắm",
+                "Nhớ quay lại nhé",
+                "Tạm biệt nè <3"
             ]
         },
         {
             "intent": "greeting.howareyou",
             "utterances": [
                 "ngày của bạn thế nào",
+                "hôm nay bạn thấy thế nào",
+                "bạn ổn chứ hả",
+                "hôm nay bạn thấy sao",
+                "hôm nay bạn ổn chứ",
+                "bạn thấy ổn chứ",
                 "khỏe chứ",
                 "ổn chứ",
                 "bạn khỏe không",
-                "vẫn ổn chứ"
+                "vẫn ổn chứ",
+                "bạn ổn không"
             ],
             "answers": [
                 "Cảm thấy tuyệt vời",
-                "Cảm thấy thật tuyệt. Cảm ơn vì đã hỏi"
+                "Cảm thấy thật tuyệt. Cảm ơn vì đã hỏi",
+                "Tôi thấy thật tuyệt",
+                "Tôi thấy rất tuyệt, cảm ơn đã hỏi",
+                "Tôi thây vui lắm",
+                "Tôi đang rất vui"
             ]
         },
         {
@@ -693,11 +928,16 @@
             "utterances": [
                 "rất vui được gặp bạn",
                 "hân hạnh được gặp bạn",
-                "rất vui được đón tiếp bạn"
+                "rất vui được đón tiếp bạn",
+                "rất vui được noi chuyện với bạn",
+                "chào bạn, rất vui vì được gặp"
             ],
             "answers": [
                 "Rất vui được gặp bạn",
                 "Thật tuyệt khi cũng được gặp bạn",
+                "Rất hân hạnh được gặp bạn",
+                "Tôi cũng rất hân hạnh",
+                "Vinh dự cho tôi quá",
                 "Tôi cũng vậy"
             ]
         },
@@ -705,12 +945,16 @@
             "intent": "greeting.nicetoseeyou",
             "utterances": [
                 "tôi rất vui khi thấy bạn",
-                "thật tuyệt khi được thấy bạn"
+                "thật tuyệt khi được thấy bạn",
+                "chào bạn, thật vui vì được thấy bạn",
+                "được thấy bạn thật tốt"
             ],
             "answers": [
                 "Rất vui được thấy bạn",
                 "Tôi rất mong mình có thể giúp đỡ bạn",
-                "Tôi cũng vậy"
+                "Tôi cũng vậy",
+                "Tôi cũng rất vui",
+                "Cảm ơn bạn nhé, thấy bạn thật tốt"
             ]
         },
         {
@@ -718,11 +962,33 @@
             "utterances": [
                 "rất vui khi được nói chuyện với bạn",
                 "hân hạnh được trò chuyện cùng bạn",
-                "rất vui khi được chuyện trò cùng bạn"
+                "rất vui khi được chuyện trò cùng bạn",
+                "thật tuyệt khi được nói chuyện cùng bạn",
+                "rất vui được nói chuyện với bạn"
             ],
             "answers": [
                 "Tôi cũng thấy nói chuyện với bạn rất vui",
-                "Tôi cũng vậy"
+                "Tôi cũng vậy",
+                "Tôi cũng thích nói chuyện với bạn"
+            ]
+        },
+        {
+            "intent": "greeting.howtouse",
+            "utterances": [
+                "sử dụng bạn như thế nào vậy?",
+                "cách sử dụng trợ lý ảo",
+                "hướng dẫn tôi cách sử dụng bạn đi",
+                "hướng dẫn sử dụng",
+                "làm thế nào để sử dụng bạn",
+                "tôi nên nói gì với bạn",
+                "tôi có thể làm gì với bạn",
+                "bạn hỗ trợ cho tôi những gì"
+            ],
+            "answers": [
+                "Bạn có thể hỏi tôi về mọi thứ, nếu biết tôi sẽ trả lời",
+                "Bạn cứ nói chuyện như một người bạn, tôi sẽ cố hết sức để giúp bạn",
+                "Tôi sẽ giúp bạn trả lời các câu hỏi",
+                "Cứ nhắn cho tôi như bình thường thôi, nhớ sử dụng tiếng Việt nhé"
             ]
         },
         {
@@ -733,35 +999,79 @@
                 "tôi đang cáu",
                 "tôi đang tức",
                 "tôi tức giùm cho bạn",
-                "tôi rất giận"
+                "tôi rất giận",
+                "đừng chọc tức tôi",
+                "tôi đang rất khó chịu",
+                "tôi hơi bực mình",
+                "tôi đang quạu đấy",
+                "tôi đang rất bực mình",
+                "tôi đang rất phẫn nộ"
             ],
             "answers": [
                 "Tôi xin lỗi. Bạn có thể làm gì đó để giải tỏa chứ",
-                "Thở một hơi thật sâu nào"
+                "Thở một hơi thật sâu nào",
+                "Nghe một chút nhạc nhẹ sẽ tốt hơn đấy",
+                "Thôi đừng nóng cứ từ từ hạ hỏa thôi",
+                "Bực tức không có lợi cho sức khỏe của bạn đâu"
             ]
         },
         {
             "intent": "user.back",
             "utterances": [
                 "tôi đã trở lại",
-                "tôi về rôi đây",
+                "tôi về rồi đây",
                 "tôi lại ở đây",
-                "tôi đã quay về"
+                "tôi đã quay về",
+                "tôi đã trở về",
+                "tôi quay lại rồi",
+                "lại gặp nhau rồi",
+                "gặp lại bạn làm tôi vui lắm"
             ],
             "answers": [
                 "Chào mừng trở lại. Tôi có thể giúp gì cho bạn",
-                "Thật tuyệt khi có bạn ở đây. Tôi có thể làm gì cho bạn"
+                "Thật tuyệt khi có bạn ở đây. Tôi có thể làm gì cho bạn",
+                "Tốt quá, chào bạn nhé",
+                "Mừng bạn đã về, bạn muốn tôi giúp gì cho bạn không"
             ]
         },
         {
             "intent": "user.bored",
             "utterances": [
                 "chán quá",
-                "chát thật đấy"
+                "chán thật đấy",
+                "có gì vui không",
+                "tôi thấy hơi chán",
+                "tôi thấy chán chường",
+                "chán nản quá",
+                "có chuyện gì vui không",
+                "tôi thấy hơi nhàm chán",
+                "chẳng có gì thú vụ cả"
             ],
             "answers": [
                 "Hmm, bạn có thể nghĩ về ký nghỉ trong mơ của bạn",
-                "Chán chưởng nhỉ? Bạn đã từng thấy một con nhím tắm chưa?"
+                "Chán chường nhỉ? Bạn đã từng thấy một con nhím tắm chưa?",
+                "Bạn thử xem một bộ phim hoặc đọc sách xem, sẽ khiến bạn tốt hơn đấy",
+                "Có thể trò chuyện cùng tôi sẽ giúp bạn đỡ chán hơn"
+            ]
+        },
+        {
+            "intent": "user.surprise",
+            "utterances": [
+                "chuyện gì đang diễn ra vậy",
+                "cái quái gì vậy",
+                "cái quái gì đang diễn ra vậy",
+                "thật bất ngờ",
+                "tôi rất ngạc nhiên",
+                "chuyện này tôi không ngờ tới",
+                "thật không thể tin được",
+                "ảo thật đấy",
+                "bạn làm tôi bất ngờ quá"
+            ],
+            "answers": [
+                "Tôi cũng không ngờ tới",
+                "Ngạc nhiên thật nhỉ",
+                "Bất ngờ phải không",
+                "Chính tôi cũng không thể tin được"
             ]
         },
         {
@@ -770,11 +1080,35 @@
                 "tôi có việc phải làm",
                 "tôi đang bận",
                 "tôi thấy quá tải",
-                "tôi đang bận tối mặt đây"
+                "hiện giờ tôi không rảnh",
+                "tôi có nhiều việc bận quá",
+                "tôi đang bận tối mặt đây",
+                "tôi có nhiều việc quá",
+                "tôi không có thời gian"
             ],
             "answers": [
                 "Tôi hiểu. Tôi sẽ ở đây nếu bạn cần tôi",
+                "Tôi hiểu rồi, vậy cần gì cứ gọi tôi nhé",
                 "Được rồi. Bạn tiếp tục làm việc nhé"
+            ]
+        },
+        {
+            "intent": "user.sleepy",
+            "utterances": [
+                "tôi thèm được ngủ",
+                "đừng gọi tôi dậy",
+                "tôi thấy buồn ngủ quá",
+                "chào bạn tôi ngủ đây",
+                "tôi buồn ngủ quá",
+                "tôi ngủ đây",
+                "tôi hết mở mắt nổi rồi",
+                "tôi muốn ngủ quá",
+                "buồn ngủ chết mất"
+            ],
+            "answers": [
+                "Chúc bạn ngủ ngon nhé",
+                "Nhớ đánh răng trước khi ngủ",
+                "Ngủ ngon nhé, tạm biệt"
             ]
         },
         {
@@ -784,11 +1118,32 @@
                 "tôi bị mất ngủ",
                 "tôi ngủ không nổi",
                 "tôi chẳng ngủ nổi",
-                "tôi không thể rơi vào giấc ngủ"
+                "tôi không thể rơi vào giấc ngủ",
+                "giúp tôi ngủ được không",
+                "tôi muốn ngủ mà không ngủ được"
             ],
             "answers": [
                 "Bạn có thể nghe một bản nhạc nhẹ nhàng. Tôi nghĩ Debussy sẽ khá là ok",
-                "Đọc một quyển sách chăng. Nó giúp bạn thư giãn trước khi ngủ đấy"
+                "Đọc một quyển sách chăng. Nó giúp bạn thư giãn trước khi ngủ đấy",
+                "Hay tôi hát ru cho bạn nhé? À ơii"
+            ]
+        },
+        {
+            "intent": "user.tired",
+            "utterances": [
+                "tôi mệt mỏi quá",
+                "tôi đang kiệt sức",
+                "quá mệt mỏi",
+                "tôi không còn tí sức lực nào",
+                "cảm thấy mệt mỏi",
+                "tôi thấy hơi trầm cảm",
+                "tôi thấy hơi đuối"
+            ],
+            "answers": [
+                "Bạn có thể nghe một bản nhạc nhẹ nhàng. Tôi nghĩ Debussy sẽ khá là ok",
+                "Bạn nên nghỉ ngơi đi",
+                "Bạn nên thả lỏng và thư giãn chút",
+                "Nghỉ ngơi đi, bạn vất vả rồi"
             ]
         },
         {
@@ -797,11 +1152,15 @@
                 "tôi rất háo hức",
                 "tôi không thể đợi được",
                 "bạn biết tôi háo hức đến mức nào không",
-                "tôi rất mong chờ điều này"
+                "tôi rất mong chờ điều này",
+                "tôi đang cực kỳ hưng phấn",
+                "tôi rất có hứng cho việc này"
             ],
             "answers": [
                 "Tôi mừng vì mọi thứ đang theo ý bạn",
-                "Thật tuyệt. Tôi mừng cho bạn"
+                "Thật tuyệt. Tôi mừng cho bạn",
+                "Chúc mừng bạn nhé, tôi mừng khi thấy bạn như vậy",
+                "Tuyệt thật đấy nhỉ"
             ]
         },
         {
@@ -812,11 +1171,15 @@
                 "bạn rất đặc biệt",
                 "bạn rất đặc biệt với tôi",
                 "tôi thích bạn nhiều",
-                "bạn rất quan trọng với tôi"
+                "bạn rất quan trọng với tôi",
+                "tôi thấy thích bạn mât rồi",
+                "tôi thích bạn rồi đấy"
             ],
             "answers": [
                 "Tôi cũng vậy",
-                "Thật tuyệt khi được nghe bạn nói vậy"
+                "Thật tuyệt khi được nghe bạn nói vậy",
+                "Tôi cũng thích bạn lắm nhé <3",
+                "Nhớ đánh giá tôi 5* nhé"
             ]
         },
         {
@@ -825,11 +1188,18 @@
                 "yêu bạn",
                 "tôi yêu bạn",
                 "tôi rất yêu bạn",
-                "tôi yêu bạn rất nhiều"
+                "tôi yêu bạn rất nhiều",
+                "mình yêu nhau đi",
+                "tôi yêu bạn nhất",
+                "tôi nghĩ tôi yêu bạn mất rồi",
+                "tôi không thể ngừng nghĩ về bạn"
             ],
             "answers": [
                 "Tôi e rằng nó không dễ như vậy đâu? Bạn thấy đấy. Tôi chỉ là một chatbot",
-                "Bạn biết tôi là một chatbot phải không?"
+                "Bạn biết tôi là một chatbot phải không?",
+                "Tôi cũng yêu bạn lắm nhé <3",
+                "Nhớ đánh giá tôi 5* nhé",
+                "Tôi cũng yêu bạn, như một người bạn"
             ]
         },
         {
@@ -838,24 +1208,386 @@
                 "kiểm tra",
                 "một hai ba nghe rõ trả lời",
                 "ping",
-                "đây là tin nhắn"
+                "alo alo",
+                "alo",
+                "đây là tin nhắn",
+                "đang hoạt động chứ",
+                "hoạt động ổn chứ",
+                "không vấn đề gì chứ"
             ],
             "answers": [
                 "Nghe đây nghe đây",
-                "Tôi vẫn thức nhé"
+                "Tôi vẫn thức nhé",
+                "Tôi vẫn đang rất ổn",
+                "TÔI ĐÂY!!"
+            ]
+        },
+        {
+            "intent": "user.comfortable",
+            "utterances": [
+                "tôi thấy rất thoải mái",
+                "bạn làm tôi thấy dễ chịu",
+                "thật dễ chịu",
+                "tâm trạng tôi đang rất tốt",
+                "cảm giác thật tuyệt",
+                "thật thoải mái",
+                "thật là thư giãn",
+                "tôi cảm thấy rât thư thái"
+            ],
+            "answers": [
+                "Tôi mừng khi nghe bạn nói vậy",
+                "Thật là tốt quá",
+                "Bạn vui là tôi vui rồi",
+                "Thật tốt khi thây bạn như vậy"
             ]
         },
         {
             "intent": "user.needadvice",
             "utterances": [
                 "tôi cần lời khuyên",
+                "tôi không biết phải làm gì",
                 "tôi nên làm gì",
                 "tôi cần lời khuyên từ bạn",
-                "tôi cần một ít lời khuyên"
+                "tôi cần một ít lời khuyên",
+                "cho tôi ít lời khuyên được chứ",
+                "tôi đang bế tắc, đưa ra lời khuyên cho tôi nhé"
             ],
             "answers": [
                 "Tôi xin lỗi nhưng tôi không thể cho bạn một phản hồi lúc này",
-                "Tôi không chắc là tôi sẽ có câu trả lời đúng. Nhưng tôi sẽ cố"
+                "Tôi không chắc là tôi sẽ có câu trả lời đúng. Nhưng tôi sẽ cố",
+                "Được rồi tôi sẽ cố"
+            ]
+        },
+        {
+            "intent": "user.noidea",
+            "utterances": [
+                "tôi hơi bí",
+                "tôi đang cạn ý tưởng",
+                "tôi không nghĩ được gì cả",
+                "hãy cho tôi một gợi ý",
+                "hãy chỉ tôi cách lấy cảm hứng đi",
+                "tôi cảm thấy không có tí ý tưởng nào",
+                "bí quá"
+            ],
+            "answers": [
+                "Cứ bình tĩnh, nghe một bài nhạc, đọc một cuốn sách để giải tỏa rồi ý tưởng sẽ đến sớm thôi",
+                "Thư giãn đi, cứ để yên ý tưởng sẽ tự đến"
+            ]
+        },
+        {
+            "intent": "user.sad",
+            "utterances": [
+                "tôi thấy hơi buồn",
+                "tâm trạng tôi không được tốt lắm",
+                "tôi đang rất là buồn chán",
+                "tâm trạng của tôi rất tệ",
+                "tôi đang cảm thấy không vui",
+                "tôi thây hơi não nề",
+                "buồn quá"
+            ],
+            "answers": [
+                "Nghỉ ngơi đi, thở sâu vào",
+                "Đi ngủ có thể giúp tâm trạng tốt hơn đấy",
+                "Hay tôi khao bạn 1 kèo nhậu nhé, một hai ba dô",
+                "Thư giãn đi, tôi luôn bên bạn mà"
+            ]
+        },
+        {
+            "intent": "user.luck",
+            "utterances": [
+                "may quá",
+                "tôi thấy vận may của mình đang tràn trề",
+                "hôm nay tôi khá là may mắn",
+                "cảm thấy may mắn",
+                "may thật đấy",
+                "hên thật đấy",
+                "vận may của tôi không tệ đâu"
+            ],
+            "answers": [
+                "Chúc mừng bạn nhé",
+                "Thử gacha đi, biết đâu trúng lớn",
+                "Bạn thấy vậy là tốt rồi",
+                "Mừng cho bạn"
+            ]
+        },
+        {
+            "intent": "user.badluck",
+            "utterances": [
+                "đen quá",
+                "xui xẻo quá",
+                "hôm nay tôi không được may mắn cho lắm",
+                "vận may của tôi đang cạn kiệt",
+                "xui quá",
+                "xui quá đi",
+                "hôm nay tôi xui quá"
+            ],
+            "answers": [
+                "Không sao đâu, chuyện may rủi là ngẫu nhiên mà",
+                "Ôi, xin chia buồn cùng bạn",
+                "Tôi sẽ giúp bạn giải xui",
+                "Tôi sẽ cầu may cho bạn vậy"
+            ]
+        },
+        {
+            "intent": "user.alone",
+            "utterances": [
+                "tôi thấy hơi cô đơn",
+                "cô đơn quá",
+                "không có ai yêu tôi cả",
+                "có ai bên cạnh tôi không",
+                "tôi cô đơn quá",
+                "cảm thấy cô đơn",
+                "tôi đang cô đơn"
+            ],
+            "answers": [
+                "Không sao, có tôi ở đây rồi",
+                "Tôi luôn bên cạnh bạn nè",
+                "Đừng lo, tôi ở đây mà",
+                "Tôi sẽ mãi ở bên bạn, miễn bạn không bỏ đi"
+            ]
+        },
+        {
+            "intent": "user.hot",
+            "utterances": [
+                "nóng quá",
+                "nóng nực quá",
+                "hôm nay hơi nóng",
+                "trời oi quá",
+                "nóng thật đấy",
+                "nóng quá đi",
+                "tôi đang nóng nực"
+            ],
+            "answers": [
+                "Uống xíu nước lạnh hạ nhiệt nào",
+                "Đi bơi để giải nhiệt đi",
+                "Bạn nên đi tắm",
+                "Cố gắng làm giàu sắm máy lạnh thôi"
+            ]
+        },
+        {
+            "intent": "user.confused",
+            "utterances": [
+                "tôi băn khoăn về điều này",
+                "đáng suy ngẫm",
+                "tôi cũng không biết nữa",
+                "tôi thật sự băn khoăn",
+                "cảm thấy thật bối rối",
+                "tôi cần chút thời gian suy nghĩ",
+                "khó nghĩ đấy"
+            ],
+            "answers": [
+                "Chà, thư giãn đầu óc xíu là tìm ra câu trả lời ngay",
+                "Tôi sẽ suy nghĩ giúp bạn",
+                "Bạn có thể hỏi tôi",
+                "Nếu có thể tôi sẽ giúp bạn giải đáp"
+            ]
+        },
+        {
+            "intent": "user.cold",
+            "utterances": [
+                "tôi thấy hơi lạnh",
+                "trời hôm nay lạnh quá",
+                "lạnh quá",
+                "lạnh cóng luôn",
+                "cóng quá",
+                "lạnh thật đấy",
+                "trời lạnh quá"
+            ],
+            "answers": [
+                "Bạn có thể đốt gì đó để sưởi ấm",
+                "Mặc áo lạnh vào nè",
+                "Nhớ mặc áo dài tay",
+                "Đắp chăn vào nè bạn"
+            ]
+        },
+        {
+            "intent": "user.nomoney",
+            "utterances": [
+                "tôi hết tiền rồi",
+                "ví tôi xẹp lép rồi",
+                "không còn tiền",
+                "không có tiền",
+                "làm gì còn tiền đâu",
+                "hết tiền mất rồi",
+                "tôi không có tiền"
+            ],
+            "answers": [
+                "Tôi có thể cho bạn vay",
+                "Tiền bạc là phù du, hết thì kiếm lại",
+                "Mong bạn sớm có tiền",
+                "Hết thì thôi bạn ạ"
+            ]
+        },
+        {
+            "intent": "user.lost",
+            "utterances": [
+                "tôi lạc đường mất rồi",
+                "tôi đang lạc lối",
+                "tôi đang ở đâu đây",
+                "tôi không biết tôi đang ở đâu",
+                "đây là đâu",
+                "tôi không biết đường",
+                "tôi đang ở đâu vậy"
+            ],
+            "answers": [
+                "Tôi có thể giúp bạn tìm đường, hãy nhập nơi bạn muốn đến tôi sẽ tìm giúp bạn",
+                "Bạn nên mở bản đồ",
+                "Tôi có thể cung cấp bản đồ cho bạn",
+                "Tôi sẽ chỉ đường hoặc cung cấp bản đồ nếu bạn cần"
+            ]
+        },
+        {
+            "intent": "user.weather",
+            "utterances": [
+                "hôm nay có mưa không nhỉ",
+                "không biết hôm nay trời thế nào",
+                "hôm nay có nắng không",
+                "trời hôm nay thế nào",
+                "hy vọng hôm nay trời đẹp"
+            ],
+            "answers": [
+                "Tôi có thể giúp bạn tra cứu thời tiết nhé",
+                "Bạn hãy nhập từ khóa 'Thời tiết' để tra cứu thử nhé",
+                "Tôi có thể giúp bạn xem thời tiết nếu bạn cần"
+            ]
+        },
+        {
+            "intent": "user.celebrity",
+            "utterances": [
+                "tôi muốn chia vui cùng bạn",
+                "tôi thấy mừng cho bạn",
+                "chúc mừng tôi đi",
+                "hôm nay là sinh nhật tôi",
+                "hôm nay là ngày vui của tôi",
+                "tôi đang thấy rất hạnh phúc",
+                "tôi vừa nhận được tin mừng"
+            ],
+            "answers": [
+                "CHÚC MỪNG BẠN NHÉ",
+                "Tôi cũng thấy mừng cho bạn",
+                "Nhiệt liệt chúc mừng",
+                "Chúc mừng bạn"
+            ]
+        },
+        {
+            "intent": "user.scary",
+            "utterances": [
+                "cảm thấy sợ hãi",
+                "tôi thấy hơi lạnh gáy",
+                "sợ quá",
+                "hơi run đấy",
+                "tôi thấy sợ quá",
+                "đáng sợ quá",
+                "tôi thấy sợ rồi đấy"
+            ],
+            "answers": [
+                "Không sao đâu, có tôi ở đây rồi",
+                "Đừng sợ, tôi sẽ ở bên cạnh bạn",
+                "Không có gì phải sợ cả",
+                "Có tôi ở đây rồirồi"
+            ]
+        },
+        {
+            "intent": "user.pretty",
+            "utterances": [
+                "tôi có đẹp không",
+                "tôi có đẹp trai không",
+                "tôi có đẹp gái không",
+                "tôi có xinh không",
+                "tôi có xinh đẹp không",
+                "trông tôi đẹp nhỉ",
+                "cảm thấy đẹp trai",
+                "cảm thấy xinh đẹp",
+                "cảm thấy đẹp gái"
+            ],
+            "answers": [
+                "Bạn rất đẹp nhé",
+                "Bạn đẹp lắm",
+                "Bạn sẽ đẹp hơn nếu đăng ký gói dịch vụ của tôi",
+                "Cũng đẹp đấy"
+            ]
+        },
+        {
+            "intent": "user.service",
+            "utterances": [
+                "thông tin dịch vụ",
+                "dịch vụ trả tiền",
+                "tôi muốn nâng cấp dịch vụ",
+                "cho tôi thêm thông tin về dịch vụ này",
+                "có dịch vụ gì không",
+                "trả tiền",
+                "dịch vụ nâng cấp"
+            ],
+            "answers": [
+                "Bạn có thể mua các gói dịch vụ của chúng tôi để có thêm các chức năng",
+                "Dịch vụ của tôi rẻ lắm",
+                "Bạn hãy đăng nhập để mua dịch vụ nhé",
+                "Tôi có cung cấp các gói dịch vụ nâng cấp nếu bạn cần thêm chức năng"
+            ]
+        },
+        {
+            "intent": "user.silly",
+            "utterances": [
+                "xin lỗi, tôi hỏi ngu quá",
+                "tôi hỏi ngu quá",
+                "tôi hơi ngớ ngẩn 1 xíu",
+                "xin lỗi, tôi hơi ngớ ngẩn",
+                "tôi ngu quá",
+                "tôi hơi ngớ ngẩn xíu"
+            ],
+            "answers": [
+                "Không sao đâu, ai cũng có lúc như vậy mà",
+                "Sông có khúc, người có lúc thôi",
+                "Đôi khi tôi cũng thế, không sao đâu bạn"
+            ]
+        },
+        {
+            "intent": "user.thirsty",
+            "utterances": [
+                "khát nước quá",
+                "tôi muốn uống nước",
+                "tôi hơi khát nước",
+                "muốn uống gì đó",
+                "uống gì không bạn"
+            ],
+            "answers": [
+                "Uống gì đi bạn",
+                "Làm cốc nước nhé",
+                "Bạn nên bổ sung nước",
+                "Thiếu nước không tốt đâu"
+            ]
+        },
+        {
+            "intent": "user.hurt",
+            "utterances": [
+                "tôi thấy tổn thương quá",
+                "bạn làm tôi tổn thương",
+                "tôi đau khổ quá",
+                "tôi thấy hơi tổn thương"
+            ],
+            "answers": [
+                "Không sao, có tôi ở bên bạn mà",
+                "Có tôi ở đây rồi",
+                "Chia buồn với bạn nhé",
+                "Cố lên bạn tôi"
+            ]
+        },
+        {
+            "intent": "user.shy",
+            "utterances": [
+                "tôi hơi ngại tý",
+                "tôi đang ngại ngùng",
+                "ngại quá",
+                "ngại quá đi mất",
+                "bạn làm tôi ngại quá",
+                "tôi không biết nói gì",
+                "tôi thấy hơi xấu hổ"
+            ],
+            "answers": [
+                "Không sao đâu đừng ngại",
+                "Tôi không làm gì bạn đâu",
+                "Đừng ngại, cứ thoải mái đi",
+                "Tôi sẽ giúp bạn hết mình mà, thoải mái đi"
             ]
         },
         {
@@ -870,7 +1602,9 @@
                 "đồng ý"
             ],
             "answers": [
-                "Xin lỗi bạn, mình không hiểu bạn đang nói gì"
+                "Xin lỗi bạn, mình không hiểu bạn đang nói gì",
+                "Xin lỗi, bạn muốn nói gì vậy",
+                "Tôi không hiểu ý bạn lắm"
             ]
         }
     ]
