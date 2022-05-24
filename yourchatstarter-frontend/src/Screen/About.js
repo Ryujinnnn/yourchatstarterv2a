@@ -20,7 +20,7 @@ export class About extends Component {
         return (
             <div>
                 <Header></Header>
-                <CSSTransition in={this.state.show} timeout={200} classNames="about-screen">
+                <CSSTransition in={this.state.show} timeout={2000} classNames="about-screen">
                     <div>
                         <h3 style={{margin: 40}}>Về dự án</h3>
                         <p>YourChatStarter cung cấp cho bạn một chatbot cung cấp thông tin nhanh và chính xác</p>

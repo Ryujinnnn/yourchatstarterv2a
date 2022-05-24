@@ -1,3 +1,11 @@
 .people-panel-container {
     margin: 50px 0 50px 0
 }
+
+.people-panel {
+    transition: linear 200ms;
+}
+
+.people-panel:hover {
+    transform: scale(1.1);
+}

@@ -70,8 +70,8 @@ module.exports.setupInstance = async () => {
     if (fs.existsSync('./chatbot_engine/model.nlp') || fs.existsSync('./chatbot_engine/model-bert.nlp')) {
         console.log('found model file, importing...')
         //try to ping python server
-        let try_python = await fetch('http://localhost:8000/ping')
-        if (try_python.status == 200) {
+        let try_python = await fetch('http://localhost:8000/ping').catch(e => console.log('connection error in python server instance'))
+        if (try_python && try_python.status == 200) {
             console.log('python server found, using bert tokenizer')
             manager.container.registerConfiguration('bert', {
                 url: 'http://localhost:8000/tokenize',

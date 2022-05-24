@@ -3,6 +3,7 @@ import { Alert, Avatar, Icon, Nav } from "rsuite";
 // import Footer from "./Component/Footer/Footer";
 // import ProfileContainer from "./Component/ProfileContainer/ProfileContainer";
 import { ProfileContainer, Footer, Header, UserInfoFragment, UserSecurityFragment, UserPreferenceFragment } from '../Component'
+import { CSSTransition } from 'react-transition-group';
 
 async function getUserInfo() {
     return fetch('api/user/profile', {
@@ -61,7 +62,8 @@ export class Profile extends Component {
         this.state = {
             active_panel: "profile",
             user_info_data: null,
-            user_preference: null
+            user_preference: null,
+            show: false
         }
 
         this.onTabSelect = this.onTabSelect.bind(this)
@@ -84,6 +86,10 @@ export class Profile extends Component {
                 user_preference: preference_result.preference
             })
         }
+
+        this.setState({
+            show: true
+        })
     }
 
     onTabSelect(e) {
@@ -135,28 +141,30 @@ export class Profile extends Component {
             <div>
                 <Header></Header>
                 {/* <ProfileContainer></ProfileContainer> */}
-                <div style={{display: "flex", flexDirection: "row", padding: 20}}>
-                    <div style={{flex: 1, border: '1px solid gray', borderRadius: 10, padding: 20}}>
-                        <div style={{marginBottom: 20}}>
-                            <Avatar circle size='lg' style={{height: 120, width: 120}}>?</Avatar>
+                <CSSTransition in={this.state.show} timeout={2000} classNames="about-screen">
+                    <div style={{display: "flex", flexDirection: "row", padding: 20}}>
+                        <div style={{flex: 1, border: '1px solid gray', borderRadius: 10, padding: 20}}>
+                            <div style={{marginBottom: 20}}>
+                                <Avatar circle size='lg' style={{height: 120, width: 120}}>?</Avatar>
+                            </div>
+                            <div style={{marginBottom: 20}}>
+                                <h4>{(this.state.user_info_data) ? this.state.user_info_data.username : "N/A"}</h4>
+                            </div>
+                            <div><p>{"Đăng ký 2 tháng trước"}</p></div>
                         </div>
-                        <div style={{marginBottom: 20}}>
-                            <h4>{(this.state.user_info_data) ? this.state.user_info_data.username : "N/A"}</h4>
-                        </div>
-                        <div><p>{"Đăng ký 2 tháng trước"}</p></div>
-                    </div>
-                    <div style={{flex: 3, border: '1px solid gray', borderRadius: 10, marginLeft: 20, padding: 20}}>
-                        <Nav activeKey={this.state.active_panel} onSelect={this.onTabSelect} appearance="tabs" justified>
-                            <Nav.Item eventKey="profile">Thông tin người dùng</Nav.Item>
-                            <Nav.Item eventKey="security">Bảo mật</Nav.Item>
-                            <Nav.Item eventKey="preference">Thiết lập cá nhân</Nav.Item>
-                        </Nav>
-                        <div style={{minHeight: 300}}>
-                            {activeComponent}
-                        </div>
+                        <div style={{flex: 3, border: '1px solid gray', borderRadius: 10, marginLeft: 20, padding: 20}}>
+                            <Nav activeKey={this.state.active_panel} onSelect={this.onTabSelect} appearance="tabs" justified>
+                                <Nav.Item eventKey="profile">Thông tin người dùng</Nav.Item>
+                                <Nav.Item eventKey="security">Bảo mật</Nav.Item>
+                                <Nav.Item eventKey="preference">Thiết lập cá nhân</Nav.Item>
+                            </Nav>
+                            <div style={{minHeight: 300}}>
+                                {activeComponent}
+                            </div>
 
+                        </div>
                     </div>
-                </div>
+                </CSSTransition>
                 <Footer></Footer>
             </div>
         )
