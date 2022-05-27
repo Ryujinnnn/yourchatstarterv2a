@@ -13,7 +13,7 @@
     "do-quickstart": "cd yourchatstarter-backend && pm2 start App.js && cd ..",
     "start-python": "cd yourchatstarter-phobert && nohup python3 -u app.py > main.log 2>&1 & echo $! > app.pid && cd ..",
     "check-python": "ps -p \"$(cat yourchatstarter-phobert/app.pid)\"",
-    "kill-python": "kill -p \"$(cat yourchatstarter-phobert/app.pid)\""
+    "kill-python": "kill -9 \"$(cat yourchatstarter-phobert/app.pid)\""
   },
   "engines": {
     "node": "16.x"
