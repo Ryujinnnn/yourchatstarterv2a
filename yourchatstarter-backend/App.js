@@ -18,6 +18,7 @@ const { init_scraper } = require('./info_module/covid_info');
 
 const { notificationCheck, checkNotification } = require('./routine/notification_check');
 const { updateStat } = require('./routine/update_stat');
+const { shuffleSuggestion } = require('./routine/shuffle_suggestion_pool')
 
 require('dotenv').config()
 
@@ -123,7 +124,9 @@ app.listen(port, () => {
 	//open connection test
 	databaseConn.initConnection()
 
+	shuffleSuggestion()
+	setInterval(shuffleSuggestion, 900000)
 	setInterval(checkNotification, 60000)
 	setInterval(updateStat, 60000)
-	console.log('check notification routine setup')
+	//console.log('check notification routine setup')
 })

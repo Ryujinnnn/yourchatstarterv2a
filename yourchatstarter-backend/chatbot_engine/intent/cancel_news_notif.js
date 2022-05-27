@@ -1,3 +1,15 @@
+const { smalltalk_suggestion } = require('../../database/session_storage')
+const random_helper = require('../utils/random_helper')
+
+Array.prototype.slice_wrap = function (start, end) {
+    if (start <= end) {
+        return this.slice(start, end)
+    }
+    else {
+        return this.slice(start).concat(this.slice(0, end))
+    }
+}
+
 module.exports.run = (entities, option, context, isLocal = true) => {
     return new Promise(async (resolve, reject) => {
         let response = ""
@@ -36,7 +48,8 @@ module.exports.run = (entities, option, context, isLocal = true) => {
                     }
                 }
                 response = `Tôi đã hủy thông báo cho bạn rồi nhé`
-                context.suggestion_list = ['Bạn khỏe không?', 'Trợ giúp', 'Tin tức']
+                let start_index = random_helper(smalltalk_suggestion.length)
+                context.suggestion_list = ["Cảm ơn"].concat(smalltalk_suggestion.slice_wrap(start_index, (start_index + 3) % smalltalk_suggestion.length))
             }
         }
 

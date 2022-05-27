@@ -8,7 +8,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
         if (option.isPaid && permitted_tier.includes(option.plan)) {
             if (isLocal) { 
                 response = "a"
-                console.log(entities)
+                //console.log(entities)
 
                 let from_currency = entities.find((val) => val.entity === "currency" && val.alias === "currency_0") 
                 let amount = entities.find((val) => val.entity === "custom_number") 
@@ -53,6 +53,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                         )
                 }
             }
+            context.suggestion_list = ["1 đô la ra mấy VND?", "12 EUR đổi ra mấy JPY", "1 đô la đổi được bao nhiêu bạt thái"]
         }
         else {
             response = "Chức năng này là chỉ dành cho khách hàng hạng tiêu chuẩn trở lên nhé :D"

@@ -45,10 +45,13 @@ async function main() {
 	for (let i = 0; i < locationKeys.length; i += 1) {
 		const location = location_vn[locationKeys[i]];
 		const location_canon_name = locationKeys[i]
-		manager.addNamedEntityText('location', location_canon_name, 'vi', location_canon_name);
+		if (location.alias) {
+			manager.addNamedEntityText('location', location_canon_name, 'vi',  [location_canon_name].concat(location.alias));
+		}
+		else {
+			manager.addNamedEntityText('location', location_canon_name, 'vi', location_canon_name);
+		}
 	}
-
-	manager.addNamedEntityText('location', 'Thành phố Hồ Chí Minh', 'vi', ['TP.HCM', 'TP. Hồ Chí Minh', 'thành phố hồ chí minh', 'Thành phố Hồ Chí Minh'])
 
 	console.log('loading stock code data...')
 	for (let i = 0; i < stocks_list.length; i++) {

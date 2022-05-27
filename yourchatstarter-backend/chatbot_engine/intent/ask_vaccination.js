@@ -9,7 +9,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                 answer = `Tính đến ${new Date(res.allocatedDate).toLocaleDateString('vi-VN')}. Việt Nam đã tiêm tổng cộng ${res.objectInjection.toLocaleString('vi-VN')} mũi vaccine`
             }
         }
-        context.suggestion_list = ['Tình hình covid như thế nào', 'Bạn khỏe không']
+        context.suggestion_list = ['Tình hình covid như thế nào', 'Bạn khỏe không', "Tình hình covid ở hà nội", "cảm ơn"]
         resolve([answer, context, {}])
     })
 }

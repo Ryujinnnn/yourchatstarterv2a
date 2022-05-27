@@ -41,6 +41,7 @@ module.exports = (parsed_data, input, option, context, IntentHandler) => {
                     if (intent_stack[i].missing_entities.includes(entity_entry.entity)) {
                         entity_entry.from_context = true
                         intent_stack[i].confirmed_entities.push(entity_entry)
+                        intent_stack[i].missing_entities.splice(intent_stack[i].missing_entities.findIndex(val => val === entity_entry.entity), 1)
                         intent_updated = true
                     }
                 })

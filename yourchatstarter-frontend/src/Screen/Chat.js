@@ -239,6 +239,7 @@ export class Chat extends Component {
         // }
         // text = text.replace(/\[(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?.*\/]/g, "")
 		//console.log('before', text)
+		if (!text) return
 		text = text.replace(/__|\*|\#|!*(?:\[([^\]]*)\]\([^)]*\))/g, "")
 		//console.log('after', text)
 		let utterance = new SpeechSynthesisUtterance(text)

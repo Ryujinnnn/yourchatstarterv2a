@@ -86,8 +86,9 @@ class customNERImplementation {
         let candidate = [] 
         rule.options.forEach((val) => {
             //console.log(`checking against ${val}, minimum dist will be ${Math.round(val.length - val.length * rule.threshold)}`)
-            let new_candidate = [...fuzzySearch(val, input, Math.round(val.length - val.length * rule.threshold))]
+            let new_candidate = [...fuzzySearch(val, input, Math.floor(val.length - val.length * rule.threshold))]
             new_candidate = new_candidate.map(entry => {return {...entry, accuracy: (val.length - entry.dist) / val.length}})
+
             candidate = candidate.concat(new_candidate)
         })
 

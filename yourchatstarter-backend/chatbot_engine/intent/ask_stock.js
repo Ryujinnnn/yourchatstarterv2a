@@ -38,6 +38,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                         (e) => response = `Mình không thể tìm được mã cổ phiếu này :(`)
                 }   
             }
+            context.suggestion_list = ["mốc điểm cổ phiếu FB", "mã cổ phiếu AMZN đang ở mức bao nhiêu điểm?", "1 đô la ra mấy VND?", "cảm ơn"]
         }
         else {
             response = "Chức năng này là chỉ dành cho khách hàng hạng tiêu chuẩn trở lên nhé :D"

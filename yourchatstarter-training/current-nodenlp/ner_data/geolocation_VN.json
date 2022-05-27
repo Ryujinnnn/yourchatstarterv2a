@@ -63,7 +63,8 @@
         "uri": "Ho%20Chi%20Minh",
         "lat": "10.7758439",
         "lon": "106.7017555",
-        "name": "Thành phố Hồ Chí Minh, Quận Nhứt, 71006, Việt Nam"
+        "name": "Thành phố Hồ Chí Minh, Quận Nhứt, 71006, Việt Nam",
+        "alias": ["thành phố hồ chí minh", "tp hồ chí minh", "tp hcm", "tp. hồ chí minh", "tp.hcm", "TP.HCM", "TP. Hồ Chí Minh"]
     },
     "Bà Rịa - Vũng Tàu": {
         "uri": "Ba%20Ria-Vung%20Tau",
@@ -4900,12 +4901,6 @@
     },
     "Đông Thành": {
         "uri": "%C4%90%C3%B4ng%20Th%C3%A0nh"
-    },
-    "Hồ": {
-        "uri": "H%E1%BB%93",
-        "lat": "21.0650324",
-        "lon": "106.0792808",
-        "name": "Hồ, Thuận Thành, Tỉnh Bắc Ninh, Việt Nam"
     },
     "Đa Krông": {
         "uri": "%C4%90a%20Kr%C3%B4ng",

@@ -56,6 +56,8 @@ module.exports.run = (entities, option, context, input = "", isLocal = false) =>
         else {
             response = "Bạn muốn tính gì?"
         }
+        
+        context.suggestion_list = ["2+2 bằng bao nhiêu", "1+sin(3.14) bằng bao nhiêu", "2*23-5 bằng bao nhiêu", "Cảm ơn"]
         //console.log(response)
         resolve([response, context, {}])
     })

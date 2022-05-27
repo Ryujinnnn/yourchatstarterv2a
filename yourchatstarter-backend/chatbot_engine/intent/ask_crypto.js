@@ -3,6 +3,7 @@ const { crypto_infographic } = require('../../info_module/infographic_generator'
 
 module.exports.run = (entities, option, context, isLocal = false) => {
     const permitted_tier = ["standard", "premium", "lifetime"]
+
     return new Promise(async (resolve, reject) => {
         let response = ""
         if (option.isPaid && permitted_tier.includes(option.plan)) {
@@ -50,6 +51,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                         (e) => response = `Mình không thể tìm được cặp giá trị này bạn ơi :(`)
                 }   
             }
+            context.suggestion_list = ["giá tiền ảo bitcoin sang USD như thế nào", "giá tiền ảo ETH qua EUR như thế nào", "Cảm ơn"]
         }
         else {
             response = "Chức năng này là chỉ dành cho khách hàng hạng tiêu chuẩn trở lên nhé :D"

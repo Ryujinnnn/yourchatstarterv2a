@@ -50,7 +50,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
             }
         }
         context.intent_stack.push(context_intent_entry)
-        context.suggestion_list = ["Bản khỏe không", "Thời tiết ở TP.HCM như thế nào?"]
+        context.suggestion_list = ["Bản khỏe không", "Trời hà nội như thế nào?", "Dự báo thời tiết Đồng Hới", "Thời tiết ở Cần Thơ"]
         resolve([response, context])
     })
 }

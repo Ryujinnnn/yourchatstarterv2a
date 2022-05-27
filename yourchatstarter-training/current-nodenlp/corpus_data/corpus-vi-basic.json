@@ -16,7 +16,7 @@
                 "Xin chào bạn",
                 "Chào bạn tôi"
             ],
-            "test": [
+            "tests": [
                 "Xin chào bạn tôi",
                 "Chào em",
                 "Chào ông"
@@ -228,7 +228,15 @@
                 "bận không",
                 "vẫn đang làm việc chứ",
                 "bạn không có việc gì chứ",
-                "không phiền nếu tôi hỏi bạn chứ"
+                "không phiền nếu tôi hỏi bạn chứ",
+                "bạn có rảnh không",
+                "bạn có đang bận gì không",
+                "rảnh chứ"
+            ],
+            "tests": [
+                "bạn có rảnh không",
+                "bạn có đang bận gì không",
+                "rảnh chứ"
             ],
             "answers": [
                 "Tôi sẽ luôn có thời gian chat với bạn. Tôi có thể làm gì cho bạn",
@@ -420,6 +428,7 @@
                 "bạn có sở thích gì không",
                 "bạn thích làm gì khi rảnh rỗi",
                 "bạn thích làm gì cho vui",
+                "bạn thích làm gì lúc rảnh",
                 "nói cho tôi biết về sở thích của bạn",
                 "thú vui của bạn là gì",
                 "bạn có đặc biệt thích điều gì không"

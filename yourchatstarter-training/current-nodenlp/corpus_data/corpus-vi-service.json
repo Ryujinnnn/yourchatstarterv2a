@@ -10,7 +10,14 @@
                 "thời tiết %location% như thế nào",
                 "Thời tiết ở %location% thế nào?",
                 "thời tiết hiện tại ở %location%",
-                "Thời tiết %location%"
+                "Thời tiết %location%",
+                "thời tiết ở thành phố hồ chí minh như thế nào",
+                "thời tiết ở thành phố hồ chí minh",
+                "thời tiết ở tp hồ chí mình như thế nào"
+            ],
+            "tests": [
+                "thời tiết ở thành phố hồ chí minh",
+                "thời tiết ở tp hồ chí mình như thế nào"
             ],
             "answers": [
                 "Mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
@@ -24,7 +31,9 @@
                 "%amount% %currency% đổi ra bao nhiêu %currency%",
                 "%amount% %currency% ra mấy %currency%?",
                 "%amount% %currency% đổi ra bao nhiêu %currency%?",
-                "giá %currency%"
+                "giá %currency%",
+                "80000 VND đổi được bao nhiêu đô la",
+                "1 đô la ra mấy VND?"
             ],
             "answers": [
                 "Mình không rõ bạn muốn nhắc đến loại tiền gì"
@@ -161,7 +170,7 @@
                 "dân số của thành phố hồ chí minh",
                 "ngày sinh của nguyễn phú trọng"
             ],
-            "answer": [
+            "answers": [
                 "Mình không biết bạn ơi :("
             ]
         },
@@ -172,7 +181,7 @@
                 "đổi 27m ra ft",
                 "32 độ C bằng bao nhiêu kelvin"
             ],
-            "answer": [
+            "answers": [
                 "Mình không đổi được bạn ơi :("
             ]
         },
@@ -186,7 +195,7 @@
                 "dự báo thời tiết thành phố Hồ Chí minh",
                 "dự báo thời tiết %location%"
             ],
-            "answer": [
+            "answers": [
                 "Mình không dự báo được thời tiết nơi này :("
             ]
         },
@@ -198,7 +207,7 @@
                 "mở app gmail",
                 "mở ứng dụng %app_name%"
             ],
-            "answer": [
+            "answers": [
                 "Mình không biết bạn muốn mở ứng dụng gì :("
             ]
         },
@@ -209,7 +218,7 @@
                 "Thông báo cho tôi về tin tức đời sống mỗi ngày",
                 "Thông báo cho tôi về tin tức %news_category% mỗi ngày"
             ],
-            "answer": [
+            "answers": [
                 "Mình không biết bạn muốn nhận thông báo về gì :("
             ]
         },
@@ -218,7 +227,7 @@
             "utterances": [
                 "Hủy thông báo tin tức cho tôi"
             ],
-            "answer": [
+            "answers": [
                 "Mình không biết bạn muốn nhận thông báo về gì :("
             ]
         },
@@ -232,7 +241,7 @@
                 "Thông tin thời tiết ở %location% mỗi ngày",
                 "Thông báo cho tôi về thời tiết ở TP Hồ Chí Minh mỗi tuần"
             ],
-            "answer": [
+            "answers": [
                 "Mình không biết bạn muốn nhận thông báo về gì :("
             ]
         },
@@ -241,7 +250,7 @@
             "utterances": [
                 "Hủy thông báo thời tiết cho tôi"
             ],
-            "answer": [
+            "answers": [
                 "Mình không biết bạn muốn nhận thông báo về gì :("
             ]
         }

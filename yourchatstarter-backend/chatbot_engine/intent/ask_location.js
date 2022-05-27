@@ -13,17 +13,22 @@ module.exports.run = (entities, option, context, isLocal = true) => {
             }
             else {
                 let location = location_entity.sourceText
-                let location_info = await nominating_search(location)
-                action = {
-                    action: "SHOW_MAP",
-                    data: {
-                        message: `${location_info.lat} ${location_info.lon}`, 
-                        time: new Date(),
-                        type: 'one-time'
-                    }
+                let location_info = await nominating_search(location).catch(e => console.log(e))
+                if (!location_info) {
+                    response = "Mình không thể tìm được nó ở đâu cả. Xin lỗi bạn :("
                 }
-                response = `Mình đã tìm thấy ${location}`
-                context.suggestion_list = ['Bạn khỏe không?', 'Trợ giúp', 'Tin tức']
+                else {
+                    action = {
+                        action: "SHOW_MAP",
+                        data: {
+                            message: `${location_info.lat} ${location_info.lon}`, 
+                            time: new Date(),
+                            type: 'one-time'
+                        }
+                    }
+                    response = `Mình đã tìm thấy ${location}`
+                }
+                context.suggestion_list = ['Vincom Đồng Khởi ở đâu?', 'Tam Kỳ ở đâu?', 'Đại học bách khoa thành phố hồ chí minh ở đâu', "Cảm ơn"]
             }
         }
 

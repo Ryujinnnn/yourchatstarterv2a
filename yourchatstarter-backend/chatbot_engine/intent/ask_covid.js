@@ -35,7 +35,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                     )
             }
         }
-        context.suggestion_list = ['Bạn khỏe không?', 'Lời khuyên covid']
+        context.suggestion_list = ['Bạn khỏe không?', 'Lời khuyên covid', 'Tình hình covid như thế nào', 'tình hình dịch covid ở hà nội như thế nào']
         resolve([response, context, {}])
     })
 }

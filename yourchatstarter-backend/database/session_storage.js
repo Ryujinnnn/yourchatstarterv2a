@@ -11,3 +11,5 @@ module.exports.session_storage = {
     neutral_utterance: 0,
     negative_utterance: 0,
 }
+
+module.exports.smalltalk_suggestion = []

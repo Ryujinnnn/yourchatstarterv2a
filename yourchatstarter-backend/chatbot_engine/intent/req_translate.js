@@ -36,6 +36,8 @@ module.exports.run = (entities, option, context, isLocal = false) => {
 					)
 				}
 			}
+			let start_index = random_helper(smalltalk_suggestion.length)
+			context.suggestion_list = ["mình nói \"you are great\" trong tiếng việt như thế nào?", "dịch \"tôi đi đến trường\" sang tiếng anh", "cảm ơn"]
 		}
 		else { 
 			response = "Chức năng này là chỉ dành cho khách hàng hạng cao cấp trở lên nhé :D"

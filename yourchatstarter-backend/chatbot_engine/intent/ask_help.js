@@ -8,7 +8,7 @@ const helpResponsePool = [
 ]
 
 module.exports.run = (entities, option, context) => {
-    context.suggestion_list = ['Thời tiết ở Hà Nội như thế nào?', '1 USD đổi ra bao nhiêu VND?', 'Bạn nói "Thank you very much" bằng tiếng việt như thế nào?']
+    context.suggestion_list = ['Thời tiết ở Hà Nội như thế nào?', '1 USD đổi ra bao nhiêu VND?', 'Bạn nói "Thank you very much" bằng tiếng việt như thế nào?', 'Chào bạn']
     return [helpResponsePool[random_helper(helpResponsePool.length)], context]
 }
 

@@ -28,6 +28,8 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                     (data_uri) => {response += "\n![stock infographic](" + data_uri + ")"},
                     (e) => response += ``)
             }
+
+            context.suggestion_list = ["1 USD đổi ra bao nhiêu VND", "2.5 EUR đổi ra bao nhiêu đô la mỹ", "80000 VND đổi được bao nhiêu đô la", "Cảm ơn"]
         }
         else {
             let from_unit = entities.find((val) => val.entity === "conversion_unit" && val.alias === "conversion_unit_0") 
@@ -51,9 +53,11 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                     console.log(e)
                     response = `Mình không đổi đơn vị này được bạn ạ :(`
                 }
+                context.suggestion_list = ["1 km đổi ra mấy yard", "200 ml đổi ra bao nhiêu gallon", "1 m đổi ra bao nhiêu ft", "Cảm ơn"]
             }
             else {
                 response = 'Mình không rõ bạn muốn đổi đơn vị gì :('
+                context.suggestion_list = ["1 yard đổi ra mấy feet", "2.5 EUR đổi ra bao nhiêu yên nhật", "1 m đổi ra bao nhiêu ft", "Trợ giúp"]
             }
         }
         resolve([response, context, {}])

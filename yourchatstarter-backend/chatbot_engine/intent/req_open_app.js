@@ -16,6 +16,7 @@ module.exports.run = (entities, option, context, isLocal = true) => {
             response = "Bạn có thể nói rõ ứng dụng nào được không?"
             context_intent_entry.missing_entities.push('app_name')
             context.intent_stack.push(context_intent_entry)
+            context.suggestion_list = ['Spotify', 'Gmail', 'Zalo' ,'Zing MP3']
         }
         else {
             let app_name_value = app_name.option
@@ -28,7 +29,7 @@ module.exports.run = (entities, option, context, isLocal = true) => {
                 }
             }
             response = `Tôi sẽ mở ứng dụng ${app_name_value} cho bạn`
-            context.suggestion_list = ['Bạn khỏe không?', 'Trợ giúp', 'Tin tức']
+            context.suggestion_list = ['Mở ứng dụng Spotify', 'Mở ứng dụng Gmail', 'Mở app Zalo' ,'Cảm ơn']
         }
     }
 

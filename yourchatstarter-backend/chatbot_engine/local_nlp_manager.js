@@ -4,7 +4,7 @@ const context_handle = require('../chatbot_engine/context_handler')
 const { embeded_answer } = require('../info_module/basic_answer_query')
 const { customNER, cleanEntities } = require('./custom_ner')
 const freeform_query = require('./freeform_query')
-const { session_storage } = require('../database/session_storage')
+const { session_storage, smalltalk_suggestion } = require('../database/session_storage')
 const { get_sentiment } = require('./external_service/sentiment_analysist')
 const random_helper = require('./utils/random_helper')
 const { LangBert } = require('@nlpjs/lang-bert')
@@ -18,19 +18,37 @@ let context = null
 let custom_ner_pool = []
 
 const negative_sentiment_response_pool = [
-    ". Mình xin lỗi nếu mình có làm bạn tức giận"
+    ". Mình xin lỗi nếu mình có làm bạn tức giận",
+    ". Mình mong bạn kiềm chế",
+    ". Mong bạn đừng nóng nhé",
 ]
 
 const negative_unclear_response_pool = [
-    "Mình không chắc bạn muốn làm gì nhưng mà đừng nóng bạn nhé"
+    "Mình không chắc bạn muốn làm gì nhưng mà đừng nóng bạn nhé",
+    "Mình không rõ ý bạn là gì nhưng mong bạn đừng nóng",
+    "Mình xin lỗi bạn, mình không hiểu ý bạn cho lắm"
 ]
 
 const positive_sentiment_response_pool = [
-    ". Mình mừng vì bạn thấy vui"
+    ". Mình mừng vì bạn thấy vui",
+    ". Cảm ơn bạn đã tin tưởng tôi",
+    ". Mình mong rằng mình đã làm bạn hài lòng"
 ]
 
 const positive_unclear_response_pool = [
-    "Mình không rõ là bạn muốn nói gì lắm, nhưng bạn có vẻ đang cảm thấy vui, mình cũng thấy vui cho bạn"
+    "Mình không rõ là bạn muốn nói gì lắm, nhưng bạn có vẻ đang cảm thấy vui, mình cũng thấy vui cho bạn",
+    "Mình không hiểu ý bạn lắm, nhưng bạn có vẻ rất vui",
+    "Mình chưa chắc là mình hiểu bạn muốn nói gì, nhưng mình mừng vì bạn thấy vui"
+]
+
+const embeded_suggestion = {
+    "embeded.ask_time": ["Hiện tại là ngày mấy", "Hôm nay là thứ mấy", "Cảm ơn", "Bạn thật tuyệt"],
+    "embeded.ask_date": ["Hiện tại đang là mấy giờ", "Hôm nay là thứ mấy", "Cảm ơn", "Bạn thật tuyệt"],
+    "embeded.ask_day_of_week": ["Hôm nay là ngày mấy", "Bây giờ là mấy giờ", "Cảm ơn", "Bạn thật tuyệt"],
+}
+
+const freeform_query_suggestion = [
+    "Vinamilk", "Đồng Hới", "Thủ đô của Việt Nam", "COVID-19", "Huấn luyện viên trưởng của Manchester City", "J.K.Rowling", "Sea Games 31"
 ]
 
 module.exports.setupInstance = async () => {
@@ -131,12 +149,12 @@ module.exports.setupInstance = async () => {
         )
 
         let affirmation = new customNER("affirmation", "vi")
-        affirmation.addNewDictRule(['Đồng ý', 'Chắc chắn', 'Đúng', 'Xác nhận', "oke", "ok", "okay"], "yes", 0.9)
+        affirmation.addNewDictRule(['Đồng ý', 'đồng ý', 'đồng Ý', 'Chắc chắn', 'Đúng', 'Xác nhận', "oke", "ok", "okay"], "yes", 0.9)
         affirmation.addNewDictRule(["Hủy", "Không", "Từ chối"], "no", 0.9)
 
         
         let number_ner = new customNER("custom_number", "vi")
-        number_ner.addNewRegexRule(/(^\d+(?=\s))|(\s\d+(?=\s))|(\s\d+$)|(^\d+$)/g, null, (inp) => {
+        number_ner.addNewRegexRule(/((\+|-)?([0-9]+)(\.[0-9]+)?)|((\+|-)?\.?[0-9]+)/g, null, (inp) => {
             let val = 1
             try {
                 val = parseFloat(inp.trim())
@@ -178,6 +196,14 @@ module.exports.setupInstance = async () => {
     }
 }
 
+Array.prototype.slice_wrap = function (start, end) {
+    if (start <= end) {
+        return this.slice(start, end)
+    }
+    else {
+        return this.slice(start).concat(this.slice(0, end))
+    }
+}
 
 
 module.exports.processInput = (input, option = {}, context = {}, IntentHandler) => {
@@ -231,7 +257,7 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                 else if (res.intent.startsWith('embeded.') && res.score > 0.7) {
                     session_storage.defined_intent += 1
                     answer = embeded_answer(res.intent, res.answer)
-                    context.suggestion_list = ['Chào bạn', 'Mình phải đi đây', "Bạn thích làm gì lúc rảnh", "Bạn thật tuyệt"]
+                    context.suggestion_list = embeded_suggestion[res.intent] || ['Chào bạn', 'Mình phải đi đây', "Bạn thích làm gì lúc rảnh", "Bạn thật tuyệt"]
                 }
                 else if (res.intent === "None" || res.score <= 0.7) {
                     // try to process pending context
@@ -251,6 +277,13 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                             session_storage.unknown_intent += 1
                             unknown_intent = true
                             answer = res.answer
+                            let start_index = random_helper(smalltalk_suggestion.length)
+                            context.suggestion_list = ["Trợ giúp", "Giúp mình với"].concat(smalltalk_suggestion.slice_wrap(start_index, (start_index + 2) % smalltalk_suggestion.length))
+                        }
+                        else {
+                            let start_index = random_helper(freeform_query_suggestion.length)
+                            //let start_index = freeform_query_suggestion.length - 1
+                            context.suggestion_list = ["Cảm ơn"].concat(freeform_query_suggestion.slice_wrap(start_index, (start_index + 3) % freeform_query_suggestion.length))
                         }
                         //console.log(answer)
                     }
@@ -261,7 +294,8 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                 else {
                     session_storage.defined_intent += 1
                     answer = res.answer
-                    context.suggestion_list = ['Chào bạn', 'Mình phải đi đây', "Bạn thích làm gì lúc rảnh", "Bạn thật tuyệt"]
+                    let start_index = random_helper(smalltalk_suggestion.length)
+                    context.suggestion_list = smalltalk_suggestion.slice_wrap(start_index, (start_index + 4) % smalltalk_suggestion.length)
                 }
 
                 if (sentiment_res && sentiment_res.certainty > 70) {
