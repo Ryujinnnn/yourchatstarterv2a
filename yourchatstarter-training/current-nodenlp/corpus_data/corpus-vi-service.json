@@ -7,6 +7,7 @@
             "utterances": [
                 "Thời tiết",
                 "thời tiết ở hà nội như thế nào",
+                "Cho tôi biết thời tiết ở %location%",
                 "thời tiết %location% như thế nào",
                 "Thời tiết ở %location% thế nào?",
                 "thời tiết hiện tại ở %location%",
@@ -20,6 +21,10 @@
             "intent": "service.ask_exchange_rate",
             "utterances": [
                 "%amount% %currency% ra mấy %currency%?",
+                "%amount% %currency% đổi được bao nhiêu %currency%?",
+                "%amount% %currency% được bao nhiêu %currency%?",
+                "%amount% %currency% đổi được mấy %currency%?",
+                "%amount% %currency% bằng bao nhiêu %currency%?",
                 "Giá ngoại tệ",
                 "%amount% %currency% đổi ra bao nhiêu %currency%",
                 "%amount% %currency% ra mấy %currency%?",
@@ -35,7 +40,13 @@
             "utterances": [
                 "giá tiền ảo %crypto% sang %currency% như thế nào",
                 "giá tiền ảo %crypto% qua %currency% như thế nào",
-                "giá tiền ảo %crypto%/%currency%"
+                "giá tiền ảo %crypto%/%currency%",
+                "giá tiền ảo %crypto%/%currency% đang là bao nhiêu",
+                "giá tiền ảo %crypto% bằng bao nhiêu %currency%",
+                "giá tiền ảo %crypto% sang %currency% bằng bao nhiêu",
+                "giá tiền ảo %crypto% sang %currency% hiện tại",
+                "giá tiền ảo %crypto%/%currency% hiện tại",
+                "giá tiền ảo %crypto%/%currency% như thế nào"
             ],
             "answers": [
                 "Mình không rõ bạn muốn nhắc đến loại tiền gì"
@@ -45,6 +56,11 @@
             "intent": "service.ask_stock",
             "utterances": [
                 "chứng khoán",
+                "cổ phiếu %stock_code% giá bao nhiêu",
+                "mức cổ phiếu %stock_code%",
+                "mức niêm yết cổ phiếu %stock_code%",
+                "cổ phiếu %stock_code% hiện tại",
+                "cổ phiếu %stock_code%",
                 "cổ phiếu %stock_code% đang ở mốc bao nhiêu điểm",
                 "cổ phiểu %stock_code% đang ở mức bao nhiêu điểm vậy?",
                 "mã cổ phiếu %stock_code% đang ở mức bao nhiêu điểm?",
@@ -59,6 +75,14 @@
             "intent": "service.ask_calc",
             "utterances": [
                 "%expression% bằng mấy?",
+                "%expression% kết quả bằng mấy?",
+                "%expression% có kết quả bằng mấy?",
+                "kết quả %expression% bằng mấy?",
+                "kết quả phép tính %expression%?",
+                "kết quả biểu thức %expression%?",
+                "kết quả biểu thức %expression bằng mấy",
+                "%expression% ra bao nhiêu?",  
+                "%expression% được bao nhiêu?",      
                 "%expression% bằng bao nhiêu?",
                 "%expression% bằng bao nhiêu?"
             ],
@@ -69,8 +93,26 @@
         {
             "intent": "service.ask_covid",
             "utterances": [
+                "tình trạng dịch covid",
+                "tình hình dịch covid",
                 "tình hình covid như thế nào",
-                "tình hình covid ở %location% như thế nào"
+                "tình hình covid hiện nay như thế nào",
+                "tình hình covid hiện nay",
+                "dịch covid hiện nay như thế nào",
+                "tình hình covid ở %location% ",
+                "tình hình covid ở %location% như thế nào",
+                "tình trạng covid như thế nào",
+                "tình trạng covid hiện nay như thế nào",
+                "tình trạng covid hiện nay",
+                "dịch covid hiện nay như thế nào",
+                "tình trạng covid ở %location% ",
+                "tình trạng covid ở %location% như thế nào",
+                "số ca nhiễm covid 19",
+                "sô ca covid hiện nay",
+                "sô ca covid hôm nay",
+                "số ca nhiễm covid",
+                "số ca nhiễm covid ở %location",
+                "số ca nhiễm covid tại %location"
             ],
             "answers": [
                 "Mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
@@ -90,8 +132,14 @@
             "utterances": [
                 "Tin tức",
                 "tin tức quốc tế",
-                "Tin báo",
-                "Tin tức %news_category%"
+                "Tin báo", 
+                "Báo mới", 
+                "Tin mới", 
+                "Tin tức hôm nay", 
+                "Tin nóng", 
+                "Tin mới nhất",                                    
+                "Tin tức %news_category%",
+                "Tin %news_category%" 
             ],
             "answers": [
                 "Mình quên mua báo rồi bạn ơi"
@@ -133,7 +181,12 @@
             "utterances": [
                 "tình hình tiêm chủng covid",
                 "tình hình tiêm vaccine covid",
-                "tiêm chủng covid tại việt nam"
+                "tiêm chủng covid tại việt nam",
+                "tình trạng vaccine covid",
+                "tình hình tiêm chủng",
+                "tiêm chủng tại việt nam",
+                "thông tin tiêm chủng vaccine",
+                "tình trạng vaccine tại việt nam"
             ],
             "answers": [
                 "Mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
@@ -159,7 +212,10 @@
                 "tác giả của tiểu thuyết chạng vạng",
                 "ngày sinh của barrack obama",
                 "dân số của thành phố hồ chí minh",
-                "ngày sinh của nguyễn phú trọng"
+                "ngày sinh của nguyễn phú trọng",
+                "ngày sinh của lionel messi",
+                "ngày sinh của thiên hoàng minh trị",
+                "ngày sinh của johnny depp"
             ],
             "answer": [
                 "Mình không biết bạn ơi :("
@@ -196,7 +252,14 @@
                 "mở spotify",
                 "mở ứng dụng Youtube",
                 "mở app gmail",
-                "mở ứng dụng %app_name%"
+                "mở giúp tôi %app_name%",
+                "mở cho tôi %app_name%",
+                "mở %app_name% giúp tôi",
+                "mở %app_name% cho tôi",
+                "mở ứng dụng %app_name%",
+                "khởi động ứng dụng %app_name%",
+                "khởi động %app_name%",
+                "khởi động app %app_name%"
             ],
             "answer": [
                 "Mình không biết bạn muốn mở ứng dụng gì :("
