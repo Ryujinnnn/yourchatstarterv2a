@@ -20,6 +20,7 @@
     "name": "degree",
     "alias": [
       "degree",
+      "độ góc",
       "degrees",
       "deg",
       "degs",
@@ -46,6 +47,9 @@
       "square petameters",
       "square petametre",
       "square petametres",
+      "pê ta mét vuông",
+      "peta mét vuông",
+      "pm vuông",
       "Pm²",
       "Pm2"
     ]
@@ -57,6 +61,9 @@
       "square terameters",
       "square terametre",
       "square terametres",
+      "tê ra mét vuông",
+      "tera mét vuông",
+      "tm vuông",
       "Tm²",
       "Tm2"
     ]
@@ -68,6 +75,9 @@
       "square gigameters",
       "square gigametre",
       "square gigametres",
+      "gi ga mét vuông",
+      "giga mét vuông",
+      "gm vuông",
       "Gm²",
       "Gm2"
     ]
@@ -79,6 +89,9 @@
       "square megameters",
       "square megametre",
       "square megametres",
+      "mê ga mét vuông",
+      "mega mét vuông",
+      "gm vuông",
       "Mm²",
       "Mm2"
     ]
@@ -90,6 +103,10 @@
       "square kilometers",
       "square kilometre",
       "square kilometres",
+      "ki lô mét vuông",
+      "kilo mét vuông",
+      "cây số vuông",
+      "km vuông",
       "km²",
       "km2"
     ]
@@ -101,6 +118,11 @@
       "square hectometers",
       "square hectometre",
       "square hectometres",
+      "héc to mét vuông",
+      "hecto vuông",
+      "hm vuông",
+      "héc ta vuông",
+      "héc ta",
       "hm²",
       "hm2"
     ]
@@ -112,6 +134,9 @@
       "square decameters",
       "square decametre",
       "square decametres",
+      "đề ca mét vuông",
+      "deca mét vuông",
+      "dam vuông",
       "dam²",
       "dam2"
     ]
@@ -123,6 +148,9 @@
       "square decimeters",
       "square decimetre",
       "square decimetres",
+      "đề xi mét vuông",
+      "deci mét vuông",
+      "dm vuông",
       "dm²",
       "dm2"
     ]
@@ -133,7 +161,9 @@
       "square meter",
       "square meters",
       "square metre",
-      "square metres",
+      "square metres",   
+      "mét vuông",
+      "m vuông",  
       "m²",
       "m2"
     ]
@@ -145,6 +175,9 @@
       "square centimeters",
       "square centimetre",
       "square centimetres",
+      "cen ti mét vuông",
+      "xăng ti mét vuông",
+      "cm vuông",
       "cm²",
       "cm2"
     ]
@@ -156,6 +189,9 @@
       "square millimeters",
       "square millimetre",
       "square millimetres",
+      "mi li mét vuông",
+      "mili mét vuông",
+      "mm vuông",
       "mm²",
       "mm2"
     ]
@@ -167,6 +203,9 @@
       "square micrometers",
       "square micrometre",
       "square micrometres",
+      "mai rô mét vuông",
+      "micro mét vuông",
+      "μm vuông",
       "μm²",
       "μm2"
     ]
@@ -178,6 +217,9 @@
       "square nanometers",
       "square nanometre",
       "square nanometres",
+      "na nô mét vuông",
+      "nano mét vuông",
+      "nm vuông",
       "nm²",
       "nm2"
     ]
@@ -189,6 +231,9 @@
       "square picometers",
       "square picometre",
       "square picometres",
+      "pi cô mét vuông",
+      "pico mét vuông",
+      "pm vuông",
       "pm²",
       "pm2"
     ]
@@ -200,6 +245,9 @@
       "square femtometers",
       "square femtometre",
       "square femtometres",
+      "phem tô mét vuông",
+      "femto mét vuông",
+      "fm vuông",
       "fm²",
       "fm2"
     ]
@@ -209,6 +257,8 @@
     "alias": [
       "acre",
       "acres",
+      "mẫu Anh",
+      "mẫu vuông Anh",
       "ac"
     ]
   },
@@ -255,6 +305,8 @@
     "name": "square foot",
     "alias": [
       "square foot",
+      "fút vuông",
+      "bàn chân vuông",
       "square feet",
       "sq ft"
     ]
@@ -263,6 +315,8 @@
     "name": "square inch",
     "alias": [
       "square inch",
+      "inch vuông",
+      "in vuông",
       "square inches",
       "sq in"
     ]
@@ -271,6 +325,8 @@
     "name": "square yard",
     "alias": [
       "square yard",
+      "i át vuông",
+      "iat vuông",
       "square yards",
       "sq yd"
     ]
@@ -279,6 +335,7 @@
     "name": "square mile",
     "alias": [
       "square mile",
+      "dặm vuông",
       "square miles",
       "sq mi"
     ]
@@ -287,6 +344,7 @@
     "name": "bit",
     "alias": [
       "bit",
+      "bít",
       "bits",
       "b"
     ]
@@ -296,6 +354,7 @@
     "alias": [
       "petabit",
       "petabits",
+      "pê ta bít",
       "Pb"
     ]
   },
@@ -304,6 +363,7 @@
     "alias": [
       "terabit",
       "terabits",
+      "tê ra bít",
       "Tb"
     ]
   },
@@ -312,6 +372,7 @@
     "alias": [
       "gigabit",
       "gigabits",
+      "gi ga bít",
       "Gb"
     ]
   },
@@ -320,6 +381,7 @@
     "alias": [
       "megabit",
       "megabits",
+      "mê ga bít",
       "Mb"
     ]
   },
@@ -327,6 +389,7 @@
     "name": "kilobit",
     "alias": [
       "kilobit",
+      "ki lô bít",
       "kilobits",
       "kb"
     ]
@@ -335,6 +398,7 @@
     "name": "hectobit",
     "alias": [
       "hectobit",
+      "héc tô bít",
       "hectobits",
       "hb"
     ]
@@ -343,6 +407,7 @@
     "name": "decabit",
     "alias": [
       "decabit",
+      "đề ca bít",
       "decabits",
       "dab"
     ]
@@ -351,6 +416,7 @@
     "name": "pebibit",
     "alias": [
       "pebibit",
+      "pe bi bít",
       "pebibits",
       "Pib"
     ]
@@ -360,6 +426,7 @@
     "alias": [
       "tebibit",
       "tebibits",
+      "te bi bít",
       "Tib"
     ]
   },
@@ -368,6 +435,7 @@
     "alias": [
       "gibibit",
       "gibibits",
+      "gi bi bít",
       "Gib"
     ]
   },
@@ -376,6 +444,7 @@
     "alias": [
       "mebibit",
       "mebibits",
+      "me bi bít",
       "Mib"
     ]
   },
@@ -384,6 +453,7 @@
     "alias": [
       "kibibit",
       "kibibits",
+      "ki bi bít",
       "Kib"
     ]
   },
@@ -405,6 +475,7 @@
       "bytes",
       "octect",
       "octects",
+      "bai",
       "B"
     ]
   },
@@ -415,6 +486,8 @@
       "petabytes",
       "petaoctect",
       "petaoctects",
+      "pê ta bai",
+      "peta bai",
       "PB"
     ]
   },
@@ -425,6 +498,8 @@
       "terabytes",
       "teraoctect",
       "teraoctects",
+      "tê ra bai",
+      "tera bai",
       "TB"
     ]
   },
@@ -435,6 +510,8 @@
       "gigabytes",
       "gigaoctect",
       "gigaoctects",
+      "gi ga bai",
+      "giga bai",
       "GB"
     ]
   },
@@ -445,6 +522,8 @@
       "megabytes",
       "megaoctect",
       "megaoctects",
+      "mê ga bai",
+      "mega bai",
       "MB"
     ]
   },
@@ -455,6 +534,9 @@
       "kilobytes",
       "kilooctect",
       "kilooctects",
+      "ki lô bai",
+      "kí lô bai",
+      "kilo bai",
       "kB"
     ]
   },
@@ -465,6 +547,8 @@
       "hectobytes",
       "hectooctect",
       "hectooctects",
+      "héc tô bai",
+      "hecto bai",
       "hB"
     ]
   },
@@ -475,6 +559,8 @@
       "decabytes",
       "decaoctect",
       "decaoctects",
+      "đề ca bai",
+      "deca bai",
       "daB"
     ]
   },
@@ -485,6 +571,8 @@
       "pebibytes",
       "pebioctect",
       "pebioctects",
+      "pe bi bai",
+      "pebi bai",
       "PiB"
     ]
   },
@@ -495,6 +583,8 @@
       "tebibytes",
       "tebioctect",
       "tebioctects",
+      "te bi bai",
+      "tebi bai",
       "TiB"
     ]
   },
@@ -505,6 +595,8 @@
       "gibibytes",
       "gibioctect",
       "gibioctects",
+      "gi bi bai",
+      "gibi bai",
       "GiB"
     ]
   },
@@ -515,6 +607,8 @@
       "mebibytes",
       "mebioctect",
       "mebioctects",
+      "me bi bai",
+      "mebi bai",
       "MiB"
     ]
   },
@@ -525,6 +619,8 @@
       "kibibytes",
       "kibioctect",
       "kibioctects",
+      "ki bi bai",
+      "kibi bai",
       "KiB"
     ]
   },
@@ -539,6 +635,7 @@
     "name": "joule",
     "alias": [
       "joule",
+      "jun",
       "joules",
       "J"
     ]
@@ -548,6 +645,8 @@
     "alias": [
       "petajoule",
       "petajoules",
+      "pê ta jun",
+      "peta jun",
       "PJ"
     ]
   },
@@ -556,6 +655,8 @@
     "alias": [
       "terajoule",
       "terajoules",
+      "te ra jun",
+      "tera jun",
       "TJ"
     ]
   },
@@ -564,6 +665,8 @@
     "alias": [
       "gigajoule",
       "gigajoules",
+      "gi ga jun",
+      "giga jun",
       "GJ"
     ]
   },
@@ -572,6 +675,8 @@
     "alias": [
       "megajoule",
       "megajoules",
+      "mê ga jun",
+      "mega jun",
       "MJ"
     ]
   },
@@ -580,6 +685,9 @@
     "alias": [
       "kilojoule",
       "kilojoules",
+      "ki lô jun",
+      "kilo jun",
+      "kí lô jun",
       "kJ"
     ]
   },
@@ -588,6 +696,8 @@
     "alias": [
       "hectojoule",
       "hectojoules",
+      "héc tô jun",
+      "hecto jun",
       "hJ"
     ]
   },
@@ -596,6 +706,8 @@
     "alias": [
       "decajoule",
       "decajoules",
+      "đề ca jun",
+      "deca jun",
       "daJ"
     ]
   },
@@ -604,6 +716,8 @@
     "alias": [
       "decijoule",
       "decijoules",
+      "đề xi jun",
+      "deci jun",
       "dJ"
     ]
   },
@@ -612,6 +726,9 @@
     "alias": [
       "centijoule",
       "centijoules",
+      "cen ti jun",
+      "centi jun",
+      "xăng ti jun",
       "cJ"
     ]
   },
@@ -620,6 +737,8 @@
     "alias": [
       "millijoule",
       "millijoules",
+      "mili jun",
+      "mi li jun",
       "mJ"
     ]
   },
@@ -628,6 +747,8 @@
     "alias": [
       "microjoule",
       "microjoules",
+      "mai rô jun",
+      "micro jun",
       "μJ"
     ]
   },
@@ -636,6 +757,8 @@
     "alias": [
       "nanojoule",
       "nanojoules",
+      "na nô jun",
+      "nano jun",
       "nJ"
     ]
   },
@@ -644,6 +767,8 @@
     "alias": [
       "picojoule",
       "picojoules",
+      "pi cô jun",
+      "pico jun",
       "pJ"
     ]
   },
@@ -652,6 +777,8 @@
     "alias": [
       "femtojoule",
       "femtojoules",
+      "phem tô jun",
+      "femto jun",
       "fJ"
     ]
   },
@@ -661,7 +788,9 @@
       "kilowatt-hour",
       "kW⋅h",
       "kW h",
-      "kWh"
+      "kWh",
+      "ki lô oát giờ",
+      "ki lô oát trên giờ"
     ]
   },
   {
@@ -669,6 +798,7 @@
     "alias": [
       "newton",
       "newtons",
+      "niu tơn",
       "N"
     ]
   },
@@ -676,6 +806,7 @@
     "name": "dyne",
     "alias": [
       "dyne",
+      "đin",
       "dynes",
       "dyn"
     ]
@@ -684,6 +815,9 @@
     "name": "kilogram-force",
     "alias": [
       "kilogram-force",
+      "ki lô gam lực",
+      "kí lô gam lực",
+      "kilo gam lực",
       "kgf",
       "kilopond",
       "kiloponds",
@@ -695,6 +829,9 @@
     "alias": [
       "pound of force",
       "pound-force",
+      "pound lực",
+      "pao lực",
+      "pao",
       "lbf"
     ]
   },
@@ -711,6 +848,7 @@
     "alias": [
       "gram",
       "grams",
+      "gam",
       "g"
     ]
   },
@@ -719,6 +857,9 @@
     "alias": [
       "petagram",
       "petagrams",
+      "pê ta gam",
+      "peta gam",
+
       "Pg"
     ]
   },
@@ -727,6 +868,9 @@
     "alias": [
       "teragram",
       "teragrams",
+      "tê ra gam",
+      "tera gam",
+
       "Tg"
     ]
   },
@@ -735,6 +879,9 @@
     "alias": [
       "gigagram",
       "gigagrams",
+      "gi ga gam",
+      "giga gam",
+
       "Gg"
     ]
   },
@@ -743,6 +890,9 @@
     "alias": [
       "megagram",
       "megagrams",
+      "mê ga gam",
+      "mega gam",
+
       "Mg"
     ]
   },
@@ -751,6 +901,11 @@
     "alias": [
       "kilogram",
       "kilograms",
+      "ki lô gam",
+      "kí lô gam",
+      "kilo gam",
+      "ký",
+      "kí",
       "kg"
     ]
   },
@@ -759,6 +914,9 @@
     "alias": [
       "hectogram",
       "hectograms",
+      "héc tô gam",
+      "hecto gam",
+
       "hg"
     ]
   },
@@ -767,6 +925,8 @@
     "alias": [
       "decagram",
       "decagrams",
+      "đề ca gam",
+      "deca gam",
       "dag"
     ]
   },
@@ -775,6 +935,8 @@
     "alias": [
       "decigram",
       "decigrams",
+      "đề xi gam",
+      "deci gam",
       "dg"
     ]
   },
@@ -783,6 +945,9 @@
     "alias": [
       "centigram",
       "centigrams",
+      "cen ti gam",
+      "centi gam",
+      "xăng ti gam",
       "cg"
     ]
   },
@@ -791,6 +956,9 @@
     "alias": [
       "milligram",
       "milligrams",
+      "mi li gam",
+      "mili gam",
+      "mi gam",
       "mg"
     ]
   },
@@ -799,6 +967,8 @@
     "alias": [
       "microgram",
       "micrograms",
+      "mai rô gam",
+      "micro gam",
       "μg"
     ]
   },
@@ -807,6 +977,8 @@
     "alias": [
       "nanogram",
       "nanograms",
+      "na nô gam",
+      "nano gam",
       "ng"
     ]
   },
@@ -815,6 +987,8 @@
     "alias": [
       "picogram",
       "picograms",
+      "pi cô gam",
+      "pico gam",
       "pg"
     ]
   },
@@ -823,6 +997,8 @@
     "alias": [
       "femtogram",
       "femtograms",
+      "phem tô gam",
+      "femto gam",
       "fg"
     ]
   },
@@ -831,6 +1007,7 @@
     "alias": [
       "tonne",
       "tonnes",
+      "tấn",
       "metric ton",
       "metric tons",
       "t"
@@ -981,6 +1158,8 @@
     "alias": [
       "pound",
       "pounds",
+      "pao",
+      "cân anh",
       "lb"
     ]
   },
@@ -989,6 +1168,7 @@
     "alias": [
       "stone",
       "stones",
+      "trọng lượng đá",
       "st"
     ]
   },
@@ -997,6 +1177,8 @@
     "alias": [
       "ounce",
       "ounces",
+      "aoxơ",
+      "lượng tây",
       "oz"
     ]
   },
@@ -1004,6 +1186,7 @@
     "name": "short ton",
     "alias": [
       "short ton",
+      "tấn thiếu",
       "short tons",
       "US ton",
       "US tons"
@@ -1014,6 +1197,7 @@
     "alias": [
       "long ton",
       "long tons",
+      "tấn dài",
       "imperial ton",
       "imperial tons",
       "displacement ton",
@@ -1025,6 +1209,7 @@
     "alias": [
       "watt",
       "watts",
+      "Oát",
       "W"
     ]
   },
@@ -1032,7 +1217,9 @@
     "name": "petawatt",
     "alias": [
       "petawatt",
-      "petawatts",
+      "petawatts",      
+      "pê ta oát",
+      "peta oát",
       "PW"
     ]
   },
@@ -1041,6 +1228,9 @@
     "alias": [
       "terawatt",
       "terawatts",
+      "tê ra oát",
+      "tera oát",
+
       "TW"
     ]
   },
@@ -1049,6 +1239,9 @@
     "alias": [
       "gigawatt",
       "gigawatts",
+      "gi ga oát",
+      "giga oát",
+
       "GW"
     ]
   },
@@ -1057,6 +1250,9 @@
     "alias": [
       "megawatt",
       "megawatts",
+      "mê ga oát",
+      "mega oát",
+
       "MW"
     ]
   },
@@ -1065,6 +1261,9 @@
     "alias": [
       "kilowatt",
       "kilowatts",
+      "ki lô oát",
+      "kí lô oát",
+      "kilo oát",
       "kW"
     ]
   },
@@ -1073,6 +1272,9 @@
     "alias": [
       "hectowatt",
       "hectowatts",
+      "héc tô oát",
+      "hecto oát",
+
       "hW"
     ]
   },
@@ -1081,6 +1283,9 @@
     "alias": [
       "decawatt",
       "decawatts",
+      "đề ca oát",
+      "deca oát",
+
       "daW"
     ]
   },
@@ -1089,6 +1294,9 @@
     "alias": [
       "deciwatt",
       "deciwatts",
+      "đề xi oát",
+      "deci oát",
+
       "dW"
     ]
   },
@@ -1097,6 +1305,9 @@
     "alias": [
       "centiwatt",
       "centiwatts",
+      "cen ti oát",
+      "centi oát",
+      "xăng ti oát",
       "cW"
     ]
   },
@@ -1105,6 +1316,8 @@
     "alias": [
       "milliwatt",
       "milliwatts",
+      "mi li oát",
+      "mili oát",
       "mW"
     ]
   },
@@ -1113,6 +1326,8 @@
     "alias": [
       "microwatt",
       "microwatts",
+      "mai rô oát",
+      "micro oát",
       "μW"
     ]
   },
@@ -1121,6 +1336,8 @@
     "alias": [
       "nanowatt",
       "nanowatts",
+      "na nô oát",
+      "nano oát",
       "nW"
     ]
   },
@@ -1129,6 +1346,8 @@
     "alias": [
       "picowatt",
       "picowatts",
+      "pi cô oát",
+      "pico oát",
       "pW"
     ]
   },
@@ -1137,6 +1356,8 @@
     "alias": [
       "femtowatt",
       "femtowatts",
+      "phem tô oát",
+      "femto oát",
       "fW"
     ]
   },
@@ -1145,6 +1366,7 @@
     "alias": [
       "horsepower",
       "mechanical horsepower",
+      "mã lực",
       "hp"
     ]
   },
@@ -1408,6 +1630,8 @@
     "alias": [
       "atmosphere",
       "atmospheres",
+      "átmốtphe",
+      "át mốt phe",
       "atm"
     ]
   },
@@ -1416,6 +1640,8 @@
     "alias": [
       "pound per square inch",
       "pounds per square inch",
+      "pao lực trên inch vuông",
+      "pound lực trên inch vuông",
       "psi",
       "lbf/in2",
       "lbf/in²"
@@ -1426,6 +1652,10 @@
     "alias": [
       "kelvin",
       "kelvins",
+      "độ kevin",
+      "nhiệt độ kelvin",
+      "nhiệt độ kevin",
+      "độ K",
       "K"
     ]
   },
@@ -1546,6 +1776,10 @@
     "alias": [
       "fahrenheit",
       "F",
+      "độ Fahrenheit",
+      "độ F",
+      "nhiệt độ fahrenheit",
+      "nhiệt độ F",
       "°F"
     ]
   },
@@ -1553,6 +1787,10 @@
     "name": "celsius",
     "alias": [
       "celsius",
+      "độ C",
+      "độ celsius",
+      "nhiệt độ celsius",
+      "nhiệt độ C",
       "C",
       "°C"
     ]
@@ -1562,6 +1800,8 @@
     "alias": [
       "second",
       "seconds",
+      "giây",
+      "tíc tắc",
       "s"
     ]
   },
@@ -1570,6 +1810,8 @@
     "alias": [
       "petasecond",
       "petaseconds",
+      "pê ta giây",
+      "peta giây",
       "Ps"
     ]
   },
@@ -1578,6 +1820,9 @@
     "alias": [
       "terasecond",
       "teraseconds",
+      "tê ra giây",
+      "tera giây",
+
       "Ts"
     ]
   },
@@ -1586,6 +1831,9 @@
     "alias": [
       "gigasecond",
       "gigaseconds",
+      "gi ga giây",
+      "giga giây",
+
       "Gs"
     ]
   },
@@ -1594,6 +1842,9 @@
     "alias": [
       "megasecond",
       "megaseconds",
+      "mê ga giây",
+      "mega giây",
+
       "Ms"
     ]
   },
@@ -1602,6 +1853,9 @@
     "alias": [
       "kilosecond",
       "kiloseconds",
+      "ki lô giây",
+      "kí lô giây",
+      "kilo giây",
       "ks"
     ]
   },
@@ -1610,6 +1864,9 @@
     "alias": [
       "hectosecond",
       "hectoseconds",
+      "héc tô giây",
+      "hecto giây",
+
       "hs"
     ]
   },
@@ -1617,6 +1874,8 @@
     "name": "decasecond",
     "alias": [
       "decasecond",
+      "đề ca giây",
+      "deca giây",
       "decaseconds",
       "das"
     ]
@@ -1626,6 +1885,8 @@
     "alias": [
       "decisecond",
       "deciseconds",
+      "đề xi giây",
+      "deci giây",
       "ds"
     ]
   },
@@ -1634,6 +1895,9 @@
     "alias": [
       "centisecond",
       "centiseconds",
+      "cen ti giây",
+      "centi giây",
+      "xăng ti giây",
       "cs"
     ]
   },
@@ -1642,6 +1906,8 @@
     "alias": [
       "millisecond",
       "milliseconds",
+      "mi li giây",
+      "mili giây",
       "ms"
     ]
   },
@@ -1650,6 +1916,8 @@
     "alias": [
       "microsecond",
       "microseconds",
+      "mai rô giây",
+      "micro giây",
       "μs"
     ]
   },
@@ -1658,6 +1926,9 @@
     "alias": [
       "nanosecond",
       "nanoseconds",
+      "na nô giây",
+      "nano giây",
+
       "ns"
     ]
   },
@@ -1666,6 +1937,9 @@
     "alias": [
       "picosecond",
       "picoseconds",
+      "pi cô giây",
+      "pico giây",
+
       "ps"
     ]
   },
@@ -1674,6 +1948,9 @@
     "alias": [
       "femtosecond",
       "femtoseconds",
+      "phem tô giây",
+      "femto giây",
+
       "fs"
     ]
   },
@@ -1682,6 +1959,7 @@
     "alias": [
       "minute",
       "minutes",
+      "phút",
       "min"
     ]
   },
@@ -1690,6 +1968,7 @@
     "alias": [
       "hour",
       "hours",
+      "giờ",
       "h"
     ]
   },
@@ -1705,6 +1984,7 @@
     "name": "day",
     "alias": [
       "day",
+      "ngày",
       "days",
       "d"
     ]
@@ -1714,6 +1994,8 @@
     "alias": [
       "week",
       "weeks",
+      "tuần",
+      "tuần lễ",
       "wk"
     ]
   },
@@ -1730,6 +2012,7 @@
     "alias": [
       "month",
       "months",
+      "tháng",
       "mo"
     ]
   },
@@ -1738,6 +2021,7 @@
     "alias": [
       "year",
       "years",
+      "năm",
       "y",
       "yr"
     ]
@@ -1747,6 +2031,10 @@
     "alias": [
       "decade",
       "decades",
+      "thập kỷ",
+      "thập kỉ",
+      "thập niên",
+      "niên đại",
       "dec"
     ]
   },
@@ -1754,21 +2042,26 @@
     "name": "century",
     "alias": [
       "century",
-      "centuries"
+      "centuries",
+      "thế kỷ",
+      "thế kỉ"
     ]
   },
   {
     "name": "millennium",
     "alias": [
       "millennium",
-      "millennia"
+      "millennia",
+      "thiên niên kỷ",
+      "thiên niên kỉ"
     ]
   },
   {
     "name": "moment",
     "alias": [
       "moment",
-      "moments"
+      "moments",
+      "khoảng khắc"
     ]
   },
   {
@@ -1782,6 +2075,7 @@
     "name": "time unit",
     "alias": [
       "time unit",
+      "Đơn vị thời gian",
       "TU"
     ]
   },
@@ -1802,6 +2096,9 @@
       "cubic petametres",
       "cubic petastere",
       "cubic petasteres",
+      "pê ta mét khối",
+      "peta mét khối",
+
       "Pm³",
       "Pm3"
     ]
@@ -1815,6 +2112,9 @@
       "cubic terametres",
       "cubic terastere",
       "cubic terasteres",
+      "tê ra mét khối",
+      "tera mét khối",
+
       "Tm³",
       "Tm3"
     ]
@@ -1828,6 +2128,9 @@
       "cubic gigametres",
       "cubic gigastere",
       "cubic gigasteres",
+      "gi ga mét khối",
+      "giga mét khối",
+
       "Gm³",
       "Gm3"
     ]
@@ -1841,7 +2144,9 @@
       "cubic megametres",
       "cubic megastere",
       "cubic megasteres",
-      "Mm³",
+      "mê ga mét khối",
+      "mega mét khối",
+
       "Mm3"
     ]
   },
@@ -1854,6 +2159,9 @@
       "cubic kilometres",
       "cubic kilostere",
       "cubic kilosteres",
+      "ki lô mét khối",
+      "kilo mét khối",
+      "km khối",
       "km³",
       "km3"
     ]
@@ -1867,6 +2175,9 @@
       "cubic hectometres",
       "cubic hectostere",
       "cubic hectosteres",
+      "héc to mét khối",
+      "hecto khối",
+      "hm khối",
       "hm³",
       "hm3"
     ]
@@ -1880,6 +2191,10 @@
       "cubic decametres",
       "cubic decastere",
       "cubic decasteres",
+      "đề ca mét khối",
+      "deca mét khối",
+      "dam khối",
+
       "dam³",
       "dam3"
     ]
@@ -1893,6 +2208,10 @@
       "cubic decimetres",
       "cubic decistere",
       "cubic decisteres",
+      "đề xi mét khối",
+      "deci mét khối",
+      "dm khối",
+
       "dm³",
       "dm3"
     ]
@@ -1906,6 +2225,10 @@
       "cubic centimetres",
       "cubic centistere",
       "cubic centisteres",
+      "cen ti mét khối",
+      "xăng ti mét khối",
+      "cm khối",
+      "phân khối",
       "cm³",
       "cm3"
     ]
@@ -1919,6 +2242,9 @@
       "cubic metres",
       "cubic stere",
       "cubic steres",
+      "mét khối",
+      "m khối",    
+
       "m³",
       "m3"
     ]
@@ -1932,6 +2258,10 @@
       "cubic millimetres",
       "cubic millistere",
       "cubic millisteres",
+      "mi li mét khối",
+      "mili mét khối",
+      "mm khối",
+
       "mm³",
       "mm3"
     ]
@@ -1945,6 +2275,10 @@
       "cubic micrometres",
       "cubic microstere",
       "cubic microsteres",
+      "mai rô mét khối",
+      "micro mét khối",
+      "μm khối",
+
       "μm³",
       "μm3"
     ]
@@ -1958,6 +2292,10 @@
       "cubic nanometres",
       "cubic nanostere",
       "cubic nanosteres",
+      "na nô mét khối",
+      "nano mét khối",
+      "nm khối",
+
       "nm³",
       "nm3"
     ]
@@ -1971,6 +2309,10 @@
       "cubic picometres",
       "cubic picostere",
       "cubic picosteres",
+      "pi cô mét khối",
+      "pico mét khối",
+      "pm khối",
+
       "pm³",
       "pm3"
     ]
@@ -1984,6 +2326,10 @@
       "cubic femtometres",
       "cubic femtostere",
       "cubic femtosteres",
+      "phem tô mét khối",
+      "femto mét khối",
+      "fm khối",
+
       "fm³",
       "fm3"
     ]
@@ -1995,6 +2341,7 @@
       "liters",
       "litre",
       "litres",
+      "lít",
       "l",
       "L"
     ]
@@ -2006,6 +2353,9 @@
       "petaliters",
       "petalitre",
       "petalitres",
+      "pê ta lít",
+      "peta lít",
+
       "Pl",
       "PL"
     ]
@@ -2017,6 +2367,8 @@
       "teraliters",
       "teralitre",
       "teralitres",
+      "tê ra lít",
+      "tera lít",
       "Tl",
       "TL"
     ]
@@ -2028,6 +2380,9 @@
       "gigaliters",
       "gigalitre",
       "gigalitres",
+      "gi ga lít",
+      "giga lít",
+
       "Gl",
       "GL"
     ]
@@ -2038,7 +2393,10 @@
       "megaliter",
       "megaliters",
       "megalitre",
-      "megalitres",
+      "megalitres",      
+      "mê ga lít",
+      "mega lít",
+
       "Ml",
       "ML"
     ]
@@ -2050,6 +2408,9 @@
       "kiloliters",
       "kilolitre",
       "kilolitres",
+      "ki lô lít",
+      "kilo lít",
+
       "kl",
       "kL"
     ]
@@ -2061,6 +2422,9 @@
       "hectoliters",
       "hectolitre",
       "hectolitres",
+      "héc to lít",
+      "hecto lít",
+
       "hl",
       "hL"
     ]
@@ -2072,6 +2436,9 @@
       "decaliters",
       "decalitre",
       "decalitres",
+      "đề ca lít",
+      "deca lít",
+
       "dal",
       "daL"
     ]
@@ -2083,6 +2450,9 @@
       "deciliters",
       "decilitre",
       "decilitres",
+      "đề xi lít",
+      "deci lít",
+
       "dl",
       "dL"
     ]
@@ -2094,6 +2464,9 @@
       "centiliters",
       "centilitre",
       "centilitres",
+      "cen ti lít",
+      "xăng ti lít",
+
       "cl",
       "cL"
     ]
@@ -2105,6 +2478,10 @@
       "milliliters",
       "millilitre",
       "millilitres",
+      "mi li lít",
+      "mili lít",
+      "mi lít",
+      "mi li",
       "ml",
       "mL"
     ]
@@ -2116,6 +2493,8 @@
       "microliters",
       "microlitre",
       "microlitres",
+      "mai rô lít",
+      "micro lít",
       "μl",
       "μL"
     ]
@@ -2127,6 +2506,8 @@
       "nanoliters",
       "nanolitre",
       "nanolitres",
+      "na nô lít",
+      "nano lít",
       "nl",
       "nL"
     ]
@@ -2138,6 +2519,9 @@
       "picoliters",
       "picolitre",
       "picolitres",
+      "pi cô lít",
+      "pico lít",
+
       "pl",
       "pL"
     ]
@@ -2149,6 +2533,9 @@
       "femtoliters",
       "femtolitre",
       "femtolitres",
+      "phem tô lít",
+      "femto lít",
+
       "fl",
       "fL"
     ]
@@ -2156,6 +2543,7 @@
   {
     "name": "cubic mile",
     "alias": [
+      "dặm khối",
       "cubic mile",
       "cubic miles",
       "cu mi",
@@ -2168,6 +2556,7 @@
     "alias": [
       "acre-foot",
       "acre-feet",
+      "mẫu foot",
       "ac⋅ft",
       "ac ft"
     ]
@@ -2176,6 +2565,8 @@
     "name": "cubic yard",
     "alias": [
       "cubic yard",
+      "iat khối",
+      "i át khối",
       "cubic yards",
       "cu yd",
       "yd3",
@@ -2186,6 +2577,7 @@
     "name": "cubic foot",
     "alias": [
       "cubic foot",
+      "foot khối",
       "cubic feet",
       "cu ft",
       "ft3",
@@ -2196,7 +2588,9 @@
     "name": "board foot",
     "alias": [
       "board foot",
-      "board feet"
+      "board feet",
+      "foot tấm ván",
+      "foot ván"
     ]
   },
   {
@@ -2204,6 +2598,7 @@
     "alias": [
       "cubic inch",
       "cubic inches",
+      "inch khối",
       "cu in",
       "in3",
       "in³"
@@ -2214,6 +2609,7 @@
     "alias": [
       "measurement ton",
       "measurement tons",
+      "tấn dung tích",
       "MTON"
     ]
   },
@@ -2222,6 +2618,7 @@
     "alias": [
       "imperial barrel",
       "imperial barrels",
+      "thùng Anh",
       "imp bbl"
     ]
   },
@@ -2230,6 +2627,7 @@
     "alias": [
       "imperial bushel",
       "imperial bushels",
+      "đấu Anh",
       "imp bsh",
       "imp bu"
     ]
@@ -2247,6 +2645,7 @@
     "name": "imperial gallon",
     "alias": [
       "imperial gallon",
+      "ga lông Anh",
       "imperial gallons",
       "imp gal"
     ]
@@ -2264,6 +2663,7 @@
     "alias": [
       "imperial pint",
       "imperial pints",
+      "pin Anh",
       "imp pt"
     ]
   },
@@ -2280,6 +2680,8 @@
     "alias": [
       "teaspoon",
       "teaspoons",
+      "thìa cà phê",
+      "muỗng cà phê",
       "US teaspoon",
       "US teaspoons",
       "tsp"
@@ -2290,6 +2692,8 @@
     "alias": [
       "tablespoon",
       "tablespoons",
+      "thìa canh",
+      "muỗng canh",
       "US tablespoon",
       "US tablespoons",
       "tbsp"
@@ -2299,6 +2703,8 @@
     "name": "US fluid ounce",
     "alias": [
       "US fluid ounce",
+      "Ounce chất lỏng",
+      "aoxơ chất lỏng",
       "US fluid ounces",
       "fl oz",
       "fl. oz.",
@@ -2312,6 +2718,7 @@
       "cups",
       "US legal cup",
       "US legal cups",
+      "tách",
       "c"
     ]
   },
@@ -2320,6 +2727,8 @@
     "alias": [
       "pint",
       "pints",
+      "panh",
+      "pin",
       "US liquid pint",
       "US liquid pints",
       "pt",
@@ -2330,6 +2739,7 @@
     "name": "quart",
     "alias": [
       "quart",
+      "lít Anh",
       "quarts",
       "US liquid quart",
       "US liquid quarts",
@@ -2341,6 +2751,7 @@
     "alias": [
       "gallon",
       "gallons",
+      "ga lông",
       "US liquid gallon",
       "US liquid gallons",
       "gal"
@@ -2349,6 +2760,7 @@
   {
     "name": "US bushel",
     "alias": [
+      "giạ",
       "US bushel",
       "US bushels",
       "US bsh",
@@ -2366,6 +2778,7 @@
     "name": "US dry gallon",
     "alias": [
       "US dry gallon",
+      "ga lông khô",
       "US dry gal"
     ]
   },
@@ -2374,12 +2787,14 @@
     "alias": [
       "US dry barrel",
       "US dry barrels",
+      "thùng khô",
       "US dry bbl"
     ]
   },
   {
     "name": "US dry quart",
     "alias": [
+      "lít Anh khô",
       "US dry quart",
       "US dry qt"
     ]
@@ -2388,6 +2803,8 @@
     "name": "US dry pint",
     "alias": [
       "US dry pint",
+      "panh khô",
+      "pin khô",
       "US dry pt"
     ]
   },
@@ -2398,6 +2815,8 @@
       "meters",
       "metre",
       "metres",
+      "mét",
+      "thước",
       "m"
     ]
   },
@@ -2408,6 +2827,8 @@
       "petameters",
       "petametre",
       "petametres",
+      "pê ta mét",
+      "peta mét",
       "Pm"
     ]
   },
@@ -2418,6 +2839,8 @@
       "terameters",
       "terametre",
       "terametres",
+      "tê ra mét",
+      "tera mét",
       "Tm"
     ]
   },
@@ -2428,6 +2851,9 @@
       "gigameters",
       "gigametre",
       "gigametres",
+      "gi ga mét",
+      "giga mét",
+
       "Gm"
     ]
   },
@@ -2438,6 +2864,9 @@
       "megameters",
       "megametre",
       "megametres",
+      "mê ga mét",
+      "mega mét",
+
       "Mm"
     ]
   },
@@ -2448,6 +2877,10 @@
       "kilometers",
       "kilometre",
       "kilometres",
+      "ki lô mét",
+      "kilo mét",
+      "cây số",
+      "cây",
       "km"
     ]
   },
@@ -2458,6 +2891,8 @@
       "hectometers",
       "hectometre",
       "hectometres",
+      "héc to mét",
+      "hecto mét",
       "hm"
     ]
   },
@@ -2468,6 +2903,8 @@
       "decameters",
       "decametre",
       "decametres",
+      "đề ca mét",
+      "deca mét",
       "dam"
     ]
   },
@@ -2478,6 +2915,9 @@
       "decimeters",
       "decimetre",
       "decimetres",
+      "đề xi mét",
+      "deci mét",
+      "tấc",
       "dm"
     ]
   },
@@ -2488,6 +2928,9 @@
       "centimeters",
       "centimetre",
       "centimetres",
+      "phân",
+      "cen ti mét ",
+      "xăng ti mét ",
       "cm"
     ]
   },
@@ -2498,6 +2941,10 @@
       "millimeters",
       "millimetre",
       "millimetres",
+      "mi li mét ",
+      "mili mét ",
+      "li",
+      "ly",
       "mm"
     ]
   },
@@ -2508,6 +2955,8 @@
       "micrometers",
       "micrometre",
       "micrometres",
+      "mai rô mét ",
+      "micro mét ",
       "μm"
     ]
   },
@@ -2518,6 +2967,9 @@
       "nanometers",
       "nanometre",
       "nanometres",
+      "na nô mét ",
+      "nano mét ",
+
       "nm"
     ]
   },
@@ -2528,6 +2980,9 @@
       "picometers",
       "picometre",
       "picometres",
+      "pi cô mét ",
+      "pico mét ",
+
       "pm"
     ]
   },
@@ -2538,6 +2993,8 @@
       "femtometers",
       "femtometre",
       "femtometres",
+      "phem tô mét",
+      "femto mét",
       "fm"
     ]
   },
@@ -2545,6 +3002,7 @@
     "name": "foot",
     "alias": [
       "foot",
+      "bước chân",
       "feet",
       "ft",
       "'"
@@ -2563,6 +3021,9 @@
     "name": "yard",
     "alias": [
       "yard",
+      "iat",
+      "i át",
+      "sân",
       "yards",
       "yd"
     ]
@@ -2572,6 +3033,7 @@
     "alias": [
       "mile",
       "miles",
+      "dặm",
       "mi"
     ]
   },
@@ -2580,6 +3042,8 @@
     "alias": [
       "nautical mile",
       "nautical miles",
+      "hải lý",
+      "dặm hải lý",
       "M",
       "NM",
       "nmi"
