@@ -86,12 +86,10 @@
                 "kết quả biểu thức %expression bằng mấy",
                 "%expression% ra bao nhiêu?",  
                 "%expression% được bao nhiêu?",      
-                "%expression% bằng bao nhiêu?",
-                "%expression% bằng bao nhiêu?",
                 "tính toán %expression%"
             ],
             "answers": [
-                "Bạn không đọc được phép tính của bạn"
+                "Mình không đọc được phép tính của bạn"
             ]
         },
         {
