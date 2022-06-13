@@ -1,5 +1,4 @@
 const { NlpManager, ConversationContext} = require('node-nlp')
-const { LangBert } = require('@nlpjs/lang-bert')
 const location_vn = require('./ner_data/geolocation_VN.json')
 const crypto_pair = require('./ner_data/crypto.json')
 const stocks_list = require('./ner_data/stocks_nasdaq.json')
@@ -7,30 +6,14 @@ const currency_list = require('./ner_data/currency.json')
 const conversion_units = require('./ner_data/conversion_units.json')
 
 async function main() {
-	const options = { languages: ['vi'], forceNER: true, autoSave: false };
+	const options = { languages: ['vi'], forceNER: true };
 	const manager = new NlpManager(options);
 
-	manager.describeLanguage('vi', 'Vietnamese');
-
-	// manager.container.registerConfiguration('basic', {
-	// 	vocabs: [{
-	// 		locales: 'vi',
-	// 		fileName: './vocab.txt'}
-	// 	],
+	// manager.container.registerConfiguration('bert', {
+	// 	url: 'http://localhost:8000/tokenize',
 	// 	languages: ['vi']
-	// })
-
-	let use_bert = false
-
-	conf = process.argv.slice(2) || []
-	if (conf.includes('--bert')) use_bert = true
-	if (use_bert) {
-		manager.container.registerConfiguration('bert', {
-			url: 'http://localhost:8000/tokenize',
-			languages: ['vi']
-		});
-		manager.container.use(LangBert);
-	}
+	// });
+	// manager.container.use(LangBert);
 	// const dock = await dockStart({ use: ['Basic'] });
 	let nlp = manager.nlp
 
@@ -45,13 +28,10 @@ async function main() {
 	for (let i = 0; i < locationKeys.length; i += 1) {
 		const location = location_vn[locationKeys[i]];
 		const location_canon_name = locationKeys[i]
-		if (location.alias) {
-			manager.addNamedEntityText('location', location_canon_name, 'vi',  [location_canon_name].concat(location.alias));
-		}
-		else {
-			manager.addNamedEntityText('location', location_canon_name, 'vi', location_canon_name);
-		}
+		manager.addNamedEntityText('location', location_canon_name, 'vi', location_canon_name);
 	}
+
+	manager.addNamedEntityText('location', 'Thành phố Hồ Chí Minh', 'vi', ['TP.HCM', 'TP. Hồ Chí Minh', 'thành phố hồ chí minh', 'Thành phố Hồ Chí Minh'])
 
 	console.log('loading stock code data...')
 	for (let i = 0; i < stocks_list.length; i++) {
@@ -93,8 +73,8 @@ async function main() {
 	manager.addNamedEntityText('language', 'fr', 'vi', ["tiếng pháp"])
 	manager.addNamedEntityText('language', 'de', 'vi', ["tiếng đức"])
 	manager.addNamedEntityText('app_name', 'spotify', 'vi', ['spotify'])
-	manager.addNamedEntityText('app_name', 'youtube', 'vi', ['youtube'])
-	manager.addNamedEntityText('app_name', 'gmail', 'vi', ['gmail', 'google mail'])
+	manager.addNamedEntityText('app_name', 'youtube', 'vi', ['youtube', 'du túp'])
+	manager.addNamedEntityText('app_name', 'gmail', 'vi', ['gmail', 'google mail', 'thư điện tử'])
 	manager.addNamedEntityText('app_name', 'zalo', 'vi', ['zalo'])
 	manager.addNamedEntityText('app_name', 'shopee', 'vi', ['shopee'])
 	manager.addNamedEntityText('app_name', 'tiktok', 'vi', ['tiktok'])
@@ -116,7 +96,7 @@ async function main() {
 	manager.addNamedEntityText('app_name', 'word', 'vi', ['word'])
 	manager.addNamedEntityText('app_name', '1.1.1.1', 'vi', ['1.1.1.1', 'warp+', 'warp'])
 	manager.addNamedEntityText('app_name', 'discord', 'vi', ['điscord'])
-	manager.addNamedEntityText('app_name', 'chrome', 'vi', ['chrome'])
+	manager.addNamedEntityText('app_name', 'chrome', 'vi', ['chrome', 'trình  duyệt'])
 	manager.addNamedEntityText('app_name', 'duolingo', 'vi', ['duolingo'])
 	manager.addNamedEntityText('app_name', "maps", 'vi', ['bản đồ', 'google map', 'map'])
 	manager.addNamedEntityText('app_name', "contacts", 'vi', ['contact' ,'danh bạ', 'sổ điện thoại', 'danh sách liên lạc'])
@@ -159,8 +139,6 @@ async function main() {
 	// manager.addAnswer('vi', 'agent.travel', 'Ok bạn, mình sẽ lưu lại')
 
 	await nlp.train();
-	if (use_bert) manager.save('model-bert.nlp')
-	else manager.save('model.nlp')
 	//connector.say('Say something!');
 }
 
