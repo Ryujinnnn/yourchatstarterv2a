@@ -1,4 +1,5 @@
 const { NlpManager, ConversationContext} = require('node-nlp')
+const { LangBert } = require('@nlpjs/lang-bert')
 const location_vn = require('./ner_data/geolocation_VN.json')
 const crypto_pair = require('./ner_data/crypto.json')
 const stocks_list = require('./ner_data/stocks_nasdaq.json')
@@ -6,16 +7,38 @@ const currency_list = require('./ner_data/currency.json')
 const conversion_units = require('./ner_data/conversion_units.json')
 
 async function main() {
-	const options = { languages: ['vi'], forceNER: true };
+	const options = { languages: ['vi'], forceNER: true, autoSave: false, ner: {threshold: 0.9}};
 	const manager = new NlpManager(options);
 
-	// manager.container.registerConfiguration('bert', {
-	// 	url: 'http://localhost:8000/tokenize',
+	manager.describeLanguage('vi', 'Vietnamese');
+
+	// manager.container.registerConfiguration('basic', {
+	// 	vocabs: [{
+	// 		locales: 'vi',
+	// 		fileName: './vocab.txt'}
+	// 	],
 	// 	languages: ['vi']
-	// });
-	// manager.container.use(LangBert);
+	// })
+
+	let use_bert = false
+
+	conf = process.argv.slice(2) || []
+	if (conf.includes('--bert')) use_bert = true
+	if (use_bert) {
+		manager.container.registerConfiguration('bert', {
+			url: 'http://localhost:8000/tokenize',
+			languages: ['vi']
+		});
+		manager.container.use(LangBert);
+	}
 	// const dock = await dockStart({ use: ['Basic'] });
 	let nlp = manager.nlp
+
+	await manager.nlp.addCorpora([
+		'./corpus_data/corpus-vi-basic.json',
+		'./corpus_data/corpus-vi-service.json',
+		'./corpus_data/corpus-vi-semi-basic.json',
+	])
 
 	await manager.nlp.addCorpora([
 		'./corpus_data/corpus-vi-basic.json',
@@ -57,8 +80,10 @@ async function main() {
 	// manager.addRegexEntity('email', 'vi', /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/)
 	// manager.addRegexEntity('http_url', 'vi', /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/ )
 	manager.addRegexEntity('phrase', "vi", /"[^"]+"/)
-	manager.addRegexEntity('location_prompt', "vi", /^.*(?= ở đâu)/)
-	manager.addRegexEntity('location_prompt', "vi", /(?<=định vị ).*$/)
+	manager.addRegexEntity('location_phrase', "vi", /^.*(?= ở đâu)/)
+	manager.addRegexEntity('location_phrase', "vi", /(?<=định vị ).*$/)
+
+	manager.addRegexEntity('expression', "vi", /([\d\(\+\-]|sin|cos|tan|abs|pow)([\s\d\(\)\+\-\*\/\.]|sin|cos|tan|abs|pow)+([\d\)])/)
 	// manager.addRegexEntity('date', 'vi', /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/)
 	// manager.addRegexEntity('time', 'vi', /((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))/)
 	// manager.addRegexEntity('time', 'vi', /^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/)
@@ -139,6 +164,8 @@ async function main() {
 	// manager.addAnswer('vi', 'agent.travel', 'Ok bạn, mình sẽ lưu lại')
 
 	await nlp.train();
+	if (use_bert) manager.save('model-bert.nlp')
+	else manager.save('model.nlp')
 	//connector.say('Say something!');
 }
 

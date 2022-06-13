@@ -28,8 +28,7 @@
                 "Giá ngoại tệ",
                 "%amount% %currency% đổi ra bao nhiêu %currency%",
                 "%amount% %currency% ra mấy %currency%?",
-                "%amount% %currency% đổi ra bao nhiêu %currency%?",
-                "giá %currency%"
+                "%amount% %currency% đổi ra bao nhiêu %currency%?"
             ],
             "answers": [
                 "Mình không rõ bạn muốn nhắc đến loại tiền gì"
@@ -46,7 +45,11 @@
                 "giá tiền ảo %crypto% sang %currency% bằng bao nhiêu",
                 "giá tiền ảo %crypto% sang %currency% hiện tại",
                 "giá tiền ảo %crypto%/%currency% hiện tại",
-                "giá tiền ảo %crypto%/%currency% như thế nào"
+                "giá tiền ảo %crypto%/%currency% như thế nào",
+                "giá tiền ảo",
+                "giá tiển ảo %crypto",
+                "tỉ giá tiền ảo %crypto",
+                "giá trị tiền ảo"
             ],
             "answers": [
                 "Mình không rõ bạn muốn nhắc đến loại tiền gì"
@@ -84,7 +87,8 @@
                 "%expression% ra bao nhiêu?",  
                 "%expression% được bao nhiêu?",      
                 "%expression% bằng bao nhiêu?",
-                "%expression% bằng bao nhiêu?"
+                "%expression% bằng bao nhiêu?",
+                "tính toán %expression%"
             ],
             "answers": [
                 "Bạn không đọc được phép tính của bạn"
@@ -195,12 +199,17 @@
         {
             "intent": "service.ask_location",
             "utterances": [
-                "%location% ở đâu",
+                "%location_phrase% ở đâu",
                 "Thành phố Hồ Chí Minh ở đâu",
+                "định vị %location_phrase%",
+                "%location% ở đâu",
                 "định vị %location%",
                 "định vị Hà Nội",
                 "Dĩ An ở đâu",
-                "Đồng Hới ở đâu"
+                "Đồng Hới ở đâu",
+                "Tìm địa điểm",
+                "Hỏi vị trí",
+                "Hỏi địa điểm"
             ],
             "answers": [
                 "Mình không thể tìm được nó ở đâu cả. Xin lỗi bạn :("
@@ -224,9 +233,13 @@
         {
             "intent": "service.ask_conversion",
             "utterances": [
-                "1 kg đổi ra bao nhiêu gram",
-                "đổi 27m ra ft",
-                "32 độ C bằng bao nhiêu kelvin"
+                "%number %conversion_unit% đổi ra bao nhiêu %conversion_unit%",
+                "đổi %number%%conversion_unit% ra %conversion_unit%",
+                "%number %conversion_unit% bằng bao nhiêu %conversion_unit%",
+                "%number %conversion_unit% bằng mấy %conversion_unit%",
+                "quy đổi %number% %conversion_unit%",
+                "quy đổi %number% %conversion_unit% sang %conversion_unit%",
+                "chuyển đổi %number% %conversion_unit% ra %conversion_unit%"
             ],
             "answer": [
                 "Mình không đổi được bạn ơi :("

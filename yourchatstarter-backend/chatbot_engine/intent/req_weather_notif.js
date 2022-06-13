@@ -47,7 +47,7 @@ module.exports.run = (entities, option, context, isLocal = true) => {
                 enough_entity = false
                 context.suggestion_list = ['Mỗi ngày', 'Mỗi giờ', 'Mỗi tuần']
             }
-            else {              
+            else if (interval) {              
                 context_intent_entry.confirmed_entities.push(interval)
             }
 

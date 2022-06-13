@@ -1609,7 +1609,12 @@
                 "Đồng ý",
                 "Hủy bỏ",
                 "Đúng",
-                "đồng ý"
+                "đồng ý",
+                "%currency%",
+                "%number% %currency%",
+                "USD",
+                "VND",
+                "%number%"
             ],
             "answers": [
                 "Xin lỗi bạn, mình không hiểu bạn đang nói gì",

@@ -5,14 +5,25 @@ module.exports.run = (entities, option, context, isLocal = false) => {
     const permitted_tier = ["standard", "premium", "lifetime"]
     return new Promise(async (resolve, reject) => {
         let response = ""
+
+        let context_intent_entry = {
+            intent: this.name,
+            addition_entities: [],
+            confirmed_entities: [],
+            missing_entities: []
+        }
+
         if (option.isPaid && permitted_tier.includes(option.plan)) {
             if (isLocal) {
                 let stock_code = entities.find((val) => val.entity === "stock_code")
                 if (!stock_code) {
                     response = "Bạn có thể nói rõ mã cổ phiếu là gì được không?"
+                    context.suggestion_list = ["AMZN", "AAPL", "GOOGL", "META"]
+                    context_intent_entry.missing_entities.push('stock_code')
                 }
                 else {
                     let code = stock_code.option
+                    context_intent_entry.confirmed_entities.push(stock_code)
                     let stock_res = await get_stockmarket(code).catch(e => console.log(e))
                     if (!stock_res) {
                         response = `Mình không thể tìm được mã cổ phiếu này :(`
@@ -43,6 +54,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
         else {
             response = "Chức năng này là chỉ dành cho khách hàng hạng tiêu chuẩn trở lên nhé :D"
         }
+        context.intent_stack.push(context_intent_entry)
         resolve([response, context, {}])
     })
 }

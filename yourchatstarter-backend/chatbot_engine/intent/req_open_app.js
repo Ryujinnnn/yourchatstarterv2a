@@ -28,7 +28,7 @@ module.exports.run = (entities, option, context, isLocal = true) => {
                     type: 'one-time'
                 }
             }
-            response = `Tôi sẽ mở ứng dụng ${app_name_value} cho bạn`
+            response = `Tôi đã mở ứng dụng ${app_name_value} cho bạn`
             context.suggestion_list = ['Mở ứng dụng Spotify', 'Mở ứng dụng Gmail', 'Mở app Zalo' ,'Cảm ơn']
         }
     }

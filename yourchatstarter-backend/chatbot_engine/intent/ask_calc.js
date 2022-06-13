@@ -30,35 +30,46 @@ const Parser = require('expr-eval').Parser;
 // tanh x	Hyperbolic tangent of x (x is in radians)
 // trunc x	Integral part of a X, looks like floor(x) unless for negative number
 
-module.exports.run = (entities, option, context, input = "", isLocal = false) => {
+module.exports.run = (entities, option, context, isLocal = false) => {
     //using entity extraction is too unreliable
     return new Promise((resolve, reject) => {
         //console.log('this is ask_calc intent')
         let response = ""
-        let expr_str = ""
-        let expr_list = input.match(/([\d\(\+\-]).*([\d\)])/)
-        //console.log(expr_list)
-        if (entities['wit$math_expression:math_expression']) {
-            expr_str = entities['wit$math_expression:math_expression'][0].body
-            response = `bằng ${Parser.evaluate(expr_str)} nhé`
+
+        let context_intent_entry = {
+            intent: this.name,
+            addition_entities: [],
+            confirmed_entities: [],
+            missing_entities: []
         }
-        else if (expr_list && expr_list.length > 0) {
-            expr_str = expr_list[0]
-            try {
-                let expr_res = Parser.evaluate(expr_str)
-                response = `bằng ${expr_res} nhé`
+        //console.log(expr_list)
+        if (isLocal) {
+            let expr = entities.find((val) => val.entity === "math_expr")
+            if (!expr) {
+                response = "Bạn có thể nhập phép tính vào được không?"
+                context_intent_entry.missing_entities.push('math_expr')
+                context.suggestion_list = ['1+1', 'sin(3.14) + 21', '(48 - 40) / (2 * 2)' ,'-33 + 42/6']
             }
-            catch (e) {
-                console.log(e)
-                response = "Bạn muốn tính gì?"
+            else {
+                expr_str = expr.resolution.value
+                try {
+                    let expr_res = Parser.evaluate(expr_str)
+                    response = `Kết quả bằng ${expr_res} nhé`
+                }
+                catch (e) {
+                    console.log(e)
+                    response = "Mình không thể tính được phép toàn này ạ :("
+                }
+
+                context.suggestion_list = ["2+2 bằng bao nhiêu", "1+sin(3.14) bằng bao nhiêu", "2*23-5 bằng bao nhiêu", "Cảm ơn"]
             }
         }
         else {
-            response = "Bạn muốn tính gì?"
+            response = "Không thể thực hiện chức năng này"
         }
-        
-        context.suggestion_list = ["2+2 bằng bao nhiêu", "1+sin(3.14) bằng bao nhiêu", "2*23-5 bằng bao nhiêu", "Cảm ơn"]
+
         //console.log(response)
+        context.intent_stack.push(context_intent_entry)
         resolve([response, context, {}])
     })
 }

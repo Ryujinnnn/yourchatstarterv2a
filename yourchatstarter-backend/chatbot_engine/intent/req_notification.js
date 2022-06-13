@@ -48,14 +48,14 @@ module.exports.run = (entities, option, context, isLocal = true) => {
                 enough_entity = false
                 context.suggestion_list = ['Sau 5 phút nữa', 'ngày mai', 'sau 1 giờ nữa']
             }
-            else {              
+            else if (date) {              
                 context_intent_entry.confirmed_entities.push(date)
             }
 
             if (enough_entity && (!affirmation || !affirmation.from_context)) {
-                let phrase_val = phrase.utteranceText
+                let phrase_val = phrase.utteranceText.replace(/\"/g, '')
                 let date_val = date.resolution.value
-                response = `Bạn có muốn đặt thông báo nội dung ${phrase_val} lúc ${date_val.toLocaleString('vi-VN', {timeZone: 'Asia/Saigon'})}`
+                response = `Bạn có muốn đặt thông báo nội dung "${phrase_val}" lúc ${date_val.toLocaleString('vi-VN', {timeZone: 'Asia/Saigon'})}`
                 context_intent_entry.missing_entities.push('affirmation')
                 context.suggestion_list = ['Đồng ý', 'Hủy bỏ']
                 enough_entity = false
@@ -63,7 +63,7 @@ module.exports.run = (entities, option, context, isLocal = true) => {
 
             if (enough_entity) {
                 // create a subscription (server-side?)
-                let phrase_val = phrase.utteranceText
+                let phrase_val = phrase.utteranceText.replace(/\"/g, '')
                 let date_val = date.resolution.value
                 action = {
                     action: "REQUEST_NOTIFICATION",

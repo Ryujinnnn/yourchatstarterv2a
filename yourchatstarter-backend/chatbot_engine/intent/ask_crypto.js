@@ -1,23 +1,47 @@
 const {crypto} = require('../../info_module/get_stockmarket')
 const { crypto_infographic } = require('../../info_module/infographic_generator')
 
+//FIXME: contextttttt
 module.exports.run = (entities, option, context, isLocal = false) => {
     const permitted_tier = ["standard", "premium", "lifetime"]
 
     return new Promise(async (resolve, reject) => {
         let response = ""
+
+        let context_intent_entry = {
+            intent: this.name,
+            addition_entities: [],
+            confirmed_entities: [],
+            missing_entities: []
+        }
+
         if (option.isPaid && permitted_tier.includes(option.plan)) {
             if (isLocal) {
+                let enough_entity = true
                 let crypto_entity = entities.find((val) => val.entity === "crypto")
                 let currency_entity = entities.find((val) => val.entity === "currency")
 
-                if (!crypto_entity) {
-                    response = "Bạn có thể nói rõ là bạn muốn đổi ra đơn vị gì được không?"
-                }
-                else if (!currency_entity) {
+                if (enough_entity && !crypto_entity) {
                     response = "Bạn có thể nói rõ là bạn muốn đổi từ loại tiền ảo gì được không?"
+                    context_intent_entry.missing_entities.push('crypto')
+                    enough_entity = false
+                    context.suggestion_list = ['Bitcoin', 'Litecoin', 'ETH']
                 }
                 else {
+                    context_intent_entry.confirmed_entities.push(crypto_entity)
+                }
+
+                if (enough_entity && !currency_entity) {
+                    response = "Bạn có thể nói rõ là bạn muốn đổi ra loại tiền gì được không?"
+                    context_intent_entry.missing_entities.push('currency')
+                    enough_entity = false
+                    context.suggestion_list = ['USD', 'VND', 'EUR']
+                }
+                else if (currency_entity) {
+                    context_intent_entry.confirmed_entities.push(currency_entity)
+                }
+
+                if (enough_entity) {
                     let crypto_val = crypto_entity.option
                     let currency_val = currency_entity.option
                     let symbol = crypto_val + "/" + currency_val
@@ -32,6 +56,8 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                             (data_uri) => {response += "\n![crypto infographic](" + data_uri + ")"},
                             (e) => response += ``)
                     }
+
+                    context.suggestion_list = ["giá tiền ảo bitcoin sang USD như thế nào", "giá tiền ảo ETH qua EUR như thế nào", "Cảm ơn"]
                 }
             }
             else {
@@ -51,11 +77,12 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                         (e) => response = `Mình không thể tìm được cặp giá trị này bạn ơi :(`)
                 }   
             }
-            context.suggestion_list = ["giá tiền ảo bitcoin sang USD như thế nào", "giá tiền ảo ETH qua EUR như thế nào", "Cảm ơn"]
         }
         else {
             response = "Chức năng này là chỉ dành cho khách hàng hạng tiêu chuẩn trở lên nhé :D"
         }
+        
+        context.intent_stack.push(context_intent_entry)
         resolve([response, context, {}])
     })
 }

@@ -372,21 +372,6 @@
     "Phan Lý": {
         "uri": "Phan%20L%C3%BD"
     },
-    "Phú Bình (3)": {
-        "uri": "Ph%C3%BA%20B%C3%ACnh%20(3)"
-    },
-    "Phú Giang (1)": {
-        "uri": "Ph%C3%BA%20Giang%20(1)",
-        "lat": "13.4713019",
-        "lon": "108.9234035",
-        "name": "Phú Giang, Đồng Xuân, Tỉnh Phú Yên, Việt Nam"
-    },
-    "Phú Xuân (1)": {
-        "uri": "Ph%C3%BA%20Xu%C3%A2n%20(1)",
-        "lat": "10.0343134",
-        "lon": "105.7645272",
-        "name": "1, Mậu Thân, Quận Ninh Kiều, Thành phố Cần Thơ, +84 292 3895 937, Việt Nam"
-    },
     "Phước Hòa": {
         "uri": "Ph%C6%B0%E1%BB%9Bc%20H%C3%B2a",
         "lat": "10.5365477",
@@ -6998,12 +6983,6 @@
         "lat": "10.3641064",
         "lon": "107.061891",
         "name": "Pho, Trần Phú, Xóm Lăng, Phường 5, Vũng Tàu, Tỉnh Bà Rịa-Vũng Tàu, 797979, Việt Nam"
-    },
-    "Giang Tiên": {
-        "uri": "Giang%20Ti%C3%AAn",
-        "lat": "10.3814246",
-        "lon": "106.2352902",
-        "name": "Tỉnh Tiền Giang, Việt Nam"
     },
     "Ba. Pu Xút": {
         "uri": "Ba.%20Pu%20X%C3%BAt"

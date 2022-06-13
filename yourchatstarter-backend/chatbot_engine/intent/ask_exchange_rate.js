@@ -1,20 +1,52 @@
 const get_exchange = require('../../info_module/get_exchange')
 const { crypto_infographic } = require('../../info_module/infographic_generator')
 
+
 module.exports.run = (entities, option, context, isLocal = false) => {
     const permitted_tier = ["standard", "premium", "lifetime"]
     return new Promise(async (resolve, reject) => {
         let response = ""
+
+        let context_intent_entry = {
+            intent: this.name,
+            addition_entities: [],
+            confirmed_entities: [],
+            missing_entities: []
+        }
+
         if (option.isPaid && permitted_tier.includes(option.plan)) {
             if (isLocal) { 
                 response = "a"
+                let enough_entity = true
                 //console.log(entities)
 
                 let from_currency = entities.find((val) => val.entity === "currency" && val.alias === "currency_0") 
                 let amount = entities.find((val) => val.entity === "custom_number") 
                 let to_currency =  entities.find((val) => val.entity === "currency" && val.alias === "currency_1") 
 
-                if (from_currency && amount && to_currency) {
+                if (enough_entity && (!amount || !from_currency)) {
+                    response = 'Bạn có thể nhập số tiền bạn cần đổi được không'
+                    context_intent_entry.missing_entities.push('custom_number')
+                    context_intent_entry.missing_entities.push('currency_0')
+                    enough_entity = false
+                    context.suggestion_list = ['1 USD', '300000 VND', '20 đô la']
+                }
+                else {
+                    context_intent_entry.confirmed_entities.push(amount)
+                    context_intent_entry.confirmed_entities.push(from_currency)
+                }
+
+                if (enough_entity && !to_currency) {
+                    response = 'Bạn có thể nhập đơn vị tiền bạn muốn đổi ra được không'
+                    context_intent_entry.missing_entities.push('currency_1')
+                    enough_entity = false
+                    context.suggestion_list = ['USD', 'VND', 'EUR']
+                }
+                else if (to_currency) {
+                    context_intent_entry.confirmed_entities.push(to_currency)
+                }
+
+                if (enough_entity) {
                     //additional guard for built-in type
                     let from_currency_val = from_currency.option || currencyString2Symbol[from_currency.resolution.unit]
                     let amount_val = amount.resolution.value
@@ -31,9 +63,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                             (data_uri) => {response += "\n![stock infographic](" + data_uri + ")"},
                             (e) => response += ``)
                     }
-                }
-                else {
-                    response = 'Mình không rõ bạn muốn đổi từ tiền gì ra tiền gì :('
+                    context.suggestion_list = ["1 đô la ra mấy VND?", "12 EUR đổi ra mấy JPY", "1 đô la đổi được bao nhiêu bạt thái"]
                 }
             }
             else {
@@ -53,11 +83,12 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                         )
                 }
             }
-            context.suggestion_list = ["1 đô la ra mấy VND?", "12 EUR đổi ra mấy JPY", "1 đô la đổi được bao nhiêu bạt thái"]
         }
         else {
             response = "Chức năng này là chỉ dành cho khách hàng hạng tiêu chuẩn trở lên nhé :D"
         }
+
+        context.intent_stack.push(context_intent_entry)
         resolve([response, context, {}])
     })
 }

@@ -163,6 +163,9 @@ module.exports.setupInstance = async () => {
             return val
         })
 
+        let math_expr_ner = new customNER("math_expr", "vi")
+        math_expr_ner.addNewRegexRule(/([\d\(\+\-]|sin|cos|tan|abs|pow)([\s\d\(\)\+\-\*\/\.]|sin|cos|tan|abs|pow)+([\d\)])/g)
+
         let interval_ner = new customNER("interval", "vi")
         interval_ner.addNewDictRule(["mỗi ngày"], 
             {
@@ -185,7 +188,7 @@ module.exports.setupInstance = async () => {
             }
         )
 
-        custom_ner_pool = [date_vi, affirmation, number_ner, interval_ner]
+        custom_ner_pool = [date_vi, affirmation, number_ner, interval_ner, math_expr_ner]
         console.log('custom NER is loaded')
 
         return true;
@@ -239,14 +242,23 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
             if (res) {
                 //TODO: match against specifically made intent first, if none is found, return answer from the trained data
                 //console.log(res)
+
+                // try to process pending context
+
+                [answer, context, action] = await context_handle(res, input, option, context, IntentHandler).catch((err) => { console.log(err); answer = "" })
+
+                if (answer !== "") {
+                    resolve([answer, context, action])
+                    return
+                }
+
                 if (res.intent.startsWith("service.") && res.score > 0.7) {
                     //restructure entity
                     session_storage.defined_intent += 1
                     let intent = IntentHandler.get(res.intent.replace("service.", ""))
                     if (intent) {
                         let entities = res.entities;
-                        if (intent.name === "ask_calc") [answer, context, action] = await intent.run(entities, option, context, input, true)
-                        else if (intent.name === "ask_entity_property") [answer, context] = await intent.run(entities, option, context, input, true)
+                        if (intent.name === "ask_entity_property") [answer, context] = await intent.run(entities, option, context, input, true)
                         else [answer, context, action] = await intent.run(entities, option, context, true)
                     }
                     else {
@@ -260,36 +272,27 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                     context.suggestion_list = embeded_suggestion[res.intent] || ['Chào bạn', 'Mình phải đi đây', "Bạn thích làm gì lúc rảnh", "Bạn thật tuyệt"]
                 }
                 else if (res.intent === "None" || res.score <= 0.7) {
-                    // try to process pending context
-
-                    [answer, context, action] = await context_handle(res, input, option, context, IntentHandler).catch((err) => { console.log(err); answer = "" })
 
                     // if context failed to be resolved, try freeform query
+                    console.log('fail to resolve any context, try freeform query')
+                    //console.log([answer, context])
+                    answer = await freeform_query(context, input, res)
 
+                    // at this point the bot gives up
                     if (answer == "") {
-                        session_storage.freeform_search += 1
-                        console.log('fail to resolve any context, try freeform query')
-                        //console.log([answer, context])
-                        answer = await freeform_query(context, input, res)
-
-                        // at this point the bot gives up
-                        if (answer == "") {
-                            session_storage.unknown_intent += 1
-                            unknown_intent = true
-                            answer = res.answer
-                            let start_index = random_helper(smalltalk_suggestion.length)
-                            context.suggestion_list = ["Trợ giúp", "Giúp mình với"].concat(smalltalk_suggestion.slice_wrap(start_index, (start_index + 2) % smalltalk_suggestion.length))
-                        }
-                        else {
-                            let start_index = random_helper(freeform_query_suggestion.length)
-                            //let start_index = freeform_query_suggestion.length - 1
-                            context.suggestion_list = ["Cảm ơn"].concat(freeform_query_suggestion.slice_wrap(start_index, (start_index + 3) % freeform_query_suggestion.length))
-                        }
-                        //console.log(answer)
+                        session_storage.unknown_intent += 1
+                        unknown_intent = true
+                        answer = res.answer
+                        let start_index = random_helper(smalltalk_suggestion.length)
+                        context.suggestion_list = ["Trợ giúp", "Giúp mình với"].concat(smalltalk_suggestion.slice_wrap(start_index, (start_index + 2) % smalltalk_suggestion.length))
                     }
                     else {
-                        session_storage.slot_filling += 1
+                        let start_index = random_helper(freeform_query_suggestion.length)
+                        //let start_index = freeform_query_suggestion.length - 1
+                        session_storage.freeform_search += 1
+                        context.suggestion_list = ["Cảm ơn"].concat(freeform_query_suggestion.slice_wrap(start_index, (start_index + 3) % freeform_query_suggestion.length))
                     }
+                    //console.log(answer)
                 }
                 else {
                     session_storage.defined_intent += 1
