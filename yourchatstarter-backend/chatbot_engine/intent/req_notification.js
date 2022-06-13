@@ -55,7 +55,7 @@ module.exports.run = (entities, option, context, isLocal = true) => {
             if (enough_entity && (!affirmation || !affirmation.from_context)) {
                 let phrase_val = phrase.utteranceText.replace(/\"/g, '')
                 let date_val = date.resolution.value
-                response = `Bạn có muốn đặt thông báo nội dung "${phrase_val}" lúc ${date_val.toLocaleString('vi-VN', {timeZone: 'Asia/Saigon'})}`
+                response = `Bạn có muốn đặt thông báo nội dung "${phrase_val}" lúc ${date_val.toLocaleString('vi-VN', {timeZone: 'Asia/Ho_Chi_Minh'})}`
                 context_intent_entry.missing_entities.push('affirmation')
                 context.suggestion_list = ['Đồng ý', 'Hủy bỏ']
                 enough_entity = false
@@ -65,15 +65,23 @@ module.exports.run = (entities, option, context, isLocal = true) => {
                 // create a subscription (server-side?)
                 let phrase_val = phrase.utteranceText.replace(/\"/g, '')
                 let date_val = date.resolution.value
-                action = {
-                    action: "REQUEST_NOTIFICATION",
-                    data: {
-                        message: phrase_val, 
-                        time: date_val, 
-                        type: 'one-time'
-                    }
+
+                let affirmation_val = affirmation.resolution.value
+
+                if (affirmation_val === "no") {
+                    response = `Tôi sẽ không dặt thông báo cho bạn nhé`
                 }
-                response = `Tôi đã đặt thông báo cho bạn rồi nhé`
+                else {
+                    action = {
+                        action: "REQUEST_NOTIFICATION",
+                        data: {
+                            message: phrase_val, 
+                            time: date_val, 
+                            type: 'one-time'
+                        }
+                    }
+                    response = `Tôi đã đặt thông báo cho bạn rồi nhé`
+                }
                 let start_index = random_helper(smalltalk_suggestion.length)
                 context.suggestion_list = ["Cảm ơn"].concat(smalltalk_suggestion.slice_wrap(start_index, (start_index + 3) % smalltalk_suggestion.length))
             }

@@ -42,7 +42,7 @@ module.exports.run = (entities, option, context, isLocal = true) => {
 
             if (enough_entity && (!affirmation || !affirmation.from_context)) {
                 let interval_val = interval.resolution.value
-                response = `Bạn có muốn đặt thông báo tin tức ${interval.utteranceText} từ ${(new Date(interval_val.start_time)).toLocaleString('vi-VN', {timeZone: 'Asia/Saigon'})}`
+                response = `Bạn có muốn đặt thông báo tin tức ${interval.utteranceText} từ ${(new Date(interval_val.start_time)).toLocaleString('vi-VN', {timeZone: 'Asia/Ho_Chi_Minh'})}`
                 context_intent_entry.missing_entities.push('affirmation')
                 context.suggestion_list = ['Đồng ý', 'Hủy bỏ']
                 enough_entity = false
@@ -51,16 +51,23 @@ module.exports.run = (entities, option, context, isLocal = true) => {
             if (enough_entity) {
                 // create a subscription (server-side?)
                 let interval_val = interval.resolution.value
-                action = {
-                    action: "REQUEST_NOTIFICATION",
-                    data: {
-                        message: "activity:news", 
-                        time: new Date(interval_val.start_time).toISOString(),
-                        interval: interval_val.interval,
-                        type: 'interval'
-                    }
+                let affirmation_val = affirmation.resolution.value
+
+                if (affirmation_val === "no") {
+                    response = `Tôi sẽ không dặt thông báo cho bạn rồi nhé`
                 }
-                response = `Tôi đã đặt thông báo cho bạn rồi nhé`
+                else {
+                    action = {
+                        action: "REQUEST_NOTIFICATION",
+                        data: {
+                            message: "activity:news", 
+                            time: new Date(interval_val.start_time).toISOString(),
+                            interval: interval_val.interval,
+                            type: 'interval'
+                        }
+                    }
+                    response = `Tôi đã đặt thông báo cho bạn nhé`
+                }
                 let start_index = random_helper(smalltalk_suggestion.length)
                 context.suggestion_list = ["Cảm ơn"].concat(smalltalk_suggestion.slice_wrap(start_index, (start_index + 3) % smalltalk_suggestion.length))
             }

@@ -2,10 +2,10 @@ const DAY_OF_WEEK = ["chủ nhật", "thứ hai", "thứ ba", "thứ tư", "th�
 
 const get_data = {
     "embeded.ask_time": () => {
-        return [new Date().toLocaleTimeString('vi-VN')]
+        return [new Date().toLocaleTimeString('vi-VN', {timeZone: "Asia/Ho_Chi_Minh"})]
     },
     "embeded.ask_date": () => {
-        return [new Date().toLocaleDateString('vi-VN')]
+        return [new Date().toLocaleDateString('vi-VN', {timeZone: "Asia/Ho_Chi_Minh"})]
     },
     "embeded.ask_day_of_week": () => {
         return [DAY_OF_WEEK[new Date().getDay()]]
