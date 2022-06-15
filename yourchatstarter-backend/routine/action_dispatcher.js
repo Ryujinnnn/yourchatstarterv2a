@@ -1,9 +1,10 @@
 const { addNotification, removeNotification } = require("./notification_data")
 
 module.exports.actionDispatch = async (action, req) => {
+    let subscriberId = req.headers['subscriber-id']
+    
     if (action.action === "REQUEST_NOTIFICATION") {
         //dispatch notification action
-        let subscriberId = req.headers['subscriber-id']
 
         let scheduledMessageInfo = {
             subscriberId: subscriberId,
@@ -23,6 +24,8 @@ module.exports.actionDispatch = async (action, req) => {
             userId: req.user_id,
             message: {$regex: `${action.data.message}.*`, $options: 'i'},
         }
+
+        //console.log(scheduledMessageQuery)
 
         removeNotification(scheduledMessageQuery)
     }

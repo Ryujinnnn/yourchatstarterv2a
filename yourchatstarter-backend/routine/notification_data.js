@@ -25,14 +25,14 @@ module.exports.addNotification = async (scheduledMessageInfo) => {
 
 module.exports.removeNotification = async (scheduledMessageQuery) => {
     let query = {
-        message: {
-            text: scheduledMessageQuery.message
-        },
+        "message.text": scheduledMessageQuery.message
     }
 
-    if (scheduledMessageQuery.userId) query.userId = new ObjectID(scheduledMessageQuery.userId)
+    if (scheduledMessageQuery.userId) query.userId = scheduledMessageQuery.userId
     else if (scheduledMessageQuery.subscriberId) query.subscriptionId = scheduledMessageInfo.subscriberId
     else return false
+
+    console.log(query)
 
     let remove_res = await db.removeRecords('scheduled_message', query).catch(err => console.log(err))
 

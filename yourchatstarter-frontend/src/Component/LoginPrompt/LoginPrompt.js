@@ -2,6 +2,7 @@ import { Component } from "react";
 import './Style.css'
 import { withRouter } from 'react-router-dom' 
 import {Grid, Col, Panel, Form, FormGroup, ControlLabel, FormControl, ButtonToolbar, Button} from 'rsuite'
+import { usePushNotifications } from '..'
 
 
 async function loginUser(credentials) {
@@ -36,7 +37,7 @@ class _LoginPrompt extends Component {
         if (login_result.status === "success") {
             console.log('login success')
             sessionStorage.setItem('token', login_result.token);
-            this.props.history.push('/')
+            this.props.history.push('/', {login_success: true})
         }
         else {
             alert(login_result.desc)

@@ -150,7 +150,7 @@ module.exports.setupInstance = async () => {
 
         let affirmation = new customNER("affirmation", "vi")
         affirmation.addNewDictRule(['Đồng ý', 'đồng ý', 'đồng Ý', 'Chắc chắn', 'Đúng', 'Xác nhận', "oke", "ok", "okay"], "yes", 0.9)
-        affirmation.addNewDictRule(["Hủy", "Không", "Từ chối"], "no", 0.9)
+        affirmation.addNewDictRule(["Hủy", "Không", "Từ chối", "hủy", "không", "từ chối"], "no", 0.9)
 
         
         let number_ner = new customNER("custom_number", "vi")

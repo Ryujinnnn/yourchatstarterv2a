@@ -1,4 +1,5 @@
 const { default: axios } = require("axios")
+const db = require('../../database/database_interaction')
 
 function onesignal_api() {
     //TODO: endpoint (POST) https://onesignal.com/api/v1/notifications
@@ -47,6 +48,25 @@ function send_notification(content, title = "YourChatStarter", action = {}, clie
         console.log(err)
     }).then(res => {
         console.log(res.data)
+        let res_obj = res.data
+        if (res_obj.errors) {
+            //check error for invalid player ids
+            if (res_obj.errors["invalid_player_ids"]) {
+                //remove invalid ids from the database
+                res_obj.errors["invalid_player_ids"].forEach(async (invalid_id) => {
+                    let remove_query = {
+                        subscriptionId: invalid_id,
+                        type: "onesignal"
+                    }
+
+                    let res = await db.removeRecords("notification_subscription", remove_query).catch(err => console.log(err))
+
+                    if (res) {
+                        console.log("removed subscriber id: " + invalid_id)
+                    }
+                })
+            }
+        }
     })
 }
 

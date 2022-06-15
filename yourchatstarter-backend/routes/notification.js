@@ -20,7 +20,10 @@ function createHash(input) {
 }
 
 router.post('/subscribe', verifyToken, async (req, res) => {
+
     const subscriptionRequest = req.body.data;
+
+    console.log("+ received subscribing request")
 
     if (!subscriptionRequest) {
         res.status(400).json({ 

@@ -75,7 +75,7 @@ export function usePushNotifications() {
         serviceWorker
             .createNotificationSubscription()
             .then(function (subscription) {
-                console.log(subscription)
+                //console.log(subscription)
                 setUserSubscription(subscription);
                 setLoading(false);
             })
@@ -93,42 +93,6 @@ export function usePushNotifications() {
                 setError(err);
                 setLoading(false);
             });
-        // if ('serviceWorker' in navigator) {
-        //     navigator.serviceWorker.ready.then(function (registration) {
-        //         if (!registration.pushManager) {
-        //             console.log('Push manager unavailable.')
-        //             return
-        //         }
-
-        //         registration.pushManager.getSubscription().then(function (existedSubscription) {
-        //             if (existedSubscription === null) {
-        //                 console.log('No subscription detected, make a request.')
-        //                 registration.pushManager.subscribe({
-        //                     applicationServerKey: urlB64ToUint8Array('BJdLsp38HrmZxuR6qsvoDdTwtVBpUb75OLleU5qW8wnNCr58_VZIR-Vck8tGmQSBOOcUso2RhEClNTjmq22fIp8'),
-        //                     userVisibleOnly: true,
-        //                 }).then(function (newSubscription) {
-        //                     console.log('New subscription added.', newSubscription)
-        //                     //sendSubscription(newSubscription)
-        //                 }).catch(function (e) {
-        //                     if (Notification.permission !== 'granted') {
-        //                         console.log('Permission was not granted.')
-        //                     } else {
-        //                         console.error('An error ocurred during the subscription process.', e)
-        //                     }
-        //                 })
-        //             } else {
-        //                 console.log('Existed subscription detected.')
-        //                 //sendSubscription(existedSubscription)
-        //             }
-        //         })
-        //     })
-        //         .catch(function (e) {
-        //             console.error('An error ocurred during Service Worker registration.', e)
-        //         })
-        // }
-        // else {
-        //     console.log('Can not reachable to the service worker');
-        // }
     };
 
     /**
@@ -139,7 +103,14 @@ export function usePushNotifications() {
         setLoading(true);
         setError(false);
         axios
-            .post('/api/notification/subscribe', { data: userSubscription }, {headers: {'x-access-token': sessionStorage.getItem("token")}})
+            .post('/api/notification/subscribe', { 
+                data: userSubscription 
+            }, 
+            {
+                headers: {
+                    'x-access-token': sessionStorage.getItem("token")
+                }
+            })
             .then(function (response) {
                 setPushServerSubscriptionId(response.data.id);
                 //save subscription Id to local storage, security be damn

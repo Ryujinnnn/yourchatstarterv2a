@@ -54,7 +54,8 @@ module.exports.run = (entities, option, context, isLocal = true) => {
 
             if (enough_entity && (!affirmation || !affirmation.from_context)) {
                 let phrase_val = phrase.utteranceText.replace(/\"/g, '')
-                let date_val = date.resolution.value
+                let date_val = new Date(date.resolution.value)
+                
                 response = `Bạn có muốn đặt thông báo nội dung "${phrase_val}" lúc ${date_val.toLocaleString('vi-VN', {timeZone: 'Asia/Ho_Chi_Minh'})}`
                 context_intent_entry.missing_entities.push('affirmation')
                 context.suggestion_list = ['Đồng ý', 'Hủy bỏ']
@@ -65,7 +66,6 @@ module.exports.run = (entities, option, context, isLocal = true) => {
                 // create a subscription (server-side?)
                 let phrase_val = phrase.utteranceText.replace(/\"/g, '')
                 let date_val = date.resolution.value
-
                 let affirmation_val = affirmation.resolution.value
 
                 if (affirmation_val === "no") {
