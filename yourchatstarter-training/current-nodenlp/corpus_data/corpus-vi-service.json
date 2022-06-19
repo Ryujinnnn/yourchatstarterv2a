@@ -86,7 +86,8 @@
                 "kết quả biểu thức %expression bằng mấy",
                 "%expression% ra bao nhiêu?",  
                 "%expression% được bao nhiêu?",      
-                "tính toán %expression%"
+                "tính toán %expression%",
+                "kết quả phép tính %expression%"
             ],
             "answers": [
                 "Mình không đọc được phép tính của bạn"
