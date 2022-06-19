@@ -33,3 +33,19 @@
     opacity: 0;
     transition: opacity 200ms;
 }
+
+.sidebar-navlink a:link, .sidebar-navlink a:visited {
+    text-decoration: none;
+}
+
+.sidebar-navlink.exit {
+    background-color: rgb(161, 78, 78);
+}
+
+.sidebar-navlink.exit a {
+    color: white;
+}
+
+.sidebar-navlink.exit:hover {
+    background-color: rgb(250, 81, 81);
+}

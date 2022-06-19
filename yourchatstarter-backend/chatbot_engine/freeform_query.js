@@ -61,13 +61,18 @@ module.exports = async function (context, input, intent_res) {
             }
             else {
                 first_res = google_res.itemListElement[0]
-                if (first_res.result.detailedDescription) {
-                    answer = first_res.result.detailedDescription.articleBody
+                if (first_res.resultScore && first_res.resultScore > 50) {
+                    if (first_res.result.detailedDescription) {
+                        answer = first_res.result.detailedDescription.articleBody
+                    }
+                    else {
+                        answer = `${first_res.result.name} là ${first_res.result.description}`
+                    }
+                    context.suggestion_list = ['Việt Nam', 'Taylor Swift', "Petrolimex"]
                 }
                 else {
-                    answer = `${first_res.result.name} là ${first_res.result.description}`
+                    throw new Error("no google result")
                 }
-                context.suggestion_list = ['Việt Nam', 'Taylor Swift', "Petrolimex"]
             }
         })
         .catch((e) => {

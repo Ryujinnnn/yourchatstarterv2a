@@ -14,7 +14,7 @@ module.exports.get_knowledge = (queries) => {
         }
         else {
             let obj = JSON.parse(await res.text())
-            //console.dir(obj, {depth: null})
+            console.dir(obj, {depth: null})
             resolve(obj)
         }
     })

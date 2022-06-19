@@ -28,15 +28,11 @@ router.post('/', verifyToken, async (req, res) => {
 
     console.log(option)
 
-    let response = "", updated_context, action = {}
+    let response = "", action, updated_context
 
-    if (is_local) { 
-        [response, updated_context, action] = await chatbot.get_response_local(message, option, context)}
-    else {
-        [response, updated_context, action] = await chatbot.get_response(message, option, context)
-    }
+    [response, updated_context, action] = await chatbot.get_response_local(message, option, context)
 
-    console.log(action)
+    //console.log(action)
 
     if (action && action !== {}) {
         //the whole req object is not needed but fuck it

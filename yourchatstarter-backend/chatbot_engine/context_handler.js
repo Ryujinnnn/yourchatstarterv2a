@@ -17,6 +17,7 @@ const context = {
 }
 
 */
+const { session_storage, smalltalk_suggestion, service_access_tier } = require('../database/session_storage')
 
 module.exports = (parsed_data, input, option, context, IntentHandler) => {
     return new Promise(async (resolve, reject) => {
@@ -85,10 +86,15 @@ module.exports = (parsed_data, input, option, context, IntentHandler) => {
                     let intent_exec = IntentHandler.get(intent.intent)
                     context.intent_stack.splice(i, 1)
                     if (intent) {
-                        [response, context, action] = await intent_exec.run(intent.confirmed_entities, option, context, true)
+                        if (!service_access_tier[intent.intent] || service_access_tier[intent.intent].includes(option.plan)) {
+                            [response, context, action] = await intent_exec.run(intent.confirmed_entities, option, context, true)
+                        }
+                        else {
+                            response = "Tài khoản của bạn chưa thể sử dụng chức năng này nhé"
+                        }
                     }
                     else {
-                        answer = "Chức năng chưa được xây dựng"
+                        response = "Chức năng chưa được xây dựng"
                     }
                     break
                 }
