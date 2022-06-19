@@ -6,6 +6,7 @@ const { customNER, cleanEntities } = require('./custom_ner')
 const freeform_query = require('./freeform_query')
 const { session_storage, smalltalk_suggestion } = require('../database/session_storage')
 const { get_sentiment } = require('./external_service/sentiment_analysist')
+const { generate_text } = require('./external_service/generate_response')
 const random_helper = require('./utils/random_helper')
 const { LangBert } = require('@nlpjs/lang-bert')
 const { default: axios } = require('axios')
@@ -283,6 +284,10 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                         session_storage.unknown_intent += 1
                         unknown_intent = true
                         answer = res.answer
+                        //TODO: the last resort, switching the conversation mode to using BARTpho model
+                        if (process.env.USE_BARTPHO) {
+                            answer = await generate_text(input)
+                        }
                         let start_index = random_helper(smalltalk_suggestion.length)
                         context.suggestion_list = ["Trợ giúp", "Giúp mình với"].concat(smalltalk_suggestion.slice_wrap(start_index, (start_index + 2) % smalltalk_suggestion.length))
                     }
@@ -297,6 +302,9 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                 else {
                     session_storage.defined_intent += 1
                     answer = res.answer
+                    if (process.env.USE_BARTPHO) {
+                        answer = await generate_text(input)
+                    }
                     let start_index = random_helper(smalltalk_suggestion.length)
                     context.suggestion_list = smalltalk_suggestion.slice_wrap(start_index, (start_index + 4) % smalltalk_suggestion.length)
                 }
