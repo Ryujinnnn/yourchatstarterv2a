@@ -30,21 +30,19 @@ module.exports.shuffleSuggestion = () => {
         console.log('smalltalk utterance loaded')
     }
     else {
-        cur_pool = smalltalk_suggestion
+        cur_pool = [...smalltalk_suggestion]
     }
 
     //shuffle
     cur_pool = shuffle(cur_pool)
 
     if (smalltalk_suggestion.length === 0) {
-        for (let i in cur_pool) smalltalk_suggestion.push(cur_pool[i])
+        for (const i of cur_pool) smalltalk_suggestion.push(i)
     }
     else {
-        for (let i in cur_pool) {
+        for (const i of cur_pool) {
             smalltalk_suggestion.shift()
-            smalltalk_suggestion.push(cur_pool[i])
+            smalltalk_suggestion.push(i)
         }
     }
-
-    //console.log(smalltalk_suggestion)
 }

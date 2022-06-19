@@ -31,7 +31,5 @@ module.exports.updateServicePermission = async () => {
             service_access_tier[key] = val
         })
 
-        console.log("permission updated")
-        console.log("new permission", service_access_tier)
     }
 }
