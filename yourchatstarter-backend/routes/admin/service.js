@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../../database/database_interaction')
+const { updateServicePermission } = require('../../routine/update_permission')
 const { verifyToken } = require('../middleware/verify_token')
 
 //TODO: hide this
@@ -54,16 +55,17 @@ router.post('/save_service', verifyToken, async (req, res) => {
         }
         config_action = {
             $set: {
-                ask_calc: free_config.ask_calc || false,
-                ask_covid: free_config.ask_covid || false,
-                ask_crypto: free_config.ask_crypto || false,
-                ask_exchange_rate: free_config.ask_exchange_rate || false,
-                ask_news: free_config.ask_news || false,
-                ask_stock: free_config.ask_stock || false,
-                ask_weather: free_config.ask_weather || false,
-                req_translate: free_config.req_translate || false,
-                wiki_fallback: free_config.wiki_fallback || false,
-                google_fallback: free_config.google_fallback || false,
+                ask_calc: trueIfUndefined(free_config.ask_calc ),
+                ask_covid: trueIfUndefined(free_config.ask_covid ),
+                ask_crypto: trueIfUndefined(free_config.ask_crypto ),
+                ask_conversion: trueIfUndefined(free_config.ask_conversion ),
+                ask_exchange_rate: trueIfUndefined(free_config.ask_exchange_rate ),
+                ask_news: trueIfUndefined(free_config.ask_news ),
+                ask_stock: trueIfUndefined(free_config.ask_stock ),
+                ask_weather: trueIfUndefined(free_config.ask_weather ),
+                req_translate: trueIfUndefined(free_config.req_translate ),
+                wiki_fallback: trueIfUndefined(free_config.wiki_fallback ),
+                google_fallback: trueIfUndefined(free_config.google_fallback ),
             }
         }
 
@@ -77,22 +79,27 @@ router.post('/save_service', verifyToken, async (req, res) => {
         }
     }
 
+    function trueIfUndefined(input) {
+        return (input === undefined || input === null) ? true : input
+    }
+
     if (standard_config) {
         config_query = {
             name: "standard"
         }
         config_action = {
             $set: {
-                ask_calc: standard_config.ask_calc || false,
-                ask_covid: standard_config.ask_covid || false,
-                ask_crypto: standard_config.ask_crypto || false,
-                ask_exchange_rate: standard_config.ask_exchange_rate || false,
-                ask_news: standard_config.ask_news || false,
-                ask_stock: standard_config.ask_stock || false,
-                ask_weather: standard_config.ask_weather || false,
-                req_translate: standard_config.req_translate || false,
-                wiki_fallback: standard_config.wiki_fallback || false,
-                google_fallback: standard_config.google_fallback || false,
+                ask_calc: trueIfUndefined(standard_config.ask_calc ),
+                ask_covid: trueIfUndefined(standard_config.ask_covid ),
+                ask_crypto: trueIfUndefined(standard_config.ask_crypto ),
+                ask_conversion: trueIfUndefined(standard_config.ask_conversion ),
+                ask_exchange_rate: trueIfUndefined(standard_config.ask_exchange_rate ),
+                ask_news: trueIfUndefined(standard_config.ask_news ),
+                ask_stock: trueIfUndefined(standard_config.ask_stock ),
+                ask_weather: trueIfUndefined(standard_config.ask_weather ),
+                req_translate: trueIfUndefined(standard_config.req_translate ),
+                wiki_fallback: trueIfUndefined(standard_config.wiki_fallback ),
+                google_fallback: trueIfUndefined(standard_config.google_fallback ),
             }
         }
 
@@ -112,16 +119,17 @@ router.post('/save_service', verifyToken, async (req, res) => {
         }
         config_action = {
             $set: {
-                ask_calc: premium_config.ask_calc || false,
-                ask_covid: premium_config.ask_covid || false,
-                ask_crypto: premium_config.ask_crypto || false,
-                ask_exchange_rate: premium_config.ask_exchange_rate || false,
-                ask_news: premium_config.ask_news || false,
-                ask_stock: premium_config.ask_stock || false,
-                ask_weather: premium_config.ask_weather || false,
-                req_translate: premium_config.req_translate || false,
-                wiki_fallback: premium_config.wiki_fallback || false,
-                google_fallback: premium_config.google_fallback || false,
+                ask_calc: trueIfUndefined(premium_config.ask_calc ),
+                ask_covid: trueIfUndefined(premium_config.ask_covid ),
+                ask_crypto: trueIfUndefined(premium_config.ask_crypto ),
+                ask_conversion: trueIfUndefined(premium_config.ask_conversion ),
+                ask_exchange_rate: trueIfUndefined(premium_config.ask_exchange_rate ),
+                ask_news: trueIfUndefined(premium_config.ask_news ),
+                ask_stock: trueIfUndefined(premium_config.ask_stock ),
+                ask_weather: trueIfUndefined(premium_config.ask_weather ),
+                req_translate: trueIfUndefined(premium_config.req_translate ),
+                wiki_fallback: trueIfUndefined(premium_config.wiki_fallback ),
+                google_fallback: trueIfUndefined(premium_config.google_fallback ),
             }
         }
 
@@ -135,6 +143,7 @@ router.post('/save_service', verifyToken, async (req, res) => {
         }
     }
 
+    updateServicePermission()
 
     res.status(200).send({
         status: "success",

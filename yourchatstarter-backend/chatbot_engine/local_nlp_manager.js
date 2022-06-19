@@ -4,7 +4,7 @@ const context_handle = require('../chatbot_engine/context_handler')
 const { embeded_answer } = require('../info_module/basic_answer_query')
 const { customNER, cleanEntities } = require('./custom_ner')
 const freeform_query = require('./freeform_query')
-const { session_storage, smalltalk_suggestion } = require('../database/session_storage')
+const { session_storage, smalltalk_suggestion, service_access_tier } = require('../database/session_storage')
 const { get_sentiment } = require('./external_service/sentiment_analysist')
 const { generate_text } = require('./external_service/generate_response')
 const random_helper = require('./utils/random_helper')
@@ -92,11 +92,14 @@ module.exports.setupInstance = async () => {
         let try_python = await fetch('http://localhost:8000/ping').catch(e => console.log('connection error in python server instance'))
         if (try_python && try_python.status == 200) {
             console.log('python server found, using bert tokenizer')
+            
             manager.container.registerConfiguration('bert', {
                 url: 'http://localhost:8000/tokenize',
                 languages: ['vi']
             });
             manager.container.use(LangBert);
+
+            session_storage.falcon_available = true
 
             const data = fs.readFileSync('./chatbot_engine/model-bert.nlp', {encoding: 'utf-8'});
             manager.import(data);
@@ -256,11 +259,17 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                 if (res.intent.startsWith("service.") && res.score > 0.7) {
                     //restructure entity
                     session_storage.defined_intent += 1
-                    let intent = IntentHandler.get(res.intent.replace("service.", ""))
+                    let intent_name = res.intent.replace("service.", "")
+                    let intent = IntentHandler.get(intent_name)
                     if (intent) {
-                        let entities = res.entities;
-                        if (intent.name === "ask_entity_property") [answer, context] = await intent.run(entities, option, context, input, true)
-                        else [answer, context, action] = await intent.run(entities, option, context, true)
+                        if (!service_access_tier[intent_name] || service_access_tier[intent_name].includes(option.plan)) {
+                            let entities = res.entities;
+                            if (intent.name === "ask_entity_property") [answer, context] = await intent.run(entities, option, context, input, true)
+                            else [answer, context, action] = await intent.run(entities, option, context, true)
+                        }
+                        else {
+                            answer = "Tài khoản của bạn chưa thể sử dụng chức năng này nhé"
+                        }
                     }
                     else {
                         answer = "Chức năng chưa được xây dựng"
@@ -285,8 +294,9 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                         unknown_intent = true
                         answer = res.answer
                         //TODO: the last resort, switching the conversation mode to using BARTpho model
-                        if (process.env.USE_BARTPHO) {
+                        if (session_storage.falcon_available && process.env.USE_BARTPHO) {
                             answer = await generate_text(input)
+                            unknown_intent = false
                         }
                         let start_index = random_helper(smalltalk_suggestion.length)
                         context.suggestion_list = ["Trợ giúp", "Giúp mình với"].concat(smalltalk_suggestion.slice_wrap(start_index, (start_index + 2) % smalltalk_suggestion.length))
@@ -302,7 +312,7 @@ module.exports.processInput = (input, option = {}, context = {}, IntentHandler) 
                 else {
                     session_storage.defined_intent += 1
                     answer = res.answer
-                    if (process.env.USE_BARTPHO) {
+                    if (session_storage.falcon_available && process.env.USE_BARTPHO) {
                         answer = await generate_text(input)
                     }
                     let start_index = random_helper(smalltalk_suggestion.length)

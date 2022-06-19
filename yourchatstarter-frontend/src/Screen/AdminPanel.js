@@ -3,6 +3,7 @@ import { Container, Sidenav, Sidebar, Nav, Navbar, Dropdown, Icon, Header, Conte
 import { BillManager, BlogManager, UserManager, ServiceManager } from "../Component";
 import { DashboardPanel } from "../Component/AdminPanelComponents/DashboardPanel";
 import { InfoPanel } from "../Component/AdminPanelComponents/InfoPanel";
+import "./Test.css"
 
 const headerStyles = {
     padding: 18,
@@ -33,9 +34,9 @@ const NavToggle = ({ expand, onChange }) => {
                             return <Icon style={iconStyles} icon="cog" />;
                         }}
                     >
-                        <Dropdown.Item>Help</Dropdown.Item>
-                        <Dropdown.Item>Settings</Dropdown.Item>
-                        <Dropdown.Item>Sign out</Dropdown.Item>
+                        <Dropdown.Item href="/about">Hồ sơ</Dropdown.Item>
+                        <Dropdown.Item href="/profile">Cài đặt</Dropdown.Item>
+                        <Dropdown.Item href="/logout">Đăng xuất</Dropdown.Item>
                     </Dropdown>
                 </Nav>
 
@@ -87,29 +88,32 @@ export class AdminPanel extends Component {
                             <Sidenav.Header>
                                 <div style={headerStyles}>
                                     <Icon icon="logo-analytics" size="lg" style={{ verticalAlign: 0 }} />
-                                    <span style={{ marginLeft: 12 }}>Admin Panel</span>
+                                    <span style={{ marginLeft: 12 }}>YourChatStarter</span>
                                 </div>
                             </Sidenav.Header>
                             <Sidenav.Body>
                                 <Nav>
                                     <Nav.Item eventKey="1" active icon={<Icon icon="dashboard" />} onSelect={() => {this.setState({currentPageTitle: "Dashboard"})}}>
-                                        Dashboard
+                                        Bảng điều khiển
                                     </Nav.Item>
                                     <Nav.Item eventKey="2" icon={<Icon icon="group" />} onSelect={() => {this.setState({currentPageTitle: "Info"})}}>
-                                        Info
+                                        Thông tin
                                     </Nav.Item>
                                     <Dropdown
                                         eventKey="3"
                                         trigger="hover"
-                                        title="Managing"
+                                        title="Quản lý"
                                         icon={<Icon icon="magic" />}
                                         placement="rightStart"
                                     >
-                                        <Dropdown.Item eventKey="3-1" onSelect={() => {this.setState({currentPageTitle: "Users"})}}>Users</Dropdown.Item>
-                                        <Dropdown.Item eventKey="3-2" onSelect={() => {this.setState({currentPageTitle: "Billing"})}}>Billing</Dropdown.Item>
-                                        <Dropdown.Item eventKey="3-3" onSelect={() => {this.setState({currentPageTitle: "Subscription Plan"})}}>Subscription Plan</Dropdown.Item>
-                                        <Dropdown.Item eventKey="3-4" onSelect={() => {this.setState({currentPageTitle: "Blog"})}}>Blog</Dropdown.Item>
+                                        <Dropdown.Item eventKey="3-1" onSelect={() => {this.setState({currentPageTitle: "Users"})}}>Người dùng</Dropdown.Item>
+                                        <Dropdown.Item eventKey="3-2" onSelect={() => {this.setState({currentPageTitle: "Billing"})}}>Hóa đơn</Dropdown.Item>
+                                        <Dropdown.Item eventKey="3-3" onSelect={() => {this.setState({currentPageTitle: "Subscription Plan"})}}>Dịch vụ</Dropdown.Item>
+                                        <Dropdown.Item eventKey="3-4" onSelect={() => {this.setState({currentPageTitle: "Blog"})}}>Bài viết</Dropdown.Item>
                                     </Dropdown>
+                                    <Nav.Item eventKey="4" className="sidebar-navlink exit" icon={<Icon icon="long-arrow-left" />} href="/">
+                                        Về trang chủ
+                                    </Nav.Item>
                                 </Nav>
                             </Sidenav.Body>
                         </Sidenav>
