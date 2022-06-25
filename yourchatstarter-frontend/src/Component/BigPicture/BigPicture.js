@@ -1,6 +1,6 @@
 import picture from './cover_img.jpg'
 import './Style.css'
-import {Carousel} from 'rsuite';
+import {Carousel, Icon} from 'rsuite';
 const { Component } = require("react");
 
 export class BigPicture extends Component {
@@ -10,6 +10,12 @@ export class BigPicture extends Component {
                 <h1 style={{marginBottom: 20}}>YourChatStarter</h1>
                 <p style={{marginBottom: 20}}>Chatbot cung cấp thông tin ngay trên đầu ngón tay của bạn</p>
                 <a href="/chat" style={{marginBottom: 20}}><button type="button" className="blueButton">Bắt đầu ngay!</button></a>
+                <a href="https://github.com/Ryujinnnn/YourChatStarter/releases/download/Android-release-v2.0.3/app-release.apk" ><button type="button" className="downloadButton">
+                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center'}}>
+                    <Icon icon="download" size='2x'/> 
+                    Tải ứng dụng cho Android
+                    </div> 
+                </button></a>
             </div>
         )
         return (
