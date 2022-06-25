@@ -11,7 +11,7 @@ module.exports.updateServicePermission = async () => {
         sv_res.forEach(element => {
             let entries = Object.entries(element)
             let name_map = {
-                "basic": ["free"],
+                "basic": ["free", "none"],
                 "standard": ["standard"],
                 "premium": ["premium", "lifetime"]
             }
