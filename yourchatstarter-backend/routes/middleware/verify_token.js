@@ -26,7 +26,8 @@ module.exports.verifyToken = async (req, res, next) => {
         req.user_id = query_result[0].user_id
         req.username = query_result[0].username
         req.is_paid = query_result[0].is_paid,
-        req.plan = query_result[0].plan
+        req.plan = query_result[0].plan,
+        req.is_admin = (query_result[0].user_id == process.env.ADMIN_ID)
         next()
     }
 }

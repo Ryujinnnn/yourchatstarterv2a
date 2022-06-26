@@ -6,8 +6,17 @@
     margin-top: 16px
 }
 
-.user-info-modal .rs-form-horizontal .rs-form-group .rs-picker-date, .rs-picker-select {
-    margin: 15px
+.user-info-modal .rs-form-horizontal .rs-form-group .rs-picker-date, .rs-picker-select, .rs-input {
+    margin: 15px;
+}
+
+.user-info-modal .rs-form-horizontal .rs-form-group .rs-input-number {
+    margin: 15px;
+    height: 36px;
+}
+
+.user-info-modal .rs-form-horizontal .rs-form-group .rs-input-number > .rs-input {
+    margin: 0px
 }
 
 .blog-editor-modal .rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {

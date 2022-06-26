@@ -1,57 +1,57 @@
 {
     "hà nội": {
-        "case": 1604574,
+        "case": 1605136,
         "recovered": 0,
         "death": 1221,
-        "daily_case": 149
+        "daily_case": 177
     },
     "tp. hồ chí minh": {
-        "case": 611558,
+        "case": 611679,
         "recovered": 0,
         "death": 19984,
-        "daily_case": 25
+        "daily_case": 32
     },
     "nghệ an": {
-        "case": 485448,
+        "case": 485572,
         "recovered": 0,
         "death": 145,
-        "daily_case": 51
+        "daily_case": 21
     },
     "bắc giang": {
-        "case": 387745,
+        "case": 387746,
         "recovered": 0,
         "death": 91,
-        "daily_case": 7
+        "daily_case": 0
     },
     "vĩnh phúc": {
-        "case": 368848,
+        "case": 368913,
         "recovered": 0,
         "death": 19,
-        "daily_case": 25
+        "daily_case": 14
     },
     "hải dương": {
-        "case": 363628,
+        "case": 363669,
         "recovered": 0,
         "death": 114,
-        "daily_case": 11
+        "daily_case": 6
     },
     "quảng ninh": {
-        "case": 348221,
+        "case": 348328,
         "recovered": 0,
         "death": 139,
-        "daily_case": 28
+        "daily_case": 21
     },
     "bắc ninh": {
-        "case": 344795,
+        "case": 344934,
         "recovered": 0,
         "death": 136,
-        "daily_case": 50
+        "daily_case": 32
     },
     "phú thọ": {
-        "case": 321313,
+        "case": 321462,
         "recovered": 0,
         "death": 97,
-        "daily_case": 34
+        "daily_case": 26
     },
     "bình dương": {
         "case": 320907,
@@ -60,40 +60,40 @@
         "daily_case": 0
     },
     "nam định": {
-        "case": 295928,
+        "case": 295972,
         "recovered": 0,
         "death": 149,
         "daily_case": 11
     },
     "thái bình": {
-        "case": 292698,
+        "case": 292751,
         "recovered": 0,
         "death": 23,
-        "daily_case": 15
-    },
-    "hưng yên": {
-        "case": 240191,
-        "recovered": 0,
-        "death": 5,
-        "daily_case": 6
-    },
-    "hòa bình": {
-        "case": 236287,
-        "recovered": 0,
-        "death": 102,
         "daily_case": 12
     },
+    "hưng yên": {
+        "case": 240223,
+        "recovered": 0,
+        "death": 5,
+        "daily_case": 2
+    },
+    "hòa bình": {
+        "case": 236334,
+        "recovered": 0,
+        "death": 102,
+        "daily_case": 9
+    },
     "thái nguyên": {
-        "case": 185669,
+        "case": 185726,
         "recovered": 0,
         "death": 110,
-        "daily_case": 15
+        "daily_case": 14
     },
     "lào cai": {
-        "case": 183577,
+        "case": 183680,
         "recovered": 0,
         "death": 38,
-        "daily_case": 26
+        "daily_case": 16
     },
     "đắk lắk": {
         "case": 170585,
@@ -102,88 +102,88 @@
         "daily_case": 0
     },
     "thanh hóa": {
-        "case": 167598,
+        "case": 167630,
         "recovered": 0,
         "death": 107,
-        "daily_case": 11
+        "daily_case": 12
     },
     "lạng sơn": {
-        "case": 156910,
+        "case": 156924,
         "recovered": 0,
         "death": 84,
-        "daily_case": 5
+        "daily_case": 0
     },
     "sơn la": {
-        "case": 150717,
+        "case": 150757,
         "recovered": 0,
         "death": 0,
-        "daily_case": 17
+        "daily_case": 11
     },
     "yên bái": {
-        "case": 148918,
+        "case": 149054,
         "recovered": 0,
         "death": 13,
-        "daily_case": 45
+        "daily_case": 11
     },
     "cà mau": {
         "case": 145900,
         "recovered": 0,
         "death": 357,
-        "daily_case": 6
+        "daily_case": 0
     },
     "tuyên quang": {
-        "case": 143048,
+        "case": 143097,
         "recovered": 0,
         "death": 14,
-        "daily_case": 11
+        "daily_case": 14
     },
     "tây ninh": {
-        "case": 137729,
+        "case": 137732,
         "recovered": 0,
         "death": 918,
         "daily_case": 0
     },
     "bình định": {
-        "case": 137098,
+        "case": 137103,
         "recovered": 0,
         "death": 281,
-        "daily_case": 5
-    },
-    "quảng bình": {
-        "case": 124103,
-        "recovered": 0,
-        "death": 74,
-        "daily_case": 22
-    },
-    "hà giang": {
-        "case": 122089,
-        "recovered": 0,
-        "death": 80,
-        "daily_case": 15
-    },
-    "hải phòng": {
-        "case": 120410,
-        "recovered": 0,
-        "death": 135,
-        "daily_case": 88
-    },
-    "khánh hòa": {
-        "case": 117835,
-        "recovered": 0,
-        "death": 361,
         "daily_case": 0
     },
+    "quảng bình": {
+        "case": 124158,
+        "recovered": 0,
+        "death": 74,
+        "daily_case": 18
+    },
+    "hà giang": {
+        "case": 122106,
+        "recovered": 0,
+        "death": 80,
+        "daily_case": 0
+    },
+    "hải phòng": {
+        "case": 120434,
+        "recovered": 0,
+        "death": 135,
+        "daily_case": 0
+    },
+    "khánh hòa": {
+        "case": 117847,
+        "recovered": 0,
+        "death": 361,
+        "daily_case": 2
+    },
     "bình phước": {
-        "case": 117414,
+        "case": 117416,
         "recovered": 0,
         "death": 224,
-        "daily_case": 1
+        "daily_case": 0
     },
     "bà rịa – vũng tàu": {
-        "case": 106987,
+        "case": 106991,
         "recovered": 0,
         "death": 495,
-        "daily_case": 4
+        "daily_case": 0
     },
     "đồng nai": {
         "case": 106646,
@@ -192,55 +192,55 @@
         "daily_case": 0
     },
     "vĩnh long": {
-        "case": 101072,
+        "case": 101075,
         "recovered": 0,
         "death": 829,
         "daily_case": 0
     },
     "ninh bình": {
-        "case": 99491,
+        "case": 99534,
         "recovered": 0,
         "death": 91,
-        "daily_case": 14
+        "daily_case": 11
     },
     "đà nẵng": {
-        "case": 99142,
+        "case": 99258,
         "recovered": 0,
         "death": 337,
-        "daily_case": 61
+        "daily_case": 14
     },
     "bến tre": {
-        "case": 97498,
+        "case": 97504,
         "recovered": 0,
         "death": 483,
-        "daily_case": 7
+        "daily_case": 1
     },
     "cao bằng": {
-        "case": 95438,
+        "case": 95477,
         "recovered": 0,
         "death": 57,
-        "daily_case": 8
-    },
-    "lâm đồng": {
-        "case": 92124,
-        "recovered": 0,
-        "death": 141,
-        "daily_case": 9
-    },
-    "điện biên": {
-        "case": 88292,
-        "recovered": 0,
-        "death": 20,
         "daily_case": 6
     },
+    "lâm đồng": {
+        "case": 92145,
+        "recovered": 0,
+        "death": 141,
+        "daily_case": 6
+    },
+    "điện biên": {
+        "case": 88318,
+        "recovered": 0,
+        "death": 20,
+        "daily_case": 3
+    },
     "hà nam": {
-        "case": 84815,
+        "case": 84867,
         "recovered": 0,
         "death": 65,
-        "daily_case": 15
+        "daily_case": 10
     },
     "quảng trị": {
-        "case": 81872,
+        "case": 81910,
         "recovered": 0,
         "death": 38,
         "daily_case": 10
@@ -258,16 +258,16 @@
         "daily_case": 0
     },
     "bắc kạn": {
-        "case": 74419,
+        "case": 74466,
         "recovered": 0,
         "death": 28,
-        "daily_case": 13
+        "daily_case": 20
     },
     "lai châu": {
-        "case": 73970,
+        "case": 73997,
         "recovered": 0,
         "death": 0,
-        "daily_case": 1
+        "daily_case": 2
     },
     "đắk nông": {
         "case": 72977,
@@ -276,10 +276,10 @@
         "daily_case": 0
     },
     "gia lai": {
-        "case": 69529,
+        "case": 69536,
         "recovered": 0,
         "death": 116,
-        "daily_case": 2
+        "daily_case": 0
     },
     "bình thuận": {
         "case": 52517,
@@ -288,22 +288,22 @@
         "daily_case": 0
     },
     "đồng tháp": {
-        "case": 50636,
+        "case": 50639,
         "recovered": 0,
         "death": 1007,
-        "daily_case": 9
+        "daily_case": 0
     },
     "hà tĩnh": {
-        "case": 50294,
+        "case": 50305,
         "recovered": 0,
         "death": 50,
-        "daily_case": 14
+        "daily_case": 0
     },
     "quảng nam": {
-        "case": 49220,
+        "case": 49221,
         "recovered": 0,
         "death": 150,
-        "daily_case": 0
+        "daily_case": 1
     },
     "long an": {
         "case": 48988,
@@ -312,7 +312,7 @@
         "daily_case": 0
     },
     "quảng ngãi": {
-        "case": 47570,
+        "case": 47581,
         "recovered": 0,
         "death": 127,
         "daily_case": 0
@@ -321,22 +321,22 @@
         "case": 46460,
         "recovered": 0,
         "death": 470,
-        "daily_case": 16
+        "daily_case": 0
     },
     "thừa thiên huế": {
-        "case": 46400,
+        "case": 46412,
         "recovered": 0,
         "death": 173,
-        "daily_case": 7
+        "daily_case": 12
     },
     "phú yên": {
-        "case": 42685,
+        "case": 42689,
         "recovered": 0,
         "death": 137,
         "daily_case": 0
     },
     "an giang": {
-        "case": 41257,
+        "case": 42243,
         "recovered": 0,
         "death": 1321,
         "daily_case": 0
@@ -366,10 +366,10 @@
         "daily_case": 0
     },
     "hậu giang": {
-        "case": 17090,
+        "case": 17092,
         "recovered": 0,
         "death": 231,
-        "daily_case": 1
+        "daily_case": 0
     },
     "ninh thuận": {
         "case": 8697,
@@ -378,11 +378,11 @@
         "daily_case": 0
     },
     "cả nước": {
-        "case": 10740595,
-        "recovered": 9627924,
+        "case": 10743448,
+        "recovered": 9649814,
         "death": 43084,
-        "daily_case": 740,
-        "daily_recovered": 5087,
+        "daily_case": 557,
+        "daily_recovered": 7300,
         "daily_death": 0
     }
 }

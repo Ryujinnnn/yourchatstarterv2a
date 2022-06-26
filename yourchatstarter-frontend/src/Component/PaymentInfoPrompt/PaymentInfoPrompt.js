@@ -104,7 +104,7 @@ class _PaymentInfoPrompt extends Component {
                             
                         </form> */}
                         <div className='login-page custom-register'>
-                            <Panel header={<h3>Thông tin thanh toán</h3>} bordered>
+                            <Panel header={<h3>Thông tin thanh toán</h3>} bordered className="payment-form">
                                 <Form fluid onSubmit={this.handleSubmit} >
                                     <FormGroup style={{marginBottom: -6}}>
                                         <ControlLabel style={{marginTop: 12}}>Họ tên</ControlLabel>
@@ -143,9 +143,9 @@ class _PaymentInfoPrompt extends Component {
                             <hr/>
                             <p>Tổng <span className="price" style={{color: 'black'}}><b>{formatter.format(this.state.amount)}</b></span></p>
                         </div>
+                        <div><a href={`/direct_payment?amount=${this.state.amount}`} style={{display: 'block',  marginTop: 60}}>Dùng phương thức thanh toán khác</a></div>
                     </div>
                 </div>
-                <div><a href="/direct_payment" style={{float: 'left', margin: '10px 40px 20px'}}>Không thanh toán được? thử thanh toán trực tiếp bằng chuyển khoản</a></div>
             </div>
         )
     }

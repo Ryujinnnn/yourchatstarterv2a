@@ -49,3 +49,13 @@
 .sidebar-navlink.exit:hover {
     background-color: rgb(250, 81, 81);
 }
+
+.direct-payment-item {
+    flex: 1;
+    margin: 10px;
+}
+
+@media screen and (max-width:700px) {
+    .direct-payment-container { flex-wrap: wrap;  }
+    .direct-payment-item:first-child { flex-basis: 100%; }
+}

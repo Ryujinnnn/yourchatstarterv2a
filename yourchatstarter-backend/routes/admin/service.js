@@ -6,7 +6,15 @@ const { verifyToken } = require('../middleware/verify_token')
 
 //TODO: hide this
 
-router.get('/all_service', async (req, res) => {
+router.get('/all_service', verifyToken, async (req, res) => {
+    if (!req.user_id || !req.is_admin) {
+        res.status(401).send({
+            status: 'failed',
+            desc: 'unauthorized'
+        })
+        return
+    }
+
     let sv_res = await db.queryRecord('service', {}, {})
     //console.log(user_res)
     if (sv_res.length == 0) {
@@ -23,7 +31,7 @@ router.get('/all_service', async (req, res) => {
 })
 
 router.post('/save_service', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'

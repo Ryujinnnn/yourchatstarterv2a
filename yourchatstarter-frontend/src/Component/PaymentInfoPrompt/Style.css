@@ -1,12 +1,12 @@
-form input{
+.payment-form form input{
 	height: 35px;
     min-width: 200px;
     width: 30vw;
 	  margin: 15px;
     padding: 10px;
     display: block;
-    background-color: #e29ae2;
-    border: solid 1px #ffb2ff;
+    /* background-color: #e29ae2;
+    border: solid 1px #ffb2ff; */
 }
 
 .payment_column {

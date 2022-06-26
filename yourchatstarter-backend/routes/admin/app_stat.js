@@ -5,7 +5,7 @@ const { verifyToken } = require('../middleware/verify_token')
 const { ObjectID } = require('mongodb')
 
 router.get('/message_timeseries', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
@@ -75,7 +75,7 @@ router.get('/message_timeseries', verifyToken, async (req, res) => {
 })
 
 router.get('/user_count', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
@@ -104,7 +104,7 @@ router.get('/user_count', verifyToken, async (req, res) => {
 })
 
 router.get('/session_count', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
@@ -133,7 +133,7 @@ router.get('/session_count', verifyToken, async (req, res) => {
 })
 
 router.get('/subcriber_count', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
@@ -162,7 +162,7 @@ router.get('/subcriber_count', verifyToken, async (req, res) => {
 })
 
 router.get('/schedule_count', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'

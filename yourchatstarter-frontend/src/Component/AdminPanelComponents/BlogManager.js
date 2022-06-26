@@ -1,7 +1,8 @@
 import { Component, useEffect, useRef, useState } from 'react'
-import { Alert, Button, ButtonToolbar, ControlLabel, Divider, Form, FormControl, FormGroup, Icon, IconButton, Modal, Table, TagPicker } from 'rsuite'
+import { Alert, Button, ButtonToolbar, ControlLabel, Divider, Form, FormControl, FormGroup, Icon, IconButton, Modal, Table, TagPicker, Input, InputGroup } from 'rsuite'
 
 const { Column, HeaderCell, Cell } = Table;
+
 
 const ActionCell = ({ rowData, dataKey, ...props }) => {
     function handleAction() {
@@ -72,6 +73,9 @@ const BlogEditor = (props) => {
                 return
             }
             Alert.success(res.desc)
+            if (props.onUpdateTable) {
+                props.onUpdateTable()
+            }
         })
     }
 
@@ -113,7 +117,7 @@ const BlogEditor = (props) => {
                 </FormGroup>
                 <FormGroup>
                     <ControlLabel>Thẻ phân loại</ControlLabel>
-                    <FormControl style={{width: '100%', margin: 15, height: 36}} name="display_tag" accepter={TagPicker} creatable data={defaultTag}></FormControl>
+                    <FormControl style={{width: '100%', margin: 15, height: 36}} name="display_tag" accepter={TagPicker} on creatable data={defaultTag}></FormControl>
                 </FormGroup>
                 <FormGroup>
                     <ControlLabel>Đường dẫn tới ảnh minh họa</ControlLabel>
@@ -143,7 +147,11 @@ export class BlogManager extends Component {
             data: [],
             isEditorModalVisible: false,
             selectedBlogId: "",
-            deleteModalShow: false
+            deleteModalShow: false,
+            needTableUpdate: false,
+
+            searchPrompt: "",
+            page: 1,
         };
 
         this.onEditRequest = this.onEditRequest.bind(this)
@@ -158,8 +166,17 @@ export class BlogManager extends Component {
         this.requestFetch()
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        //console.log(prevState)
+        if (prevState.page !== this.state.page) {
+            this.requestFetch()
+        }
+    }
+
     requestFetch() {
-        this.callApi()
+        const query = this.state.searchPrompt
+        const page = this.state.page
+        this.callApi(query, page)
             .then(res => {
                 if (res.status !== "success") return
                 this.setState({ 
@@ -170,8 +187,15 @@ export class BlogManager extends Component {
             .catch(err => console.log(err));
     }
 
-    callApi = async () => {
-        const response = await fetch('/api/admin/blog/all_blog', {
+    callApi = async (query, page) => {
+        let url = '/api/admin/blog/all_blog?'
+        if (query !== "") {
+            url += `query=${query}&` 
+        }
+        if (page > 1) {
+            url += `page=${page}`
+        }
+        const response = await fetch(url, {
             method: 'GET',
             headers: {
                 'x-access-token': sessionStorage.getItem("token")
@@ -224,8 +248,13 @@ export class BlogManager extends Component {
 
     onEditorHide() {
         //console.log('a')
+        if (this.state.needTableUpdate) {
+            this.requestFetch()
+        }
+        
         this.setState({
-            isEditorModalVisible: false
+            isEditorModalVisible: false,
+            needTableUpdate: false
         })
     }
 
@@ -265,17 +294,48 @@ export class BlogManager extends Component {
                     </Modal.Footer>
                 </Modal>
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'end', alignItems: 'center'}}>
-                    <div style={{flex: 1}}>
-                        <p>Đang có tổng cộng {this.state.data.length} bài viết được đăng tại Website này</p>
+                    <div style={{flex: 4}}>
+                        <InputGroup>
+                            <Input onChange={(v) => this.setState({searchPrompt: v})} onPressEnter={() => {
+                                if (this.state.page !== 1) {
+                                    this.setState({page: 1})
+                                }
+                                else this.requestFetch()
+                            }} />
+                            <InputGroup.Addon>
+                                <Icon icon="search" />
+                            </InputGroup.Addon>
+                        </InputGroup>
                     </div>
+
                     <div style={{flex: 1}}>
                         <IconButton style={{float: 'right'}} icon={<Icon icon="plus"></Icon>} onClick={this.onNewBlog} color="green"> Thêm mới</IconButton>
                     </div>
                 </div>
-                <Divider />
+
                 <Modal show={this.state.isEditorModalVisible} backdrop={true} onHide={this.onEditorHide} size="lg">
-                    <BlogEditor selectedBlogId={this.state.selectedBlogId} onRequestClose={this.onEditorHide} />
+                    <BlogEditor selectedBlogId={this.state.selectedBlogId} onRequestClose={this.onEditorHide} 
+                        onUpdateTable={() => {this.setState({needTableUpdate: true})}}/>
                 </Modal>
+
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20, marginBottom: 20}}>
+                    <div style={{flex: 4}}>
+                        <p>Đang hiển thị {this.state.data.length} bài viết được đăng tại Website này</p>
+                    </div>
+                    <div style={{flex: 1, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+                        <Button disabled={(this.state.page <= 1)} onClick={() => {
+                            this.setState({
+                                page: Math.max(1, this.state.page - 1) 
+                            })
+                        }}>{"<<"}</Button>
+                        <p>Trang {this.state.page}</p>
+                        <Button disabled={this.state.data.length === 0} onClick={() => {
+                            this.setState({
+                                page: this.state.page + 1
+                            })
+                        }}>{">>"}</Button>
+                    </div>
+                </div>
                 <Table
                     height={400}
                     data={this.state.data}

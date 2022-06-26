@@ -1,5 +1,6 @@
 import { Component, useEffect, useRef, useState } from 'react'
-import { ControlLabel, FormGroup, Modal, Table, Form, FormControl, Divider, Button, IconButton, Icon, ButtonToolbar, DatePicker, SelectPicker, Alert } from 'rsuite'
+import { ControlLabel, FormGroup, Modal, Table, Form, FormControl, 
+    Divider, Button, IconButton, Icon, ButtonToolbar, DatePicker, SelectPicker, Alert, Input, InputGroup } from 'rsuite'
 import './style.css'
 
 const { Column, HeaderCell, Cell } = Table;
@@ -43,6 +44,9 @@ const UserInfoEditor = (props) => {
                 return
             }
             Alert.success(res.desc)
+            if (props.onUpdateTable) {
+                props.onUpdateTable()
+            }
         })
     }
 
@@ -130,7 +134,10 @@ export class UserManager extends Component {
             data: [],
             isEditorModalVisible: false,
             selectedUserId: "",
-            deleteModalShow: false
+            deleteModalShow: false,
+
+            searchPrompt: "",
+            page: 1,
         };
 
         this.onEditorHide = this.onEditorHide.bind(this)
@@ -145,8 +152,17 @@ export class UserManager extends Component {
         this.requestFetch()
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        //console.log(prevState)
+        if (prevState.page !== this.state.page) {
+            this.requestFetch()
+        }
+    }
+
     requestFetch() {
-        this.callApi()
+        const query = this.state.searchPrompt
+        const page = this.state.page
+        this.callApi(query, page)
             .then(res => {
                     this.setState({ 
                         data: res.user_list
@@ -156,8 +172,15 @@ export class UserManager extends Component {
             .catch(err => console.log(err));
     }
 
-    callApi = async () => {
-        const response = await fetch('/api/admin/user/all_user', {
+    callApi = async (query, page) => {
+        let url = '/api/admin/user/all_user?'
+        if (query !== "") {
+            url += `query=${query}&` 
+        }
+        if (page > 1) {
+            url += `page=${page}`
+        }
+        const response = await fetch(url, {
             method: 'GET',
             headers: {
                 'x-access-token': sessionStorage.getItem("token")
@@ -180,11 +203,14 @@ export class UserManager extends Component {
 
     onEditorHide() {
         //console.log('a')
+        if (this.state.needTableUpdate) {
+            this.requestFetch()
+        }
+        
         this.setState({
-            isEditorModalVisible: false
+            isEditorModalVisible: false,
+            needTableUpdate: false
         })
-
-        this.requestFetch()
     }
 
     onNewUser() {
@@ -251,18 +277,48 @@ export class UserManager extends Component {
                     </Modal.Footer>
                 </Modal>
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'end', alignItems: 'center'}}>
-                    <div style={{flex: 1}}>
-                    <p>Có tổng cộng {this.state.data.length} người dùng đã đăng ký vào dịch vụ</p>
+                    <div style={{flex: 4}}>
+                    <InputGroup>
+                        <Input onChange={(v) => this.setState({searchPrompt: v})} onPressEnter={() => {
+                            if (this.state.page !== 1) {
+                                this.setState({page: 1})
+                            }
+                            else this.requestFetch()
+                        }} />
+                        <InputGroup.Addon>
+                            <Icon icon="search" />
+                        </InputGroup.Addon>
+                    </InputGroup>
                     </div>
                     <div style={{flex: 1}}>
                     <IconButton style={{float: 'right'}} icon={<Icon icon="plus"></Icon>} onClick={this.onNewUser} color="green"> Thêm mới</IconButton>
                     </div>
                 </div>
-                <Divider />
                 
                 <Modal show={this.state.isEditorModalVisible} backdrop={true} onHide={this.onEditorHide}>
-                    <UserInfoEditor selectedUserId={this.state.selectedUserId} onRequestClose={this.onEditorHide}></UserInfoEditor>
+                    <UserInfoEditor selectedUserId={this.state.selectedUserId} onRequestClose={this.onEditorHide}
+                        onUpdateTable={() => {this.setState({needTableUpdate: true})}}/>
                 </Modal>
+
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20, marginBottom: 20}}>
+                    <div style={{flex: 4}}>
+                    <p>Đang hiển thị {this.state.data.length} người dùng đã đăng ký vào dịch vụ</p>
+                    </div>
+                    <div style={{flex: 1, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+                        <Button disabled={(this.state.page <= 1)} onClick={() => {
+                            this.setState({
+                                page: Math.max(1, this.state.page - 1) 
+                            })
+                        }}>{"<<"}</Button>
+                        <p>Trang {this.state.page}</p>
+                        <Button disabled={this.state.data.length === 0} onClick={() => {
+                            this.setState({
+                                page: this.state.page + 1
+                            })
+                        }}>{">>"}</Button>
+                    </div>
+                </div>
+
                 <Table
                     height={400}
                     data={this.state.data}
@@ -299,6 +355,7 @@ export class UserManager extends Component {
                         <ActionCell dataKey="_id" onEditRequest={this.onEditRequest} onRemoveRequest={this.onRemoveRequest}/>
                     </Column>
                 </Table>
+
             </div>
         );
     }

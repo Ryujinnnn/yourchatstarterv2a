@@ -40,6 +40,14 @@ function tryEndpoint() {
 }
 
 router.get('/all', verifyToken , async (req, res) => {
+    if (!req.user_id || !req.is_admin) {
+        res.status(401).send({
+            status: 'failed',
+            desc: 'unauthorized'
+        })
+        return
+    }
+    
     let err = null
     let service_res = await tryEndpoint().catch((e) => {err = e})
 

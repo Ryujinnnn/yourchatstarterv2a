@@ -20,7 +20,7 @@ var stringToColour = function(str) {
 //TODO: hide this
 
 router.get('/all_blog', verifyToken , async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
@@ -28,8 +28,22 @@ router.get('/all_blog', verifyToken , async (req, res) => {
         return
     }
 
+    let blog_query = {}
+    let skip = 0
+    const ENTRY_PER_PAGE = 20
+
+    if (req.query.query) blog_query.title = {
+        $regex: `.*${req.query.query}.*`, $options: 'i',
+    }
+    if (req.query.page) {
+        let pageParse = parseInt(req.query.page)
+        if (!Number.isNaN(pageParse)) {
+            skip = Math.max(0, pageParse - 1) * ENTRY_PER_PAGE
+        }
+    }
+
     let err = null
-    let blog_res = await db.queryRecord('blog', {}, {content: 0}).catch(e => err = e)
+    let blog_res = await db.queryRecordLimit('blog', blog_query, ENTRY_PER_PAGE, {content: 0}, {}, skip).catch(e => err = e)
 
     if (err) {
         res.send({
@@ -46,7 +60,7 @@ router.get('/all_blog', verifyToken , async (req, res) => {
 })
 
 router.get('/from_id/:id', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
@@ -88,7 +102,7 @@ router.get('/from_id/:id', verifyToken, async (req, res) => {
 })
 
 router.post('/save_blog', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
@@ -151,7 +165,7 @@ router.post('/save_blog', verifyToken, async (req, res) => {
 })
 
 router.delete('/from_id/:id', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'

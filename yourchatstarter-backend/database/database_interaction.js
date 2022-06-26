@@ -61,10 +61,10 @@ module.exports.queryRecord = (colName, query, projection = {}, mysort = {}) => {
     }).catch()
 }
 
-module.exports.queryRecordLimit = (colName, query, limit, projection = {}, mysort = {}) => {
+module.exports.queryRecordLimit = (colName, query, limit, projection = {}, mysort = {}, skip = 0) => {
     return new Promise((resolve, reject) => {
         let col = databaseConn.getConnection().collection(colName)
-        col.find(query).sort(mysort).project(projection).limit(limit).toArray(function(err, res) {
+        col.find(query).sort(mysort).project(projection).limit(limit).skip(skip).toArray(function(err, res) {
             if (err) {
                 console.err(err)
                 reject()

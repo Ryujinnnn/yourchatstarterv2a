@@ -73,13 +73,17 @@ export class ServiceManager extends Component {
                             premium: res.sv_list.find((val) => val.name === "premium") || {},
                         }
                     })
-                    console.log(res)
             })
             .catch(err => console.log(err));
     }
 
     callApi = async () => {
-        const response = await fetch('/api/admin/service/all_service');
+        const response = await fetch('/api/admin/service/all_service', {
+            method: 'GET',
+            headers: {
+                'x-access-token': sessionStorage.getItem("token")
+            }
+        });
         const body = await response.json();
         return body;
     };

@@ -8,15 +8,30 @@ const crypto = require('crypto')
 //TODO: hide this
 
 router.get('/all_user', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
         })
         return
     }
+
+    let user_query = {}
+    let skip = 0
+    const ENTRY_PER_PAGE = 20
+
+    if (req.query.query) user_query.username = {
+        $regex: `.*${req.query.query}.*`, $options: 'i',
+    }
+    if (req.query.page) {
+        let pageParse = parseInt(req.query.page)
+        if (!Number.isNaN(pageParse)) {
+            skip = Math.max(0, pageParse - 1) * ENTRY_PER_PAGE
+        }
+    }
+
     let err = null
-    let user_res = await db.queryRecord('user', {}, {hashed_password: 0}).catch(e => err = e)
+    let user_res = await db.queryRecordLimit('user', user_query, ENTRY_PER_PAGE, {hashed_password: 0}, {}, skip).catch(e => err = e)
 
     if (err) {
         res.send({
@@ -32,8 +47,39 @@ router.get('/all_user', verifyToken, async (req, res) => {
     }
 })
 
+router.get('/search_username', verifyToken, async (req, res) => {
+    if (!req.query.query || req.query.query === "") {
+        res.send({
+            status: 'failed',
+            desc: 'no query',
+            user_list: []
+        })
+    }
+    let user_query = {
+        username: {$regex: `.*${req.query.query}.*`, $options: 'i'},
+    }
+
+
+    let err = null
+    let user_res = await db.queryRecordLimit('user', user_query, 20, {username: 1, _id: 0}).catch(e => err = e)
+
+    if (err) {
+        res.send({
+            status: 'failed',
+            desc: err,
+            user_list: []
+        })
+    }
+    else {
+        res.send({
+            status: 'success',
+            user_list: user_res
+        })
+    }
+})
+
 router.get('/from_id/:id', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
@@ -76,7 +122,7 @@ router.get('/from_id/:id', verifyToken, async (req, res) => {
 
 
 router.post('/save_user', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
@@ -133,7 +179,7 @@ router.post('/save_user', verifyToken, async (req, res) => {
 })
 
 router.delete('/from_id/:id', verifyToken, async (req, res) => {
-    if (!req.user_id) {
+    if (!req.user_id || !req.is_admin) {
         res.status(401).send({
             status: 'failed',
             desc: 'unauthorized'
