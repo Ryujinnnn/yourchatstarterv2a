@@ -23,6 +23,20 @@ module.exports.addNotification = async (scheduledMessageInfo) => {
     return false
 }
 
+module.exports.fetchActiveNotification = async (userId = null, subId = null) => {
+    let res = []
+    if (userId) {
+        let query = {
+            userId: new ObjectID(userId)
+        }
+    }
+    else if (subId) {
+        let query = {
+            subscriptionId: subId
+        }
+    }
+} 
+
 module.exports.removeNotification = async (scheduledMessageQuery) => {
     let query = {
         "message.text": scheduledMessageQuery.message

@@ -37,7 +37,7 @@ module.exports.run = (entities, option, context, isLocal = true) => {
                     }
                     response = `Mình đã tìm thấy ${location}`
                 }
-                context.suggestion_list = ['Vincom Đồng Khởi ở đâu?', 'Tam Kỳ ở đâu?', 'Đại học bách khoa thành phố hồ chí minh ở đâu', "Cảm ơn"]
+                context.suggestion_list = ['Vincom Đồng Khởi ở đâu?', 'Tam Kỳ ở đâu?', 'Trường đại học bách khoa thành phố hồ chí minh ở đâu', "Cảm ơn"]
             }
         }
 
