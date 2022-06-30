@@ -7,12 +7,22 @@ module.exports = async function (context, input, intent_res) {
     let answer = ""
     //if context failed to get anything out, fallback to a wiki search
     
+    let property = ""
+    let object_entity = ""
+    let wiki_prompt_entity = intent_res.entities.find((val) => val.entity === "wiki_property_entity")
+
+    if (wiki_prompt_entity) {
+        property = wiki_prompt_entity.resolution.value.property
+        object_entity = wiki_prompt_entity.resolution.value.entity
+    }
     if (input.split('của').length >= 2) {
         //attempt for property parsing query
         let comp = input.split('của')
-        let property = comp[0].trim()
-        let object_entity = comp[1].trim()
+        property = comp[0].trim()
+        object_entity = comp[1].trim()
+    }
 
+    if (property !== "" && object_entity !== "") {
         await wiki_property(property, object_entity).then(wiki_res => {
             if (wiki_res === "") {
                 return

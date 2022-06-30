@@ -3,12 +3,22 @@ const { wiki_property } = require('../../info_module/wikidata_info')
 module.exports.run = (entities, option, context, input = "", isLocal = false) => {
     return new Promise(async (resolve, reject) => {
         let response = ""
+        let property = ""
+        let object_entity = ""
+        let wiki_prompt_entity = entities.find((val) => val.entity === "wiki_property_entity")
+
+        if (wiki_prompt_entity) {
+            property = wiki_prompt_entity.resolution.value.property
+            object_entity = wiki_prompt_entity.resolution.value.entity
+        }
         if (input.split('của').length >= 2) {
             //attempt for property parsing query
             let comp = input.split('của')
-            let property = comp[0].trim()
-            let object_entity = comp[1].trim()
+            property = comp[0].trim()
+            object_entity = comp[1].trim()
+        }
 
+        if (property !== "" && object_entity !== "") {
             await wiki_property(property, object_entity).then(wiki_res => {
                 if (wiki_res === "") {
                     response = 'Mình không rõ bạn muốn hỏi gì :('

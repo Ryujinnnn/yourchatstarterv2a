@@ -192,7 +192,40 @@ module.exports.setupInstance = async () => {
             }
         )
 
-        custom_ner_pool = [date_vi, affirmation, number_ner, interval_ner, math_expr_ner]
+        let custom_wiki_property_entity = new customNER('wiki_property_entity', 'vi')
+
+        function add_property_alias(alias, value, type = 1, threshold = 1) {
+            //type = -1 for prefix, 1 for suffix, 0 for both concat
+            custom_wiki_property_entity.addNewDictRule(alias, 
+            (prefix_val, match_str, suffix_val) => {
+                let entity_val = ""
+                try {
+                    if (type === -1) entity_val = prefix_val.trim()
+                    if (type === 1) entity_val = suffix_val.trim()
+                    if (type === 0) entity_val = prefix_val.trim() + " " + suffix_val.trim()
+                }
+                catch (e) { console.log('error parsing suffix') }
+                return {
+                    property: value,
+                    entity: entity_val
+                }
+            }, 1, /^.+\s+/g, /\s+.+\s*$/g)
+        }
+
+        add_property_alias(["ai sáng tác", "ai đã sáng tác"], "tác giả", 1, 0.9)
+        add_property_alias(["ai là người sinh ra", "ai đã sinh"], "mẹ", 1, 0.9)
+        add_property_alias(["sinh vào ngày nào", "sinh lúc nào", "sinh khi nào"], "ngày sinh", -1, 0.9)
+        add_property_alias(["rộng bao nhiêu", "có diện tích bao nhiêu"], "diện tích", -1, 0.9)
+        add_property_alias(["có dân số bao nhiêu", "có bao nhiêu dân"], "dân số", -1, 0.9)
+
+        custom_ner_pool = [
+            date_vi, 
+            affirmation, 
+            number_ner, 
+            interval_ner, 
+            math_expr_ner, 
+            custom_wiki_property_entity
+        ]
         console.log('custom NER is loaded')
 
         return true;
