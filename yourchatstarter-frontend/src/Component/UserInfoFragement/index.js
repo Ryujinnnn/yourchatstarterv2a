@@ -71,7 +71,7 @@ export class UserInfoFragment extends Component {
             <Form layout="horizontal" ref={this.form} model={model} formValue={this.state.formValue} onChange={(v) => {this.setState({formValue: v})}} className="profile-form"> 
                 <FormGroup>
                     <ControlLabel>Tên đăng nhập</ControlLabel>
-                    <FormControl name="username" />
+                    <FormControl name="username" disabled/>
                 </FormGroup>
                 <FormGroup>
                     <ControlLabel>Tên hiển thị</ControlLabel>

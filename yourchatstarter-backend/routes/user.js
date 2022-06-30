@@ -92,7 +92,7 @@ router.post('/save_profile', verifyToken, async (req, res) => {
 
     let user_action = {
         $set: {
-            username: input.username,
+            // username: input.username,
             email: input.email,
         }
     }
