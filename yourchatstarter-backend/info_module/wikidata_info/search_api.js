@@ -105,9 +105,12 @@ function getEntitiesProperty(property, entity) {
         console.log(property_id, entity_id)
 
         const sparql = `
-        SELECT ?value ?unitLabel ?itemLabel WHERE { 
+        SELECT ?value ?unitLabel ?itemLabel ?imageLabel WHERE { 
             {
                 wd:${entity_id} wdt:${property_id} ?item.
+                OPTIONAL {
+                    ?item wdt:P18 ?image.
+                }
             }
             UNION {
                 wd:${entity_id} p:${property_id} ?statement.
@@ -136,7 +139,7 @@ function getEntitiesProperty(property, entity) {
                     reject('cant find info')
                     return
                 }
-                resolve(simplify_res[0])
+                resolve(simplify_res)
             })
             .catch((err) => {
                 reject(err)
