@@ -36,7 +36,7 @@ module.exports = (parsed_data, input, option, context, IntentHandler) => {
 
             let intent_updated = false
             for (let i = intent_stack.length - 1; i >= 0; i--) {
-                console.log(intent_stack[i])
+                //console.log(intent_stack[i])
 
                 let missing_entity_type = intent_stack[i].missing_entities.map(val => val.replace(/_\d+/, ''))
 
