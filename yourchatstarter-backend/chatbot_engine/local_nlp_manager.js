@@ -8,6 +8,7 @@ const { session_storage, smalltalk_suggestion, service_access_tier } = require('
 const { get_sentiment } = require('./external_service/sentiment_analysist')
 const { generate_text } = require('./external_service/generate_response')
 const random_helper = require('./utils/random_helper')
+const parse_reading = require('./utils/parse_number_reading')
 const { LangBert } = require('@nlpjs/lang-bert')
 const { default: axios } = require('axios')
 
@@ -167,6 +168,18 @@ module.exports.setupInstance = async () => {
             return val
         })
 
+        const start_word = `(một|hai|ba|bốn|năm|sáu|bảy|tám|chín|mười)`
+        const word = `(một|hai|ba|bốn|năm|sáu|bảy|tám|chín|mười|lăm|mốt|tư|ngàn|nghìn|tỷ|tỉ|vạn|trăm|triệu|lẻ|không|mươi)`
+
+        number_ner.addNewRegexRule(new RegExp(`${start_word}(\\s${word})*`, 'gi'), null, (inp) => {
+            let val = 1
+            try {
+                val = parse_reading(inp)
+            }
+            catch (e) {console.log('error parsing value')}
+            return val
+        })
+
         let math_expr_ner = new customNER("math_expr", "vi")
         math_expr_ner.addNewRegexRule(/([\d\(\+\-]|sin|cos|tan|abs|pow)([\s\d\(\)\+\-\*\/\.]|sin|cos|tan|abs|pow)+([\d\)])/g)
 
@@ -217,6 +230,13 @@ module.exports.setupInstance = async () => {
         add_property_alias(["sinh vào ngày nào", "sinh lúc nào", "sinh khi nào"], "ngày sinh", -1, 0.9)
         add_property_alias(["rộng bao nhiêu", "có diện tích bao nhiêu"], "diện tích", -1, 0.9)
         add_property_alias(["có dân số bao nhiêu", "có bao nhiêu dân"], "dân số", -1, 0.9)
+        add_property_alias(["ai sáng lập", "ai đã thành lập", "ai đã sáng lập", "ai là người sáng lập"], "nhà sáng lập", 1, 0.9)
+
+        let custom_conversion_unit = new customNER('conversion_unit', 'vi')
+
+        custom_conversion_unit.addNewDictRule(['ký', 'kí'], 'kg', 1)
+        custom_conversion_unit.addNewDictRule(['sân'], 'yard', 1)
+        custom_conversion_unit.addNewDictRule(['năm'], 'year', 1)
 
         custom_ner_pool = [
             date_vi, 
@@ -224,7 +244,8 @@ module.exports.setupInstance = async () => {
             number_ner, 
             interval_ner, 
             math_expr_ner, 
-            custom_wiki_property_entity
+            custom_wiki_property_entity,
+            custom_conversion_unit
         ]
         console.log('custom NER is loaded')
 

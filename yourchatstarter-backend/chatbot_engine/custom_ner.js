@@ -63,6 +63,7 @@ class customNERImplementation {
                 end: val["index"] + match_len,
                 len: match_len,
                 accuracy: 1,
+                type: 'regex',
                 sourceText: match_str ,
                 utteranceText: match_str,
                 entity: this.name,
@@ -108,6 +109,8 @@ class customNERImplementation {
                 end: best.end,
                 len: best.end - best.start,
                 accuracy: best.accuracy,
+                type: 'enum',
+                option: best_str,
                 sourceText: best_str ,
                 utteranceText: best_str,
                 entity: this.name,
@@ -136,6 +139,7 @@ class customNERImplementation {
             }
             else if (rule.output) {
                 res.resolution.value = rule.output
+                res.option = rule.output
             }
         }
 
@@ -170,15 +174,22 @@ function cleanEntities(initial_entities) {
     //eliminate sub entity
     initial_entities.forEach((entity) => {
         let find = initial_entities.find((val) => {
-            console.log((entity.entity === val.entity) && (entity.start >= val.start) && (entity.end <= val.end) && (val.alias && entity.alias !== val.alias))
+            //console.log((entity.entity === val.entity) && (entity.start >= val.start) && (entity.end <= val.end) && (val.alias && entity.alias !== val.alias))
             return (entity.entity === val.entity) && (entity.start >= val.start) && (entity.end <= val.end) && (val.alias && entity.alias !== val.alias)
         })
         if (!find) {
             entities_res.push(entity)
         }
-        else {
-            console.log('aaaaaaa')
-        }
+        // else {
+        //     console.log('aaaaaaa')
+        // }
+    })
+
+    //sort entity to not mess up the order
+    entities_res.sort((x, y) => {
+        if (x.entity < y.entity) { return -1; }
+        if (x.entity > y.entity) { return 1; }
+        else return x.start - y.start
     })
     //console.log(entities_res)
     //re-label the alias
