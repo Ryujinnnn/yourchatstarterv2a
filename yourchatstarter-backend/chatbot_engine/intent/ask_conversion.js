@@ -95,7 +95,7 @@ module.exports.run = (entities, option, context, isLocal = false) => {
                 try {
                     // console.log()
                     let conv_res = convert(amount_conv_val, from_unit_val).to(to_unit_val)
-                    response = `${amount_conv_val} ${from_unit.sourceText} đổi ra được ${rounding(conv_res)} ${to_unit.sourceText} nhé`
+                    response = `${amount_conv_val.toLocaleString('vi-VN')} ${from_unit.sourceText} đổi ra được ${rounding(conv_res).toLocaleString('vi-VN')} ${to_unit.sourceText} nhé`
                 }
                 catch (e) {
                     console.log(e)
