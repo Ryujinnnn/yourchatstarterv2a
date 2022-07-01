@@ -14,6 +14,7 @@
 .message p > img {
   display: block;
   margin: 10px 10px 5px 10px;
+  max-width: 512px;
 }
 .message p:after {
     top: 100%;

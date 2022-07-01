@@ -3,26 +3,28 @@
 }
 
 .about-screen-enter {
-    margin-bottom: -100%;
-    overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: center top;
 }
 
 .about-screen-enter-active {
-    margin-bottom: 0px;
+    transform: scaleY(1);
     transition-delay: 500ms;
-    transition: all 1000ms;
+    transition: all 200ms;
+    transform-origin: center top;
 }
 
 
 .about-screen-long-enter {
-    margin-bottom: -100%;
-    overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: center top;
 }
 
 .about-screen-long-enter-active {
-    margin-bottom: 0px;
+    transform: scaleY(1);
     transition-delay: 500ms;
-    transition: all 1000ms;
+    transition: all 200ms;
+    transform-origin: center top;
 }
 
 .about-screen-exit {
@@ -59,3 +61,14 @@
     .direct-payment-container { flex-wrap: wrap;  }
     .direct-payment-item:first-child { flex-basis: 100%; }
 }
+
+/* @keyframes content_expand {
+    from{transform:scale(0)}
+    80%{transform:scale(0.8)}
+    to{transform:scale(1)}
+}
+@-webkit-keyframes content_expand {
+    from{-webkit-transform:scale(0)}
+    80%{-webkit-transform:scale(0.8)}
+    to{-webkit-transform:scale(1)}
+} */
