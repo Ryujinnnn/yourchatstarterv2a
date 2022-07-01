@@ -1614,7 +1614,9 @@
                 "%number% %currency%",
                 "USD",
                 "VND",
-                "%number%"
+                "%number%",
+                "%conversion_unit",
+                "của %conversion_unit"
             ],
             "answers": [
                 "Xin lỗi bạn, mình không hiểu bạn đang nói gì",

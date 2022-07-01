@@ -33,6 +33,14 @@ module.exports.wiki_property = (property, entity) => {
                 if (pattern.test(res.itemLabel)) {
                     answer = (new Date(res.itemLabel)).toLocaleDateString('vi-VN')
                 }
+                else if (res.itemLabel.startsWith("http://") || res.itemLabel.startsWith("https://")) {
+                    if (res.itemLabel.endsWith(".gif") || res.itemLabel.endsWith(".png") || res.itemLabel.endsWith(".jpg") || res.itemLabel.endsWith(".jpeg") || res.itemLabel.endsWith(".svg")) {
+                        answer = `![wiki_image](${res.itemLabel})`
+                    }
+                    else {
+                        answer = `[đường dẫn này](${res.itemLabel})`
+                    }
+                }
                 else {
                     answer = res.itemLabel
                 }

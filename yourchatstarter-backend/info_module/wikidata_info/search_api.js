@@ -5,15 +5,7 @@ const wdk = WBK({
     sparqlEndpoint: 'https://query.wikidata.org/sparql'
 })
 
-const property_lookup = [
-    {name: 'ngày sinh', id: 'P569'},
-    {name: 'lãnh đạo chính phủ', id: 'P6'},
-    {name: 'phụ thân', id: 'P22'},
-    {name: 'mẫu thân', id: 'P25'},
-    {name: 'lãnh đạo nhà nước', id: 'P35'},
-    {name: 'sân nhà', id: 'P115'},
-    {name: 'thể loại', id: 'P136'}
-]
+const property_lookup = require('./property_list.json')
 
 function search(keyword) {
     const url = wdk.searchEntities({

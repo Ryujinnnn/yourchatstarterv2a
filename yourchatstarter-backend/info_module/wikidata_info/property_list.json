@@ -1,0 +1,13 @@
+[
+    {"name": "ngày sinh", "id": "P569"},
+    {"name": "lãnh đạo chính phủ", "id": "P6"},
+    {"name": "phụ thân", "id": "P22"},
+    {"name": "mẫu thân", "id": "P25"},
+    {"name": "lãnh đạo nhà nước", "id": "P35"},
+    {"name": "sân nhà", "id": "P115"},
+    {"name": "thể loại", "id": "P136"},
+    {"name": "biên kịch", "id": "P58"},
+    {"name": "nghề nghiệp", "id": "P106"},
+    {"name": "họa sỹ minh họa", "id": "P110"},
+    {"name": "nhà xuất bản", "id": "P123"}
+]
