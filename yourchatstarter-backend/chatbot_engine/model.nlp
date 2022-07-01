@@ -100479,8 +100479,6 @@
                 "ki lô gam",
                 "kí lô gam",
                 "kilo gam",
-                "ký",
-                "kí",
                 "kg"
               ]
             },
@@ -101582,7 +101580,6 @@
               "texts": [
                 "year",
                 "years",
-                "năm",
                 "y",
                 "yr"
               ]
@@ -101636,16 +101633,14 @@
               "option": "time unit",
               "texts": [
                 "time unit",
-                "Đơn vị thời gian",
-                "TU"
+                "Đơn vị thời gian"
               ]
             },
             {
               "option": "svedberg",
               "texts": [
                 "svedberg",
-                "svedbergs",
-                "S"
+                "svedbergs"
               ]
             },
             {
@@ -102558,7 +102553,6 @@
                 "yard",
                 "iat",
                 "i át",
-                "sân",
                 "yards",
                 "yd"
               ]

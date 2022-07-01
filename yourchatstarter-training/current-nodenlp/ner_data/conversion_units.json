@@ -904,8 +904,6 @@
       "ki lô gam",
       "kí lô gam",
       "kilo gam",
-      "ký",
-      "kí",
       "kg"
     ]
   },
@@ -2021,7 +2019,6 @@
     "alias": [
       "year",
       "years",
-      "năm",
       "y",
       "yr"
     ]
@@ -2075,16 +2072,14 @@
     "name": "time unit",
     "alias": [
       "time unit",
-      "Đơn vị thời gian",
-      "TU"
+      "Đơn vị thời gian"
     ]
   },
   {
     "name": "svedberg",
     "alias": [
       "svedberg",
-      "svedbergs",
-      "S"
+      "svedbergs"
     ]
   },
   {
@@ -2098,7 +2093,6 @@
       "cubic petasteres",
       "pê ta mét khối",
       "peta mét khối",
-
       "Pm³",
       "Pm3"
     ]
@@ -2114,7 +2108,6 @@
       "cubic terasteres",
       "tê ra mét khối",
       "tera mét khối",
-
       "Tm³",
       "Tm3"
     ]
@@ -2130,7 +2123,6 @@
       "cubic gigasteres",
       "gi ga mét khối",
       "giga mét khối",
-
       "Gm³",
       "Gm3"
     ]
@@ -3023,7 +3015,6 @@
       "yard",
       "iat",
       "i át",
-      "sân",
       "yards",
       "yd"
     ]
