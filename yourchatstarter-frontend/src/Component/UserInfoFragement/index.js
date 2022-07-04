@@ -68,7 +68,7 @@ export class UserInfoFragment extends Component {
             <p>Trạng thái tài khoản: {this.props.data.status}</p> */}
             <h4>Thông tin người dùng</h4>
             <Divider />
-            <Form layout="horizontal" ref={this.form} model={model} formValue={this.state.formValue} onChange={(v) => {this.setState({formValue: v})}} > 
+            <Form layout="horizontal" ref={this.form} model={model} formValue={this.state.formValue} onChange={(v) => {this.setState({formValue: v})}} className="profile-form"> 
                 <FormGroup>
                     <ControlLabel>Tên đăng nhập</ControlLabel>
                     <FormControl name="username" />

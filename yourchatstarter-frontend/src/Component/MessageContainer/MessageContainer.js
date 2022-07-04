@@ -20,11 +20,12 @@ export class MessageContainer extends Component {
         //console.log('container rendering')
         const style = {
             margin: "10px",
-            padding: "10px",
+            padding: "10px 10px 20px 10px",
             border: "black solid 1px",
             backgroundColor: "#1A1D24",
             height: "60vh",
             overflowY: 'scroll',
+            borderRadius: '10px'
         }
 
         const messageListDisplay = this.props.messageList.map((message, index) => {

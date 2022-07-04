@@ -21,6 +21,7 @@
     "react-scripts": "^4.0.3",
     "react-showdown": "^2.3.0",
     "react-speech-kit": "^3.0.1",
+    "react-transition-group": "^4.4.2",
     "rsuite": "^4.10.1",
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.1"

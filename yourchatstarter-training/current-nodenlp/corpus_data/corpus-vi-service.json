@@ -1,6 +1,6 @@
 {
     "name": "[Vietnamese] Service Conversation",
-    "locale": "vi-VN",
+    "locale": "vi",
     "data": [
         {
             "intent": "service.ask_weather",

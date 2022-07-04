@@ -19,7 +19,7 @@
     margin-top: 16px
 }
 
-.blog-editor-modal .rs-form-horizontal .rs-form-group .rs-picker-date, textarea {
+.blog-editor-modal .rs-form-horizontal .rs-form-group .rs-picker-date, .blog-editor-modal .rs-form-horizontal .rs-form-group textarea {
     margin: 15px;
     width: 100%;
 }
