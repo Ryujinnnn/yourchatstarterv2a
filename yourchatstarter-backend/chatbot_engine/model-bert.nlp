@@ -130717,8 +130717,7 @@
               "texts": [
                 "minute",
                 "minutes",
-                "phút",
-                "min"
+                "phút"
               ]
             },
             {
@@ -130726,8 +130725,7 @@
               "texts": [
                 "hour",
                 "hours",
-                "giờ",
-                "h"
+                "giờ"
               ]
             },
             {
@@ -130742,9 +130740,7 @@
               "option": "day",
               "texts": [
                 "day",
-                "ngày",
-                "days",
-                "d"
+                "days"
               ]
             },
             {
@@ -130752,7 +130748,6 @@
               "texts": [
                 "week",
                 "weeks",
-                "tuần",
                 "tuần lễ",
                 "wk"
               ]
@@ -130769,9 +130764,7 @@
               "option": "month",
               "texts": [
                 "month",
-                "months",
-                "tháng",
-                "mo"
+                "months"
               ]
             },
             {
@@ -130779,7 +130772,6 @@
               "texts": [
                 "year",
                 "years",
-                "y",
                 "yr"
               ]
             },

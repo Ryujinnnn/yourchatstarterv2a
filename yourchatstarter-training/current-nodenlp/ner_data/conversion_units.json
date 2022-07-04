@@ -1957,8 +1957,7 @@
     "alias": [
       "minute",
       "minutes",
-      "phút",
-      "min"
+      "phút"
     ]
   },
   {
@@ -1966,8 +1965,7 @@
     "alias": [
       "hour",
       "hours",
-      "giờ",
-      "h"
+      "giờ"
     ]
   },
   {
@@ -1982,9 +1980,7 @@
     "name": "day",
     "alias": [
       "day",
-      "ngày",
-      "days",
-      "d"
+      "days"
     ]
   },
   {
@@ -1992,7 +1988,6 @@
     "alias": [
       "week",
       "weeks",
-      "tuần",
       "tuần lễ",
       "wk"
     ]
@@ -2009,9 +2004,7 @@
     "name": "month",
     "alias": [
       "month",
-      "months",
-      "tháng",
-      "mo"
+      "months"
     ]
   },
   {
@@ -2019,7 +2012,6 @@
     "alias": [
       "year",
       "years",
-      "y",
       "yr"
     ]
   },

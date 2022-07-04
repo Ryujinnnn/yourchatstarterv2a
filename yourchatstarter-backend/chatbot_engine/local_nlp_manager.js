@@ -237,6 +237,8 @@ module.exports.setupInstance = async () => {
         custom_conversion_unit.addNewDictRule(['ký', 'kí'], 'kg', 1)
         custom_conversion_unit.addNewDictRule(['sân'], 'yard', 1)
         custom_conversion_unit.addNewDictRule(['năm'], 'year', 1)
+        custom_conversion_unit.addNewDictRule(['tháng'], 'month', 1)
+        custom_conversion_unit.addNewDictRule(['ngày'], 'day', 1)
 
         let custom_location = new customNER('location', 'vi')
         custom_location.addNewDictRule(['tp hồ chí minh', 'thành phố hồ chí minh', 'tp hcm', 'tp.hcm', 'tphcm', 'sài gòn'], "Thành phố Hồ Chí Minh", 0.9)
