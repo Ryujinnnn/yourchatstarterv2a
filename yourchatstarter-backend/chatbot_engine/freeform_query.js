@@ -71,7 +71,7 @@ module.exports = async function (context, input, intent_res) {
             }
             else {
                 first_res = google_res.itemListElement[0]
-                if (first_res.resultScore && first_res.resultScore > 50) {
+                if (first_res.resultScore && (first_res.resultScore > 50 || (first_res.resultScore > 10 && !process.env.USE_BARTPHO))) {
                     if (first_res.result.detailedDescription) {
                         answer = first_res.result.detailedDescription.articleBody
                     }
