@@ -60,7 +60,7 @@ async function main() {
 	console.log('loading stock code data...')
 	for (let i = 0; i < stocks_list.length; i++) {
 		const stock_entry = stocks_list[i]
-		manager.addNamedEntityText('stock_code', stock_entry.Symbol, 'vi', stock_entry.Symbol)
+		manager.addNamedEntityText('stock_code', stock_entry.Symbol, 'vi', [stock_entry.Symbol, stock_entry['Company Name']])
 	}
 
 	console.log('loading conversion unit data...')
