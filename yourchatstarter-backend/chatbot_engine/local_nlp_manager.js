@@ -248,7 +248,8 @@ module.exports.setupInstance = async () => {
             interval_ner, 
             math_expr_ner, 
             custom_wiki_property_entity,
-            custom_conversion_unit
+            custom_conversion_unit,
+            custom_location,
         ]
         console.log('custom NER is loaded')
 
