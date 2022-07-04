@@ -584,10 +584,6 @@
         "Symbol": "AMRI"
     },
     {
-        "Company Name": "A",
-        "Symbol": "AMRK"
-    },
-    {
         "Company Name": "Amarin Corporation plc",
         "Symbol": "AMRN"
     },
@@ -1496,10 +1492,6 @@
         "Symbol": "BPOPN"
     },
     {
-        "Company Name": "Bio",
-        "Symbol": "BPTH"
-    },
-    {
         "Company Name": "Brocade Communications Systems, Inc.",
         "Symbol": "BRCD"
     },
@@ -1530,10 +1522,6 @@
     {
         "Company Name": "Brooks Automation, Inc.",
         "Symbol": "BRKS"
-    },
-    {
-        "Company Name": "Bio",
-        "Symbol": "BRLI"
     },
     {
         "Company Name": "BSD Medical Corporation",
@@ -1702,10 +1690,6 @@
     {
         "Company Name": "magicJack VocalTec Ltd",
         "Symbol": "CALL"
-    },
-    {
-        "Company Name": "Cal",
-        "Symbol": "CALM"
     },
     {
         "Company Name": "Cambridge Capital Acquisition Corporation",
@@ -4100,10 +4084,6 @@
         "Symbol": "FLML"
     },
     {
-        "Company Name": "1",
-        "Symbol": "FLWS"
-    },
-    {
         "Company Name": "Flexion Therapeutics, Inc.",
         "Symbol": "FLXN"
     },
@@ -4578,10 +4558,6 @@
     {
         "Company Name": "GigaMedia Limited",
         "Symbol": "GIGM"
-    },
-    {
-        "Company Name": "G",
-        "Symbol": "GIII"
     },
     {
         "Company Name": "Gilead Sciences, Inc.",
@@ -5476,10 +5452,6 @@
         "Symbol": "IIN"
     },
     {
-        "Company Name": "II",
-        "Symbol": "IIVI"
-    },
-    {
         "Company Name": "Ikanos Communications, Inc.",
         "Symbol": "IKAN"
     },
@@ -6034,10 +6006,6 @@
     {
         "Company Name": "Kite Pharma, Inc.",
         "Symbol": "KITE"
-    },
-    {
-        "Company Name": "KLA",
-        "Symbol": "KLAC"
     },
     {
         "Company Name": "Kulicke and Soffa Industries, Inc.",
@@ -6648,10 +6616,6 @@
         "Symbol": "MCBK"
     },
     {
-        "Company Name": "Mid",
-        "Symbol": "MCEP"
-    },
-    {
         "Company Name": "MCG Capital Corporation",
         "Symbol": "MCGC"
     },
@@ -6984,10 +6948,6 @@
         "Symbol": "MNTX"
     },
     {
-        "Company Name": "Sky",
-        "Symbol": "MOBI"
-    },
-    {
         "Company Name": "MobileIron, Inc.",
         "Symbol": "MOBL"
     },
@@ -7146,10 +7106,6 @@
     {
         "Company Name": "MTS Systems Corporation",
         "Symbol": "MTSC"
-    },
-    {
-        "Company Name": "M/A",
-        "Symbol": "MTSI"
     },
     {
         "Company Name": "MER Telemanagement Solutions Ltd.",
@@ -7600,14 +7556,6 @@
         "Symbol": "NXST"
     },
     {
-        "Company Name": "NXT",
-        "Symbol": "NXTD"
-    },
-    {
-        "Company Name": "NXT",
-        "Symbol": "NXTDW"
-    },
-    {
         "Company Name": "NxStage Medical, Inc.",
         "Symbol": "NXTM"
     },
@@ -8048,10 +7996,6 @@
         "Symbol": "PCRX"
     },
     {
-        "Company Name": "PC",
-        "Symbol": "PCTI"
-    },
-    {
         "Company Name": "Paylocity Holding Corporation",
         "Symbol": "PCTY"
     },
@@ -8078,10 +8022,6 @@
     {
         "Company Name": "Patterson Companies, Inc.",
         "Symbol": "PDCO"
-    },
-    {
-        "Company Name": "Pro",
-        "Symbol": "PDEX"
     },
     {
         "Company Name": "PDF Solutions, Inc.",
@@ -8302,10 +8242,6 @@
     {
         "Company Name": "Pacific Mercantile Bancorp",
         "Symbol": "PMBC"
-    },
-    {
-        "Company Name": "PMC",
-        "Symbol": "PMCS"
     },
     {
         "Company Name": "Psychemedics Corporation",
@@ -10380,10 +10316,6 @@
         "Symbol": "TECD"
     },
     {
-        "Company Name": "Bio",
-        "Symbol": "TECH"
-    },
-    {
         "Company Name": "Tecumseh Products Company",
         "Symbol": "TECU"
     },
@@ -10940,10 +10872,6 @@
         "Symbol": "UNTY"
     },
     {
-        "Company Name": "Uni",
-        "Symbol": "UNXL"
-    },
-    {
         "Company Name": "Uroplasty, Inc.",
         "Symbol": "UPI"
     },
@@ -11440,10 +11368,6 @@
         "Symbol": "WDC"
     },
     {
-        "Company Name": "WD",
-        "Symbol": "WDFC"
-    },
-    {
         "Company Name": "Wellesley Bancorp, Inc.",
         "Symbol": "WEBK"
     },
@@ -11514,10 +11438,6 @@
     {
         "Company Name": "G. Willi",
         "Symbol": "WILC"
-    },
-    {
-        "Company Name": "Wi",
-        "Symbol": "WILN"
     },
     {
         "Company Name": "Windstream Holdings, Inc.",

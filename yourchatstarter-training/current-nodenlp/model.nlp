@@ -82815,13 +82815,6 @@
               ]
             },
             {
-              "option": "AMRK",
-              "texts": [
-                "AMRK",
-                "A"
-              ]
-            },
-            {
               "option": "AMRN",
               "texts": [
                 "AMRN",
@@ -84411,13 +84404,6 @@
               ]
             },
             {
-              "option": "BPTH",
-              "texts": [
-                "BPTH",
-                "Bio"
-              ]
-            },
-            {
               "option": "BRCD",
               "texts": [
                 "BRCD",
@@ -84471,13 +84457,6 @@
               "texts": [
                 "BRKS",
                 "Brooks Automation, Inc."
-              ]
-            },
-            {
-              "option": "BRLI",
-              "texts": [
-                "BRLI",
-                "Bio"
               ]
             },
             {
@@ -84772,13 +84751,6 @@
               "texts": [
                 "CALL",
                 "magicJack VocalTec Ltd"
-              ]
-            },
-            {
-              "option": "CALM",
-              "texts": [
-                "CALM",
-                "Cal"
               ]
             },
             {
@@ -88968,13 +88940,6 @@
               ]
             },
             {
-              "option": "FLWS",
-              "texts": [
-                "FLWS",
-                "1"
-              ]
-            },
-            {
               "option": "FLXN",
               "texts": [
                 "FLXN",
@@ -89805,13 +89770,6 @@
               "texts": [
                 "GIGM",
                 "GigaMedia Limited"
-              ]
-            },
-            {
-              "option": "GIII",
-              "texts": [
-                "GIII",
-                "G"
               ]
             },
             {
@@ -91376,13 +91334,6 @@
               ]
             },
             {
-              "option": "IIVI",
-              "texts": [
-                "IIVI",
-                "II"
-              ]
-            },
-            {
               "option": "IKAN",
               "texts": [
                 "IKAN",
@@ -92353,13 +92304,6 @@
               "texts": [
                 "KITE",
                 "Kite Pharma, Inc."
-              ]
-            },
-            {
-              "option": "KLAC",
-              "texts": [
-                "KLAC",
-                "KLA"
               ]
             },
             {
@@ -93427,13 +93371,6 @@
               ]
             },
             {
-              "option": "MCEP",
-              "texts": [
-                "MCEP",
-                "Mid"
-              ]
-            },
-            {
               "option": "MCGC",
               "texts": [
                 "MCGC",
@@ -94015,13 +93952,6 @@
               ]
             },
             {
-              "option": "MOBI",
-              "texts": [
-                "MOBI",
-                "Sky"
-              ]
-            },
-            {
               "option": "MOBL",
               "texts": [
                 "MOBL",
@@ -94299,13 +94229,6 @@
               "texts": [
                 "MTSC",
                 "MTS Systems Corporation"
-              ]
-            },
-            {
-              "option": "MTSI",
-              "texts": [
-                "MTSI",
-                "M/A"
               ]
             },
             {
@@ -95093,20 +95016,6 @@
               ]
             },
             {
-              "option": "NXTD",
-              "texts": [
-                "NXTD",
-                "NXT"
-              ]
-            },
-            {
-              "option": "NXTDW",
-              "texts": [
-                "NXTDW",
-                "NXT"
-              ]
-            },
-            {
               "option": "NXTM",
               "texts": [
                 "NXTM",
@@ -95877,13 +95786,6 @@
               ]
             },
             {
-              "option": "PCTI",
-              "texts": [
-                "PCTI",
-                "PC"
-              ]
-            },
-            {
               "option": "PCTY",
               "texts": [
                 "PCTY",
@@ -95930,13 +95832,6 @@
               "texts": [
                 "PDCO",
                 "Patterson Companies, Inc."
-              ]
-            },
-            {
-              "option": "PDEX",
-              "texts": [
-                "PDEX",
-                "Pro"
               ]
             },
             {
@@ -96322,13 +96217,6 @@
               "texts": [
                 "PMBC",
                 "Pacific Mercantile Bancorp"
-              ]
-            },
-            {
-              "option": "PMCS",
-              "texts": [
-                "PMCS",
-                "PMC"
               ]
             },
             {
@@ -99958,13 +99846,6 @@
               ]
             },
             {
-              "option": "TECH",
-              "texts": [
-                "TECH",
-                "Bio"
-              ]
-            },
-            {
               "option": "TECU",
               "texts": [
                 "TECU",
@@ -100938,13 +100819,6 @@
               ]
             },
             {
-              "option": "UNXL",
-              "texts": [
-                "UNXL",
-                "Uni"
-              ]
-            },
-            {
               "option": "UPI",
               "texts": [
                 "UPI",
@@ -101813,13 +101687,6 @@
               ]
             },
             {
-              "option": "WDFC",
-              "texts": [
-                "WDFC",
-                "WD"
-              ]
-            },
-            {
               "option": "WEBK",
               "texts": [
                 "WEBK",
@@ -101943,13 +101810,6 @@
               "texts": [
                 "WILC",
                 "G. Willi"
-              ]
-            },
-            {
-              "option": "WILN",
-              "texts": [
-                "WILN",
-                "Wi"
               ]
             },
             {
