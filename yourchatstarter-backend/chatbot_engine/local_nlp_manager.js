@@ -235,10 +235,56 @@ module.exports.setupInstance = async () => {
         let custom_conversion_unit = new customNER('conversion_unit', 'vi')
 
         custom_conversion_unit.addNewDictRule(['ký', 'kí'], 'kg', 1)
+        custom_conversion_unit.addNewDictRule(['gam', 'g'], 'gram', 1)
+        custom_conversion_unit.addNewDictRule(['Oát', 'W'], 'watt', 1)
+        custom_conversion_unit.addNewDictRule(['thìa cà phê','muỗng cà phê'], 'teaspoon', 1)
+        custom_conversion_unit.addNewDictRule(['thìa canh','muỗng canh'], 'tablespoon', 1)
+        custom_conversion_unit.addNewDictRule(['foot'], 'foot', 1)
+
+        custom_conversion_unit.addNewDictRule(['Pa'], 'pascal', 1)
+        custom_conversion_unit.addNewDictRule(['ga lông'], 'gallon', 1)
+        custom_conversion_unit.addNewDictRule(['mile','mi'], 'dặm', 1)
+        custom_conversion_unit.addNewDictRule(["'"], 'foot', 1)
+        custom_conversion_unit.addNewDictRule(['hải lý','dặm hải lý'], 'nautical mile', 1)
+
+
+        custom_conversion_unit.addNewDictRule(['bar'], 'bar', 1)
+        custom_conversion_unit.addNewDictRule(['cây'], 'km', 1)
+        custom_conversion_unit.addNewDictRule(['mét','thước','m'], 'meter', 1)
+        custom_conversion_unit.addNewDictRule(['phân','xăng'], 'centimeter', 1)
+        custom_conversion_unit.addNewDictRule(['li','ly'], 'millimeter', 1)
+
+
+
+        custom_conversion_unit.addNewDictRule(['ha'], 'hectare', 1)
+        custom_conversion_unit.addNewDictRule(['atm'], 'atmosphere', 1)
+        custom_conversion_unit.addNewDictRule(['K'], 'kelvin', 1)
+        custom_conversion_unit.addNewDictRule(['C'], 'celsius', 1)
+        custom_conversion_unit.addNewDictRule(['l','L','lít'], 'liter', 1)
+        custom_conversion_unit.addNewDictRule(['mi li', 'ml', 'mL'], 'milliliter', 1)
+
+
+        
+
+
+
+        custom_conversion_unit.addNewDictRule(['b'], 'bit',1)
+        custom_conversion_unit.addNewDictRule(['bai'], 'byte',1)
+
+        custom_conversion_unit.addNewDictRule(['J'], 'joule',1)
+        custom_conversion_unit.addNewDictRule(['mét'], 'm', 1)
+        custom_conversion_unit.addNewDictRule(['N'], 'newton', 1)
         custom_conversion_unit.addNewDictRule(['sân'], 'yard', 1)
         custom_conversion_unit.addNewDictRule(['năm'], 'year', 1)
         custom_conversion_unit.addNewDictRule(['tháng'], 'month', 1)
         custom_conversion_unit.addNewDictRule(['ngày'], 'day', 1)
+        custom_conversion_unit.addNewDictRule(['giây','s'], 'second', 1)
+        custom_conversion_unit.addNewDictRule(['phút'], 'minute', 1)
+        custom_conversion_unit.addNewDictRule(['giờ'], 'hour', 1)
+
+
+
+
 
         let custom_location = new customNER('location', 'vi')
         custom_location.addNewDictRule(['tp hồ chí minh', 'thành phố hồ chí minh', 'tp hcm', 'tp.hcm', 'tphcm', 'sài gòn'], "Thành phố Hồ Chí Minh", 0.9)

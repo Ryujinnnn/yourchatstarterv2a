@@ -11,7 +11,9 @@
                 "thời tiết %location% như thế nào",
                 "Thời tiết ở %location% thế nào?",
                 "thời tiết hiện tại ở %location%",
-                "Thời tiết %location%"
+                "Thời tiết %location%",
+                "Trời %location% như thế nào?",
+                "Trời %location% đang như thế nào?"
             ],
             "answers": [
                 "Mình không thể tìm được chỗ bạn muốn hỏi. Mình xin lỗi nhé"
@@ -64,6 +66,7 @@
                 "mức niêm yết cổ phiếu %stock_code%",
                 "cổ phiếu %stock_code% hiện tại",
                 "cổ phiếu %stock_code%",
+                "giá cổ phiếu %stock_code%",
                 "cổ phiếu %stock_code% đang ở mốc bao nhiêu điểm",
                 "cổ phiểu %stock_code% đang ở mức bao nhiêu điểm vậy?",
                 "mã cổ phiếu %stock_code% đang ở mức bao nhiêu điểm?",
@@ -85,8 +88,11 @@
                 "kết quả biểu thức %expression%?",
                 "kết quả biểu thức %expression bằng mấy",
                 "%expression% ra bao nhiêu?",  
-                "%expression% được bao nhiêu?",      
+                "%expression% được bao nhiêu?",     
+                "%expression% bằng bao nhiêu?",      
                 "tính toán %expression%",
+                "tính %expression%",
+                "kết quả của %expression%",
                 "kết quả phép tính %expression%"
             ],
             "answers": [
@@ -157,7 +163,8 @@
                 "bạn nói %phrase% như thế nào bằng %language%?",
                 "mình nói %phrase% trong %language% như thế nào nhỉ?",
                 "dịch %phrase% ra %language%",
-                "dịch %phrase% ra %language%",
+                "%phrase% trong %language% nghĩa là gì",
+                "dịch %phrase% sang %language%",
                 "mình nói %phrase% trong %language% như thế nào?",
                 "dịch thuật"
             ],
@@ -170,7 +177,9 @@
             "utterances": [
                 "nhắc tôi",
                 "nhắc tôi %phrase%?",
+                "báo cho tôi %phrase% sau 3 giờ nữa?",
                 "nhắc tôi %phrase% sau 3 giờ nữa",
+                "nhắc nhở tôi %phrase% sau 3 giờ nữa",
                 "nhắc tôi %phrase% sau 30 phút nữa",
                 "nhắc tôi %phrase% hôm sau",
                 "nhắc tôi %phrase% 2 tiếng sau"
@@ -200,8 +209,11 @@
             "utterances": [
                 "%location_phrase% ở đâu",
                 "Thành phố Hồ Chí Minh ở đâu",
+                "vị trí %location%",
                 "định vị %location_phrase%",
                 "%location% ở đâu",
+                "%location% ở chỗ nào",
+                "%location% nằm ở đâu",
                 "định vị %location%",
                 "định vị Hà Nội",
                 "Dĩ An ở đâu",
@@ -221,6 +233,7 @@
                 "ngày sinh của barrack obama",
                 "dân số của thành phố hồ chí minh",
                 "ngày sinh của nguyễn phú trọng",
+                "sinh nhật của nguyễn phú trọng",
                 "ngày sinh của lionel messi",
                 "ngày sinh của thiên hoàng minh trị",
                 "ngày sinh của johnny depp",
@@ -240,6 +253,8 @@
             "intent": "service.ask_conversion",
             "utterances": [
                 "%number %conversion_unit% đổi ra bao nhiêu %conversion_unit%",
+                "%number %conversion_unit% đổi được mấy %conversion_unit%",
+                "%number %conversion_unit% đổi được bao nhiêu %conversion_unit%",
                 "đổi %number%%conversion_unit% ra %conversion_unit%",
                 "%number %conversion_unit% bằng bao nhiêu %conversion_unit%",
                 "%number %conversion_unit% bằng mấy %conversion_unit%",
@@ -289,6 +304,9 @@
             "utterances": [
                 "Thông báo cho tôi về tin tức mỗi giờ",
                 "Thông báo cho tôi về tin tức đời sống mỗi ngày",
+                "Báo cho tôi về tin tức mỗi giờ",
+                "Tôi muốn nhận thông báo về tin tức mỗi ngày",
+                "Báo tin tức %news_category% cho tôi về mỗi ngày",
                 "Thông báo cho tôi về tin tức %news_category% mỗi ngày"
             ],
             "answer": [
@@ -308,6 +326,8 @@
             "intent": "service.req_weather_notif",
             "utterances": [
                 "Thông tin cho tôi về thời tiết mỗi ngày",
+                "Tôi muốn nhận thông báo về thời tiết mỗi ngày",
+                "Báo cho tôi về thời tiết mỗi ngày",
                 "Thông báo cho tôi về thời tiết mỗi tuần",
                 "Thông tin cho tôi về thời tiết ở Hà Nội mỗi ngày",
                 "Thông tin cho tôi về thời tiết ở %location% mỗi ngày",
